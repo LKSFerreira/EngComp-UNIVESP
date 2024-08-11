@@ -1,3 +1,4 @@
+
 # Engenharia de Computação - UNIVESP
 
 ## Índice
@@ -17,7 +18,16 @@
 ### SOC100 - Ética, Cidadania e Sociedade (40h)
 **Objetivos:** Compreender os conceitos de ética, cidadania e sociedade; analisar a relação entre ética, cidadania e sociedade; contribuir para uma reflexão sobre os valores éticos e responsabilidades como cidadão perante o país, a fim de procurar construir uma sociedade economicamente viável, ambientalmente correta, e socialmente justa; reconhecer cidadania no mundo do trabalho; analisar as relações étnico-raciais. Discutir o conceito de ética e compromisso com a promoção de cidadania e da profissão. Conhecer os aspectos legais que permeiam a atuação profissional.
 
-**Ementa:** Etimologia e conceitos: Fundamentos filosóficos. Ética e valor humano. Ética, moral e condição humana. Ética e ciência. A Ética e o profissional. Ética e cidadania no mundo do trabalho. O trabalho, o trabalhador e as organizações no mundo contemporâneo. Relações étnico-raciais. Sustentabilidade.
+**Ementa:** 
+- [ ] Etimologia e conceitos: Fundamentos filosóficos.
+- [ ] Ética e valor humano.
+- [ ] Ética, moral e condição humana.
+- [ ] Ética e ciência.
+- [ ] A Ética e o profissional.
+- [ ] Ética e cidadania no mundo do trabalho.
+- [ ] O trabalho, o trabalhador e as organizações no mundo contemporâneo.
+- [ ] Relações étnico-raciais.
+- [ ] Sustentabilidade.
 
 **Bibliografia Base:**
 - TEIXEIRA, Orci Paulino Bretanha. A fundamentação ética do estado socioambiental. Porto Alegre/RS: EdiPUCRS, 2017.
