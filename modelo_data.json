@@ -1,0 +1,27 @@
+{
+  "semana": "Semana X",
+  "perguntas": [
+    {
+      "questao": "Texto da nova questão aqui...",
+      "alternativas_incorretas": [
+        "Alternativa incorreta 1.",
+        "Alternativa incorreta 2.",
+        "Alternativa incorreta 3.",
+        "Alternativa incorreta 4."
+      ],
+      "resposta_correta": "Texto da resposta correta.",
+      "justificativa": "Justificativa da resposta correta."
+    },
+    {
+      "questao": "Texto de outra nova questão...",
+      "alternativas_incorretas": [
+        "Alternativa incorreta A.",
+        "Alternativa incorreta B.",
+        "Alternativa incorreta C.",
+        "Alternativa incorreta D."
+      ],
+      "resposta_correta": "Texto da resposta correta para a segunda questão.",
+      "justificativa": "Justificativa para a segunda questão."
+    }
+  ]
+}

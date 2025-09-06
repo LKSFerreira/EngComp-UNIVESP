@@ -1,0 +1,404 @@
+{
+  "materia": "Banco de Dados",
+  "semanas": [
+    {
+      "semana": "Semana 1",
+      "perguntas": [
+        {
+          "questao": "Em organizações que lidam com grande volume de informações, a estruturação e o acesso eficiente aos dados são fatores importantes para a tomada de decisão, análise estratégica e operação de sistemas computacionais com precisão e confiabilidade, pois dados bem organizados permitem extração rápida de informações relevantes, reduzem redundâncias e inconsistências, e possibilitam integrações entre sistemas, o que favorece a agilidade nos processos e a geração de insights baseados em evidências concretas.\n\nDiante do contexto, assinale a alternativa correta com relação a definição técnica de um banco de dados.",
+          "alternativas_incorretas": [
+            "Um banco de dados é uma planilha com dados salvos digitalmente, desde que seja utilizada para armazenar informações em formato tabular.",
+            "Um banco de dados é o sistema que executa comandos para armazenar dados, ignorando o conteúdo ou a organização dos dados em si.",
+            "Um banco de dados é formado por dados armazenados de forma aleatória, desorganizados, bastando estarem disponíveis em um servidor na rede.",
+            "Um banco de dados é qualquer conjunto de arquivos digitais utilizados para arquivamento, mitigando a necessidade de estrutura ou relacionamento entre os dados."
+          ],
+          "resposta_correta": "Um banco de dados é uma coleção estruturada e relacionada de dados, projetada para suportar múltiplas aplicações e garantir integridade e acesso eficiente.",
+          "justificativa": "A alternativa \"Um banco de dados é uma coleção estruturada e relacionada de dados, projetada para suportar múltiplas aplicações e garantir integridade e acesso eficiente\" é correta, pois um banco de dados, de forma técnica, é um conjunto organizado de dados relacionados entre si, que oferece suporte ao acesso e manipulação de múltiplas aplicações. Ele garante integridade, consistência, acessibilidade e recuperação eficiente das informações"
+        },
+        {
+          "questao": "Modelagens conceituais de dados são fundamentais para estruturar informações de forma compreensível e eficiente, utilizando abstrações que representam elementos do mundo real e suas interações. O Modelo Entidade-Relacionamento (MER) oferece diversos construtos para lidar com diferentes cenários, como atributos que podem ter múltiplos valores, dados que são calculados a partir de outros, entidades que dependem da existência de outras e atributos que são subdivididos em partes menores.\n\nCom base no contexto, associe os elementos do MER e exemplos de modelagem conceitual.\n\nI. Atributo multivalorado\nII. Atributo derivado\nIII. Entidade fraca\nIV. Atributo composto\n\nA. Dispositivo sem endereço IP fixo, dependente de outro nó\nB. Lista de protocolos suportados por um roteador\nC. Endereço com campos rua, número, cidade e estado\nD. Latência média calculada a partir de logs históricos\n\nAssinale a alternativa que apresenta a associação correta:",
+          "alternativas_incorretas": [
+            "I-D; II-B; III-C; IV-A.",
+            "I-A; II-C; III-B; IV-D.",
+            "I-C; II-A; III-D; IV-B.",
+            "I-B; II-A; III-D; IV-C."
+          ],
+          "resposta_correta": "I-B; II-D; III-A; IV-C.",
+          "justificativa": "A sentença A se enquadra no conceito III, pois um dispositivo sem endereço IP fixo e dependente de outro nó para sua identificação e funcionamento caracteriza uma entidade fraca. Essa entidade não possui chave própria e depende da identificação de outra entidade forte. A sentença B se enquadra no conceito I, pois a lista de protocolos suportados por um roteador representa múltiplos valores possíveis para o mesmo atributo. Um roteador pode utilizar mais de um protocolo simultaneamente (por exemplo, TCP, UDP, HTTP), o que caracteriza o atributo como multivalorado. A sentença C se enquadra no conceito IV, pois o endereço, sendo formado por subcomponentes como rua, número, cidade e estado, é um exemplo clássico de atributo composto. Cada subparte pode ser tratada separadamente, mas pertence a uma estrutura conceitual única. A sentença D se enquadra no conceito II, pois a latência média é um valor que não precisa ser armazenado diretamente, pois pode ser calculado com base em outros dados (logs históricos de rede). Assim, trata-se de um atributo derivado, pois depende de cálculos sobre atributos armazenados."
+        },
+        {
+          "questao": "Sistemas de informação dependem da modelagem conceitual para garantir que os dados representem corretamente as regras de negócio. Essa modelagem envolve identificar entidades, seus atributos e os relacionamentos possíveis entre elas no ambiente a ser sistematizado.\n\n• A entidade **Professor** tem os valores: {Carlos, Denise, Hugo}\n• A entidade **Disciplina** tem os valores: {BD1, POO, Redes}\n• A entidade **Curso** tem os valores: {ADS, SI, RedesComp}\n\nCom relação a este tema e o cenário anterior, compreenda as afirmativas a seguir:\n\nI. O relacionamento apresentado extraído do cenário \"Professor ministra Disciplina\" é um exemplo simples de relacionamento binário.\nII. A associação \"Professor ministra Disciplina no Curso\" pode ser modelada com três relacionamentos binários, sem alterar o significado.\nIII. Um relacionamento entre Professor, Disciplina e Curso representa um relacionamento ternário com possibilidade de conter atributos como “semestre\".\n\nEstá correto o que se afirma em:",
+          "alternativas_incorretas": [
+            "II e III, apenas.",
+            "I, II e III.",
+            "I, apenas.",
+            "I e II, apenas."
+          ],
+          "resposta_correta": "I e III, apenas.",
+          "justificativa": "A afirmativa I é correta, pois o relacionamento entre \"Professor\" e \"Disciplina\" envolve apenas duas entidades, sendo um exemplo clássico de relacionamento binário. Cada instância indica que um professor leciona determinada disciplina, como “Carlos ministra BD1”. A afirmativa II é incorreta, pois a associação entre três entidades (Professor, Disciplina e Curso) não pode ser representada com fidelidade por três relacionamentos binários. Isso pode gerar significados incorretos, como permitir que um professor ministre a disciplina em um curso sem controle cruzado. A afirmativa III é correta, pois a associação de \"Professor\", \"Disciplina\" e \"Curso\" requer um relacionamento ternário, pois envolve três entidades simultaneamente. Esse relacionamento pode ter atributos próprios, como “semestre”, que se refere ao contexto da associação entre os três elementos."
+        },
+        {
+          "questao": "Ao estruturar os dados de um sistema, a modelagem conceitual deve considerar as estratégias que permitam distinguir de forma precisa cada ocorrência de uma entidade em diversas situações. Para isso, são utilizados conceitos como chaves, que garantem a unicidade e a integridade dos relacionamentos entre os dados.\n\nConsidere as duas asserções a seguir sobre o uso de chaves em bancos de dados relacionais:\n\nI. A chave primária é usada para garantir que cada instância de uma entidade possa ser identificada de forma única, impedindo registros duplicados.\n\nPORQUE\n\nII. a chave estrangeira é usada para identificar unicamente registros de uma tabela, garantindo a unicidade das tuplas em qualquer entidade.\n\nA respeito dessas asserções, assinale a alternativa correta:",
+          "alternativas_incorretas": [
+            "As asserções I e II são falsas.",
+            "A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.",
+            "As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa da I.",
+            "As asserções I e II são proposições verdadeiras, e a II é uma justificativa da I."
+          ],
+          "resposta_correta": "A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.",
+          "justificativa": "A asserção I é uma proposição verdadeira, pois a chave primária tem como função principal garantir a unicidade dos registros em uma entidade. Ao ser definida, ela impede que duas tuplas (linhas) possuam o mesmo valor para o conjunto de atributos que a compõe, garantindo identificação única e integridade estrutural. A asserção II é uma proposição falsa, pois a chave estrangeira tem como objetivo referenciar registros de outra tabela, mantendo a integridade referencial entre entidades, e não garante unicidade dentro da própria tabela. Ela pode conter valores repetidos, e isso é comum em relacionamentos do tipo N:1 ou N:N."
+        },
+        {
+          "questao": "Em um sistema de uma clínica médica, é necessário modelar a relação entre as entidades `Médico` e `Paciente`. As regras de negócio definem que um médico pode atender vários pacientes ao longo do tempo, e um paciente pode ser consultado por diferentes médicos (por exemplo, um clínico geral e um especialista).\n\nCom base nessa descrição, qual é a cardinalidade que melhor representa o relacionamento \"atende\" entre `Médico` e `Paciente`?",
+          "alternativas_incorretas": [
+            "1:1 (um para um)",
+            "1:N (um para muitos)",
+            "N:1 (muitos para um)",
+            "0:1 (zero ou um)"
+          ],
+          "resposta_correta": "N:M (muitos para muitos)",
+          "justificativa": "Esta cardinalidade representa corretamente a situação: um médico pode atender muitos (M) pacientes, e um paciente pode ser atendido por muitos (N) médicos."
+        },
+        {
+          "questao": "Durante a fase de projeto de um banco de dados para um e-commerce, um analista criou uma tabela `Vendas` com as seguintes colunas: `ID_Venda`, `Data`, `ID_Cliente`, e `Produtos_Comprados`. A coluna `Produtos_Comprados` armazena textos como \"ID01, ID05, ID12\" para registrar todos os produtos de uma única venda.\n\nEssa estrutura de tabela viola qual das Formas Normais?",
+          "alternativas_incorretas": [
+            "Segunda Forma Normal (2FN)",
+            "Terceira Forma Normal (3FN)",
+            "A tabela não viola nenhuma Forma Normal.",
+            "Forma Normal de Boyce-Codd (FNBC)"
+          ],
+          "resposta_correta": "Primeira Forma Normal (1FN)",
+          "justificativa": "A Primeira Forma Normal exige que todos os atributos de uma tabela sejam atômicos, ou seja, indivisíveis. Armazenar uma lista de valores (múltiplos IDs de produtos) em uma única coluna viola este princípio fundamental."
+        },
+        {
+          "questao": "Em um sistema de gestão de recursos humanos, existem as entidades `Funcionário`, `Gerente` e `Diretor`. Todos eles compartilham atributos comuns como `CPF`, `Nome` e `Data_Admissao`, mas cada um possui atributos específicos (`Salario_Base` para Funcionário, `Bonus_Gestao` para Gerente, `Acoes_Empresa` para Diretor).\n\nQual conceito de modelagem de dados é mais apropriado para representar essa situação, criando uma entidade genérica `Pessoa` ou `Colaborador` da qual as outras herdam as características comuns?",
+          "alternativas_incorretas": [
+            "Agregação",
+            "Entidade Associativa",
+            "Relacionamento Ternário",
+            "Atributo Composto"
+          ],
+          "resposta_correta": "Especialização/Generalização",
+          "justificativa": "Este é o conceito exato para modelar hierarquias \"é um tipo de\". `Colaborador` seria a entidade generalizada (superclasse), e `Funcionário`, `Gerente` e `Diretor` seriam as especializações (subclasses)."
+        },
+        {
+          "questao": "Ao modelar a entidade `Veiculo` para um sistema de trânsito, um projetista identificou os seguintes atributos: `numero_chassi`, `placa`, `modelo`, `cor` e `ano_fabricacao`. Tanto o `numero_chassi` quanto a `placa` são garantidamente únicos para cada veículo. O projetista escolheu `numero_chassi` como a chave primária da tabela.\n\nNeste contexto, o atributo `placa` é classificado como:",
+          "alternativas_incorretas": [
+            "Chave Estrangeira",
+            "Superchave",
+            "Atributo Derivado",
+            "Atributo Multivalorado"
+          ],
+          "resposta_correta": "Chave Candidata",
+          "justificativa": "Uma chave candidata é qualquer atributo (ou conjunto de atributos) que pode servir como chave primária, ou seja, que identifica unicamente cada registro. Como tanto `numero_chassi` quanto `placa` têm essa propriedade, ambos são chaves candidatas. A que é escolhida se torna a primária, e as outras permanecem como candidatas (ou chaves alternativas)."
+        },
+        {
+          "questao": "Em um sistema hospitalar, o relacionamento `Realiza_Cirurgia` conecta as entidades `Médico`, `Paciente` e `Sala_Operatória`. Agora, é necessário registrar qual `Seguradora` irá cobrir os custos dessa cirurgia específica. A seguradora não se relaciona diretamente com o médico, o paciente ou a sala de forma isolada, mas sim com o evento \"cirurgia\" como um todo.\n\nQual construto do Modelo Entidade-Relacionamento permite tratar o relacionamento `Realiza_Cirurgia` como uma única unidade conceitual para que possa ser associado à entidade `Seguradora`?",
+          "alternativas_incorretas": [
+            "Entidade Fraca",
+            "Generalização",
+            "Entidade Associativa",
+            "Atributo Composto"
+          ],
+          "resposta_correta": "Agregação",
+          "justificativa": "A agregação é o mecanismo usado para abstrair um relacionamento (neste caso, `Realiza_Cirurgia`) em uma entidade de nível superior, permitindo que esse \"bloco\" participe de outros relacionamentos, como o de ser coberto por uma `Seguradora`."
+        },
+        {
+          "questao": "Um sistema acadêmico armazena informações sobre estudantes e matrículas. A entidade Aluno possui os valores {João, Carla, Tiago}, e a entidade Matrícula possui os valores {M1, M2, M3}. O modelo conceitual visa representar os vínculos entre alunos e as disciplinas que cursam. Entidades como Aluno e Matrícula permitem organizar informações sobre os sujeitos e suas respectivas ações no sistema, como a inscrição em disciplinas. O modelo conceitual precisa, portanto, refletir corretamente o tipo de participação das entidades nos relacionamentos, considerando se há obrigatoriedade ou não de associação entre os registros.\nCom relação a este contexto e sobre o conteúdo estudado, avalie as asserções a seguir e a relação proposta entre elas:\nI. A entidade Aluno tem participação total no relacionamento com Matrícula, pois todos os alunos (João, Carla e Tiago) possuem ao menos uma matrícula registrada.\nPORQUE\nII. a entidade Matrícula tem participação parcial no relacionamento com Aluno, pois M2 não está associada a nenhum dos alunos listados.\nA respeito dessas asserções, assinale a alternativa correta:",
+          "alternativas_incorretas": [
+            "A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.",
+            "As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa da I.",
+            "A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.",
+            "As asserções I e II são proposições verdadeiras, e a II é uma justificativa da I."
+          ],
+          "resposta_correta": "As asserções I e II são falsas.",
+          "justificativa": "A asserção I é uma proposição falsa, pois embora a proposição pareça correta ao afirmar que todos os alunos possuem matrícula, a restrição de participação total não depende apenas de casos observados, mas sim de uma regra de negócio modelada que obriga todos os alunos, presentes e futuros, a participarem do relacionamento. A conclusão baseada apenas nos exemplos fornecidos é insuficiente para validar a obrigatoriedade da participação. A asserção II é uma proposição falsa, pois a proposição parte da suposição de que M2 está \"sem aluno\", mas isso não é permitido em um modelo bem definido. A entidade Matrícula representa o vínculo de um aluno com uma disciplina, e por definição, não pode existir sem estar associada a um aluno, o que exige participação total da Matrícula no relacionamento com Aluno."
+        }
+      ]
+    },
+    {
+      "semana": "Semana 2",
+      "perguntas": [
+        {
+          "questao": "No modelo relacional, a ordenação das tuplas e a forma como os relacionamentos são representados está correta em:",
+          "alternativas_incorretas": [
+            "As tuplas são ordenadas e os relacionamentos são representados por meio de índices.",
+            "As tuplas possuem ordenação e os relacionamentos são representados por atributos multivalorados.",
+            "As tuplas não possuem ordenação e os relacionamentos são representados apenas por atributos derivados.",
+            "As tuplas possuem ordenação e os relacionamentos são representados por atributos compostos."
+          ],
+          "resposta_correta": "As tuplas não possuem ordenação e os relacionamentos são representados por chaves.",
+          "justificativa": "No modelo relacional, as tuplas (linhas) não têm ordem garantida. Os relacionamentos são estabelecidos por meio de chaves primárias e estrangeiras, nunca por ordenação física."
+        },
+        {
+          "questao": "Sobre entidades fracas, considere as afirmações: <br>I. Dependem de uma entidade forte para existir. <br>II. Possuem chave primária própria e independente. <br>III. São representadas com duplo retângulo no MER.",
+          "alternativas_incorretas": [
+            "Apenas II está correta.",
+            "Apenas I e II estão corretas.",
+            "Todas estão corretas.",
+            "Nenhuma está correta."
+          ],
+          "resposta_correta": "Apenas I e III estão corretas.",
+          "justificativa": "Entidades fracas dependem de entidades fortes (I) e são representadas com duplo retângulo (III). Elas não possuem chave própria independente (II é incorreta)."
+        },
+        {
+          "questao": "No modelo relacional, uma tupla é:",
+          "alternativas_incorretas": [
+            "Uma tabela inteira.",
+            "Um conjunto de atributos que formam a chave primária.",
+            "O relacionamento entre duas entidades.",
+            "O valor de um único atributo."
+          ],
+          "resposta_correta": "Uma linha da tabela (registro).",
+          "justificativa": "Tupla corresponde a uma linha da tabela, ou seja, um registro que contém valores para todos os atributos."
+        },
+        {
+          "questao": "No MER, um atributo multivalorado é representado por:",
+          "alternativas_incorretas": [
+            "Elipse simples.",
+            "Retângulo.",
+            "Losango.",
+            "Sublinhado."
+          ],
+          "resposta_correta": "Elipse dupla.",
+          "justificativa": "Atributos multivalorados são representados com uma elipse dupla no MER."
+        },
+        {
+          "questao": "Na transformação do MER para o modelo relacional, em um relacionamento 1:N:",
+          "alternativas_incorretas": [
+            "Cria-se uma nova tabela para o relacionamento.",
+            "A chave primária da entidade do lado N vai como chave estrangeira para a do lado 1.",
+            "Sempre se cria uma tabela associativa.",
+            "Usa-se atributo derivado para representar."
+          ],
+          "resposta_correta": "A chave primária da entidade do lado 1 vai como chave estrangeira para a do lado N.",
+          "justificativa": "No relacionamento 1:N, a chave primária da entidade do lado '1' é adicionada como chave estrangeira na entidade do lado 'N'."
+        },
+        {
+          "questao": "Sobre as cardinalidades Cliente–Pedido–Produto, em que um cliente pode fazer vários pedidos e cada pedido pode conter vários produtos:",
+          "alternativas_incorretas": [
+            "Cliente–Pedido é N:N e Pedido–Produto é 1:N.",
+            "Cliente–Pedido é 1:1 e Pedido–Produto é 1:N.",
+            "Cliente–Pedido é N:N e Pedido–Produto é N:N.",
+            "Cliente–Pedido é 1:N e Pedido–Produto é 1:1."
+          ],
+          "resposta_correta": "Cliente–Pedido é 1:N e Pedido–Produto é N:N.",
+          "justificativa": "Um cliente pode fazer vários pedidos (1:N). Cada pedido pode ter vários produtos, e um mesmo produto pode aparecer em diferentes pedidos (N:N)."
+        },
+        {
+          "questao": "Classifique as restrições: <br>I. O atributo CPF deve ter 11 dígitos. <br>II. Todo aluno deve estar matriculado em pelo menos uma disciplina. <br>III. O valor de um atributo salário deve ser positivo.",
+          "alternativas_incorretas": [
+            "I explícita, II de negócio, III implícita.",
+            "I de negócio, II implícita, III explícita.",
+            "I explícita, II implícita, III de negócio.",
+            "I implícita, II explícita, III de negócio."
+          ],
+          "resposta_correta": "I implícita, II de negócio, III explícita.",
+          "justificativa": "Implícita: vem da própria estrutura de dados (CPF 11 dígitos). De negócio: depende da regra (aluno matriculado). Explícita: definida pelo DBA ou sistema (salário > 0)."
+        },
+        {
+          "questao": "Associe: <br>I. Entidade — Pessoa. <br>II. Atributo — Nome. <br>III. Tupla — {João, 20}. <br>IV. Relação — Tabela Pessoa(Nome, Idade).",
+          "alternativas_incorretas": [
+            "I e II corretos apenas.",
+            "I, II e III corretos apenas.",
+            "II e IV corretos apenas.",
+            "Apenas I e IV corretas."
+          ],
+          "resposta_correta": "Todas corretas.",
+          "justificativa": "Todas as associações estão corretas: entidade é Pessoa, atributo é Nome, tupla é um registro e relação é a tabela."
+        },
+        {
+          "questao": "Ted Codd introduziu o modelo relacional em:",
+          "alternativas_incorretas": [
+            "1975",
+            "1980",
+            "1985",
+            "1990"
+          ],
+          "resposta_correta": "1970",
+          "justificativa": "O modelo relacional foi introduzido por Ted Codd em 1970 no artigo 'A Relational Model of Data for Large Shared Data Banks'."
+        },
+        {
+          "questao": "Sobre chave primária em uma tabela relacional:",
+          "alternativas_incorretas": [
+            "Pode haver várias chaves primárias.",
+            "Não é obrigatório definir chave primária.",
+            "Sempre é composta.",
+            "Pode mudar de acordo com o SGBD."
+          ],
+          "resposta_correta": "Pode haver apenas uma chave primária.",
+          "justificativa": "Uma tabela pode ter várias chaves candidatas, mas apenas uma pode ser escolhida como chave primária."
+        }
+      ]
+    },
+    {
+      "semana": "Semana 3",
+      "perguntas": [
+        {
+          "questao": "Em uma dependência funcional em que A é funcionalmente dependente de B, como é feita essa representação?",
+          "alternativas_incorretas": [
+            "A → B",
+            "A, B",
+            "B, A",
+            "A x B"
+          ],
+          "resposta_correta": "B → A",
+          "justificativa": "B → A, representa a dependência funcional em que A é funcionalmente dependente de B."
+        },
+        {
+          "questao": "Dependência funcional total é um conceito que está relacionado e que é trabalhado em qual forma normal?",
+          "alternativas_incorretas": [
+            "Primeira Forma Normal (1NF).",
+            "Terceira Forma Normal (3NF).",
+            "Quarta Forma Normal (4NF).",
+            "Forma Normal de Boyce-Codd (BCNF)."
+          ],
+          "resposta_correta": "Segunda Forma Normal (2NF).",
+          "justificativa": "A dependência funcional total e o atributo primo são conceitos que estão relacionados à Segunda Forma Normal (2NF)."
+        },
+        {
+          "questao": "Questão referente ao texto-base “Comparing Database Management Systems: MySQL, PostgreSQL, MSSQL Server, MongoDB, Elasticsearch and others”, de AltexSoft Inc. \n\nQual é o banco de dados opensource que nasceu a partir de uma ramificação (fork) do MySQL?",
+          "alternativas_incorretas": [
+            "Postgresql.",
+            "Oracle.",
+            "MongoDB.",
+            "Redis."
+          ],
+          "resposta_correta": "Maria DB.",
+          "justificativa": "Maria DB é o banco de dados opensource que nasceu a partir de uma ramificação do MySQL."
+        },
+        {
+          "questao": "Questão referente ao texto-base Sistemas de banco de dados (seções 14 até 14.7), de Ramez Elmasri e Shamkant B. Navathe. \n\nOs únicos valores permitidos são valores atômicos (ou indivisíveis). Estamos nos referindo à:",
+          "alternativas_incorretas": [
+            "Segunda Forma Normal.",
+            "Terceira Forma Normal.",
+            "Forma Normal de Boyce-Codd.",
+            "Quarta Forma Normal."
+          ],
+          "resposta_correta": "Primeira Forma Normal.",
+          "justificativa": "A Primeira Forma Normal afirma que os únicos valores permitidos são valores atômicos."
+        },
+        {
+          "questao": "Considere a seguinte tabela e as seguintes dependências funcionais (FD) especificadas pelo projetista do banco de dados:\n\nENDERECO\nCEP, numero, rua, cidade, estado\n\nFD1: {CEP, numero} → rua\nFD2: CEP → rua\nFD3: CEP → cidade\nFD4: CEP → estado\n\nInforme a qual forma normal a relação acima não obedece:",
+          "alternativas_incorretas": [
+            "Primeira forma normal.",
+            "Terceira forma normal.",
+            "Forma normal de Boyce-Codd.",
+            "Nenhuma das demais alternativas."
+          ],
+          "resposta_correta": "Segunda forma normal.",
+          "justificativa": "O fato de ter atributos não primos que dependem parcialmente da chave, impede de estar na 2NF, consequentemente, a 3NF e a BCNF. Está na 1FN porque não há atributo multivalorado ou tabela aninhada."
+        },
+        {
+          "questao": "Considere a seguinte relação e as seguintes dependências funcionais (FD) especificadas pelo projetista do banco de dados:\n\nCARRO\nnum_serial, modelo, cor, fabricante, preco\n\nFD1: {num_serial} → {modelo, cor, fabricante, preco}\nFD2: {modelo, cor, fabricante} → preco\n\nInforme a qual forma normal a relação acima não obedece:",
+          "alternativas_incorretas": [
+            "Primeira forma normal.",
+            "Segunda forma normal.",
+            "Forma normal de Boyce-Codd.",
+            "Nenhuma das demais alternativas."
+          ],
+          "resposta_correta": "Terceira forma normal.",
+          "justificativa": "O atributo preço depende do funcionamento de modelo, cor e fabricante, criando uma dependência transitiva para num_serial, dessa forma, não atende à 3NF, consequentemente, a BCNF. Está na 1FN porque não há nenhum atributo multivalorado ou tabela aninhada. Está na 2NF porque não há atributos não primos que dependem parcialmente da chave."
+        },
+        {
+          "questao": "Considere a tabela “AVIAO” descrita a seguir e as dependências funcionais estabelecidas para esse esquema de relação:\n\nAVIAO (id_aviao, id_voo, nome_aviao, autonomia, de, para, distancia, hora_saida, hora_chegada)\nDF1 - id_aviao → {nome_aviao, autonomia}\nDF2 - id_voo → {de, para, distancia, hora_saida, hora_chegada}\n\nResponda a normalização correta do esquema para atender à segunda forma normal (2NF):",
+          "alternativas_incorretas": [
+            "AVIAO_NOVO(id_aviao, nome_aviao, autonomia);\nLOCAL(id_voo, de, para);  #id_voo referência id_aviao em AVIAO_NOVO\nTEMPO(id_voo, distancia, hora_saida, hora_chegada)\n#id_voo referência id_aviao em AVIAO_NOVO.",
+            "AVIAO_NOVO(id_aviao, nome_aviao, autonomia);\nVOO(id_voo, de, para, distancia, hora_saida, hora_chegada).",
+            "AVIAO_NOVO(id_aviao);\nVOO(id_voo, nome_aviao, autonomia, de, para, distancia, hora_saida, hora_chegada)."
+          ],
+          "resposta_correta": "AVIAO_NOVO(id_aviao, nome_aviao, autonomia);\nVOO(id_voo, de, para, distancia, hora_saida, hora_chegada, idav);\n#idav referência id_aviao em AVIAO_NOVO.",
+          "justificativa": "Para atender à 2NF é necessário que todas os atributos não primos dependentes de parte da chave sejam decompostos. Dessa forma, utilizou-se as dependências funcionais quebrando a tabela em duas."
+        },
+        {
+          "questao": "A escolha do banco de dados apropriado depende de vários fatores como estrutura dos dados, volume de leitura e escrita, latência e tolerância a falhas. Em arquiteturas distribuídas e aplicações modernas, diferentes tecnologias NoSQL são avaliadas conforme requisitos específicos. Com base no contexto, e as tecnologias de bancos de dados NoSQL MongoDB, Redis e Cassandra em diferentes contextos de uso, julgue as afirmativas a seguir:\nI. Redis é indicado para aplicações que exigem altíssima velocidade de leitura e escrita, como cache em memória e filas de mensagens.\nII. Cassandra é ideal para cenários com grande volume de escrita distribuída, pois garante alta disponibilidade mesmo com falhas em nós.\nIII. MongoDB adota exclusivamente modelo de chave-valor, sendo mais eficiente que Cassandra e Redis em operações de dados binários puros.\nEstá correto o que se afirma em:",
+          "alternativas_incorretas": [
+            "I, II e III.",
+            "I, apenas.",
+            "I e III, apenas.",
+            "II e III, apenas."
+          ],
+          "resposta_correta": "I e II, apenas.",
+          "justificativa": "A afirmativa I é correta, pois Redis é uma estrutura de dados em memória extremamente rápida, indicada para cache, filas, sessões e pub/sub. Seu desempenho em leitura e escrita é superior a muitos bancos, sendo frequentemente usado como camada de suporte em aplicações de alta performance. A afirmativa II é correta, pois Cassandra foi projetado para escrita massiva distribuída. Utiliza um modelo baseado em coluna larga e arquitetura peer-to-peer, oferecendo alta disponibilidade e tolerância a falhas, sendo ideal para grandes volumes de dados com replicação eficiente. A afirmativa III é incorreta, pois MongoDB utiliza modelo de documento(JSON/BSON), não de chave-valor. Além disso, Cassandra e Redis são mais indicados para manipulação pura de dados binários. MongoDB se destaca na flexibilidade de dados semiestruturados, não no tratamento binário puro."
+        },
+        {
+          "questao": "A normalização é uma técnica aplicada ao projeto lógico de bancos de dados com o objetivo de reduzir redundâncias e dependências inadequadas entre os dados. O conhecimento das regras que regem as formas normais é essencial para a construção de modelos eficientes e consistentes.\n\nCom relação a este contexto, avalie as asserções a seguir e a relação proposta entre elas:\nI. Uma relação está em 2FN quando os atributos não chave dependem funcionalmente de parte da chave primária composta.\nPORQUE\nII. A 2FN é aplicada quando todos os atributos não chave são independentes da chave primária completa e possuem múltiplos valores por registro.\nA respeito dessas asserções, assinale a alternativa correta:",
+          "alternativas_incorretas": [
+            "As asserções I e II são proposições verdadeiras, e a II é uma justificativa da I.",
+            "A asserção I é uma proposição verdadeira, e a II é uma proposição falsa.",
+            "A asserção I é uma proposição falsa, e a II é uma proposição verdadeira.",
+            "As asserções I e II são proposições verdadeiras, mas a II não é uma justificativa da I."
+          ],
+          "resposta_correta": "As asserções I e II são falsas.",
+          "justificativa": "A asserção I é uma proposição falsa, pois a definição apresentada é incorreta. A 2FN elimina dependências parciais, ou seja, atributos que dependem apenas de parte da chave composta violam a 2FN. Portanto, afirmar que a presença dessa dependência indica que a relação está em 2FN é um erro conceitual. A asserção II é uma proposição falsa a 2FN não trata de atributos com múltiplos valores por registro (isso é uma violação da 1FN). Além disso, a afirmação mistura critérios da 1FN e da 2FN de forma confusa. O erro complementa o da proposição I ao tratar de uma questão distinta, mas relacionada à estrutura correta da tabela."
+        },
+        {
+          "questao": "Empresas lidam com diferentes necessidades de armazenamento e consulta de dados. A escolha entre bancos relacionais e não relacionais depende de fatores como estrutura dos dados, escalabilidade, consistência e necessidade de resposta em tempo real. Avaliar corretamente esses critérios é essencial.\nNeste contexto, para um sistema de gerenciamento de estoque com regras rígidas e integridade referencial, recomenda-se o [preencher 1]. Já para um sistema de análise de redes sociais com dados semiestruturados e alta escalabilidade, o mais adequado é o [preencher 2].\nNesse contexto, reconheça os termos de [preencher 1] e [preencher 2] que são substituídos por:",
+          "alternativas_incorretas": [
+            "1 - banco distribuído; 2 - banco tabular relacional.",
+            "1 - banco não relacional; 2 - banco relacional.",
+            "1 - banco não relacional; 2 - banco não relacional.",
+            "1 - banco relacional; 2 - banco relacional."
+          ],
+          "resposta_correta": "1 - banco relacional; 2 - banco não relacional.",
+          "justificativa": "Bancos relacionais são ideais para sistemas estruturados e com regras rígidas como estoques. Já bancos não relacionais (NoSQL) são indicados para grandes volumes de dados semiestruturados e escaláveis, como redes sociais."
+        },
+        {
+          "questao": "A modelagem de dados exige atenção à estrutura lógica das tabelas. Para evitar inconsistências e redundâncias, os projetistas aplicam regras conhecidas como formas normais, que estabelecem critérios para a organização dos dados nas tabelas de forma eficiente e coerente, e contribuem para a integridade das informações, facilitando a manutenção, minimizando duplicações e promovendo a clareza na representação dos relacionamentos entre os dados.\nCom base no apresentado, assinale alternativa que identifica uma característica da 1FN ao projetar uma tabela relacional:",
+          "alternativas_incorretas": [
+            "A tabela deve conter pelo menos uma chave estrangeira para garantir integridade referencial entre entidades distintas.",
+            "É necessário garantir que todas as colunas sejam preenchidas com valores distintos, sem repetições em nenhuma linha.",
+            "Os dados devem estar ordenados de acordo com a chave primária definida na estrutura da tabela relacional.",
+            "A relação deve ser dividida em múltiplas tabelas para eliminar transbordo de registros em arquivos de dados binários"
+          ],
+          "resposta_correta": "Todos os atributos devem conter valores atômicos, ou seja, indivisíveis, sem grupos repetitivos ou multivalorados.",
+          "justificativa": "A 1ª Forma Normal exige que todos os atributos da tabela contenham valores atômicos, ou seja, que não sejam compostos nem contenham listas ou repetições. Essa atomicidade é fundamental para garantir a integridade e a coerência do modelo relacional."
+        },
+        {
+          "questao": "Com base nas métricas utilizadas para avaliar a presença de SGBDs no mercado, assinale a alternativa que identifica um critério para adoção de um Sistema Gerenciador de Banco de dados (ferramenta DB-Score-Engine).",
+          "alternativas_incorretas": [
+            "Nível de engajamento da base de usuários nas redes sociais mantidas pelo fabricante do SGBD.",
+            "Frequência de atualizações dos plugins de administração lançados pela comunidade de usuários.",
+            "Quantidade de tutoriais e vídeos disponíveis no YouTube sobre o SGBD avaliado.",
+            "Número de programadores cadastrados em fóruns online que mencionam o nome do banco de dados."
+          ],
+          "resposta_correta": "Participação de mercado baseada em implementações empresariais e ambientes produtivos ativos.",
+          "justificativa": "A participação de mercado com base em implementações reais e ambientes de produção é um critério objetivo e relevante. O DB-Score-Engine utiliza dados consolidados de uso corporativo para avaliar a penetração dos SGBDs no mercado."
+        },
+        {
+          "questao": "O mercado oferece diversas soluções de bancos de dados, cada uma com características próprias quanto ao desempenho, licenciamento, funcionalidades e suporte. Entender as diferenças entre esses produtos é fundamental para a escolha adequada conforme os requisitos de projetos distintos.\nCom base no contexto, assinale a alternativa que compreende a relação entre os produtos de banco de dados e uma característica que os diferencia dos demais no mercado:",
+          "alternativas_incorretas": [
+            "MySQL – Suporte nativo e robusto a regras e procedimentos armazenados com controle transacional avançado.",
+            "SQL Server – Licença gratuita e open source para todos os módulos da edição padrão, sem restrições de uso.",
+            "Oracle – Compatibilidade exclusiva com ambientes operacionais baseados em Linux e arquiteturas ARM.",
+            "PostgreSQL – Sistema de licenciamento comercial com cobrança por núcleos de CPU e suporte da Microsoft."
+          ],
+          "resposta_correta": "Oracle – Suporte nativo a partições de tabelas em múltiplos níveis com paralelismo automático de consultas.",
+          "justificativa": "O Oracle Database se destaca por recursos corporativos avançados, incluindo suporte nativo a partições multiescalares e paralelismo automático, otimizando desempenho em grandes volumes de dados — diferencial que o coloca como opção robusta para ambientes corporativos."
+        },
+        {
+          "questao": "A normalização busca eliminar anomalias em bancos de dados relacionais. As formas normais impõem regras baseadas em dependências funcionais. Identificar a forma normal correta em um projeto garante estrutura adequada para atualização, inserção e remoção de dados sem inconsistências.\n\nDiante do tema, assinale a alternativa que interpreta a normalização até a Forma Normal de Boyce-Codd (BCNF):",
+          "alternativas_incorretas": [
+            "Em uma tabela com chave primária (Aluno, Disciplina), existe a dependência funcional Disciplina → Professor.",
+            "Em uma tabela com chave primária (Funcionario, Projeto), o atributo Departamento depende da combinação completa da chave, o que evita qualquer repetição de dados",
+            "Em uma relação com chave primária (CPF, Endereço), há dependência funcional Endereço → Cidade, o que caracteriza multivaloração",
+            "Em uma relação com chave primária (Produto, Loja), há dependência funcional Loja → Endereço, mantendo transição parcial"
+          ],
+          "resposta_correta": "Em uma relação onde a chave primária é (Curso, Disciplina), e a única dependência funcional é (Curso, Disciplina) → Professor.",
+          "justificativa": "A única dependência funcional parte da chave primária completa (Curso, Disciplina) → Professor, o que significa que todas as dependências funcionais têm determinantes que são superchaves. Portanto, a relação está em BCNF."
+        },
+        {
+          "questao": "A organização eficiente das entidades em bancos de dados relacionais exige decisões fundamentadas em critérios estruturais. Entre esses critérios, alguns processos são aplicados para melhorar o desempenho, a consistência e a integridade dos dados. Um desses processos é a normalização\nCom relação a este tema e a a necessidade de normalizar entidades em um banco de dados, compreenda as afirmativas a seguir:\nI. A normalização permite reduzir redundâncias e inconsistências, promovendo maior integridade e organização dos dados.\nII. A normalização tem como principal finalidade aumentar a velocidade de leitura e escrita no banco de dados.\nIII. A normalização facilita a manutenção de dados ao separar conceitos distintos em tabelas independentes com chaves bem definidas.\nEstá correto o que se afirma em:",
+          "alternativas_incorretas": [
+            "I e II, apenas.",
+            "I, apenas.",
+            "II e III, apenas.",
+            "I, II e III."
+          ],
+          "resposta_correta": "I e III, apenas.",
+          "justificativa": "A afirmativa I é correta, pois a normalização organiza os dados em tabelas menores e relacionadas, reduzindo redundâncias e inconsistências. Isso melhora a integridade dos dados e facilita a manutenção, pois evita duplicações desnecessárias e garante maior consistência nas atualizações e inserções. A afirmativa II é incorreta, pois embora traga benefícios lógicos, a normalização não visa diretamente otimizar a performance física. Em muitos casos, ela pode até reduzir o desempenho de leitura, pois exige mais junções entre tabelas. Seu foco está na integridade e consistência dos dados, não na velocidade de acesso. A afirmativa III é correta, pois separar dados em tabelas específicas com chaves bem definidas facilita a manutenção, pois cada tabela representa um conceito único. Essa abordagem modular permite atualizações mais seguras, reduz riscos de inconsistência e melhora o entendimento e controle sobre a estrutura do banco."
+        }
+      ]
+    }
+  ]
+}
