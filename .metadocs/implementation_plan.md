@@ -58,7 +58,6 @@ EngComp-UNIVESP/
 * Deletar a pasta `03 - semestre/` antiga do repositório para evitar duplicações e conflitos.
 
 ### Fase 2: Geração Programática da Estrutura
-* Escrever um script em PowerShell (`C:\Users\LKSFERREIRA\.gemini\antigravity-ide\brain\9f98f2af-903f-4d4e-a055-1f4108b2c2a2/scratch/generate_structure.ps1`) que:
   1. Crie os diretórios de nível superior (`00 - Onboarding-e-Matricula`, `01 - Primeiro-Semestre`, ..., `11 - Colacao-de-Grau`).
   2. Crie as subpastas de disciplinas de acordo com a matriz do curso extraída de `matriz_curricular_tabela.md`.
   3. Gere o arquivo `README.md` de cada disciplina com a ementa correta e objetivos extraídos de `matriz_curricular.md`.
