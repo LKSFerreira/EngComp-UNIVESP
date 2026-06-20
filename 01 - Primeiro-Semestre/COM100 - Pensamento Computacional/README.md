@@ -1,16 +1,25 @@
-# COM100 - Pensamento Computacional
+# COM100 — Pensamento Computacional
 
-## 📖 Ementa, Objetivos e Bibliografia
+> **Carga Horária:** 80h | **Bimestre:** Ímpar (1º Semestre)
+
+---
+
+## Ementa e Objetivos
+
 **Objetivos:** Apresentar noções básicas de computação. Utilizar sistemas computacionais (computadores e celulares) para acesso à internet, programas e compartilhamento de informações; pensar e resolver problemas utilizando quatro características principais: Decomposição (dividir a questão em problemas menores), Padrões (identificar o padrão ou padrões que geram o problema), Abstração (entender como soluções podem ser reutilizadas em múltiplos cenários) e Algoritmo (definir ordem ou sequência de passos para solução de problema).
 
 **Ementa:** Navegação, pesquisa e filtragem de informações. Interação por meio de tecnologias. Compartilhamento de informações e conteúdo. Colaboração por canais digitais. Raciocínio lógico, análise e resolução de problemas. Estudo dos dispositivos computacionais. Noção de algoritmos. Práticas de computação. Jogos de lógica. Desenvolvimento de conteúdo. Construção de narrativas usando programação com blocos.
 
-**Bibliografia Base:**
+---
+
+## Bibliografia
+
+**Base:**
 - CARVALHO, Fábio Câmara Araújo de; IVANOFF, Gregório Bittar. Tecnologias que Educam: ensinar e aprender com as tecnologias de informação e comunicação. São Paulo/SP: Pearson, 2013.
 - VIALI, Lorí; LAHM, Regis Alexandre. Tecnologias na educação em ciências e matemática. Porto Alegre/RS: EdiPUC, 2019.
 - KENSKI, Vani Moreira. Educação e tecnologias: o novo ritmo da informação. Campinas/SP: Papirus, 2013.
 
-**Bibliografia Complementar:**
+**Complementar:**
 - LOCK, Matheus. Comunicações transversais: o preconceito digital e os efeitos na opinião pública. Porto Alegre/RS: EdiPUC, 2019.
 - JARVIS, Jeff. O que a Google faria? Como atender às novas exigências do mercado. São Paulo/SP: Manole, 2013.
 - CAPRON, H. L.; JOHNSON, J. A. Introdução à Informática. São Paulo/SP: Pearson, 2013.
@@ -18,35 +27,35 @@
 
 ---
 
-## 📊 Controle de Avaliações e Notas
+## Monitoramento
 
-| Atividade | Peso | Nota Obtida | Data Limite | Status |
-|-----------|------|-------------|-------------|--------|
-| Atividades Semanais (Média) | 40%  | - | - | A Cursar |
-| Prova Presencial | 60%  | - | - | A Cursar |
-| **Média Final** | **100%** | **-** | | **A Cursar** |
+| Componente | Peso | Nota | Status |
+|------------|------|------|--------|
+| Atividades Semanais (AVA) | 40% | — | Pendente |
+| Prova Presencial | 60% | — | Pendente |
+| **Média Final** | **100%** | **—** | **—** |
 
----
-
-## 📅 Cronograma Semanal de Estudos
-
-- [ ] **Semana 1**
-- [ ] **Semana 2**
-- [ ] **Semana 3**
-- [ ] **Semana 4**
-- [ ] **Semana 5**
-- [ ] **Semana 6**
-- [ ] **Semana 7**
-- [ ] **Semana 8**
+> Aprovação: média ≥ 5,0. Caso contrário, exame final disponível.
 
 ---
 
-## 🗂️ Links Rápidos e Anotações
-* [Semana 01](./semana-01/semana-01.md)
-* [Semana 02](./semana-02/semana-02.md)
-* [Semana 03](./semana-03/semana-03.md)
-* [Semana 04](./semana-04/semana-04.md)
-* [Semana 05](./semana-05/semana-05.md)
-* [Semana 06](./semana-06/semana-06.md)
-* [Semana 07](./semana-07/semana-07.md)
-* [Semana 08](./semana-08/semana-08.md)
+## Progresso
+
+```
+[                    ] 0%
+```
+
+---
+
+## Cronograma Semanal
+
+| Semana | Tema | Status |
+|--------|------|--------|
+| [01](<./semana-01/semana-01.md>) | — | Pendente |
+| [02](<./semana-02/semana-02.md>) | — | Pendente |
+| [03](<./semana-03/semana-03.md>) | — | Pendente |
+| [04](<./semana-04/semana-04.md>) | — | Pendente |
+| [05](<./semana-05/semana-05.md>) | — | Pendente |
+| [06](<./semana-06/semana-06.md>) | — | Pendente |
+| [07](<./semana-07/semana-07.md>) | — | Pendente |
+| [08](<./semana-08/semana-08.md>) | — | Pendente |
