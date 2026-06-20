@@ -12,7 +12,7 @@ Este plano descreve a reestruturação completa do repositório para transformá
 4. **Dashboard Principal**: O `README.md` raiz conterá tabelas cronológicas por semestre com colunas para:
    * **Código** e **Disciplina**
    * **Status** (A Cursar, Cursando, Concluída)
-   * **Progresso** (barra visual `[████░░░░░░] 40%`)
+   * **Progresso** (barra visual `[████████                ] 40%`)
    * **Nota Final**
 
 ---

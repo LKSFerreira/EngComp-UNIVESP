@@ -19,7 +19,7 @@ Esta documentação deve estar legível e enviada na Secretaria Acadêmica (SEI)
 
 ## 🎖️ Status Acadêmico Final
 
-* **Grade Curricular**: `[░░░░░░░░░░] 0% Concluída`
-* **Horas Complementares**: `[░░░░░░░░░░] 0% Concluídas`
+* **Grade Curricular**: `[                    ] 0% Concluída`
+* **Horas Complementares**: `[                    ] 0% Concluídas`
 * **ENADE**: `Pendente` (Será realizado no final do curso)
 * **Status do Diploma**: `Aguardando Conclusão do Curso`
