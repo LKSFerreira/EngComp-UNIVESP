@@ -1,6 +1,6 @@
-﻿# SOC100 - Ética, Cidadania e Sociedade
+# SOC100 - Ética, Cidadania e Sociedade
 
-## ðŸ“– Ementa, Objetivos e Bibliografia
+## 📖 Ementa, Objetivos e Bibliografia
 **Objetivos:** Compreender os conceitos de ética, cidadania e sociedade; analisar a relação entre ética, cidadania e sociedade; contribuir para uma reflexão sobre os valores éticos e responsabilidades como cidadão perante o país, a fim de procurar construir uma sociedade economicamente viável, ambientalmente correta, e socialmente justa; reconhecer cidadania no mundo do trabalho; analisar as relações étnico-raciais. Discutir o conceito de ética e compromisso com a promoção de cidadania e da profissão. Conhecer os aspectos legais que permeiam a atuação profissional.
 
 **Ementa:** 
@@ -29,17 +29,17 @@
 
 ---
 
-## ðŸ“Š Controle de AvaliaÃ§Ãµes e Notas
+## 📊 Controle de Avaliações e Notas
 
 | Atividade | Peso | Nota Obtida | Data Limite | Status |
 |-----------|------|-------------|-------------|--------|
-| Atividades Semanais (MÃ©dia) | 40%  | - | - | A Cursar |
+| Atividades Semanais (Média) | 40%  | - | - | A Cursar |
 | Prova Presencial | 60%  | - | - | A Cursar |
-| **MÃ©dia Final** | **100%** | **-** | | **A Cursar** |
+| **Média Final** | **100%** | **-** | | **A Cursar** |
 
 ---
 
-## ðŸ“… Cronograma Semanal de Estudos
+## 📅 Cronograma Semanal de Estudos
 
 - [ ] **Semana 1**
 - [ ] **Semana 2**
@@ -52,7 +52,7 @@
 
 ---
 
-## ðŸ—‚ï¸ Links RÃ¡pidos e AnotaÃ§Ãµes
+## 🗂️ Links Rápidos e Anotações
 * [Semana 01](./semana-01/semana-01.md)
 * [Semana 02](./semana-02/semana-02.md)
 * [Semana 03](./semana-03/semana-03.md)

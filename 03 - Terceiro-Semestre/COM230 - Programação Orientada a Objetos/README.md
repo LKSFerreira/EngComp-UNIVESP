@@ -1,6 +1,6 @@
-﻿# COM230 - Programação Orientada a Objetos
+# COM230 - Programação Orientada a Objetos
 
-## ðŸ“– Ementa, Objetivos e Bibliografia
+## 📖 Ementa, Objetivos e Bibliografia
 **Objetivos:** Introduzir noções de programação orientada a objetos com ênfase na linguagem Python.
 
 **Ementa:** Aprofundamento dos conceitos básicos de orientação a objetos, entre eles: classes, objetos, interfaces, herança e polimorfismo. Introduzir técnicas de tratamento de erros com exceções. Arquitetura de software: coesão e acoplamento. Noções de padrões de projeto (observer, adapter, null object etc.). Noções de aspectos: mixins e traits. Funções anônimas, closures e técnicas funcionais (map, filter, fold etc.).
@@ -23,17 +23,17 @@
 
 ---
 
-## ðŸ“Š Controle de AvaliaÃ§Ãµes e Notas
+## 📊 Controle de Avaliações e Notas
 
 | Atividade | Peso | Nota Obtida | Data Limite | Status |
 |-----------|------|-------------|-------------|--------|
-| Atividades Semanais (MÃ©dia) | 40%  | - | - | A Cursar |
+| Atividades Semanais (Média) | 40%  | - | - | A Cursar |
 | Prova Presencial | 60%  | - | - | A Cursar |
-| **MÃ©dia Final** | **100%** | **-** | | **A Cursar** |
+| **Média Final** | **100%** | **-** | | **A Cursar** |
 
 ---
 
-## ðŸ“… Cronograma Semanal de Estudos
+## 📅 Cronograma Semanal de Estudos
 
 - [ ] **Semana 1**
 - [ ] **Semana 2**
@@ -46,7 +46,7 @@
 
 ---
 
-## ðŸ—‚ï¸ Links RÃ¡pidos e AnotaÃ§Ãµes
+## 🗂️ Links Rápidos e Anotações
 * [Semana 01](./semana-01/semana-01.md)
 * [Semana 02](./semana-02/semana-02.md)
 * [Semana 03](./semana-03/semana-03.md)

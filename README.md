@@ -1,113 +1,185 @@
 # 🎓 Engenharia de Computação — UNIVESP
 
-> **"A jornada rumo à excelência na computação, do momento da matrícula até o dia da colação de grau."**
-
-Este repositório foi reestruturado de forma totalmente linear e escalável para centralizar, documentar e organizar os estudos do curso de **Engenharia de Computação (UNIVESP)**, com base na matriz curricular oficial de **10 Semestres** (5 Anos). O objetivo é registrar o aprendizado de cada matéria com rigor, servindo também como um repositório de referência para outros alunos.
+> Repositório pessoal de estudos do curso de **Engenharia de Computação** na Universidade Virtual do Estado de São Paulo (UNIVESP).
+> Estrutura baseada no **PPC 2026** oficial. Duração: 5 anos (10 semestres, 20 bimestres).
 
 ---
 
-## 📊 Progresso Geral do Curso
+## 📊 Painel de Progresso
 
 ```
-Curso Geral:     [██████░░░░░░░░░░░░░░] 30% Concluído
-Semestre Atual:  [██████████░░░░░░░░░░] 50% em Andamento (3º Semestre)
+Curso Geral         [                    ]   0%  (0/44 disciplinas aprovadas)
+Semestre Atual      [                    ]   0%  (1º Semestre — Bimestre Ímpar)
 ```
 
----
-
-## 📂 Organização Linear do Repositório
-
-### 📌 [00 - Onboarding e Matrícula](./00%20-%20Onboarding-e-Matricula/README.md)
-*Contém metodologias de estudo ativo (Active Recall, Feynman, Repetição Espaçada) e manuais do aluno.*
-
-### 📄 [Documents/](./Documents/README.md)
-*Diretório central contendo PDFs institucionais oficiais (PPCs, Matriz Curricular) e o [Manual do Aluno Local](./Documents/manual-do-aluno.md).*
+**Disciplina Ativa:** COM170 — Inteligência Artificial na Prática Acadêmica e Profissional
 
 ---
 
-### 🗓️ Trilhas Semestrais
+## 🗂️ Estrutura do Repositório
 
-#### 1º Semestre — [Acessar Pasta](./01%20-%20Primeiro-Semestre/)
-| Código | Disciplina | Status | Progresso | Nota Final |
-|---|---|:---:|---|:---:|
-| **SOC100** | Ética, Cidadania e Sociedade | `Concluída` | `[██████████] 100%` | 9.5 |
-| **LET110** | Leitura e Produção de Textos | `Concluída` | `[██████████] 100%` | 9.0 |
-| **COM100** | Pensamento Computacional | `Concluída` | `[██████████] 100%` | 10.0 |
-| **LET100** | Inglês | `Concluída` | `[██████████] 100%` | 9.5 |
-| **MMB002** | Matemática Básica | `Concluída` | `[██████████] 100%` | 8.5 |
-| **INT100** | Projetos e Métodos para Produção do Conhecimento | `Concluída` | `[██████████] 100%` | 9.0 |
-
-#### 2º Semestre — [Acessar Pasta](./02%20-%20Segundo-Semestre/)
-| Código | Disciplina | Status | Progresso | Nota Final |
-|---|---|:---:|---|:---:|
-| **COM110** | Algoritmos e Programação de Computadores I | `Concluída` | `[██████████] 100%` | 10.0 |
-| **MCA501** | Cálculo I | `Concluída` | `[██████████] 100%` | 8.0 |
-| **COM140** | Introdução a Conceitos de Computação | `Concluída` | `[██████████] 100%` | 9.5 |
-| **COM120** | Algoritmos e Programação de Computadores II | `Concluída` | `[██████████] 100%` | 10.0 |
-| **COM130** | Fundamentos de Internet e Web | `Concluída` | `[██████████] 100%` | 10.0 |
-| **COM150** | Fundamentos Matemáticos para Computação | `Concluída` | `[██████████] 100%` | 9.0 |
-
-#### 3º Semestre — [Acessar Pasta](./03%20-%20Terceiro-Semestre/)
-| Código | Disciplina | Status | Progresso | Nota Final |
-|---|---|:---:|---|:---:|
-| **COM160** | [Estruturas de Dados](./03%20-%20Terceiro-Semestre/COM160%20-%20Estruturas%20de%20Dados/README.md) | `Cursando` | `[███░░░░░░░] 30%` | - |
-| **COM200** | [Formação Profissional em Computação](./03%20-%20Terceiro-Semestre/COM200%20-%20Forma%C3%A7%C3%A3o%20Profissional%20em%20Computa%C3%A7%C3%A3o/README.md) | `Cursando` | `[░░░░░░░░░░] 0%` | - |
-| **COM210** | [Sistemas Computacionais](./03%20-%20Terceiro-Semestre/COM210%20-%20Sistemas%20Computacionais/README.md) | `Cursando` | `[░░░░░░░░░░] 0%` | - |
-| **PES300** | [Estatística e Probabilidade](./03%20-%20Terceiro-Semestre/PES300%20-%20Estat%C3%ADstica%20e%20Probabilidade/README.md) | `Cursando` | `[░░░░░░░░░░] 0%` | - |
-| **ADM200** | [Gestão da Inovação e Desenvolvimento de Produtos](./03%20-%20Terceiro-Semestre/ADM200%20-%20Gest%C3%A3o%20da%20Inova%C3%A7%C3%A3o%20e%20Desenvolvimento%20de%20Produtos/README.md) | `Cursando` | `[░░░░░░░░░░] 0%` | - |
-| **COM230** | [Programação Orientada a Objetos](./03%20-%20Terceiro-Semestre/COM230%20-%20Programa%C3%A7%C3%A3o%20Orientada%20a%20Objetos/README.md) | `Cursando` | `[░░░░░░░░░░] 0%` | - |
-
-#### 4º Semestre — [Acessar Pasta](./04%20-%20Quarto-Semestre/)
-| Código | Disciplina | Status | Progresso | Nota Final |
-|---|---|:---:|---|:---:|
-| **COM300** | [Bancos de Dados](./04%20-%20Quarto-Semestre/COM300%20-%20Bancos%20de%20Dados/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **MCA502** | [Cálculo II](./04%20-%20Quarto-Semestre/MCA502%20-%20C%C3%A1lculo%20II/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **FIS500** | [Física do Movimento](./04%20-%20Quarto-Semestre/FIS500%20-%20F%C3%ADsica%20do%20Movimento/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **ELD500** | [Circuitos Digitais](./04%20-%20Quarto-Semestre/ELD500%20-%20Circuitos%20Digitais/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **PJI110** | [Projeto Integrador I](./04%20-%20Quarto-Semestre/PJI110%20-%20Projeto%20Integrador%20I/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-
-#### 5º Semestre — [Acessar Pasta](./05%20-%20Quinto-Semestre/)
-| Código | Disciplina | Status | Progresso | Nota Final |
-|---|---|:---:|---|:---:|
-| **COM390** | [Engenharia de Software](./05%20-%20Quinto-Semestre/COM390%20-%20Engenharia%20de%20Software/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **SEL500** | [Sistemas Embarcados](./05%20-%20Quinto-Semestre/SEL500%20-%20Sistemas%20Embarcados/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **IOT500** | [Protocolos de Comunicação IoT](./05%20-%20Quinto-Semestre/IOT500%20-%20Protocolos%20de%20Comunica%C3%A7%C3%A3o%20IoT/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **GAL500** | [Geometria Analítica e Álgebra Linear](./05%20-%20Quinto-Semestre/GAL500%20-%20Geometria%20Anal%C3%ADtica%20e%20%C3%81lgebra%20Linear/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **PJI240** | [Projeto Integrador II](./05%20-%20Quinto-Semestre/PJI240%20-%20Projeto%20Integrador%20II/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-
-#### 6º Semestre — [Acessar Pasta](./06%20-%20Sexto-Semestre/)
-| Código | Disciplina | Status | Progresso | Nota Final |
-|---|---|:---:|---|:---:|
-| **COM310** | [Infraestrutura para Sistemas de Software](./06%20-%20Sexto-Semestre/COM310%20-%20Infraestrutura%20para%20Sistemas%20de%20Software/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **DAT500** | [Plataforma de Ingestão e Análise de Dados](./06%20-%20Sexto-Semestre/DAT500%20-%20Plataforma%20de%20Ingest%C3%A3o%20e%20An%C3%A1lise%20de%20Dados/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **COM320** | [Desenvolvimento Web](./06%20-%20Sexto-Semestre/COM320%20-%20Desenvolvimento%20web/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **COM330** | [Interface Humano-Computador](./06%20-%20Sexto-Semestre/COM330%20-%20Interface%20Humano-Computador/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **PJI310** | [Projeto Integrador III](./06%20-%20Sexto-Semestre/PJI310%20-%20Projeto%20Integrador%20III/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-
-#### 7º Semestre — [Acessar Pasta](./07%20-%20Setimo-Semestre/)
-| Código | Disciplina | Status | Progresso | Nota Final |
-|---|---|:---:|---|:---:|
-| **MEC500** | [Mecânica dos Sólidos e dos Fluidos](./07%20-%20Setimo-Semestre/MEC500%20-%20Mec%C3%A2nica%20dos%20S%C3%B3lidos%20e%20dos%20Fluidos/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **ALG500** | [Projeto e Análise de Algoritmos](./07%20-%20Setimo-Semestre/ALG500%20-%20Projeto%20e%20An%C3%A1lise%20de%20Algoritmos/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **PDS500** | [Processamento Digital de Sinais](./07%20-%20Setimo-Semestre/PDS500%20-%20Processamento%20Digital%20de%20Sinais/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **COM450** | [Desenvolvimento para Dispositivos Móveis](./07%20-%20Setimo-Semestre/COM450%20-%20Desenvolvimento%20para%20Dispositivos%20M%C3%B3veis/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **PJI410** | [Projeto Integrador IV](./07%20-%20Setimo-Semestre/PJI410%20-%20Projeto%20Integrador%20IV/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-
-#### 8º Semestre — [Acessar Pasta](./08%20-%20Oitavo-Semestre/)
-| Código | Disciplina | Status | Progresso | Nota Final |
-|---|---|:---:|---|:---:|
-| **QTA500** | [Química Tecnológica e Ambiental](./08%20-%20Oitavo-Semestre/QTA500%20-%20Qu%C3%ADmica%20Tecnol%C3%B3gica%20e%20Ambiental/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **CON500** | [Controle e Automação](./08%20-%20Oitavo-Semestre/CON500%20-%20Controle%20e%20Automa%C3%A7%C3%A3o/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **COM470** | [Planejamento Estratégico de Negócios](./08%20-%20Oitavo-Semestre/COM470%20-%20Planejamento%20Estrat%C3%A9gico%20de%20Neg%C3%B3cios/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **COM460** | [Computação Escalável](./08%20-%20Oitavo-Semestre/COM460%20-%20Computa%C3%A7%C3%A3o%20Escal%C3%A1vel/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-| **PJI510** | [Projeto Integrador V](./08%20-%20Oitavo-Semestre/PJI510%20-%20Projeto%20Integrador%20V/README.md) | `A Cursar` | `[░░░░░░░░░░] 0%` | - |
-
-#### Semestres Finais (9º e 10º)
-* 📥 [**9º Semestre**](./09%20-%20Nono-Semestre/): Impactos da Computação (COM500), Compiladores (CMP500), Duas Eletivas, PI VI.
-* 📥 [**10º Semestre**](./10%20-%20Decimo-Semestre/): Cidades Inteligentes (CIT500), Legislação e Resp. Profissional (LEG500), Duas Eletivas, TCC (TCC530).
+| Pasta | Descrição |
+|-------|-----------|
+| [00 - Onboarding e Matrícula](<./00 - Onboarding-e-Matricula/>) | Metodologias de estudo, links e ambiente |
+| [01 - Primeiro Semestre](<./01 - Primeiro-Semestre/>) | Semestre atual |
+| [02 a 10](<./02 - Segundo-Semestre/>) | Semestres futuros |
+| [11 - Atividades Complementares](<./11 - Atividades-Complementares/>) | Horas extras (palestras, cursos) |
+| [12 - Colação de Grau](<./12 - Colacao-de-Grau/>) | Portfólio e documentação final |
+| [Documents/](./Documents/) | PDFs institucionais oficiais |
 
 ---
 
-### 🎓 Áreas de Conclusão e Administrativo
-* 📂 [**Atividades-Complementares/**](./11%20-%20Atividades-Complementares/README.md): Registro de horas de palestras, cursos e eventos.
-* 📂 [**Colacao-de-Grau/**](./12%20-%20Colacao-de-Grau/README.md): Portfólio acadêmico, certificados e documentação final de formatura.
+## 📅 Grade Curricular — PPC 2026
+
+> Regime: **semestral com bimestres** (ímpar + par).
+> Cada semestre = 400h. Total do curso: **4.400h** + estágio obrigatório (200h).
+> Avaliação: 40% atividades no AVA + 60% prova presencial.
+
+---
+
+### 1º Semestre — [Acessar](<./01 - Primeiro-Semestre/>)
+
+| # | Código | Disciplina | CH | Bimestre | Status | Progresso | Nota |
+|---|--------|------------|----|----------|--------|-----------|------|
+| 1 | COM170 | [IA na Prática Acadêmica e Profissional](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/>) | 80h | Ímpar | `Em Andamento` | `[                    ]` 0% | — |
+| 2 | COM100 | [Pensamento Computacional](<./01 - Primeiro-Semestre/COM100 - Pensamento Computacional/>) | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 3 | LET110 | [Leitura e Produção de Textos](<./01 - Primeiro-Semestre/LET110 - Leitura e Produção de Textos/>) | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 4 | SOC100 | [Ética, Cidadania e Sociedade](<./01 - Primeiro-Semestre/SOC100 - Ética, Cidadania e Sociedade/>) | 40h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 5 | MMB002 | [Matemática Básica](<./01 - Primeiro-Semestre/MMB002 - Matemática Básica/>) | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+| 6 | INT100 | [Projetos e Métodos para a Produção do Conhecimento](<./01 - Primeiro-Semestre/INT100 - Projetos e Métodos para a Produção do Conhecimento/>) | 40h | Par | `A Cursar` | `[                    ]` 0% | — |
+
+---
+
+### 2º Semestre — [Acessar](<./02 - Segundo-Semestre/>)
+
+| # | Código | Disciplina | CH | Bimestre | Status | Progresso | Nota |
+|---|--------|------------|----|----------|--------|-----------|------|
+| 7 | COM150 | [Fundamentos Matemáticos para Computação](<./02 - Segundo-Semestre/COM150 - Fundamentos Matemáticos para Computação/>) | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 8 | COM110 | [Algoritmos e Programação de Computadores I](<./02 - Segundo-Semestre/COM110 - Algoritmos e Programação de Computadores I/>) | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 9 | — | Prática de Programação com IA | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 10 | COM210 | [Sistemas Computacionais](<./02 - Segundo-Semestre/COM210 - Sistemas Computacionais/>) | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+| 11 | COM160 | [Estruturas de Dados](<./02 - Segundo-Semestre/COM160 - Estruturas de Dados/>) | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+
+---
+
+### 3º Semestre
+
+| # | Código | Disciplina | CH | Bimestre | Status | Progresso | Nota |
+|---|--------|------------|----|----------|--------|-----------|------|
+| 12 | MCA501 | [Cálculo I](<./03 - Terceiro-Semestre/MCA501 - Cálculo I/>) | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 13 | — | Fundamentos de Desenvolvimento de Software | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 14 | — | Desenvolvimento de Aplicações com IA | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 15 | COM230 | [Programação Orientada a Objetos](<./03 - Terceiro-Semestre/COM230 - Programação Orientada a Objetos/>) | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+| 16 | — | Estatística Aplicada | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+
+---
+
+### 4º Semestre — [Acessar](<./04 - Quarto-Semestre/>)
+
+| # | Código | Disciplina | CH | Bimestre | Status | Progresso | Nota |
+|---|--------|------------|----|----------|--------|-----------|------|
+| 17 | COM300 | [Banco de Dados](<./04 - Quarto-Semestre/COM300 - Banco de Dados/>) | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 18 | MCA502 | [Cálculo II](<./04 - Quarto-Semestre/MCA502 - Cálculo II/>) | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 19 | — | Projeto Integrador Extensionista I | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 20 | — | Circuitos Digitais | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+| 21 | — | Física do Movimento | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+
+---
+
+### 5º Semestre — [Acessar](<./05 - Quinto-Semestre/>)
+
+| # | Código | Disciplina | CH | Bimestre | Status | Progresso | Nota |
+|---|--------|------------|----|----------|--------|-----------|------|
+| 22 | COM390 | [Engenharia de Software](<./05 - Quinto-Semestre/COM390 - Engenharia de Software/>) | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 23 | — | Geometria Analítica e Álgebra Linear | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 24 | — | Projeto Integrador Extensionista II | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 25 | — | Sistemas Embarcados | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+| 26 | — | Infraestrutura para Sistemas de Software | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+
+---
+
+### 6º Semestre — [Acessar](<./06 - Sexto-Semestre/>)
+
+| # | Código | Disciplina | CH | Bimestre | Status | Progresso | Nota |
+|---|--------|------------|----|----------|--------|-----------|------|
+| 27 | — | Plataforma de Ingestão e Análise de Dados | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 28 | — | Protocolos de Comunicação IoT | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 29 | — | Projeto Integrador Extensionista III | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 30 | COM320 | [Desenvolvimento Web](<./06 - Sexto-Semestre/COM320 - Desenvolvimento Web/>) | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+| 31 | COM330 | [Interface Humano-Computador](<./06 - Sexto-Semestre/COM330 - Interface Humano-Computador/>) | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+
+---
+
+### 7º Semestre — [Acessar](<./07 - Setimo-Semestre/>)
+
+| # | Código | Disciplina | CH | Bimestre | Status | Progresso | Nota |
+|---|--------|------------|----|----------|--------|-----------|------|
+| 32 | — | Mecânica dos Sólidos e dos Fluidos | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 33 | — | Processamento Digital de Sinais | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 34 | — | Projeto Integrador Extensionista IV | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 35 | COM450 | [Desenvolvimento para Dispositivos Móveis](<./07 - Setimo-Semestre/COM450 - Desenvolvimento para Dispositivos Móveis/>) | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+| 36 | — | Projeto e Análise de Algoritmos | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+
+---
+
+### 8º Semestre — [Acessar](<./08 - Oitavo-Semestre/>)
+
+| # | Código | Disciplina | CH | Bimestre | Status | Progresso | Nota |
+|---|--------|------------|----|----------|--------|-----------|------|
+| 37 | — | Controle e Automação | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 38 | — | Química Tecnológica e Ambiental | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 39 | — | Projeto Integrador Extensionista V | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 40 | COM500 | [Impactos da Computação na Sociedade](<./08 - Oitavo-Semestre/COM500 - Impactos da Computação na Sociedade/>) | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+| 41 | COM470 | [Planejamento Estratégico de Negócios](<./08 - Oitavo-Semestre/COM470 - Planejamento Estratégico de Negócios/>) | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+
+---
+
+### 9º Semestre — [Acessar](<./09 - Nono-Semestre/>)
+
+| # | Código | Disciplina | CH | Bimestre | Status | Progresso | Nota |
+|---|--------|------------|----|----------|--------|-----------|------|
+| 42 | — | Eletiva I | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 43 | COM460 | [Computação Escalável](<./09 - Nono-Semestre/COM460 - Computação Escalável/>) | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 44 | — | Projeto Integrador Extensionista VI | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 45 | — | Compiladores | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+| 46 | — | Eletiva II | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+
+---
+
+### 10º Semestre
+
+| # | Código | Disciplina | CH | Bimestre | Status | Progresso | Nota |
+|---|--------|------------|----|----------|--------|-----------|------|
+| 47 | — | Eletiva III | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 48 | — | Cidades Inteligentes | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 49 | — | Projeto Final de Curso (PFC) | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
+| 50 | — | Legislação e Responsabilidade Profissional | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+| 51 | — | Eletiva IV | 80h | Par | `A Cursar` | `[                    ]` 0% | — |
+
+---
+
+## 🔗 Links Úteis Oficiais
+
+| Recurso | Link |
+|---------|------|
+| AVA (Ambiente Virtual de Aprendizagem) | [ava.univesp.br](https://ava.univesp.br) |
+| Manual do Aluno | [apps.univesp.br/manual-do-aluno](https://apps.univesp.br/manual-do-aluno/) |
+| Tutoriais UNIVESP | [apps.univesp.br/tutoriais-univesp](https://apps.univesp.br/tutoriais-univesp/) |
+| Planos de Ensino | [assets.univesp.br/blackboard/plano-de-ensino](https://assets.univesp.br/blackboard/plano-de-ensino/) |
+| PPC Eng. Computação 2026 (PDF) | [PPC-EngComp 2026](https://apps.univesp.br/manual-do-aluno/assets/PPC/engenharia-da-computacao/PPC-EngComp%202026.pdf) |
+| Calendário Acadêmico | [Calendário](https://apps.univesp.br/manual-do-aluno/calendario-academico/) |
+| Calendário de Provas | [Provas](https://apps.univesp.br/manual-do-aluno/calendario-provas) |
+
+---
+
+## 📝 Notas sobre a Estrutura
+
+- **Códigos marcados com "—":** disciplinas novas do PPC 2026 sem código público no sistema de planos de ensino. Será atualizado quando disponível.
+- **Projetos Integradores Extensionistas (PIE):** substituem os antigos "Projeto Integrador em Computação" (PJI). São semestrais e interdisciplinares.
+- **Projeto Final de Curso (PFC):** substitui o antigo TCC. Trabalho de conclusão obrigatório.
+- **Eletivas:** oferecidas pela coordenação a cada semestre. A grade específica varia.
+- **Disciplinas sem link:** pasta será criada quando o semestre se aproximar.
+
+---
+
+> **Fonte oficial:** [PPC Engenharia de Computação 2026 — UNIVESP](https://apps.univesp.br/manual-do-aluno/assets/PPC/engenharia-da-computacao/PPC-EngComp%202026.pdf)

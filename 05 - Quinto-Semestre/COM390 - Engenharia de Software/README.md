@@ -1,21 +1,21 @@
-﻿# COM390 - Engenharia de Software
+# COM390 - Engenharia de Software
 
-## ðŸ“– Ementa, Objetivos e Bibliografia
-**Ementa:** Modelos de Ciclos de Vida (ClÃ¡ssicos e Ãgeis). Engenharia de Requisitos. Arquitetura e Projeto de Software. Testes unitÃ¡rios, funcionais e de integraÃ§Ã£o. Entrega ContÃ­nua e IntegraÃ§Ã£o ContÃ­nua.
+## 📖 Ementa, Objetivos e Bibliografia
+**Ementa:** Modelos de Ciclos de Vida (Clássicos e Ágeis). Engenharia de Requisitos. Arquitetura e Projeto de Software. Testes unitários, funcionais e de integração. Entrega Contínua e Integração Contínua.
 
 ---
 
-## ðŸ“Š Controle de AvaliaÃ§Ãµes e Notas
+## 📊 Controle de Avaliações e Notas
 
 | Atividade | Peso | Nota Obtida | Data Limite | Status |
 |-----------|------|-------------|-------------|--------|
-| Atividades Semanais (MÃ©dia) | 40%  | - | - | A Cursar |
+| Atividades Semanais (Média) | 40%  | - | - | A Cursar |
 | Prova Presencial | 60%  | - | - | A Cursar |
-| **MÃ©dia Final** | **100%** | **-** | | **A Cursar** |
+| **Média Final** | **100%** | **-** | | **A Cursar** |
 
 ---
 
-## ðŸ“… Cronograma Semanal de Estudos
+## 📅 Cronograma Semanal de Estudos
 
 - [ ] **Semana 1**
 - [ ] **Semana 2**
@@ -28,7 +28,7 @@
 
 ---
 
-## ðŸ—‚ï¸ Links RÃ¡pidos e AnotaÃ§Ãµes
+## 🗂️ Links Rápidos e Anotações
 * [Semana 01](./semana-01/semana-01.md)
 * [Semana 02](./semana-02/semana-02.md)
 * [Semana 03](./semana-03/semana-03.md)

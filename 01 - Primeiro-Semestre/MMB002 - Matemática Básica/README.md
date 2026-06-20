@@ -1,6 +1,6 @@
-﻿# MMB002 - Matemática Básica
+# MMB002 - Matemática Básica
 
-## ðŸ“– Ementa, Objetivos e Bibliografia
+## 📖 Ementa, Objetivos e Bibliografia
 **Objetivos:** Revisar e aprofundar conceitos básicos e ideias chave da matemática escolar, os alicerces dos conteúdos que se estudam no Ensino Fundamental e Médio e nos primeiros anos da universidade, oferecendo uma visão mais estrutural, com abordagem problematizadora e integrada (não fragmentada) por meio da exploração de aspectos da história do conceito, conexões (intramatemáticas e interdisciplinares), aplicações realísticas, exploração de problemas, situações e contextos que contribuam para a aprendizagem de conceitos, propriedades e relações com potencial de desenvolver competências e habilidades a partir das ideias fundamentais e estruturantes do pensamento matemático.
 
 **Ementa:** 1) Número: significado numérico, operações e propriedades aritméticas; 2) Relações numéricas; 3) Equivalência e estratégias e modalidades de cálculo; 4) Proporcionalidade; 4) Representações e linguagem matemática; 5) Equações; 6) Variação: Introdução às funções, lei de formação; relação fórmula-tabela-gráfico; Análise do gráfico; 7) Tópicos especiais: combinatória, probabilidade, tratamento de dados.
@@ -18,17 +18,17 @@
 
 ---
 
-## ðŸ“Š Controle de AvaliaÃ§Ãµes e Notas
+## 📊 Controle de Avaliações e Notas
 
 | Atividade | Peso | Nota Obtida | Data Limite | Status |
 |-----------|------|-------------|-------------|--------|
-| Atividades Semanais (MÃ©dia) | 40%  | - | - | A Cursar |
+| Atividades Semanais (Média) | 40%  | - | - | A Cursar |
 | Prova Presencial | 60%  | - | - | A Cursar |
-| **MÃ©dia Final** | **100%** | **-** | | **A Cursar** |
+| **Média Final** | **100%** | **-** | | **A Cursar** |
 
 ---
 
-## ðŸ“… Cronograma Semanal de Estudos
+## 📅 Cronograma Semanal de Estudos
 
 - [ ] **Semana 1**
 - [ ] **Semana 2**
@@ -41,7 +41,7 @@
 
 ---
 
-## ðŸ—‚ï¸ Links RÃ¡pidos e AnotaÃ§Ãµes
+## 🗂️ Links Rápidos e Anotações
 * [Semana 01](./semana-01/semana-01.md)
 * [Semana 02](./semana-02/semana-02.md)
 * [Semana 03](./semana-03/semana-03.md)

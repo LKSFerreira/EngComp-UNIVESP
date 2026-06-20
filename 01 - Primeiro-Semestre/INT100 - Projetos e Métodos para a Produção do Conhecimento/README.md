@@ -1,6 +1,6 @@
-﻿# INT100 - Projetos e Métodos para a Produção do Conhecimento
+# INT100 - Projetos e Métodos para a Produção do Conhecimento
 
-## ðŸ“– Ementa, Objetivos e Bibliografia
+## 📖 Ementa, Objetivos e Bibliografia
 **Objetivos:** Compreender a estrutura científica formal como maneira de comunicação acadêmica própria de cada área de conhecimento. Desenvolver habilidades e competências específicas necessárias para o desempenho na vida acadêmica e profissional: raciocínio lógico, análise, síntese e construção de textos científicos. Fazer a leitura crítica, análise e produção de textos argumentativos no desenvolvimento da produção científica. Dominar as normas da ABNT e utilizá-las na construção do conhecimento científico.
 
 **Ementa:** Tipos de conhecimentos. O processo de pesquisa científica e suas classificações. Fundamentos da Metodologia Científica. Métodos e Técnicas de Pesquisa. A comunicação científica. Ética em pesquisa. Base de dados científicos. Planejamento e elaboração de Pesquisa. Organização de trabalho científico (Artigo Científico, Monografias e Relatórios Técnicos – Científicos). Referências e Citações. Desenvolvimento do projeto de pesquisa.
@@ -21,17 +21,17 @@
 
 ---
 
-## ðŸ“Š Controle de AvaliaÃ§Ãµes e Notas
+## 📊 Controle de Avaliações e Notas
 
 | Atividade | Peso | Nota Obtida | Data Limite | Status |
 |-----------|------|-------------|-------------|--------|
-| Atividades Semanais (MÃ©dia) | 40%  | - | - | A Cursar |
+| Atividades Semanais (Média) | 40%  | - | - | A Cursar |
 | Prova Presencial | 60%  | - | - | A Cursar |
-| **MÃ©dia Final** | **100%** | **-** | | **A Cursar** |
+| **Média Final** | **100%** | **-** | | **A Cursar** |
 
 ---
 
-## ðŸ“… Cronograma Semanal de Estudos
+## 📅 Cronograma Semanal de Estudos
 
 - [ ] **Semana 1**
 - [ ] **Semana 2**
@@ -44,7 +44,7 @@
 
 ---
 
-## ðŸ—‚ï¸ Links RÃ¡pidos e AnotaÃ§Ãµes
+## 🗂️ Links Rápidos e Anotações
 * [Semana 01](./semana-01/semana-01.md)
 * [Semana 02](./semana-02/semana-02.md)
 * [Semana 03](./semana-03/semana-03.md)

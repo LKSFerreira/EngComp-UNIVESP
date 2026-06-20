@@ -1,23 +1,23 @@
-﻿# Semana 08 - Engenharia de Software
+# Semana 08 - Engenharia de Software
 
-## ðŸ“º Resumos das Videoaulas
-*Siga o padrÃ£o de resumo de videoaulas em [prompt.md](../../../prompt.md).*
+## 📺 Resumos das Videoaulas
+*Siga o padrão de resumo de videoaulas em [prompt.md](../../../prompt.md).*
 
-* **[0:00:00](link_do_video&t=0s)** â€“ **TÃ³pico Principal**
-  * ExplicaÃ§Ã£o clara e sucinta do conceito chave da aula.
-  * **Exemplo**: Caso prÃ¡tico de fixaÃ§Ã£o.
-
----
-
-## ðŸ“– Leituras e Material de Apoio
-* Indicar capÃ­tulos de livros da Bibliografia ou PDFs auxiliares.
+* **[0:00:00](link_do_video&t=0s)** – **Tópico Principal**
+  * Explicação clara e sucinta do conceito chave da aula.
+  * **Exemplo**: Caso prático de fixação.
 
 ---
 
-## âœï¸ ExercÃ­cios e PrÃ¡ticas
-* ResoluÃ§Ãµes de listas de exercÃ­cios, cÃ³digos de estudo e anotaÃ§Ãµes.
+## 📖 Leituras e Material de Apoio
+* Indicar capítulos de livros da Bibliografia ou PDFs auxiliares.
 
 ---
 
-## ðŸ’¡ Insights e ReflexÃµes
-* ConexÃµes com outras disciplinas e liÃ§Ãµes aprendidas aplicÃ¡veis ao mercado.
+## ✍️ Exercícios e Práticas
+* Resoluções de listas de exercícios, códigos de estudo e anotações.
+
+---
+
+## 💡 Insights e Reflexões
+* Conexões com outras disciplinas e lições aprendidas aplicáveis ao mercado.

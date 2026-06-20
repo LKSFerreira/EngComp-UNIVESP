@@ -1,6 +1,6 @@
-﻿# LET110 - Leitura e Produção de Textos
+# LET110 - Leitura e Produção de Textos
 
-## ðŸ“– Ementa, Objetivos e Bibliografia
+## 📖 Ementa, Objetivos e Bibliografia
 **Objetivos:** Discutir o papel social da linguagem no contexto da nossa realidade; oferecer conceitos e reflexões a respeito da linguagem humana; apresentar a relação entre leitura e produção textual; apresentar princípios básicos da produção textual.
 
 **Ementa:** Prática de leitura e de produção de textos de diversos gêneros. Noções fundamentais sobre estrutura e conteúdo: coesão, coerência, clareza, informatividade e adequação. Revisão e reescrita orientada dos textos produzidos. Subsidiar os estudantes para a produção textual.
@@ -19,17 +19,17 @@
 
 ---
 
-## ðŸ“Š Controle de AvaliaÃ§Ãµes e Notas
+## 📊 Controle de Avaliações e Notas
 
 | Atividade | Peso | Nota Obtida | Data Limite | Status |
 |-----------|------|-------------|-------------|--------|
-| Atividades Semanais (MÃ©dia) | 40%  | - | - | A Cursar |
+| Atividades Semanais (Média) | 40%  | - | - | A Cursar |
 | Prova Presencial | 60%  | - | - | A Cursar |
-| **MÃ©dia Final** | **100%** | **-** | | **A Cursar** |
+| **Média Final** | **100%** | **-** | | **A Cursar** |
 
 ---
 
-## ðŸ“… Cronograma Semanal de Estudos
+## 📅 Cronograma Semanal de Estudos
 
 - [ ] **Semana 1**
 - [ ] **Semana 2**
@@ -42,7 +42,7 @@
 
 ---
 
-## ðŸ—‚ï¸ Links RÃ¡pidos e AnotaÃ§Ãµes
+## 🗂️ Links Rápidos e Anotações
 * [Semana 01](./semana-01/semana-01.md)
 * [Semana 02](./semana-02/semana-02.md)
 * [Semana 03](./semana-03/semana-03.md)

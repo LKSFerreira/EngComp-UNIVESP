@@ -1,21 +1,21 @@
-﻿# COM330 - Interface Humano-Computador
+# COM330 - Interface Humano-Computador
 
-## ðŸ“– Ementa, Objetivos e Bibliografia
-**Ementa:** HistÃ³rico e evoluÃ§Ã£o de IHC. MÃ©todos e tÃ©cnicas de design. ExperiÃªncia de usuÃ¡rio (UX), arquitetura da informaÃ§Ã£o e acessibilidade. PÃ¡ginas responsivas e manipulaÃ§Ã£o do DOM.
+## 📖 Ementa, Objetivos e Bibliografia
+**Ementa:** Histórico e evolução de IHC. Métodos e técnicas de design. Experiência de usuário (UX), arquitetura da informação e acessibilidade. Páginas responsivas e manipulação do DOM.
 
 ---
 
-## ðŸ“Š Controle de AvaliaÃ§Ãµes e Notas
+## 📊 Controle de Avaliações e Notas
 
 | Atividade | Peso | Nota Obtida | Data Limite | Status |
 |-----------|------|-------------|-------------|--------|
-| Atividades Semanais (MÃ©dia) | 40%  | - | - | A Cursar |
+| Atividades Semanais (Média) | 40%  | - | - | A Cursar |
 | Prova Presencial | 60%  | - | - | A Cursar |
-| **MÃ©dia Final** | **100%** | **-** | | **A Cursar** |
+| **Média Final** | **100%** | **-** | | **A Cursar** |
 
 ---
 
-## ðŸ“… Cronograma Semanal de Estudos
+## 📅 Cronograma Semanal de Estudos
 
 - [ ] **Semana 1**
 - [ ] **Semana 2**
@@ -28,7 +28,7 @@
 
 ---
 
-## ðŸ—‚ï¸ Links RÃ¡pidos e AnotaÃ§Ãµes
+## 🗂️ Links Rápidos e Anotações
 * [Semana 01](./semana-01/semana-01.md)
 * [Semana 02](./semana-02/semana-02.md)
 * [Semana 03](./semana-03/semana-03.md)

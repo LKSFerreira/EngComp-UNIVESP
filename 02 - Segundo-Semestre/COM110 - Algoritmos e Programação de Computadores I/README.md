@@ -1,6 +1,6 @@
-﻿# COM110 - Algoritmos e Programação de Computadores I
+# COM110 - Algoritmos e Programação de Computadores I
 
-## ðŸ“– Ementa, Objetivos e Bibliografia
+## 📖 Ementa, Objetivos e Bibliografia
 **Objetivos:** Compreender conceitos básicos de programação e descrever algoritmos para resolver problemas utilizando a linguagem de programação Python, incluindo depuração e testes automatizados básicos.
 
 **Ementa:** Algoritmos: caracterização, notação, estruturas básicas. Conceitos de linguagens algorítmicas: expressões; comandos sequenciais, seletivos e repetitivos. Entrada/saída. Variáveis e constantes. Tipos: listas, vetores (listas em Python), matrizes, strings. Funções. Escopo de variáveis. Desenvolvimento, depuração, noções de testes automatizados e documentação de programas em Python.
@@ -16,17 +16,17 @@
 
 ---
 
-## ðŸ“Š Controle de AvaliaÃ§Ãµes e Notas
+## 📊 Controle de Avaliações e Notas
 
 | Atividade | Peso | Nota Obtida | Data Limite | Status |
 |-----------|------|-------------|-------------|--------|
-| Atividades Semanais (MÃ©dia) | 40%  | - | - | A Cursar |
+| Atividades Semanais (Média) | 40%  | - | - | A Cursar |
 | Prova Presencial | 60%  | - | - | A Cursar |
-| **MÃ©dia Final** | **100%** | **-** | | **A Cursar** |
+| **Média Final** | **100%** | **-** | | **A Cursar** |
 
 ---
 
-## ðŸ“… Cronograma Semanal de Estudos
+## 📅 Cronograma Semanal de Estudos
 
 - [ ] **Semana 1**
 - [ ] **Semana 2**
@@ -39,7 +39,7 @@
 
 ---
 
-## ðŸ—‚ï¸ Links RÃ¡pidos e AnotaÃ§Ãµes
+## 🗂️ Links Rápidos e Anotações
 * [Semana 01](./semana-01/semana-01.md)
 * [Semana 02](./semana-02/semana-02.md)
 * [Semana 03](./semana-03/semana-03.md)

@@ -1,6 +1,6 @@
-﻿# COM100 - Pensamento Computacional
+# COM100 - Pensamento Computacional
 
-## ðŸ“– Ementa, Objetivos e Bibliografia
+## 📖 Ementa, Objetivos e Bibliografia
 **Objetivos:** Apresentar noções básicas de computação. Utilizar sistemas computacionais (computadores e celulares) para acesso à internet, programas e compartilhamento de informações; pensar e resolver problemas utilizando quatro características principais: Decomposição (dividir a questão em problemas menores), Padrões (identificar o padrão ou padrões que geram o problema), Abstração (entender como soluções podem ser reutilizadas em múltiplos cenários) e Algoritmo (definir ordem ou sequência de passos para solução de problema).
 
 **Ementa:** Navegação, pesquisa e filtragem de informações. Interação por meio de tecnologias. Compartilhamento de informações e conteúdo. Colaboração por canais digitais. Raciocínio lógico, análise e resolução de problemas. Estudo dos dispositivos computacionais. Noção de algoritmos. Práticas de computação. Jogos de lógica. Desenvolvimento de conteúdo. Construção de narrativas usando programação com blocos.
@@ -18,17 +18,17 @@
 
 ---
 
-## ðŸ“Š Controle de AvaliaÃ§Ãµes e Notas
+## 📊 Controle de Avaliações e Notas
 
 | Atividade | Peso | Nota Obtida | Data Limite | Status |
 |-----------|------|-------------|-------------|--------|
-| Atividades Semanais (MÃ©dia) | 40%  | - | - | A Cursar |
+| Atividades Semanais (Média) | 40%  | - | - | A Cursar |
 | Prova Presencial | 60%  | - | - | A Cursar |
-| **MÃ©dia Final** | **100%** | **-** | | **A Cursar** |
+| **Média Final** | **100%** | **-** | | **A Cursar** |
 
 ---
 
-## ðŸ“… Cronograma Semanal de Estudos
+## 📅 Cronograma Semanal de Estudos
 
 - [ ] **Semana 1**
 - [ ] **Semana 2**
@@ -41,7 +41,7 @@
 
 ---
 
-## ðŸ—‚ï¸ Links RÃ¡pidos e AnotaÃ§Ãµes
+## 🗂️ Links Rápidos e Anotações
 * [Semana 01](./semana-01/semana-01.md)
 * [Semana 02](./semana-02/semana-02.md)
 * [Semana 03](./semana-03/semana-03.md)
