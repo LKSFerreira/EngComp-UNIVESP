@@ -1,48 +1,129 @@
-# 00 - Onboarding e Matrícula
+# 00 — Onboarding e Matrícula
 
-Bem-vindo à sua jornada acadêmica na **Engenharia de Computação (UNIVESP)**! Este espaço serve como base para planejar, gerenciar e otimizar sua rotina de estudos do primeiro dia até a colação de grau.
-
-> [!IMPORTANT]
-> **Manual do Aluno Local:**
-> Nós extraímos e organizamos o guia oficial da UNIVESP diretamente no repositório. Consulte-o em: [Documents/manual-do-aluno.md](../Documents/manual-do-aluno.md).
+> Seu centro de comando acadêmico. Leia isso UMA vez. Depois, só consulte quando precisar.
 
 ---
 
-## 💡 Metodologias de Estudo Recomendadas (Aprendizado Ativo)
+## 🧠 Ritual de Estudo (Protocolo Fixo)
 
-Para absorver o denso conteúdo do curso de engenharia sem sobrecarregar sua mente, a prática deliberada e o estudo ativo são fundamentais. Abaixo estão as técnicas que você deve utilizar ao preencher os arquivos deste repositório:
+> **Por que ritual?** Cérebros TDAH/TEA funcionam melhor com rotinas externas fixas.
+> Quando a rotina é automática, você não gasta energia executiva decidindo "como" estudar.
 
-### 1. Reevocação Ativa (Active Recall)
-Em vez de ler passivamente os resumos ou slides:
-* Após assistir a uma videoaula, **tente escrever o resumo de memória** nas seções correspondentes antes de consultar os slides ou notas.
-* Crie perguntas para si mesmo nas anotações semanais e responda-as mentalmente ou por escrito.
+### Antes de Sentar (2 min)
 
-### 2. Repetição Espaçada (Spaced Repetition)
-A curva de esquecimento é real. Planeje revisões periódicas das semanas anteriores:
-* **Semana Atual**: Foco em novos conceitos e exercícios práticos.
-* **Finais de Semana**: Revise rapidamente os resumos das semanas anteriores (ex: ler os resumos das semanas 1 e 2 na semana 3).
-* Use os checklists de acompanhamento no `README.md` de cada disciplina para marcar o que já foi revisado.
+- [ ] Água na mesa
+- [ ] Celular silencioso ou fora do cômodo
+- [ ] Fecha TODAS as abas (só AVA + este repositório)
+- [ ] Timer de 25 min visível (app, relógio, qualquer coisa)
+- [ ] Fone se tiver barulho
 
-### 3. Técnica Feynman (Aprenda Ensinando)
-A melhor maneira de consolidar um assunto complexo (ex: Ponteiros em C ou Normalização de Banco de Dados) é explicá-lo de forma extremamente simples:
-* Use a seção `💡 Insights e Reflexões` de cada semana para resumir tópicos difíceis como se estivesse explicando para um aluno do primeiro semestre.
-* Se conseguir simplificar sem perder a precisão, você dominou o assunto.
+### Bloco de Estudo (25 + 5)
+
+```
+┌─────────────────────────────────────────┐
+│  🍅 POMODORO — 25 min de FOCO           │
+│                                         │
+│  1. Assistir videoaula (ou ler texto)   │
+│  2. PAUSAR o vídeo no fim              │
+│  3. Fechar o material                   │
+│  4. Abrir semana-XX.md                  │
+│  5. Preencher Active Recall de MEMÓRIA  │
+│                                         │
+│  ⏸️  PAUSA — 5 min (levantar, água)     │
+└─────────────────────────────────────────┘
+```
+
+### Depois de Cada Bloco
+
+- [ ] Marcar ☐ → ☑ no [HOJE.md](../HOJE.md)
+- [ ] Atualizar progresso no README da disciplina (se completou a semana)
+
+### Se o TDAH Atacar (Protocolo de Emergência)
+
+> Dia ruim? Energia zero? Só faça o **Modo Mínimo**:
+> 1. Assistir 1 vídeo (pode ser no 1.5x)
+> 2. Responder UMA pergunta do Active Recall
+> 3. Pronto. Amanhã você volta com mais força.
+
+Isso NÃO é fracasso. Consistência > perfeição.
 
 ---
 
-## 🌐 Links e Plataformas Essenciais da UNIVESP
+## 💡 Como Este Repositório Funciona
 
-| Plataforma | Link | Descrição |
-|------------|------|-----------|
-| **AVA (Ambiente Virtual de Aprendizagem)** | [ava.univesp.br](https://ava.univesp.br) | Acesso às disciplinas, videoaulas, fóruns e envio de atividades semanais. |
-| **Secretaria Acadêmica** | [sei.univesp.br](https://sei.univesp.br) | Solicitações de documentos oficiais, matrícula e acompanhamento do histórico escolar. |
-| **Biblioteca Virtual** | [biblioteca.univesp.br](https://biblioteca.univesp.br) | Acesso gratuito aos livros indicados na bibliografia básica e complementar do curso. |
+### A Ciência por Trás
+
+| Técnica | O que é | Onde está aqui |
+|---------|---------|----------------|
+| **Active Recall** | Testar a memória SEM consultar | Seção 1 de cada `semana-XX.md` |
+| **Repetição Espaçada** | Revisar no timing certo (1→3→7→21 dias) | Seção 8 + painel em [HOJE.md](../HOJE.md) |
+| **Elaboração** (Feynman) | Explicar com suas palavras | Seção 2 de cada `semana-XX.md` |
+| **Interleaving** | Conectar com outras disciplinas | Seção 3 (Mapa de Conexões) |
+| **Prática Distribuída** | Pomodoros curtos ao longo da semana | Ritual acima |
+
+### A Estrutura
+
+```
+📁 HOJE.md               ← "O que fazer AGORA" (ponto de entrada diário)
+📁 01 - Primeiro-Semestre/
+  📁 COM170 - .../
+    📄 README.md          ← Ementa + Monitoramento + Cronograma
+    📁 semana-01/
+      📄 semana-01.md     ← Seu caderno de estudos (Active Recall aqui)
+```
+
+### Fluxo Semanal
+
+```
+Segunda/Terça     → Assistir videoaulas + Active Recall
+Quarta/Quinta     → Leituras + Exercícios + Resumo
+Sexta             → Dúvidas no fórum + Mapa de Conexões
+Fim de Semana     → Revisão Espaçada (semanas anteriores)
+```
 
 ---
 
-## ⚙️ Configuração do Ambiente de Estudos
+## 🌐 Links e Plataformas Essenciais
 
-Para as disciplinas de programação (Python, C++, SQL, Java, Web), configure seu ambiente local de desenvolvimento com as ferramentas recomendadas no mercado:
-1. **VS Code**: Com extensões de C/C++, Python e SQL.
-2. **Git & GitHub**: Crie commits limpos e atômicos a cada semana prática de laboratório para construir seu portfólio acadêmico e de projetos.
-3. **Docker**: Para subir bancos de dados locais (PostgreSQL, MySQL, Cassandra) de forma isolada e limpa.
+| Plataforma | Link | Uso |
+|------------|------|-----|
+| AVA (Moodle) | [ava.univesp.br](https://ava.univesp.br) | Videoaulas, atividades, fóruns |
+| Secretaria (SEI) | [sei.univesp.br](https://sei.univesp.br) | Documentos, matrícula, histórico |
+| Biblioteca Virtual | [biblioteca.univesp.br](https://biblioteca.univesp.br) | Livros da bibliografia (gratuitos) |
+| Tutoriais UNIVESP | [apps.univesp.br/tutoriais-univesp](https://apps.univesp.br/tutoriais-univesp/) | Guias de uso do AVA |
+| Manual do Aluno | [apps.univesp.br/manual-do-aluno](https://apps.univesp.br/manual-do-aluno/) | Regras, prazos, avaliação |
+| Calendário Acadêmico | [Calendário](https://apps.univesp.br/manual-do-aluno/calendario-academico/) | Datas de provas e entregas |
+
+---
+
+## ⚙️ Ambiente de Desenvolvimento
+
+> Só configure isso quando chegar em disciplinas de programação (2º semestre em diante).
+
+| Ferramenta | Quando usar |
+|------------|-------------|
+| VS Code + extensões | Todas as disciplinas de código |
+| Git + GitHub | Portfólio (este repositório JÁ é seu portfólio) |
+| Python 3.12+ | COM110, práticas com IA |
+| Docker | Banco de dados (COM300 em diante) |
+
+---
+
+## 📊 Sistema de Avaliação UNIVESP
+
+```
+┌──────────────────────────────────────────────┐
+│  Nota Final = (AVA × 0.4) + (Prova × 0.6)   │
+│                                              │
+│  Aprovação: Nota Final ≥ 5.0                 │
+│  Reprovação < 5.0: Exame Final disponível    │
+│  Frequência mínima: 75% das atividades AVA   │
+└──────────────────────────────────────────────┘
+```
+
+> **Dica prática:** as atividades AVA (40%) são sua rede de segurança. Faça TODAS.
+> Se tirar 10 no AVA, precisa só 1.67 na prova pra passar.
+
+---
+
+> 💬 *"Você não precisa ser perfeito. Só precisa ser consistente."*

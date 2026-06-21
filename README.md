@@ -5,10 +5,16 @@
 
 ---
 
+## 🎯 [→ HOJE.md — O QUE FAZER AGORA ←](./HOJE.md)
+
+> **Não sabe por onde começar?** Clique acima. Zero decisões. Só ação.
+
+---
+
 ## 📊 Painel de Progresso
 
 ```
-Curso Geral         [                    ]   0%  (0/44 disciplinas aprovadas)
+Curso Geral         [                    ]   0%  (0/51 disciplinas aprovadas)
 Semestre Atual      [                    ]   0%  (1º Semestre — Bimestre Ímpar)
 ```
 
@@ -16,11 +22,25 @@ Semestre Atual      [                    ]   0%  (1º Semestre — Bimestre Ímp
 
 ---
 
+## 📋 Revisões Pendentes (Repetição Espaçada)
+
+> Preencha aqui as revisões conforme completar semanas.
+> Regra: revisar **1 dia → 3 dias → 7 dias → 21 dias** após completar.
+
+| # | Disciplina | Semana | Completada em | Rev 1d | Rev 3d | Rev 7d | Rev 21d |
+|---|------------|--------|---------------|--------|--------|--------|---------|
+| — | (nenhuma semana completa ainda) | — | — | ☐ | ☐ | ☐ | ☐ |
+
+> Quando completar uma semana: adicione uma linha, calcule as datas, e marque ☐ → ☑ conforme revisar.
+
+---
+
 ## 🗂️ Estrutura do Repositório
 
 | Pasta | Descrição |
 |-------|-----------|
-| [00 - Onboarding e Matrícula](<./00 - Onboarding-e-Matricula/>) | Metodologias de estudo, links e ambiente |
+| **[🎯 HOJE.md](./HOJE.md)** | **Ponto de entrada diário — sua próxima ação** |
+| [00 - Onboarding e Matrícula](<./00 - Onboarding-e-Matricula/>) | Ritual de estudo, metodologia, links |
 | [01 - Primeiro Semestre](<./01 - Primeiro-Semestre/>) | Semestre atual |
 | [02 a 10](<./02 - Segundo-Semestre/>) | Semestres futuros |
 | [11 - Atividades Complementares](<./11 - Atividades-Complementares/>) | Horas extras (palestras, cursos) |
