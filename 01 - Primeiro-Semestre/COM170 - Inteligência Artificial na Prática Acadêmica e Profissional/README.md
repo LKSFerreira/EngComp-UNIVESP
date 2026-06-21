@@ -53,9 +53,5 @@
 | [02](<./semana-02/semana-02.md>) | (Disponível 29/06) | ⚫ Pendente | ☐ | ☐ |
 | [03](<./semana-03/semana-03.md>) | (Disponível 06/07) | ⚫ Pendente | ☐ | ☐ |
 | [04](<./semana-04/semana-04.md>) | (Disponível 13/07) | ⚫ Pendente | ☐ | ☐ |
-| [05](<./semana-05/semana-05.md>) | — | ⚫ Pendente | ☐ | ☐ |
-| [06](<./semana-06/semana-06.md>) | — | ⚫ Pendente | ☐ | ☐ |
-| [07](<./semana-07/semana-07.md>) | — | ⚫ Pendente | ☐ | ☐ |
-| [08](<./semana-08/semana-08.md>) | — | ⚫ Pendente | ☐ | ☐ |
 
 > **Legenda:** ⚫ Pendente | 🔵 Em andamento | 🟢 Completa | ☐→☑ Atividades entregues
