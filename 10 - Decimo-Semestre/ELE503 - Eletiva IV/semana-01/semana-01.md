@@ -1,5 +1,9 @@
 # Semana 01 — Eletiva IV
 
+> ⚡ **MODO MÍNIMO (dia ruim de TDAH):** Assista 1 vídeo + responda P1 abaixo. Só isso. Amanhã você completa.
+
+---
+
 ## 1. Active Recall (responder SEM consultar o material)
 
 Após assistir as videoaulas, feche tudo e responda:
