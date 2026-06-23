@@ -8,14 +8,14 @@
 
 Após assistir as videoaulas, feche tudo e responda:
 
-* **P1:** Qual o conceito apresentado na semana 1 da matéria COM!70?
+* **P1:** Qual o conceito apresentado na semana 1 da matéria COM170?
 * **R1:** Ambientar o aluno, quanto a estrutura, dinâmica, interatividade e comunição na plataforma, usou-se as sigla AIA -> Ambientação e Integração Acadêmica.
 
-* **P2:** Qual a estrutura semanal do método didático da UNIVESP?
-* **R2:** O matéria são divididas por semana, a COM170 é a única que possui 4 semandas, cada semana possui apresentação do conteúdo, material didático, material de apoio, exercícios e atividades e uma prova semanal.
+* **P2:** Qual a estrutura da plataforma e dos métodos didáticos da UNIVESP?
+* **R2:** A matérias são divididas por semana, a COM170 é a única que possui 4 semanas, cada semana possui apresentação do conteúdo, material didático, material de apoio, exercícios e atividades e ao final uma prova semanal.
 
 * **P3:** Qual foi atividade prática realizada na primeira semana do COM170?
-* **R3:** Escrever um prompt para um LLM, que nesse caso fora utilizado o Gemini com a conta da Aluno da UNIVESP, fora reforçada diversas vezes que os dados por meio do acordo UNIVEP-GEMINI não permitem que nossas informações sejam usadas para treinamento, diferente das contas de uso gratúito e pessoal (Pensamentos da minha cabeça: Mas quem garante que eles não usam? Quem fiscaliza? Qual a prova de que mesmo com esse contrato os dados não são usados para treinamento? Afinal falar até papagaio fala.)
+* **R3:** Escrever um prompt para o LLM do Gemini, usando uma conta de Aluno da UNIVESP, fora reforçada diversas vezes que os dados por meio do acordo UNIVESP-GEMINI não permitem que nossas informações sejam usadas para treinamento, diferente das contas de uso gratuito e pessoal (Pensamentos da minha cabeça: Mas quem garante que eles não usam nosso dados para treinamento? Quem fiscaliza? Qual a prova de que mesmo com esse contrato os dados não são usados para treinamento? Afinal falar até papagaio fala.)
 
 > Dica: se não conseguir responder, é sinal de que precisa revisitar o material.
 
@@ -23,7 +23,7 @@ Após assistir as videoaulas, feche tudo e responda:
 
 ## 2. Resumo em Minhas Palavras (máx. 5 frases)
 
-O conteúdo semanal era para nos familizarmos com a plataforma, com o AVA (Ambiente Virutal de Aprendizado), com fórum, eles reforçaram bastante essa questão da interatividade entre os alunos, achei bem mais notório do que em 2023 quando entrei pela primeira vez nesse mesmo curso, formos instruidos a acessar o gemini com a conta estudante, mas que no meu caso não foi possível, apresentou uma mensagem de erro dizendo que eu não tinha acesso com a minha conta estude, resolvi ignorar o exercício pois não faz sentido insistir nessa parte para mim, que sou desenvolvedor atuante na área e uso diariamente agentes e LLM's, no entanto enviei uma mensagem para centro de suporte pois quero ter acesso ao modelo gemini via conta de estudante, por fim realizei minhas apesentação no forum:
+O conteúdo semanal era para nos familizarmos com a plataforma, com o AVA (Ambiente Virutal de Aprendizado) e com fórum, eles reforçaram bastante essa questão da interatividade entre os alunos, achei bem mais notório do que em 2023 quando entrei pela primeira vez nesse mesmo curso, fomos instruídos a acessar o gemini com a conta estudante, mas que no meu caso não foi possível, apresentou uma mensagem de erro dizendo que eu não tinha acesso com a minha conta estudante, resolvi ignorar o exercício pois não faz sentido insistir nessa parte, uma vez que sou desenvolvedor e trablho na área usando diariamente agentes e LLM's, no entanto enviei uma mensagem para centro de suporte pois quero ter acesso ao modelo gemini via conta de estudante, por fim realizei minhas apesentação no forum:
 
  👋 Meu nome é ☝️, sou de Rio Preto.
 
@@ -78,7 +78,7 @@ Apesar de não ter concluído extamente todas as epatas como em um script, acred
 
 | Revisão | Data Prevista | Feito? |
 |----------|---------------|--------|
-| 1ª (1 dia depois) | 22/06 | ☐ |
+| 1ª (1 dia depois) | 22/06 | ☑ |
 | 2ª (3 dias depois) | 24/06 | ☐ |
 | 3ª (7 dias depois) | 28/06 | ☐ |
 | 4ª (21 dias depois) | 12/07 | ☐ |
