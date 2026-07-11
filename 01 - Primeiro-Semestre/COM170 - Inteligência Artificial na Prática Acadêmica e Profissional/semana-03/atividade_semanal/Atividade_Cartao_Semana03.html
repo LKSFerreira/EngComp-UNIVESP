@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Cartão da Semana 3: Meu curso em 6 pistas | COM170</title>
+
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+ <style>
+ :root {
+ --color-primary: #D13239;
+ --color-secondary: #808285;
+ --color-dark: #2c3e50;
+ --color-light: #f8f9fa;
+ --color-border: #e9ecef;
+ --color-question-bg: #fff5f5;
+ --color-answer-bg: #fdfdfd;
+ --color-section: #1e3a5f;
+ --color-ia-bg: #eef6ff;
+ --color-test-bg: #fff8e8;
+ --font-title: 'Barlow', 'Inter', sans-serif;
+ --font-body: 'Inter', sans-serif;
+ }
+
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+
+ body {
+ background-color: #f0f2f5;
+ font-family: var(--font-body);
+ color: #333;
+ line-height: 1.6;
+ padding: 40px 20px;
+ }
+
+ .paper {
+ background: #ffffff;
+ max-width: 820px;
+ margin: 0 auto;
+ padding: 25mm 20mm;
+ box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+ border-radius: 8px;
+ position: relative;
+ overflow: hidden;
+ border-top: 5px solid var(--color-primary);
+ }
+
+ .toolbar {
+ max-width: 820px;
+ margin: 0 auto 20px auto;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background: #fff;
+ padding: 15px 25px;
+ border-radius: 8px;
+ box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+ }
+
+ .toolbar-info { font-size: 14px; color: #666; }
+
+ .btn-print {
+ background-color: var(--color-primary);
+ color: white;
+ border: none;
+ padding: 10px 20px;
+ font-family: var(--font-title);
+ font-weight: 600;
+ font-size: 14px;
+ border-radius: 6px;
+ cursor: pointer;
+ display: flex;
+ align-items: center;
+ gap: 8px;
+ transition: all 0.2s ease-in-out;
+ box-shadow: 0 4px 6px rgba(209, 50, 57, 0.2);
+ }
+
+ .btn-print:hover {
+ background-color: #b0242a;
+ transform: translateY(-1px);
+ }
+
+ .header-container {
+ display: flex;
+ justify-content: space-between;
+ align-items: flex-start;
+ border-bottom: 2px solid var(--color-primary);
+ padding-bottom: 15px;
+ margin-bottom: 25px;
+ }
+
+ .logo-container img {
+ height: 120px;
+ width: auto;
+ display: block;
+ margin-left: -12px;
+ margin-top: -8px;
+ }
+
+ .doc-info {
+ text-align: right;
+ font-family: var(--font-title);
+ font-size: 12px;
+ color: #444;
+ line-height: 1.6;
+ padding-top: 20px;
+ }
+
+ .doc-info strong { color: var(--color-dark); font-weight: 600; }
+
+ .doc-title {
+ font-family: var(--font-title);
+ font-size: 24px;
+ color: var(--color-dark);
+ font-weight: 700;
+ margin-bottom: 8px;
+ letter-spacing: -0.5px;
+ }
+
+ .doc-subtitle {
+ font-size: 14px;
+ color: var(--color-secondary);
+ margin-bottom: 28px;
+ font-style: italic;
+ border-left: 3px solid var(--color-primary);
+ padding-left: 10px;
+ }
+
+ .section-banner {
+ background: var(--color-section);
+ color: #fff;
+ font-family: var(--font-title);
+ font-weight: 600;
+ font-size: 15px;
+ padding: 12px 18px;
+ border-radius: 8px;
+ margin: 32px 0 18px 0;
+ letter-spacing: 0.2px;
+ }
+
+ .section-banner.ia { background: #2563a8; }
+ .section-banner.tests { background: #b45309; }
+
+ .faq-container { display: flex; flex-direction: column; gap: 20px; }
+
+ .faq-item {
+ border: 1px solid var(--color-border);
+ border-radius: 8px;
+ overflow: hidden;
+ background-color: var(--color-answer-bg);
+ }
+
+ .faq-question {
+ background-color: var(--color-question-bg);
+ padding: 14px 18px;
+ font-family: var(--font-title);
+ font-size: 15px;
+ font-weight: 600;
+ color: var(--color-dark);
+ border-bottom: 1px solid var(--color-border);
+ display: flex;
+ align-items: flex-start;
+ gap: 10px;
+ }
+
+ .faq-question .num {
+ flex-shrink: 0;
+ width: 26px;
+ height: 26px;
+ border-radius: 50%;
+ background: var(--color-primary);
+ color: #fff;
+ font-size: 13px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ margin-top: 1px;
+ }
+
+ .faq-body { padding: 16px 18px; }
+
+ .faq-answer {
+ font-size: 14.5px;
+ color: #333;
+ text-align: justify;
+ }
+
+ .faq-answer p + p { margin-top: 10px; }
+ .faq-answer ul, .faq-answer ol { margin: 8px 0 8px 1.2em; }
+ .faq-answer li { margin-bottom: 6px; }
+ .faq-answer strong { color: var(--color-dark); }
+
+ .compare-table {
+ width: 100%;
+ border-collapse: collapse;
+ font-size: 13px;
+ margin-top: 8px;
+ }
+
+ .compare-table th, .compare-table td {
+ border: 1px solid var(--color-border);
+ padding: 8px 10px;
+ text-align: left;
+ vertical-align: top;
+ }
+
+ .compare-table th {
+ background: var(--color-light);
+ font-family: var(--font-title);
+ font-weight: 600;
+ color: var(--color-dark);
+ }
+
+ .meta-box {
+ background: var(--color-light);
+ border: 1px solid var(--color-border);
+ border-radius: 8px;
+ padding: 14px 16px;
+ font-size: 13.5px;
+ margin-bottom: 18px;
+ }
+
+ .meta-box p { margin-bottom: 6px; }
+ .meta-box p:last-child { margin-bottom: 0; }
+
+ .ia-block, .test-block {
+ border: 1px solid var(--color-border);
+ border-radius: 8px;
+ padding: 16px 18px;
+ margin-bottom: 14px;
+ font-size: 14px;
+ }
+
+ .ia-block { background: var(--color-ia-bg); }
+ .test-block { background: var(--color-test-bg); }
+
+ .ia-block h3, .test-block h3 {
+ font-family: var(--font-title);
+ font-size: 15px;
+ color: var(--color-dark);
+ margin-bottom: 8px;
+ }
+
+ .check-row {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 16px;
+ margin: 8px 0 12px 0;
+ font-size: 14px;
+ }
+
+ .check-item:before {
+ content: "☑ ";
+ color: var(--color-primary);
+ font-weight: 700;
+ }
+
+ .check-item.off:before {
+ content: "☐ ";
+ color: var(--color-secondary);
+ }
+
+ .footer-container {
+ margin-top: 40px;
+ padding-top: 16px;
+ border-top: 1px solid var(--color-border);
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ font-size: 11px;
+ color: var(--color-secondary);
+ }
+
+ @media print {
+ body { background: #fff; padding: 0; margin: 0; font-size: 10pt; color: #000; }
+ .toolbar { display: none !important; }
+ .paper {
+ max-width: 100%;
+ margin: 0;
+ padding: 0 !important;
+ box-shadow: none;
+ border-radius: 0;
+ border-top: none;
+ overflow: visible !important;
+ }
+ @page { size: A4; margin: 10mm 14mm 12mm 14mm; }
+ .header-container {
+ align-items: center !important;
+ padding-bottom: 6px !important;
+ margin-bottom: 14px !important;
+ }
+ .logo-container img {
+ height: 90px !important;
+ margin-left: -10px !important;
+ margin-top: -10px !important;
+ }
+ .doc-info { font-size: 9.5pt !important; padding-top: 0 !important; }
+ .doc-title { font-size: 14pt; margin-bottom: 4px; }
+ .doc-subtitle { font-size: 9pt; margin-bottom: 12px; }
+ .section-banner {
+ -webkit-print-color-adjust: exact;
+ print-color-adjust: exact;
+ font-size: 11pt;
+ margin: 16px 0 10px 0;
+ page-break-after: avoid;
+ }
+ .faq-item {
+ page-break-inside: avoid;
+ break-inside: avoid;
+ margin-bottom: 10px;
+ border: 1px solid #ddd;
+ }
+ .faq-question {
+ background: #f9f9f9 !important;
+ -webkit-print-color-adjust: exact;
+ print-color-adjust: exact;
+ font-size: 10pt;
+ padding: 8px 12px;
+ }
+ .faq-body { padding: 10px 12px; }
+ .faq-answer { font-size: 9.5pt; }
+ .ia-block, .test-block, .meta-box {
+ -webkit-print-color-adjust: exact;
+ print-color-adjust: exact;
+ page-break-inside: avoid;
+ font-size: 9.5pt;
+ }
+ .compare-table { font-size: 8.5pt; }
+ .footer-container { font-size: 8pt; margin-top: 16px; }
+ }
+ </style>
+</head>
+<body>
+
+ <div class="toolbar">
+ <div class="toolbar-info">
+ <strong>COM170 · Semana 3</strong> · Cartão em 6 pistas · Pronto para PDF (A4)
+ </div>
+ <button class="btn-print" onclick="window.print()">
+ <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+ <polyline points="6 9 6 2 18 2 18 9"></polyline>
+ <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+ <rect x="6" y="14" width="12" height="8"></rect>
+ </svg>
+ Gerar PDF / Imprimir
+ </button>
+ </div>
+
+ <div class="paper">
+
+ <header class="header-container">
+ <div class="logo-container">
+ <img src="univesp_logo_png_rgb.png" alt="Logotipo UNIVESP">
+ </div>
+ <div class="doc-info">
+ <strong>CURSO:</strong> Engenharia de Computação<br>
+ <strong>DISCIPLINA:</strong> COM170: IA na Prática<br>
+ <strong>GRUPO:</strong> COM170-EC-DRP11-2026S2-T001-G5<br>
+ <strong>PERÍODO:</strong> 1º Semestre · Semana 03<br>
+ <strong>ENTREGA:</strong> 10/07/2026
+ </div>
+ </header>
+
+ <h1 class="doc-title">Cartão da Semana 3: Meu curso em 6 pistas</h1>
+ <div class="doc-subtitle">
+ Leitura do PPC com apoio de IA (Gemini + NotebookLM), reescrita com palavras próprias.
+ Formato próprio do repositório (estilo FAQ da Semana 2). Conteúdo alinhado ao cartão oficial.
+ </div>
+
+ <div class="meta-box">
+ <p><strong>Participantes desta entrega:</strong> Lucas da Silva Ferreira e Thales Alexandre Silva Souza</p>
+ <p><strong>Curso de ambos:</strong> Engenharia de Computação</p>
+ <p><strong>Observação:</strong> apenas Lucas e Thales participaram desta entrega (demais nomes do cartão do AVA do G5 não participaram).</p>
+ <p><strong>Fonte-base:</strong> PPC Engenharia de Computação 2026</p>
+ </div>
+
+ <!-- ========== PARTE 1 ========== -->
+ <div class="section-banner">Parte 1: As 6 pistas (respostas)</div>
+
+ <main class="faq-container">
+
+ <div class="faq-item">
+ <div class="faq-question">
+ <span class="num">1</span>
+ <div>Qual é o eixo ao qual o meu curso pertence? O PPC explica o que isso significa para a formação? Reescreva em uma frase clara, sem usar o vocabulário do documento.</div>
+ </div>
+ <div class="faq-body">
+ <div class="faq-answer">
+ O curso de Bacharelado em Engenharia de Computação está no <strong>Eixo de Computação</strong>. Na prática, isso significa que o aprendizado vai conectar diferentes matérias e trazer bastantes exercícios práticos para deixar o estudante pronto para lidar com as constantes evoluções do mundo digital.
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <div class="faq-question">
+ <span class="num">2</span>
+ <div>O PPC descreve o profissional que o curso pretende formar. Encontre essa descrição e reescreva com suas próprias palavras, como explicaria para alguém de fora da área.</div>
+ </div>
+ <div class="faq-body">
+ <div class="faq-answer">
+ O objetivo é preparar um profissional completo, capaz de criar tanto a parte física (aparelhos, placas e circuitos) quanto os programas de computador que fazem esses equipamentos funcionarem juntos. Ele estará pronto para lidar com tecnologias do dia a dia, como objetos e dispositivos que se conectam à internet, e será uma pessoa prática e flexível, que sabe analisar problemas difíceis e inventar soluções tecnológicas que funcionem de forma rápida e eficiente, agindo sempre de forma correta, honesta e dentro da lei.
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <div class="faq-question">
+ <span class="num">3</span>
+ <div>O PPC lista competências que os alunos devem desenvolver. Escolha três e reescreva cada uma em uma frase que qualquer calouro entenda.</div>
+ </div>
+ <div class="faq-body">
+ <div class="faq-answer">
+ <ol>
+ <li><strong>Analisar, modelar e resolver problemas complexos na área de Engenharia de Computação</strong>: você vai aprender a olhar para um desafio tecnológico difícil, planejar uma estratégia passo a passo e construir a solução ideal para resolvê-lo.</li>
+ <li><strong>Projetar, implementar e integrar sistemas computacionais envolvendo hardware e software</strong>: você será capaz de desenhar e criar um sistema do zero, fazendo com que a parte física (placas e circuitos) e a parte digital (programas e códigos) funcionem bem juntas.</li>
+ <li><strong>Atuar em áreas de fronteira e na interface entre diferentes disciplinas e campos do conhecimento</strong>: você estará preparado para trabalhar com tecnologias que misturam a computação com outras áreas, como medicina, agronegócio ou indústria automotiva.</li>
+ </ol>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <div class="faq-question">
+ <span class="num">4</span>
+ <div>O PPC menciona uma trilha estruturante. O que é isso? Como ela organiza o curso? O que acontece com o aluno que não for aprovado em uma disciplina dessa trilha?</div>
+ </div>
+ <div class="faq-body">
+ <div class="faq-answer">
+ <p><strong>O que é:</strong> sequência encadeada de disciplinas <strong>práticas</strong> que atravessa o curso inteiro. Nelas o aluno aplica, em contextos reais, o que aprendeu nas matérias teóricas (metodologias ativas: problemas e projetos). No curso, a trilha é formada pelos <strong>Projetos Integradores Extensionistas (PIEs)</strong> e, no fim, pelo <strong>Projeto Final de Curso (PFC)</strong>.</p>
+ <p><strong>Como organiza:</strong> uma disciplina por semestre, do início ao fim; complexidade crescente; sem aproveitamento de estudos e sem regime especial fora da série correta.</p>
+ <p><strong>Se reprovar:</strong> a trilha é sequencial. Reprovar em um PIE bloqueia o seguinte e atrasa a formatura, mesmo que as matérias teóricas do semestre seguinte sejam aprovadas. A avaliação segue regulamento próprio (plano de ação, entregas e projeto), não o modelo clássico “só prova de polo”.</p>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <div class="faq-question">
+ <span class="num">5</span>
+ <div>Há disciplinas regulares e disciplinas estruturantes. Qual é a diferença prática entre elas para o aluno no dia a dia do curso?</div>
+ </div>
+ <div class="faq-body">
+ <div class="faq-answer">
+ <table class="compare-table">
+ <thead>
+ <tr>
+ <th>Aspecto</th>
+ <th>Regulares</th>
+ <th>Estruturantes</th>
+ </tr>
+ </thead>
+ <tbody>
+ <tr>
+ <td><strong>Duração</strong></td>
+ <td>Em geral bimestrais</td>
+ <td>Semestrais (uma por semestre)</td>
+ </tr>
+ <tr>
+ <td><strong>Foco no dia a dia</strong></td>
+ <td>Teoria e técnica (aulas, textos, exercícios)</td>
+ <td>Projeto prático em grupo (PIEs / PFC)</td>
+ </tr>
+ <tr>
+ <td><strong>Avaliação</strong></td>
+ <td>AVA (~40%) + prova presencial no polo (~60%)</td>
+ <td>Contínua: metas, plano de ação, relatórios e entrega do projeto</td>
+ </tr>
+ <tr>
+ <td><strong>Reprovação</strong></td>
+ <td>Em geral dá para refazer depois</td>
+ <td>Gargalo: trava a sequência e atrasa a formatura</td>
+ </tr>
+ </tbody>
+ </table>
+ </div>
+ </div>
+ </div>
+
+ <div class="faq-item">
+ <div class="faq-question">
+ <span class="num">6</span>
+ <div>Descoberta do grupo: algo que encontraram no PPC que não esperavam ou que consideraram importante, o que qualquer calouro deveria saber antes de começar.</div>
+ </div>
+ <div class="faq-body">
+ <div class="faq-answer">
+ <p>A descoberta que mais mudou nossa visão foi a <strong>trilha estruturante dos PIEs</strong>. Muita gente entra pensando que “as matérias mais pesadas são as provas teóricas do polo”. O PPC mostra outra lógica: os Projetos Integradores formam a <strong>espinha dorsal</strong> do curso (um por semestre), em sequência, sem aproveitamento e sem regime especial. Reprovar em um projeto <strong>não é só “ficar de DP”</strong>: trava o próximo e empurra a formatura para frente, mesmo se você for bem nas disciplinas teóricas.</p>
+ <p><strong>Mensagem para o calouro:</strong> trate os PIEs com a mesma seriedade (ou mais) que as provas presenciais. Organize tempo, grupo e entregas desde o primeiro semestre, o atraso na trilha prática é o atraso mais caro do curso.</p>
+ <p style="margin-top:10px;font-size:13px;color:#555;"><em>Descoberta consolidada por Lucas da Silva Ferreira e Thales Alexandre Silva Souza.</em></p>
+ </div>
+ </div>
+ </div>
+
+ </main>
+
+ <!-- ========== PARTE 2 ========== -->
+ <div class="section-banner ia">Parte 2: Registro do uso da IA</div>
+
+ <div class="ia-block">
+ <h3>Ferramenta utilizada</h3>
+ <div class="check-row">
+ <span class="check-item">Gemini (3.5 Thinking e 3.5 Flash)</span>
+ <span class="check-item">NotebookLM (contexto do PPC)</span>
+ <span class="check-item off">Outra</span>
+ </div>
+ </div>
+
+ <div class="ia-block">
+ <h3>O que foi perguntado à ferramenta</h3>
+ <p>Foram enviadas as pistas 1 a 5 do cartão (com iterações de refinamento), por exemplo: eixo e significado para a formação; perfil do profissional; três competências em linguagem de calouro; trilha estruturante e efeito da reprovação; diferença prática entre disciplinas regulares e estruturantes. Também foi usado um prompt de refino com exemplo prático (“aluno Lucas Ferreira”, 4º semestre / PIE IV) quando a explicação da trilha ficou confusa.</p>
+ <p style="margin-top:8px;">As respostas da IA foram usadas <strong>apenas como base</strong>. A redação final é do grupo (Lucas e Thales), em linguagem própria.</p>
+ </div>
+
+ <div class="ia-block">
+ <h3>A resposta da ferramenta precisou de correção ou complemento após verificação no PPC?</h3>
+ <div class="check-row">
+ <span class="check-item">Sim</span>
+ <span class="check-item off">Não</span>
+ </div>
+ <p><strong>O que foi corrigido ou complementado:</strong></p>
+ <ul style="margin:8px 0 0 1.2em;">
+ <li>Reescrita em tom menos formal e mais claro para calouro.</li>
+ <li>Prompt refeito com exemplo prático quando a trilha ficou confusa.</li>
+ <li>Conferência de sentido com o PPC (eixo, perfil, competências, regras da trilha, regular × estruturante).</li>
+ <li>Pista 6 (descoberta do grupo) elaborada pelos participantes, não como cópia da IA.</li>
+ </ul>
+ </div>
+
+ <div class="ia-block">
+ <h3>Data de entrega</h3>
+ <p><strong>10/07/2026</strong></p>
+ </div>
+
+ <!-- ========== PARTE 3 ========== -->
+ <div class="section-banner tests">Parte 3: O que os testes com a IA revelaram</div>
+
+ <div class="test-block">
+ <h3>1. Modelo muda a resposta (mesmo prompt)</h3>
+ <p><strong>3.5 Thinking</strong> gerou respostas mais longas e em camadas. <strong>3.5 Flash</strong> às vezes ficou mais curto e direto; outras vezes se aproximou do Thinking.</p>
+ </div>
+
+ <div class="test-block">
+ <h3>2. Flash não reproduziu a primeira resposta curta</h3>
+ <p>Ao refazer a mesma pergunta no Flash (botão “Editar pergunta”), a resposta curta inicial <strong>não voltou</strong>. Hipótese: possível uso de cache ou amostragem entre execuções, por isso não se deve confiar em uma única geração como verdade estável.</p>
+ </div>
+
+ <div class="test-block">
+ <h3>3. Cota do Thinking forçou troca de modelo</h3>
+ <p>Após o limite de cota do 3.5 Thinking, as pistas seguintes saíram no 3.5 Flash. Isso reforça: a ferramenta é apoio; a validação final é no PPC e na reescrita humana.</p>
+ </div>
+
+ <div class="test-block">
+ <h3>4. Prompt vago confunde; exemplo real desbloqueia</h3>
+ <p>A primeira explicação da trilha ficou confusa. Pedir um exemplo prático com o aluno Lucas Ferreira (PIE IV, reprovação e efeito cascata) tornou a resposta útil para o cartão e para o calouro.</p>
+ </div>
+
+ <div class="test-block">
+ <h3>5. Uso crítico (o que a disciplina pede)</h3>
+ <p>IA para localizar e esboçar · humano para validar, simplificar e assinar · registro honesto dos testes. <strong>Não entregamos a primeira saída da IA.</strong></p>
+ </div>
+
+ <footer class="footer-container">
+ <div>COM170 · Ambientação e Integração Acadêmica · UNIVESP</div>
+ <div>Grupo G5 · Lucas &amp; Thales · 10/07/2026</div>
+ </footer>
+
+ </div>
+
+</body>
+</html>
