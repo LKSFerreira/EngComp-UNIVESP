@@ -1365,21 +1365,35 @@
     tourAudio.defaultPlaybackRate = NARRATION_RATE;
 
     /**
-     * Uma só pasta de áudio: ao lado do tour.html (atividade).
-     * No Pages (index.html na raiz) aponta para o caminho completo até a atividade.
+     * Uma só pasta de áudio (na atividade). Sem cópia na raiz.
+     * - tour.html local / file:// → audio/ relativo
+     * - GitHub Pages (index na raiz do repo) → URL absoluta no site
+     *   /EngComp-UNIVESP/.../atividade_semanal/audio/arquivo.mp3
      */
     function audioSrc(idOrFile) {
       const file = /\.mp3$/i.test(idOrFile) ? idOrFile : idOrFile + ".mp3";
-      const path = (location.pathname || "").replace(/\\/g, "/");
+      const pathName = (location.pathname || "").replace(/\\/g, "/");
       const localTour =
-        /atividade_semanal/i.test(path) ||
-        /tour\.html$/i.test(path) ||
-        // file:// abrindo tour.html direto
-        (location.protocol === "file:" && /tour\.html$/i.test(path));
-      const base = localTour
-        ? "audio/"
-        : "01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/semana-04/atividade_semanal/audio/";
-      return encodeURI(base + file);
+        /atividade_semanal/i.test(pathName) ||
+        /tour\.html$/i.test(pathName);
+
+      if (localTour) {
+        return encodeURI("audio/" + file);
+      }
+
+      const deepRel =
+        "01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/semana-04/atividade_semanal/audio/" +
+        file;
+
+      // Project Pages: https://user.github.io/REPO/...
+      if (/\.github\.io$/i.test(location.hostname)) {
+        const segs = pathName.split("/").filter(Boolean);
+        const repo = segs[0] || "EngComp-UNIVESP";
+        return location.origin + "/" + repo + "/" + encodeURI(deepRel);
+      }
+
+      // Servidor estático na raiz do repo (Live Server etc.)
+      return encodeURI("/" + deepRel.replace(/^\//, ""));
     }
 
     function isWelcomeOpen() {
