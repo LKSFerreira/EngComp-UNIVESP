@@ -75,6 +75,25 @@
       background: #fff;
       box-shadow: 0 1px 3px rgba(0,0,0,.08);
     }
+    /* Banners oficiais dos blocos (Escolha / Recursos / Provas) — não estourar o card */
+    .panel-card-banner-wrap {
+      width: 100%;
+      background: #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
+      line-height: 0;
+      overflow: hidden;
+    }
+    .panel-card-banner {
+      width: 100%;
+      height: auto;
+      max-height: 10.5rem;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    @media (min-width: 640px) {
+      .panel-card-banner { max-height: 12.5rem; }
+    }
     .panel-card-links a {
       display: block;
       background: var(--ava-link-row);
@@ -538,13 +557,18 @@
       </div>
     </div>
 
-    <!-- Cards de atalho -->
+    <!-- Cards de atalho (banners oficiais UNIVESP em referencia/) -->
     <div id="painel-cards" class="space-y-5">
       <section class="panel-card" data-tour-id="card-destino">
-        <div class="h-28 sm:h-32 bg-gradient-to-r from-amber-100 via-orange-50 to-white flex items-center justify-center border-b">
-          <h2 class="text-xl sm:text-2xl font-extrabold tracking-wide text-gray-800">
-            ESCOLHA <span class="text-red-600">→</span> SEU DESTINO
-          </h2>
+        <div class="panel-card-banner-wrap">
+          <img
+            class="panel-card-banner"
+            data-asset="referencia/link1_escolha_seu_destino.jpg"
+            alt="Escolha seu destino"
+            width="1200"
+            height="360"
+            decoding="async"
+          />
         </div>
         <div class="panel-card-links">
           <a id="hotspot-portal-aluno" href="#" onclick="return explainLink(event, 'Portal do Aluno', 'Secretaria virtual da UNIVESP: solicitar documentos, acompanhar provas, recursos e outros serviços administrativos.')">Portal do Aluno</a>
@@ -556,9 +580,15 @@
       </section>
 
       <section class="panel-card" data-tour-id="card-recursos">
-        <div class="h-28 sm:h-32 bg-gradient-to-r from-yellow-300 to-amber-200 flex items-center justify-center gap-2">
-          <h2 class="text-xl sm:text-2xl font-extrabold tracking-wide text-gray-900">RECURSOS DIDÁTICOS</h2>
-          <i data-lucide="book-open" class="w-8 h-8 text-gray-800"></i>
+        <div class="panel-card-banner-wrap">
+          <img
+            class="panel-card-banner"
+            data-asset="referencia/link2_recursos_didaticos.jpg"
+            alt="Recursos didáticos"
+            width="1200"
+            height="360"
+            decoding="async"
+          />
         </div>
         <div class="panel-card-links">
           <a href="#" onclick="return explainLink(event, 'Pearson', 'Parceiro de conteúdo / biblioteca digital quando a disciplina utilizar.')">Pearson</a>
@@ -569,9 +599,15 @@
       </section>
 
       <section id="hotspot-bloco-provas" class="panel-card" data-tour-id="card-provas">
-        <div class="h-28 sm:h-32 bg-gradient-to-r from-cyan-500 to-teal-400 flex items-center justify-center gap-3">
-          <h2 class="text-2xl font-extrabold tracking-widest text-white bg-slate-800/90 px-6 py-2 rounded">PROVAS</h2>
-          <i data-lucide="badge-check" class="w-10 h-10 text-white"></i>
+        <div class="panel-card-banner-wrap">
+          <img
+            class="panel-card-banner"
+            data-asset="referencia/link3_provas.jpg"
+            alt="Provas"
+            width="1200"
+            height="360"
+            decoding="async"
+          />
         </div>
         <div class="panel-card-links">
           <a id="hotspot-calendario-provas" href="#" onclick="return explainLink(event, 'Calendário de provas', 'Datas e orientações gerais das avaliações. Consulte cedo para se organizar.')">Acesse aqui o calendário geral de provas</a>
@@ -1376,6 +1412,42 @@
     tourAudio.playbackRate = NARRATION_RATE;
     tourAudio.defaultPlaybackRate = NARRATION_RATE;
 
+    /** Pasta da atividade (tour.html local vs index.html no Pages). */
+    const ACTIVITY_REL =
+      "01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/semana-04/atividade_semanal/";
+
+    function isLocalActivityPage() {
+      const pathName = (location.pathname || "").replace(/\\/g, "/");
+      return /atividade_semanal/i.test(pathName) || /tour\.html$/i.test(pathName);
+    }
+
+    /**
+     * Resolve caminho de arquivo da atividade (imgs, etc.).
+     * @param {string} relPath caminho relativo à pasta atividade_semanal (ex.: referencia/x.jpg)
+     */
+    function activityAsset(relPath) {
+      const clean = String(relPath || "").replace(/^\/+/, "");
+      if (isLocalActivityPage()) {
+        return encodeURI(clean);
+      }
+      const deepRel = ACTIVITY_REL + clean;
+      if (/\.github\.io$/i.test(location.hostname)) {
+        const segs = (location.pathname || "").split("/").filter(Boolean);
+        const repo = segs[0] || "EngComp-UNIVESP";
+        return location.origin + "/" + repo + "/" + encodeURI(deepRel);
+      }
+      return encodeURI("/" + deepRel.replace(/^\//, ""));
+    }
+
+    /** Preenche src de <img data-asset="..."> (banners oficiais, etc.). */
+    function resolveActivityAssets() {
+      document.querySelectorAll("[data-asset]").forEach(function (el) {
+        const rel = el.getAttribute("data-asset");
+        if (!rel) return;
+        el.setAttribute("src", activityAsset(rel));
+      });
+    }
+
     /**
      * Áudios de produção em audio/clips/ (roteiros em audio/roteiros/).
      * - tour.html local → audio/clips/relativo
@@ -1383,28 +1455,7 @@
      */
     function audioSrc(idOrFile) {
       const file = /\.mp3$/i.test(idOrFile) ? idOrFile : idOrFile + ".mp3";
-      const pathName = (location.pathname || "").replace(/\\/g, "/");
-      const localTour =
-        /atividade_semanal/i.test(pathName) ||
-        /tour\.html$/i.test(pathName);
-
-      if (localTour) {
-        return encodeURI("audio/clips/" + file);
-      }
-
-      const deepRel =
-        "01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/semana-04/atividade_semanal/audio/clips/" +
-        file;
-
-      // Project Pages: https://user.github.io/REPO/...
-      if (/\.github\.io$/i.test(location.hostname)) {
-        const segs = pathName.split("/").filter(Boolean);
-        const repo = segs[0] || "EngComp-UNIVESP";
-        return location.origin + "/" + repo + "/" + encodeURI(deepRel);
-      }
-
-      // Servidor estático na raiz do repo (Live Server etc.)
-      return encodeURI("/" + deepRel.replace(/^\//, ""));
+      return activityAsset("audio/clips/" + file);
     }
 
     function isWelcomeOpen() {
@@ -2254,6 +2305,7 @@
     });
 
     /* Estado inicial: Painel /my/ + chrome do guia */
+    resolveActivityAssets();
     showView("painel");
     initGuideChrome();
     // Índice do curso começa aberto; gaveta de blocos fechada (como no print)
