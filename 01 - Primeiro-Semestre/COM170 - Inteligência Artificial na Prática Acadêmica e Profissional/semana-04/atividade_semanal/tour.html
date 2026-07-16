@@ -363,6 +363,27 @@
       margin-left: 0.1rem;
       user-select: none;
     }
+    /* FAQ no painel do Guia: mesma “caixa” dos irmãos, hierarquia secundária (vermelho suave) */
+    .btn-faq {
+      background: linear-gradient(135deg, #ffffff 0%, #fef2f2 55%, #fee2e2 100%);
+      color: #991b1b;
+      border: 2px solid #ca3120;
+      box-shadow: 0 6px 16px rgba(202, 49, 32, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+      letter-spacing: 0.04em;
+      transition: transform .15s ease, box-shadow .15s ease, filter .15s ease, border-color .15s ease;
+    }
+    .btn-faq:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.02);
+      border-color: #8b1520;
+      box-shadow: 0 10px 22px rgba(202, 49, 32, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    }
+    .btn-faq:active {
+      transform: translateY(0);
+    }
+    .btn-faq .lucide {
+      color: #ca3120;
+    }
     /* Botão Bilhete Dourado, chama atenção no fim do tour */
     .btn-bilhete {
       background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 45%, #d97706 100%);
@@ -893,8 +914,36 @@
     <p id="free-modal-body" class="text-sm text-gray-700 leading-relaxed"></p>
   </div>
 
+  <!-- Consentimento de narração (antes da boas-vindas): desbloqueia Audio no navegador -->
+  <div id="narration-consent-modal" class="fixed inset-0 z-[82] modal-backdrop flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="narration-consent-title">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 sm:p-7 border border-gray-100">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="w-12 h-12 rounded-2xl bg-violet-600 text-white flex items-center justify-center shadow-lg">
+          <i data-lucide="headphones" class="w-6 h-6"></i>
+        </span>
+        <div>
+          <p class="text-[10px] font-bold uppercase tracking-wider text-violet-700">Opcional</p>
+          <h2 id="narration-consent-title" class="text-lg font-extrabold text-gray-900 leading-tight">Tour narrado?</h2>
+        </div>
+      </div>
+      <div class="text-sm text-gray-600 space-y-3 leading-relaxed">
+        <p>Deseja ouvir a narração do guia enquanto faz o tour?</p>
+      </div>
+      <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <button type="button" id="narration-yes-btn" onclick="chooseNarration(true)" class="w-full bg-violet-600 hover:bg-violet-700 text-white font-extrabold py-3.5 rounded-xl flex items-center justify-center gap-2 text-sm shadow-md">
+          <i data-lucide="volume-2" class="w-5 h-5"></i>
+          Sim, narrar
+        </button>
+        <button type="button" id="narration-no-btn" onclick="chooseNarration(false)" class="w-full bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold py-3.5 rounded-xl flex items-center justify-center gap-2 text-sm border border-gray-200">
+          <i data-lucide="volume-x" class="w-5 h-5"></i>
+          Não, só texto
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Modal de boas-vindas: apresenta o site + o FAB (como antes) -->
-  <div id="welcome-modal" class="fixed inset-0 z-[80] modal-backdrop flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="welcome-title">
+  <div id="welcome-modal" class="fixed inset-0 z-[80] modal-backdrop hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="welcome-title" style="display:none">
     <div class="bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 sm:p-7 border border-gray-100">
       <div class="flex items-center gap-3 mb-4">
         <span class="w-12 h-12 rounded-2xl bg-red-600 text-white flex items-center justify-center shadow-lg">
@@ -916,7 +965,7 @@
           <i data-lucide="graduation-cap" class="w-6 h-6"></i>
         </div>
         <div class="min-w-0">
-          <p class="text-xs font-bold text-gray-900">Botão flutuante no lado direto</p>
+          <p class="text-xs font-bold text-gray-900">Botão flutuante no lado direito</p>
           <p class="text-[11px] text-gray-600 leading-relaxed mt-0.5">
             <strong class="text-red-700">Dica</strong>: Reabre o tour, o <strong>FAQ</strong> e o <strong>Bilhete Dourado</strong> quando quiser.
           </p>
@@ -982,10 +1031,10 @@
       <button type="button" onclick="startTourFromGuide()" class="btn-iniciar-tour w-full text-white font-extrabold py-3.5 rounded-xl flex items-center justify-center gap-2 text-sm uppercase tracking-wide">
         <i data-lucide="play" class="w-4 h-4"></i> Iniciar tour
       </button>
-      <button type="button" onclick="openContentModal('faq')" class="w-full border border-gray-200 hover:border-red-300 hover:bg-red-50 font-semibold py-2.5 rounded-xl text-sm flex items-center justify-center gap-2">
-        <i data-lucide="help-circle" class="w-4 h-4 text-red-600"></i> FAQ
+      <button type="button" onclick="openContentModal('faq')" class="btn-faq w-full font-extrabold py-3.5 rounded-xl text-sm flex items-center justify-center gap-2 uppercase tracking-wide">
+        <i data-lucide="help-circle" class="w-4 h-4"></i> FAQ
       </button>
-      <button type="button" id="btn-bilhete-dourado" onclick="openContentModal('cartao')" class="btn-bilhete w-full font-extrabold py-3 rounded-xl text-sm flex items-center justify-center gap-2">
+      <button type="button" id="btn-bilhete-dourado" onclick="openContentModal('cartao')" class="btn-bilhete w-full font-extrabold py-3.5 rounded-xl text-sm flex items-center justify-center gap-2 uppercase tracking-wide">
         <i data-lucide="ticket" class="w-4 h-4"></i> Bilhete Dourado
       </button>
     </div>
@@ -1140,38 +1189,40 @@
       });
     }
 
-    /** Bilhete Dourado: descoberta da trilha dos PIEs (pista 6), tom informal e correto */
+    /** Bilhete Dourado: trilha sequencial dos PIEs (aviso de calouro para calouro) */
     function buildCartaoModal() {
       const el = document.getElementById("cartao-modal-body");
       if (!el) return;
       el.innerHTML = `
         <p class="text-base font-semibold text-amber-950 mb-3">Calouro, pare um momento e leia com atenção.</p>
         <p class="mb-3">
-          Quando entramos no curso, a impressão mais comum era a de que o grande desafio seria a
+          Quando entramos no curso, a impressão mais comum é de que o grande desafio seria a
           <strong>prova presencial no polo</strong>: estudar a teoria, cumprir a atividade no AVA,
           marcar a data da prova e seguir em frente.
         </p>
         <p class="mb-3">
-          Depois de ler o <strong>PPC</strong> com mais cuidado, a conclusão mudou. A estrutura que
-          realmente organiza a Engenharia de Computação não se resume à prova. É a
-          <strong>trilha dos Projetos Integradores Extensionistas (PIEs)</strong>:
-          <strong>um projeto por semestre</strong>, do início ao fim da formação, com complexidade crescente.
+          No entanto, depois de ler o <strong>PPC</strong> com mais cuidado, a nossa conclusão mudou.
+          A estrutura que realmente organiza os eixos de estudo não se resume à prova ou às atividades
+          (claro que elas são importantes), e sim à
+          <strong>trilha dos Projetos Integradores Extensionistas (PIE)</strong>:
+          <strong>um projeto por semestre</strong>, totalizando <strong>6</strong>, com complexidade crescente.
         </p>
         <p class="mb-3">
-          Há um detalhe que quase ninguém destaca no primeiro dia: essa trilha é
-          <strong>sequencial</strong>. Não existe atalho. Em regra, <strong>não há aproveitamento
-          de outra instituição</strong> e <strong>não há regime especial</strong> fora da ordem correta.
+          Há um detalhe que pode passar despercebido: essa trilha é
+          <strong>SEQUENCIAL</strong>. Não existe "depois". Em regra,
+          <strong>não há aproveitamento de outra instituição</strong> e
+          <strong>não há regime especial</strong> fora da ordem.
           Reprovar em um projeto <strong>não é apenas "ficar de DP"</strong>:
           <strong>impede o próximo</strong> e <strong>atrasa a formatura</strong>, mesmo com bom desempenho
           nas disciplinas teóricas.
         </p>
         <p class="mb-4 p-3 rounded-xl bg-amber-200/60 border border-amber-500/40 font-medium">
-          O recado é objetivo: trate o <strong>PIE</strong> com a mesma seriedade (ou com mais seriedade)
-          que a prova presencial. Organize o grupo, os prazos e as entregas desde o
+          Então, a dica deste Bilhete Dourado: trate o <strong>PIE</strong> com a mesma seriedade
+          (ou com mais) que a prova presencial. Organize o grupo, os prazos e as entregas desde o
           <strong>primeiro semestre</strong>. O atraso na trilha prática costuma ser o mais custoso do curso.
         </p>
-        <p class="text-sm text-amber-900/80 border-t border-amber-300/50 pt-3">
-          Registro de quem se deparou com essa leitura no PPC e quis deixar o aviso para quem está chegando agora.
+        <p class="text-sm font-semibold text-amber-950 border-t border-amber-300/50 pt-3">
+          Bem-vindo à UNIVESP e bons estudos.
         </p>
       `;
     }
@@ -1183,12 +1234,22 @@
       const el = document.getElementById(id);
       el.classList.remove("hidden");
       el.style.display = "flex";
-      if (which === "faq") buildFaqModal();
+      if (which === "faq") {
+        buildFaqModal();
+        // FAQ sem narração
+        stopTourNarration();
+      }
       if (which === "cartao") {
         buildCartaoModal();
         pendingBilhete = false;
         const bilheteBtn = document.getElementById("btn-bilhete-dourado");
         if (bilheteBtn) bilheteBtn.classList.remove("is-highlight");
+        // Bilhete: voz masculina Algenib (se o usuário aceitou narração)
+        if (narrationEnabled) {
+          playNarrationClip("bilhete-dourado");
+        } else {
+          stopTourNarration();
+        }
       }
       lucide.createIcons();
     }
@@ -1198,6 +1259,7 @@
       const el = document.getElementById(id);
       el.classList.add("hidden");
       el.style.display = "none";
+      if (which === "cartao") stopTourNarration();
     }
 
     // FAQ residual na view curso (se existir container)
@@ -1208,15 +1270,128 @@
 
     /* ---------- Guia FAB + modais ---------- */
     const STORAGE_POST_TOUR = "guiaCalouro_post_tour_v1";
+    const STORAGE_NARRATION = "guiaCalouro_narracao_v1";
 
     let guideOpen = false;
     let forcingFab = false;
     let pendingBilhete = false; // após o tour: guiar o calouro até o Bilhete Dourado
     let postTourDone = localStorage.getItem(STORAGE_POST_TOUR) === "1";
+    /** Preferência de narração: null = ainda não perguntou; true/false após consentimento */
+    let narrationEnabled = null;
+    /** Player único reutilizado (gesto do “Sim” desbloqueia o autoplay nos passos) */
+    const NARRATION_RATE = 1.25;
+    const tourAudio = new Audio();
+    tourAudio.preload = "none";
+    tourAudio.playbackRate = NARRATION_RATE;
+    tourAudio.defaultPlaybackRate = NARRATION_RATE;
 
     function isWelcomeOpen() {
       const el = document.getElementById("welcome-modal");
       return el && !el.classList.contains("hidden") && el.style.display !== "none";
+    }
+    function isNarrationConsentOpen() {
+      const el = document.getElementById("narration-consent-modal");
+      return el && !el.classList.contains("hidden") && el.style.display !== "none";
+    }
+
+    function openNarrationConsentModal() {
+      const el = document.getElementById("narration-consent-modal");
+      el.classList.remove("hidden");
+      el.style.display = "flex";
+      document.getElementById("fab-dock").classList.add("z-[85]");
+      lucide.createIcons();
+    }
+    function closeNarrationConsentModal() {
+      const el = document.getElementById("narration-consent-modal");
+      el.classList.add("hidden");
+      el.style.display = "none";
+    }
+
+    /**
+     * Escolha do usuário no primeiro clique (desbloqueia áudio no browser).
+     * @param {boolean} wantNarration
+     */
+    function chooseNarration(wantNarration) {
+      narrationEnabled = !!wantNarration;
+      try {
+        localStorage.setItem(STORAGE_NARRATION, wantNarration ? "1" : "0");
+      } catch (e) { /* ignore */ }
+      closeNarrationConsentModal();
+      if (wantNarration) {
+        // Gesto desbloqueia o Audio; em seguida abre e narra a boas-vindas
+        unlockAudioOnUserGesture(function () {
+          openWelcomeModal();
+        });
+      } else {
+        stopTourNarration();
+        openWelcomeModal();
+      }
+    }
+
+    /**
+     * “Arma” o elemento de áudio com um play mudo (política de autoplay).
+     * @param {function} [done]
+     */
+    function unlockAudioOnUserGesture(done) {
+      const finish = function () {
+        try {
+          tourAudio.pause();
+          tourAudio.currentTime = 0;
+        } catch (e) { /* ignore */ }
+        tourAudio.muted = false;
+        if (typeof done === "function") done();
+      };
+      try {
+        tourAudio.muted = true;
+        tourAudio.src = "audio/welcome.mp3";
+        tourAudio.playbackRate = NARRATION_RATE;
+        const p = tourAudio.play();
+        if (p && typeof p.then === "function") {
+          p.then(finish).catch(finish);
+        } else {
+          finish();
+        }
+      } catch (e) {
+        tourAudio.muted = false;
+        if (typeof done === "function") done();
+      }
+    }
+
+    function stopTourNarration() {
+      try {
+        tourAudio.pause();
+        tourAudio.removeAttribute("src");
+        tourAudio.load();
+      } catch (e) { /* ignore */ }
+    }
+
+    /**
+     * Toca um clip por id (ex.: welcome, tour-01-...).
+     * Falha silenciosa (404 / rede) = só texto.
+     * @param {string} audioId
+     */
+    function playNarrationClip(audioId) {
+      stopTourNarration();
+      if (!narrationEnabled || !audioId) return;
+      const src = "audio/" + audioId + ".mp3";
+      tourAudio.muted = false;
+      tourAudio.src = src;
+      tourAudio.playbackRate = NARRATION_RATE;
+      tourAudio.defaultPlaybackRate = NARRATION_RATE;
+      const playPromise = tourAudio.play();
+      if (playPromise && typeof playPromise.then === "function") {
+        playPromise.catch(function () {
+          // arquivo ausente, autoplay bloqueado, etc. — tour segue só com texto
+        });
+      }
+    }
+
+    /**
+     * Toca o MP3 do passo se narração estiver ativa e o arquivo existir.
+     */
+    function playStepNarration(step) {
+      if (!step || !step.audioId) return;
+      playNarrationClip(step.audioId);
     }
 
     function openWelcomeModal() {
@@ -1225,11 +1400,17 @@
       el.style.display = "flex";
       document.getElementById("fab-dock").classList.add("z-[85]");
       lucide.createIcons();
+      // Conteúdo da modal de boas-vindas (após consentimento de narração)
+      if (narrationEnabled) {
+        playNarrationClip("welcome");
+      }
     }
     function closeWelcomeModal() {
       const el = document.getElementById("welcome-modal");
       el.classList.add("hidden");
       el.style.display = "none";
+      // Para a narração da boas-vindas ao iniciar o tour / fechar
+      stopTourNarration();
     }
     /** Só fecha a boas-vindas iniciando o tour (bloqueio: não dá para “só fechar”) */
     function startTourFromWelcome() {
@@ -1292,6 +1473,16 @@
     }
 
     function onFabClick() {
+      // Consentimento de narração aberto: só destaca os botões Sim/Não
+      if (isNarrationConsentOpen()) {
+        const yes = document.getElementById("narration-yes-btn");
+        if (yes) {
+          yes.classList.add("ring-4", "ring-amber-300");
+          setTimeout(() => yes.classList.remove("ring-4", "ring-amber-300"), 900);
+          yes.focus();
+        }
+        return;
+      }
       // Boas-vindas aberta: não pula o tour, só destaca que precisa iniciar
       if (isWelcomeOpen()) {
         const btn = document.getElementById("welcome-start-btn");
@@ -1345,7 +1536,8 @@
       fab.classList.add("fab-urgent");
       document.getElementById("fab-badge").classList.remove("hidden");
       document.getElementById("fab-label").classList.remove("hidden");
-      openWelcomeModal();
+      // Sempre pergunta narração no primeiro load (gesto necessário para áudio)
+      openNarrationConsentModal();
     }
 
     /** Após iniciar o tour: tira o “!” e o label, mas mantém o pulse do botão */
@@ -1465,6 +1657,7 @@
       {
         view: "painel",
         elementId: "univesp-header",
+        audioId: "tour-01-barra-superior",
         title: "Barra superior do AVA",
         description: "Depois do login você está no ambiente da <strong>UNIVESP</strong>. Por aqui você encontra <strong>recados importantes</strong>, <strong>Portal do Aluno</strong>, <strong>tutoriais</strong>, <strong>biblioteca virtual</strong> e muito mais, vamos passar por cada um deles.",
         placement: "bottom"
@@ -1472,6 +1665,7 @@
       {
         view: "painel",
         elementId: "painel-banners",
+        audioId: "tour-02-avisos-campanhas",
         title: "Avisos e campanhas",
         description: "Banners no topo do <strong>Painel</strong> trazem <strong>prazos</strong> e <strong>orientações institucionais</strong>. Vale a pena ler sempre que entrar. O conteúdo muda a cada ciclo.",
         placement: "bottom"
@@ -1479,6 +1673,7 @@
       {
         view: "painel",
         elementId: "painel-cards",
+        audioId: "tour-03-atalhos-estudante",
         title: "Atalhos do estudante",
         description: "Blocos como <strong>Escolha seu destino</strong>, <strong>Recursos didáticos</strong> e <strong>Provas</strong> reúnem links para Portal, bibliotecas, manuais e orientações de avaliação. <strong>Vamos destacar alguns importantes.</strong>",
         placement: "top"
@@ -1486,6 +1681,7 @@
       {
         view: "painel",
         elementId: "hotspot-portal-aluno",
+        audioId: "tour-04-portal-aluno",
         title: "Portal do Aluno",
         description: "É a <strong>secretaria virtual</strong> da UNIVESP: <strong>solicitar documentos</strong>, <strong>acompanhar provas</strong>, <strong>recursos</strong> e outros serviços administrativos. Não confunda com o <strong>AVA</strong> (sala de aula).",
         placement: "bottom"
@@ -1493,6 +1689,7 @@
       {
         view: "painel",
         elementId: "hotspot-office365",
+        audioId: "tour-05-email-teams",
         title: "E-mail e Teams (Office 365)",
         description: "Aqui ficam o <strong>e-mail institucional</strong>, o <strong>Teams</strong> e outras ferramentas Microsoft da conta de estudante, comunicação oficial e colaboração.",
         placement: "bottom"
@@ -1500,6 +1697,7 @@
       {
         view: "painel",
         elementId: "hotspot-sae",
+        audioId: "tour-06-sae",
         title: "Sistema de Atendimento Eletrônico",
         description: "Disponibiliza os <strong>canais oficiais de atendimento</strong>. Use quando precisar de suporte formal da instituição.",
         placement: "bottom"
@@ -1507,6 +1705,7 @@
       {
         view: "painel",
         elementId: "hotspot-biblioteca",
+        audioId: "tour-07-minha-biblioteca",
         title: "Minha Biblioteca",
         description: "Acesso ao <strong>acervo digital</strong> de livros e materiais de apoio das disciplinas.",
         placement: "bottom"
@@ -1514,6 +1713,7 @@
       {
         view: "painel",
         elementId: "hotspot-manual",
+        audioId: "tour-08-manual-aluno",
         title: "Manual do Aluno",
         description: "Documento <strong>oficial</strong> com <strong>regras</strong>, <strong>prazos</strong>, canais e orientações. É a referência que todo calouro deveria consultar cedo.",
         placement: "bottom"
@@ -1521,6 +1721,7 @@
       {
         view: "painel",
         elementId: "hotspot-bloco-provas",
+        audioId: "tour-09-bloco-provas",
         title: "Bloco Provas",
         description: "Central de orientações sobre <strong>avaliações</strong>: calendário, FAQ, como fazer a prova e como recorrer a uma questão. Vale marcar no começo do bimestre.",
         placement: "top"
@@ -1528,6 +1729,7 @@
       {
         view: "painel",
         elementId: "hotspot-meus-cursos-manual",
+        audioId: "tour-10-meus-cursos",
         title: "Meus cursos",
         description: "Para acessar o conteúdo das <strong>matérias</strong>, abra <strong>Meus cursos</strong> ou clique em <strong>Manual do Aluno</strong> para ser redirecionado.",
         placement: "bottom"
@@ -1535,6 +1737,7 @@
       {
         view: "cursos",
         elementId: "cursos-overview-block",
+        audioId: "tour-11-resumo-cursos",
         title: "Resumo dos cursos",
         description: "O bloco <strong>Resumo dos cursos</strong> lista suas turmas. Use os filtros (<strong>Todos</strong>, <strong>Buscar</strong>, ordenação e visualização em <strong>Cartão</strong>) para achar uma disciplina.",
         placement: "top"
@@ -1542,6 +1745,7 @@
       {
         view: "cursos",
         elementId: "course-card-com170",
+        audioId: "tour-12-cartao-disciplina",
         title: "Cartão da disciplina",
         description: "Cada <strong>cartão</strong> é uma disciplina. Clique para abrir a <strong>sala virtual</strong> (semanas, materiais, fóruns e atividades).",
         placement: "right"
@@ -1549,6 +1753,7 @@
       {
         view: "curso",
         elementId: "course-header",
+        audioId: "tour-13-pagina-disciplina",
         title: "Página da disciplina",
         description: "Você entrou na <strong>sala virtual</strong> da disciplina. O título identifica o componente, o código e a turma.",
         placement: "bottom"
@@ -1556,6 +1761,7 @@
       {
         view: "curso",
         elementId: "course-index-drawer",
+        audioId: "tour-14-indice-curso",
         title: "Índice do curso",
         description: "Use o menu lateral à esquerda para navegar e acessar o conteúdo <strong>semanal</strong> ou atividade. Em <strong>Geral</strong> ficam os itens fixos da disciplina; abaixo, o conteúdo organizado por semana.",
         placement: "right",
@@ -1564,6 +1770,7 @@
       {
         view: "curso",
         elementId: "moodle-tabs",
+        audioId: "tour-15-abas-disciplina",
         title: "Abas da disciplina",
         description: "Navegação secundária: <strong>Curso</strong> (conteúdo semanal), <strong>Informação</strong>, <strong>Participantes</strong>, <strong>Notas</strong> e <strong>Competências</strong>.",
         placement: "bottom"
@@ -1571,6 +1778,7 @@
       {
         view: "curso",
         elementId: "section-geral",
+        audioId: "tour-16-secao-geral",
         title: "Seção Geral",
         description: "No topo do conteúdo ficam itens permanentes: <strong>live</strong>, <strong>fórum de dúvidas</strong>, <strong>manual</strong> e <strong>avisos</strong>.",
         placement: "top"
@@ -1578,6 +1786,7 @@
       {
         view: "curso",
         elementId: "section-s4",
+        audioId: "tour-17-semana-4",
         title: "Semana 4",
         description: "Em cada <strong>semana</strong> há materiais e atividades, com status <strong>Concluído</strong> ou <strong>Pendente</strong>. A <strong>Semana 4</strong> inclui o Laboratório de revisão entre pares.",
         placement: "top",
@@ -1586,6 +1795,7 @@
       {
         view: "curso",
         elementId: "lab-section",
+        audioId: "tour-18-laboratorio",
         title: "Laboratório",
         description: "<strong>Envio</strong> e <strong>revisão anônima</strong> com <strong>rubrica</strong> e <strong>comentário</strong>. É o passo extra em relação a uma semana só com entrega simples.",
         placement: "top",
@@ -1594,6 +1804,7 @@
       {
         view: "curso",
         elementId: "btn-toggle-blocks",
+        audioId: "tour-19-gaveta-blocos",
         title: "Gaveta de blocos",
         description: "Esse botão abre a <strong>gaveta da direita</strong>. Em geral ela começa <strong>fechada</strong>.",
         placement: "left"
@@ -1601,6 +1812,7 @@
       {
         view: "curso",
         elementId: "professor-card",
+        audioId: "tour-20-professor-autor",
         title: "Professor e autor",
         description: "Aqui aparece o <strong>docente responsável</strong> pela disciplina, com o papel de <strong>Autor</strong>. Em <strong>Mini currículo</strong> você lê um resumo da formação e da atuação do professor.",
         placement: "left"
@@ -1608,6 +1820,7 @@
       {
         view: "curso",
         elementId: "btn-messages",
+        audioId: "tour-21-menu-mensagens",
         title: "Menu de mensagens",
         description: "Pelo ícone de <strong>mensagens</strong> você acessa o chat do AVA: conversa com o <strong>grupo</strong>, envia <strong>mensagens privadas</strong> a colegas adicionados como contato e ajusta as <strong>configurações do chat</strong>.",
         placement: "bottom"
@@ -1615,6 +1828,7 @@
       {
         view: "curso",
         elementId: "btn-user-menu",
+        audioId: "tour-22-menu-perfil",
         title: "Menu do perfil",
         description: "No menu do avatar você encontra: <strong>Perfil</strong>, <strong>Notas</strong>, <strong>Calendário</strong>, <strong>Arquivos privados</strong>, <strong>Relatórios</strong>, <strong>Preferências</strong> e a opção de <strong>Sair</strong>.",
         placement: "bottom"
@@ -1632,6 +1846,7 @@
       tourCompleted = false;
       closeFreeModal();
       closeAbandonModal();
+      stopTourNarration();
       currentStepIndex = 0;
       showStep(0);
     }
@@ -1644,6 +1859,7 @@
       const completed = !!(opts && opts.completed);
       tourActive = false;
       if (completed) tourCompleted = true;
+      stopTourNarration();
       clearTourHighlights();
       const tooltip = document.getElementById("tour-tooltip");
       tooltip.classList.add("hidden", "opacity-0", "scale-95");
@@ -1750,6 +1966,9 @@
         tooltip.classList.remove("opacity-0", "scale-95");
         positionTooltip(targetEl, tooltip, step.placement);
       });
+
+      // Narração do conteúdo do passo (se o usuário aceitou e o MP3 existir)
+      playStepNarration(step);
     }
 
     /** Posiciona o card sem cobrir o elemento destacado (respeita a borda vermelha). */
