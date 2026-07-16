@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Painel | Tour simulado do AVA — Guia do Calouro UNIVESP</title>
+  <title>Painel | Tour simulado do AVA. Guia do Calouro UNIVESP</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -20,7 +20,7 @@
       font-family: "Open Sans", system-ui, sans-serif;
       background: var(--ava-bg);
     }
-    /* Halo vermelho animado (só CSS — sem lógica extra no tour) */
+    /* Halo vermelho animado (só CSS, sem lógica extra no tour) */
     @keyframes tour-border-pulse {
       0%, 100% {
         box-shadow:
@@ -49,6 +49,20 @@
       box-decoration-break: clone;
       -webkit-box-decoration-break: clone;
       background-clip: padding-box;
+    }
+    /* Segundo destaque (ex.: Semana 4 no índice + no conteúdo), borda sem overlay extra */
+    .tour-highlight-secondary {
+      position: relative;
+      z-index: 60 !important;
+      border: 3px solid #ca3120 !important;
+      border-radius: 6px;
+      outline: none;
+      pointer-events: none;
+      box-shadow:
+        0 0 0 3px #ca3120,
+        0 0 0 6px rgba(202, 49, 32, 0.3),
+        0 0 14px 2px rgba(202, 49, 32, 0.4) !important;
+      animation: tour-border-pulse 1.6s ease-in-out infinite;
     }
     /* Alvo do menu superior: retângulo estável para o highlight */
     #hotspot-meus-cursos-manual.tour-highlight {
@@ -146,40 +160,323 @@
     @media (min-width: 640px) {
       #fab-dock { right: 1.25rem; }
     }
+    /* Curso, gavetas / índice */
+    #view-curso {
+      background: #f8f9fa;
+    }
+    .course-index-drawer {
+      width: 260px;
+      max-width: 85vw;
+      background: #dee2e6;
+      transition: margin .2s ease, transform .2s ease;
+    }
+    .course-index-drawer.is-closed {
+      margin-left: -260px;
+    }
+    /* Índice do curso, visual próximo ao Moodle Boost */
+    .ci-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.35rem 0.4rem;
+      min-height: 2.5rem;
+    }
+    .ci-icon-btn {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #495057;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+    .ci-icon-btn:hover { background: rgba(0,0,0,.06); }
+    .ci-section-row {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      padding: 0.5rem 0.5rem 0.5rem 0.35rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: #212529;
+      cursor: pointer;
+      user-select: none;
+      border: 0;
+      background: transparent;
+      width: 100%;
+      text-align: left;
+    }
+    .ci-section-row:hover { background: rgba(0,0,0,.04); }
+    .ci-section-row .ci-chevron {
+      width: 1.1rem;
+      flex-shrink: 0;
+      color: #495057;
+      font-size: 0.7rem;
+      line-height: 1;
+    }
+    .ci-cm {
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.42rem 0.65rem 0.42rem 1.5rem;
+      font-size: 0.8125rem;
+      font-weight: 400;
+      color: #343a40;
+      line-height: 1.25;
+      white-space: nowrap;
+      overflow: hidden;
+      max-width: 100%;
+    }
+    /* Subitens da Semana 4, um pouco mais de respiro */
+    #ci-section-s4 .ci-cm-list .ci-cm {
+      padding-top: 0.55rem;
+      padding-bottom: 0.55rem;
+    }
+    .ci-section + .ci-section {
+      margin-top: 0.2rem;
+    }
+    .ci-cm > span:last-child {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      min-width: 0;
+    }
+    .ci-cm-plain {
+      padding-left: 1.65rem;
+      color: #495057;
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .ci-cm .ci-dot {
+      width: 0.55rem;
+      height: 0.55rem;
+      border-radius: 999px;
+      flex-shrink: 0;
+    }
+    .ci-section-row span:last-child {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    /* No tour, o highlight não deve forçar quebra de linha no índice */
+    #course-index-drawer.tour-highlight,
+    #course-index-drawer.tour-highlight .ci-cm,
+    #course-index-drawer.tour-highlight .ci-section-row {
+      white-space: nowrap;
+    }
+    /* Borda do tour por outline: não “come” largura e evita quebra de linha no menu */
+    #course-index-drawer.tour-highlight {
+      overflow: hidden !important;
+      border-color: transparent !important;
+      outline: 3px solid #ca3120;
+      outline-offset: -3px;
+    }
+    .ci-dot.done { background: #357a32; }
+    .ci-dot.todo { background: transparent; border: 1.5px solid #adb5bd; }
+    .ci-cm-list { display: none; padding-bottom: 0.25rem; }
+    .ci-section.is-open > .ci-cm-list { display: block; }
+    .ci-section.is-open > .ci-section-row .ci-chevron-collapsed { display: none; }
+    .ci-section:not(.is-open) > .ci-section-row .ci-chevron-expanded { display: none; }
+    .ci-menu {
+      position: absolute;
+      top: 2.4rem;
+      right: 0.4rem;
+      z-index: 30;
+      background: #fff;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,.15);
+      border: 1px solid #e9ecef;
+      min-width: 11rem;
+      padding: 0.35rem 0;
+    }
+    .ci-menu button {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      width: 100%;
+      text-align: left;
+      padding: 0.45rem 0.85rem;
+      font-size: 0.875rem;
+      color: #212529;
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+    .ci-menu button:hover { background: #f8f9fa; }
+    .blocks-drawer {
+      width: 300px;
+      max-width: 90vw;
+      min-width: 300px;
+      background: #fff;
+      border-left: 1px solid #dee2e6;
+      transition: width .2s ease, min-width .2s ease, border .2s ease;
+      overflow: hidden;
+    }
+    .blocks-drawer.is-closed {
+      width: 0 !important;
+      min-width: 0 !important;
+      border: 0;
+      padding: 0;
+    }
+    .blocks-drawer.is-closed > * {
+      min-width: 0;
+      visibility: hidden;
+    }
+    /* Botão da gaveta de blocos, semicírculo cinza (tema Boost / Moodle) */
+    .drawer-blocks-toggle {
+      position: absolute;
+      right: 0;
+      top: 6.5rem;
+      z-index: 20;
+      width: 2.1rem;
+      height: 3.6rem;
+      padding: 0;
+      margin: 0;
+      border: 0;
+      cursor: pointer;
+      background: #ced4da;
+      color: #495057;
+      /* só metade esquerda do círculo fica visível na borda */
+      border-radius: 2rem 0 0 2rem;
+      box-shadow: -1px 0 4px rgba(0,0,0,.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .15s ease;
+    }
+    .drawer-blocks-toggle:hover {
+      background: #adb5bd;
+    }
+    /* Esconde o botão enquanto a gaveta está aberta (como no Moodle) */
+    .drawer-blocks-toggle.is-hidden {
+      display: none !important;
+    }
+    .drawer-blocks-chevron {
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1;
+      margin-left: 0.1rem;
+      user-select: none;
+    }
+    /* Botão Bilhete Dourado, chama atenção no fim do tour */
+    .btn-bilhete {
+      background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 45%, #d97706 100%);
+      color: #1c1917;
+      border: 2px solid #b45309;
+      box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.55), 0 8px 20px rgba(180, 83, 9, 0.25);
+      animation: bilhete-pulse 1.4s ease-in-out infinite;
+    }
+    .btn-bilhete:hover {
+      filter: brightness(1.05);
+    }
+    @keyframes bilhete-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0.5), 0 8px 20px rgba(180, 83, 9, 0.25); transform: scale(1); }
+      50% { box-shadow: 0 0 0 10px rgba(245, 158, 11, 0), 0 10px 24px rgba(180, 83, 9, 0.35); transform: scale(1.03); }
+    }
+    .btn-bilhete.is-highlight {
+      animation: bilhete-pulse 1s ease-in-out infinite;
+      outline: 3px solid #fbbf24;
+      outline-offset: 3px;
+    }
+    /* Coluna principal do curso: conteúdo centralizado na área central */
+    .course-main-col {
+      flex: 1 1 auto;
+      min-width: 0;
+    }
+    .course-main-inner {
+      width: 100%;
+      max-width: 48rem;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 1.25rem 1.5rem 2rem;
+    }
+    @media (min-width: 640px) {
+      .course-main-inner { padding-left: 2rem; padding-right: 2rem; }
+    }
+    .activity-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.55rem 0.75rem;
+      border-bottom: 1px solid #f0f0f0;
+      font-size: 0.875rem;
+      color: #333;
+    }
+    .activity-row:last-child { border-bottom: 0; }
+    .badge-done {
+      margin-left: auto;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #357a32;
+      background: #e8f5e9;
+      border: 1px solid #c8e6c9;
+      border-radius: 999px;
+      padding: 0.15rem 0.55rem;
+      white-space: nowrap;
+    }
+    .badge-pending {
+      margin-left: auto;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #666;
+      background: #f5f5f5;
+      border: 1px solid #e0e0e0;
+      border-radius: 999px;
+      padding: 0.15rem 0.55rem;
+      white-space: nowrap;
+    }
+    .sec-nav-btn.active {
+      color: #0f6cbf;
+      border-bottom: 2px solid #0f6cbf;
+      font-weight: 700;
+    }
+    /* Ícones do header: preenchidos de branco (não só contorno) */
+    .hdr-icon-solid {
+      fill: currentColor;
+      stroke: currentColor;
+      stroke-width: 1.5px;
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col text-gray-800 overflow-x-hidden">
 
-  <!-- HEADER (barra superior do AVA) — layout limpo, sem faixa extra -->
+  <!-- HEADER (barra superior do AVA), layout limpo, sem faixa extra -->
   <header id="univesp-header" class="bg-black text-white px-3 sm:px-4 py-2.5 flex items-center justify-between sticky top-0 z-40 shadow overflow-visible">
     <div class="flex items-center gap-4 sm:gap-6 min-w-0 overflow-visible">
       <button type="button" onclick="showView('painel')" class="flex items-center shrink-0" title="Painel">
-        <span class="text-lg sm:text-xl font-black tracking-wider">UNIV<span class="text-red-600">E</span>SP</span>
+        <img
+          src="https://ava.univesp.br/pluginfile.php/1/tool_tenant/headerlogo/1/logo-univesp_simplificado_cor-negativo.png"
+          class="logo mr-1 h-7 sm:h-8 w-auto"
+          alt="UNIVESP"
+        >
       </button>
       <nav id="main-nav" class="hidden sm:flex items-center gap-2 text-xs font-medium text-gray-300 overflow-visible">
         <button type="button" data-nav="painel" onclick="showView('painel')" class="nav-link px-2 py-1 hover:text-white transition nav-active">Painel</button>
-        <!-- Alvo limpo do tour (Meus cursos + Manual) — evita borda “quebrada” no nav inteiro -->
+        <!-- Alvo limpo do tour (Meus cursos + Manual), evita borda “quebrada” no nav inteiro -->
         <span id="hotspot-meus-cursos-manual" class="inline-flex items-center gap-1 rounded-md px-1 py-0.5">
           <button type="button" data-nav="cursos" onclick="showView('cursos')" class="nav-link px-2 py-1 hover:text-white transition">Meus cursos</button>
           <button type="button" id="nav-manual" class="nav-link px-2 py-1 hover:text-white transition" data-tour-id="manual" title="No AVA real abre o Manual do Aluno">Manual do Aluno</button>
         </span>
       </nav>
     </div>
-    <div class="flex items-center gap-2 sm:gap-3">
-      <button type="button" id="btn-bell" class="relative p-1.5 text-gray-300 hover:text-white" title="Notificações" data-tour-id="notificacoes">
-        <i data-lucide="bell" class="w-5 h-5"></i>
-        <span class="absolute top-0.5 right-0.5 w-2 h-2 bg-red-500 rounded-full"></span>
+    <div class="flex items-center gap-1 sm:gap-2">
+      <!-- Canto superior direito: ícones brancos preenchidos + avatar com boneco (como no AVA) -->
+      <button type="button" id="btn-bell" class="p-1.5 text-white hover:opacity-90" title="Notificações" data-tour-id="notificacoes" aria-label="Notificações">
+        <i data-lucide="bell" class="hdr-icon-solid w-5 h-5"></i>
       </button>
-      <button type="button" id="btn-messages" class="p-1.5 text-gray-300 hover:text-white" title="Mensagens" data-tour-id="mensagens">
-        <i data-lucide="message-square" class="w-5 h-5"></i>
+      <button type="button" id="btn-messages" class="p-1.5 text-white hover:opacity-90" title="Mensagens" data-tour-id="mensagens" aria-label="Mensagens">
+        <i data-lucide="message-square" class="hdr-icon-solid w-5 h-5"></i>
       </button>
-      <button type="button" id="btn-help" class="p-1.5 text-gray-300 hover:text-white hidden sm:inline-flex" title="Ajuda" data-tour-id="ajuda">
-        <i data-lucide="circle-help" class="w-5 h-5"></i>
-      </button>
-      <div id="btn-user-menu" class="flex items-center gap-2 cursor-pointer bg-neutral-900 px-2 py-1 rounded hover:bg-neutral-800" data-tour-id="perfil">
-        <div class="w-7 h-7 rounded-full bg-neutral-600 flex items-center justify-center text-[10px] font-bold border border-gray-500">AL</div>
-        <span class="text-xs hidden md:inline font-semibold">ALUNO</span>
-        <i data-lucide="chevron-down" class="w-3 h-3 text-gray-400"></i>
+      <div id="btn-user-menu" class="flex items-center gap-0.5 cursor-pointer pl-1 pr-0.5 py-0.5 rounded hover:bg-white/5" data-tour-id="perfil" title="Menu do usuário" role="button" tabindex="0">
+        <div class="w-8 h-8 rounded-full bg-neutral-500 flex items-center justify-center ring-1 ring-white/25" aria-hidden="true">
+          <i data-lucide="user" class="hdr-icon-solid w-4 h-4 text-white"></i>
+        </div>
+        <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-white/90"></i>
       </div>
     </div>
   </header>
@@ -204,7 +501,7 @@
         </div>
         <div class="text-sm leading-relaxed max-w-md">
           <p class="mb-2">No AVA real, avisos institucionais sobre prazos de PI, TCC e matrícula aparecem aqui no Painel.</p>
-          <p><span class="text-mark-yellow">Dica do tour:</span> leia sempre os banners do topo — prazos oficiais mudam a cada ciclo.</p>
+          <p><span class="text-mark-yellow">Dica do tour:</span> leia sempre os banners do topo. Os prazos oficiais mudam a cada ciclo.</p>
         </div>
       </div>
 
@@ -230,7 +527,7 @@
         </div>
         <div class="panel-card-links">
           <a id="hotspot-portal-aluno" href="#" onclick="return explainLink(event, 'Portal do Aluno', 'Secretaria virtual da UNIVESP: solicitar documentos, acompanhar provas, recursos e outros serviços administrativos.')">Portal do Aluno</a>
-          <a id="hotspot-office365" href="#" onclick="return explainLink(event, 'Office 365', 'E-mail institucional, Teams e ferramentas Microsoft da conta de estudante — canal oficial de comunicação.')">Email, Teams e outras ferramentas Office 365</a>
+          <a id="hotspot-office365" href="#" onclick="return explainLink(event, 'Office 365', 'E-mail institucional, Teams e ferramentas Microsoft da conta de estudante, canal oficial de comunicação.')">Email, Teams e outras ferramentas Office 365</a>
           <a id="hotspot-sae" href="#" onclick="return explainLink(event, 'Sistema de Atendimento Eletrônico', 'Disponibiliza os canais oficiais de atendimento da instituição.')">Sistema de Atendimento Eletrônico</a>
           <a href="#" onclick="return explainLink(event, 'Carreira Univesp', 'Espaço de orientação profissional e carreira (quando disponível no Painel).')">Carreira Univesp</a>
           <a id="hotspot-tutoriais" href="#" onclick="return explainLink(event, 'Tutoriais', 'Vídeos e guias oficiais sobre sistemas, provas e rotinas do estudante.')">Tutoriais</a>
@@ -246,7 +543,7 @@
           <a href="#" onclick="return explainLink(event, 'Pearson', 'Parceiro de conteúdo / biblioteca digital quando a disciplina utilizar.')">Pearson</a>
           <a id="hotspot-biblioteca" href="#" onclick="return explainLink(event, 'Minha Biblioteca', 'Acervo digital de livros e materiais de apoio para as disciplinas.')">Minha Biblioteca</a>
           <a id="hotspot-manual" href="#" onclick="return explainLink(event, 'Manual do Aluno', 'Documento oficial com regras, prazos, canais e orientações do estudante UNIVESP.')">Manual do Aluno</a>
-          <a href="#" onclick="return explainLink(event, 'Apps Univesp', 'Repositório de recursos educacionais abertos (REAs) e apps institucionais.')">Apps Univesp – Repositório de Recursos Educacionais Abertos (REAs)</a>
+          <a href="#" onclick="return explainLink(event, 'Apps Univesp', 'Repositório de recursos educacionais abertos (REAs) e apps institucionais.')">Apps Univesp - Repositório de Recursos Educacionais Abertos (REAs)</a>
         </div>
       </section>
 
@@ -261,8 +558,8 @@
           <a href="#" onclick="return explainLink(event, 'Preparação para prova', 'Orientações de estudo e formato da aplicação.')">Como se preparar para a aplicação de prova?</a>
           <a href="#" onclick="return explainLink(event, 'Glossário de provas', 'Termos usados nas avaliações e no regulamento.')">Glossário de provas</a>
           <a href="#" onclick="return explainLink(event, 'FAQ Provas', 'Perguntas frequentes sobre provas na UNIVESP.')">FAQ Provas</a>
-          <a href="#" onclick="return explainLink(event, 'Prova no Portal do Aluno', 'Parte do fluxo de prova pode envolver o Portal — leia o tutorial oficial.')">Como realizar a prova no sistema (Portal do Aluno)?</a>
-          <a href="#" onclick="return explainLink(event, 'Recurso de questão', 'Caminho formal para contestar/recorrer de uma questão, conforme regras.')">Tutorial / Requerimento – Recorrer a uma questão</a>
+          <a href="#" onclick="return explainLink(event, 'Prova no Portal do Aluno', 'Parte do fluxo de prova pode envolver o Portal, leia o tutorial oficial.')">Como realizar a prova no sistema (Portal do Aluno)?</a>
+          <a href="#" onclick="return explainLink(event, 'Recurso de questão', 'Caminho formal para contestar/recorrer de uma questão, conforme regras.')">Tutorial / Requerimento - Recorrer a uma questão</a>
           <a href="#" onclick="return explainLink(event, 'IA e provas', 'Regras sobre uso de ferramentas de IA em avaliações (quando publicadas).')">Possibilidade de usos acadêmicos para IA</a>
           <a href="#" onclick="return explainLink(event, 'Questões objetivas', 'Orientação sobre formato de questões objetivas.')">Questões objetivas</a>
         </div>
@@ -317,154 +614,256 @@
     </section>
   </div>
 
-  <!-- ========== VIEW: DISCIPLINA (COM170) ========== -->
-  <div id="view-curso" class="view view-hidden flex-1 flex flex-col lg:flex-row relative pb-16">
-    <aside id="sidebar-left" class="w-full lg:w-64 bg-gray-50 border-r border-gray-200 p-4 shrink-0">
-      <div class="flex items-center justify-between mb-4 pb-2 border-b border-gray-200">
-        <span class="text-xs font-bold uppercase tracking-wider text-gray-500">Menu da Disciplina</span>
-        <button type="button" onclick="showView('cursos')" class="text-[10px] text-red-700 font-semibold">← Cursos</button>
-      </div>
-      <nav class="space-y-5 text-sm">
-        <div>
-          <h3 class="font-bold text-gray-700 flex items-center gap-2 mb-2"><i data-lucide="chevron-down" class="w-4 h-4 text-red-700"></i> Geral</h3>
-          <ul class="pl-5 space-y-2 text-gray-600">
-            <li class="flex items-center gap-1.5"><i data-lucide="video" class="w-3.5 h-3.5"></i> Live com facilitador</li>
-            <li class="flex items-center gap-1.5"><i data-lucide="help-circle" class="w-3.5 h-3.5"></i> Fórum de dúvidas gerais</li>
-            <li class="flex items-center gap-1.5"><i data-lucide="megaphone" class="w-3.5 h-3.5"></i> Avisos</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold text-gray-700 flex items-center gap-2 mb-2"><i data-lucide="chevron-down" class="w-4 h-4 text-red-700"></i> Semana 2</h3>
-          <ul class="pl-5 space-y-2 text-gray-600">
-            <li id="sidebar-forum-grupo" class="bg-red-50 text-red-900 px-2 py-1.5 rounded font-semibold flex items-center gap-1.5 border-l-4 border-red-600">
-              <i data-lucide="users" class="w-4 h-4 text-red-600"></i> S2 - Fórum do Grupo
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="font-bold text-gray-700 flex items-center gap-2 mb-2"><i data-lucide="chevron-down" class="w-4 h-4 text-red-700"></i> Semana 4</h3>
-          <ul class="pl-5 space-y-2 text-gray-600">
-            <li id="sidebar-lab-s4" class="hover:text-red-700 flex items-center gap-1.5 cursor-pointer font-medium" onclick="document.getElementById('lab-section').scrollIntoView({behavior:'smooth'})">
-              <i data-lucide="flask-conical" class="w-3.5 h-3.5"></i> S4 - Laboratório: Revisão entre pares
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </aside>
+  <!-- ========== VIEW: DISCIPLINA (formato Moodle Boost / UNIVESP) ========== -->
+  <div id="view-curso" class="view view-hidden flex-1 flex flex-col min-h-0 pb-20 relative">
+    <div class="flex flex-1 min-h-0 relative">
 
-    <main class="flex-1 bg-white p-5 md:p-8 min-w-0">
-      <div id="course-header" class="mb-6 pb-4 border-b border-gray-200">
-        <div class="text-xs uppercase font-bold text-red-700 tracking-wider mb-1">Engenharia de Computação / Bacharelado</div>
-        <h2 class="text-xl md:text-2xl font-extrabold text-gray-900 leading-tight">
-          Inteligência Artificial na Prática Acadêmica e Profissional
-        </h2>
-        <div class="text-sm font-semibold text-gray-500 mt-1">COM170 — exemplo de disciplina no AVA</div>
-        <div id="moodle-tabs" class="flex flex-wrap gap-1 mt-5 border-b border-gray-200">
-          <button type="button" id="tab-btn-curso" onclick="switchTab('curso')" class="tab-btn px-4 py-2 text-sm font-bold border-b-2 border-red-600 text-red-700">Curso</button>
-          <button type="button" id="tab-btn-faq" onclick="switchTab('faq')" class="tab-btn px-4 py-2 text-sm font-semibold text-gray-500 hover:text-red-700 flex items-center gap-1.5">
-            <i data-lucide="help-circle" class="w-4 h-4 text-red-600"></i> FAQ do Calouro
+      <!-- Índice do curso (barra lateral esquerda, visual Moodle) -->
+      <aside id="course-index-drawer" class="course-index-drawer shrink-0 flex flex-col border-r border-gray-300 relative overflow-visible">
+        <div class="ci-header relative">
+          <button type="button" id="btn-close-index" onclick="toggleCourseIndex(false)" class="ci-icon-btn" title="Fechar índice do curso" data-tour-id="indice-fechar" aria-label="Fechar índice">
+            <i data-lucide="x" class="w-4 h-4"></i>
           </button>
-          <button type="button" id="tab-btn-notas" onclick="switchTab('notas')" class="tab-btn px-4 py-2 text-sm font-medium text-gray-500 hover:text-gray-900">Notas</button>
+          <button type="button" id="btn-ci-menu" onclick="toggleCiMenu(event)" class="ci-icon-btn" title="Opções de índice de curso" aria-label="Opções de índice" aria-haspopup="true" aria-expanded="false">
+            <i data-lucide="more-vertical" class="w-4 h-4"></i>
+          </button>
+          <div id="ci-menu" class="ci-menu hidden" role="menu">
+            <button type="button" role="menuitem" onclick="setAllCourseSections(true)">
+              <i data-lucide="chevrons-down" class="w-4 h-4 text-gray-600"></i> Expandir tudo
+            </button>
+            <button type="button" role="menuitem" onclick="setAllCourseSections(false)">
+              <i data-lucide="chevrons-right" class="w-4 h-4 text-gray-600"></i> Contrair tudo
+            </button>
+          </div>
         </div>
-      </div>
-
-      <div id="tab-content-curso" class="tab-content space-y-6">
-        <section id="group-forum-section" class="border border-red-200 rounded-xl overflow-hidden bg-red-50/10 p-5">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="p-2.5 bg-red-100 text-red-700 rounded-xl"><i data-lucide="messages-square" class="w-5 h-5"></i></span>
-            <div>
-              <span class="text-[9px] bg-green-100 text-green-800 px-2 py-0.5 rounded font-bold uppercase">Exemplo · Feito</span>
-              <h3 class="text-base font-extrabold text-gray-900 mt-1">S2 - Fórum do Grupo</h3>
+        <nav id="sidebar-left" class="flex-1 overflow-y-auto pb-4" aria-label="Índice do curso">
+          <!-- Geral (aberta) -->
+          <div class="ci-section is-open" data-ci-section>
+            <button type="button" class="ci-section-row" onclick="toggleCiSection(this)">
+              <span class="ci-chevron ci-chevron-expanded">▾</span>
+              <span class="ci-chevron ci-chevron-collapsed">▸</span>
+              <span>Geral</span>
+            </button>
+            <div class="ci-cm-list">
+              <div class="ci-cm ci-cm-plain">Live com facilitador</div>
+              <div class="ci-cm ci-cm-plain">Fórum de dúvidas gerais</div>
+              <div class="ci-cm ci-cm-plain">Manual do Ingressante 2026</div>
+              <div class="ci-cm ci-cm-plain">Avisos</div>
             </div>
           </div>
-          <p class="bg-white border border-gray-100 rounded-lg p-3 text-xs text-gray-700 mb-3">
-            Espaço só do seu grupo (e do facilitador). Use para combinar formato de entrega, divisão de tarefas e registrar a colaboração.
-          </p>
-          <div id="forum-table" class="bg-white border border-gray-200 rounded-lg overflow-hidden text-xs">
-            <table class="w-full text-left">
-              <thead>
-                <tr class="bg-gray-50 text-gray-500 font-bold border-b text-[10px]">
-                  <th class="p-3">Tópico</th>
-                  <th class="p-3">Grupo</th>
-                  <th class="p-3">Autor</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="hover:bg-gray-50">
-                  <td class="p-3 font-semibold">Atividade Semanal — exemplo</td>
-                  <td class="p-3"><span class="bg-gray-100 px-1.5 py-0.5 rounded text-[10px]">DRPXX-…-GX</span></td>
-                  <td class="p-3">Estudante (genérico)</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section id="lab-section" class="border border-indigo-200 rounded-xl overflow-hidden bg-indigo-50/20 p-5">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="p-2.5 bg-indigo-100 text-indigo-700 rounded-xl"><i data-lucide="flask-conical" class="w-5 h-5"></i></span>
-            <div>
-              <span class="text-[9px] bg-indigo-100 text-indigo-800 px-2 py-0.5 rounded font-bold uppercase">Diferencial da Semana 4</span>
-              <h3 class="text-base font-extrabold text-gray-900 mt-1">S4 - Laboratório: Revisão entre pares</h3>
+          <!-- Semanas 1-3 (fechadas) -->
+          <div class="ci-section" data-ci-section>
+            <button type="button" class="ci-section-row" onclick="toggleCiSection(this)">
+              <span class="ci-chevron ci-chevron-expanded">▾</span>
+              <span class="ci-chevron ci-chevron-collapsed">▸</span>
+              <span>Semana 1</span>
+            </button>
+            <div class="ci-cm-list">
+              <div class="ci-cm"><span class="ci-dot done"></span><span>S1 - Início</span></div>
+              <div class="ci-cm"><span class="ci-dot done"></span><span>S1 - O mapa do mês</span></div>
             </div>
           </div>
-          <div class="text-xs sm:text-sm text-gray-700 space-y-2 leading-relaxed">
-            <p>O <strong>Laboratório (Workshop)</strong> do Moodle tem fases: envio do material → distribuição anônima → revisão com rubrica → retorno.</p>
-            <ol class="list-decimal pl-5 space-y-1">
-              <li>O representante envia o material do grupo no prazo de envio.</li>
-              <li>O sistema distribui o trabalho de outro grupo (anônimo).</li>
-              <li>Vocês preenchem a rubrica e escrevem comentário de retorno (80–120 palavras na missão da S4).</li>
-              <li>Enviam a revisão no prazo da fase de avaliação.</li>
-            </ol>
-            <p class="text-gray-500 text-[11px]">As outras semanas repetem o padrão (materiais + atividade). A S4 acrescenta essa etapa de revisão entre pares.</p>
+          <div class="ci-section" data-ci-section>
+            <button type="button" class="ci-section-row" onclick="toggleCiSection(this)">
+              <span class="ci-chevron ci-chevron-expanded">▾</span>
+              <span class="ci-chevron ci-chevron-collapsed">▸</span>
+              <span>Semana 2</span>
+            </button>
+            <div class="ci-cm-list">
+              <div class="ci-cm"><span class="ci-dot done"></span><span>S2 - Início</span></div>
+              <div class="ci-cm"><span class="ci-dot done"></span><span>S2 - Fórum do Grupo</span></div>
+            </div>
           </div>
-        </section>
+          <div class="ci-section" data-ci-section>
+            <button type="button" class="ci-section-row" onclick="toggleCiSection(this)">
+              <span class="ci-chevron ci-chevron-expanded">▾</span>
+              <span class="ci-chevron ci-chevron-collapsed">▸</span>
+              <span>Semana 3</span>
+            </button>
+            <div class="ci-cm-list">
+              <div class="ci-cm"><span class="ci-dot done"></span><span>S3 - Início</span></div>
+              <div class="ci-cm"><span class="ci-dot done"></span><span>S3 - Fórum do Grupo</span></div>
+            </div>
+          </div>
+          <!-- Semana 4 (aberta, como no print) -->
+          <div class="ci-section is-open" data-ci-section id="ci-section-s4">
+            <button type="button" class="ci-section-row" onclick="toggleCiSection(this)">
+              <span class="ci-chevron ci-chevron-expanded">▾</span>
+              <span class="ci-chevron ci-chevron-collapsed">▸</span>
+              <span>Semana 4</span>
+            </button>
+            <div class="ci-cm-list">
+              <div class="ci-cm"><span class="ci-dot done"></span><span>S4 - Início</span></div>
+              <div class="ci-cm"><span class="ci-dot done"></span><span>S4 - Como organizar seus estudo…</span></div>
+              <div class="ci-cm"><span class="ci-dot done"></span><span>S4 - As atividades desta semana</span></div>
+              <div class="ci-cm"><span class="ci-dot todo"></span><span>S4 - O que é revisão por pares</span></div>
+              <div class="ci-cm"><span class="ci-dot todo"></span><span>S4 - Tutorial da ferramenta Labo…</span></div>
+              <div id="sidebar-lab-s4" class="ci-cm cursor-pointer hover:bg-black/5 rounded" onclick="document.getElementById('lab-section').scrollIntoView({behavior:'smooth',block:'center'})">
+                <span class="ci-dot done"></span><span>S4 - Laboratório: Revisão entre p…</span>
+              </div>
+              <div id="sidebar-forum-grupo" class="ci-cm"><span class="ci-dot done"></span><span>S4 - Fórum do Grupo</span></div>
+              <div class="ci-cm"><span class="ci-dot todo"></span><span>S4 - Em síntese</span></div>
+            </div>
+          </div>
+        </nav>
+      </aside>
+
+      <!-- Conteúdo principal (alinhado à esquerda da área central, como no AVA) -->
+      <div class="course-main-col flex flex-col relative overflow-x-hidden">
+        <!-- Botão reabrir índice (hamburger / painel) quando fechado -->
+        <button type="button" id="btn-open-index" onclick="toggleCourseIndex(true)" class="hidden absolute left-0 top-2 z-20 bg-[#dee2e6] border border-gray-300 border-l-0 shadow-sm px-1.5 py-2 rounded-r-md text-gray-700 hover:bg-gray-300" title="Abrir índice do curso" data-tour-id="indice-abrir" aria-label="Abrir índice do curso">
+          <i data-lucide="menu" class="w-4 h-4"></i>
+        </button>
+
+        <div class="flex-1 overflow-y-auto">
+          <div class="course-main-inner">
+          <div id="course-header" class="mb-2">
+            <h1 class="text-xl sm:text-2xl font-bold text-gray-900 leading-snug">
+              Inteligência Artificial na Prática Acadêmica e Profissional - COM170 - EC - DRP11 - Turma 001
+            </h1>
+          </div>
+
+          <!-- Navegação secundária do curso -->
+          <div id="moodle-tabs" class="secondary-navigation flex flex-wrap gap-0 border-b border-gray-200 mb-5 text-sm">
+            <button type="button" id="tab-btn-curso" onclick="switchTab('curso')" class="sec-nav-btn tab-btn active px-3 py-2 text-gray-600 hover:text-gray-900">Curso</button>
+            <button type="button" id="tab-btn-info" onclick="switchTab('info')" class="sec-nav-btn tab-btn px-3 py-2 text-gray-500 hover:text-gray-900">Informação</button>
+            <button type="button" id="tab-btn-participantes" onclick="switchTab('participantes')" class="sec-nav-btn tab-btn px-3 py-2 text-gray-500 hover:text-gray-900">Participantes</button>
+            <button type="button" id="tab-btn-notas" onclick="switchTab('notas')" class="sec-nav-btn tab-btn px-3 py-2 text-gray-500 hover:text-gray-900">Notas</button>
+            <button type="button" id="tab-btn-competencias" onclick="switchTab('competencias')" class="sec-nav-btn tab-btn px-3 py-2 text-gray-500 hover:text-gray-900">Competências</button>
+          </div>
+
+          <!-- Aba Curso (seções) -->
+          <div id="tab-content-curso" class="tab-content space-y-4">
+            <!-- Geral -->
+            <section id="section-geral" class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+              <div class="flex items-center justify-between px-4 py-3 border-b border-gray-100">
+                <h2 class="font-semibold text-gray-900 flex items-center gap-2"><i data-lucide="chevron-down" class="w-4 h-4"></i> Geral</h2>
+                <span class="text-xs text-blue-700 font-medium">Contrair tudo</span>
+              </div>
+              <div class="px-3 pt-3">
+                <div class="rounded-md overflow-hidden mb-2 h-28 sm:h-36 bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-800 flex items-center justify-center">
+                  <span class="text-white font-semibold text-sm sm:text-base tracking-wide text-center px-4">Ambientação e Integração Acadêmica</span>
+                </div>
+              </div>
+              <div>
+                <div class="activity-row"><i data-lucide="video" class="w-4 h-4 text-sky-600 shrink-0"></i> Live com facilitador</div>
+                <div class="activity-row"><i data-lucide="messages-square" class="w-4 h-4 text-violet-600 shrink-0"></i> Fórum de dúvidas gerais</div>
+                <div class="activity-row"><i data-lucide="file-text" class="w-4 h-4 text-blue-600 shrink-0"></i> Manual do Ingressante 2026</div>
+                <div class="activity-row"><i data-lucide="megaphone" class="w-4 h-4 text-blue-600 shrink-0"></i> Avisos</div>
+              </div>
+            </section>
+
+            <!-- Semana 1 (resumo) -->
+            <section class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+              <div class="px-4 py-3 border-b border-gray-100">
+                <h2 class="font-semibold text-gray-900 flex items-center gap-2"><i data-lucide="chevron-down" class="w-4 h-4"></i> Semana 1</h2>
+                <div class="mt-2 text-xs bg-teal-50 text-teal-900 rounded px-3 py-1.5 inline-block">Tema: O começo de tudo</div>
+              </div>
+              <div class="activity-row"><i data-lucide="file-text" class="w-4 h-4 text-blue-600 shrink-0"></i> S1 - Início <span class="badge-done">Concluído ▾</span></div>
+              <div class="activity-row"><i data-lucide="file-text" class="w-4 h-4 text-blue-600 shrink-0"></i> S1 - O mapa do mês <span class="badge-done">Concluído ▾</span></div>
+              <div class="activity-row text-gray-500 text-xs px-3 py-2">… demais itens da semana (padrão se repete)</div>
+            </section>
+
+            <!-- Semana 4 (completa, diferencial) -->
+            <section id="section-s4" class="bg-white border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+              <div class="px-4 py-3 border-b border-gray-100">
+                <h2 class="font-semibold text-gray-900 flex items-center gap-2"><i data-lucide="chevron-down" class="w-4 h-4"></i> Semana 4</h2>
+              </div>
+              <div class="activity-row"><i data-lucide="file-text" class="w-4 h-4 text-blue-600 shrink-0"></i> S4 - Início <span class="badge-done">Concluído ▾</span></div>
+              <div class="activity-row"><i data-lucide="file-text" class="w-4 h-4 text-blue-600 shrink-0"></i> S4 - Como organizar seus estudos esta semana <span class="badge-done">Concluído ▾</span></div>
+              <div class="activity-row"><i data-lucide="file-text" class="w-4 h-4 text-blue-600 shrink-0"></i> S4 - As atividades desta semana <span class="badge-done">Concluído ▾</span></div>
+              <div class="activity-row"><i data-lucide="file-text" class="w-4 h-4 text-blue-600 shrink-0"></i> S4 - O que é revisão por pares <span class="badge-pending">Pendente ▾</span></div>
+              <div class="activity-row"><i data-lucide="link" class="w-4 h-4 text-sky-600 shrink-0"></i> S4 - Tutorial da ferramenta Laboratório <span class="badge-pending">Pendente ▾</span></div>
+              <div id="lab-section" class="activity-row bg-indigo-50/50 border-l-4 border-indigo-500">
+                <i data-lucide="flask-conical" class="w-4 h-4 text-pink-600 shrink-0"></i>
+                <div class="min-w-0 flex-1">
+                  <div class="font-semibold text-gray-900">S4 - Laboratório: Revisão entre pares</div>
+                  <p class="text-[11px] text-gray-600 mt-0.5 leading-relaxed">
+                    Fases: <strong>envio</strong> → distribuição anônima → <strong>rubrica</strong> e comentário → retorno. É o passo a mais da Semana 4.
+                  </p>
+                </div>
+                <span class="badge-done">Concluído ▾</span>
+              </div>
+              <div id="group-forum-section" class="activity-row">
+                <i data-lucide="messages-square" class="w-4 h-4 text-violet-600 shrink-0"></i> S4 - Fórum do Grupo <span class="badge-done">Concluído ▾</span>
+              </div>
+              <div class="activity-row"><i data-lucide="file-text" class="w-4 h-4 text-blue-600 shrink-0"></i> S4 - Em síntese <span class="badge-pending">Pendente ▾</span></div>
+            </section>
+          </div>
+
+          <div id="tab-content-info" class="tab-content hidden">
+            <div class="bg-white border border-gray-200 rounded-lg p-5 text-sm text-gray-700 space-y-2">
+              <h3 class="font-bold text-gray-900">Informação</h3>
+              <p>Aba com dados da disciplina (ementa, equipe, etc.). No AVA real o conteúdo é institucional.</p>
+            </div>
+          </div>
+          <div id="tab-content-participantes" class="tab-content hidden">
+            <div class="bg-white border border-gray-200 rounded-lg p-5 text-sm text-gray-700 space-y-2">
+              <h3 class="font-bold text-gray-900">Participantes</h3>
+              <p>Lista de estudantes, facilitadores e papéis da turma. Útil para achar colegas e enviar mensagem.</p>
+            </div>
+          </div>
+          <div id="tab-content-notas" class="tab-content hidden">
+            <div class="bg-white border border-gray-200 rounded-lg p-5 shadow-sm">
+              <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <i data-lucide="award" class="text-red-600 w-5 h-5"></i> Notas
+              </h3>
+              <div class="space-y-3 text-sm">
+                <div class="flex justify-between border-b pb-2"><span>Atividade da Semana 1</span><span class="text-gray-400">-</span></div>
+                <div class="flex justify-between border-b pb-2"><span>Atividade da Semana 2</span><span class="text-gray-400">-</span></div>
+                <p class="text-xs text-gray-500 bg-gray-50 p-3 rounded">Modelo comum: atividades no AVA (~40%) e prova presencial (~60%). Confirme no plano da disciplina.</p>
+              </div>
+            </div>
+          </div>
+          <div id="tab-content-competencias" class="tab-content hidden">
+            <div class="bg-white border border-gray-200 rounded-lg p-5 text-sm text-gray-700">
+              <h3 class="font-bold text-gray-900 mb-2">Competências</h3>
+              <p>Quando a instituição usa o recurso, aqui aparecem competências vinculadas à disciplina.</p>
+            </div>
+          </div>
+          <!-- FAQ da disciplina (legado do guia, acessível pelo Guia flutuante) -->
+          <div id="tab-content-faq" class="tab-content hidden space-y-4">
+            <div id="faq-accordion-container" class="space-y-3"></div>
+          </div>
+          </div><!-- /.course-main-inner -->
+        </div>
       </div>
 
-      <div id="tab-content-faq" class="tab-content hidden space-y-4">
-        <div class="bg-red-50 border-l-4 border-red-600 p-4 rounded-r-xl">
-          <h3 class="font-extrabold text-red-900 text-base">Central de dúvidas do ingressante</h3>
-          <p class="text-xs text-red-700 mt-1">Pesquise ou expanda as perguntas. Conteúdo genérico para calouros.</p>
-        </div>
-        <div class="relative">
-          <input type="text" id="faq-search" oninput="filterFAQ()" placeholder="Buscar (ex: nota, prazo, grupo, AVA)..." class="w-full pl-10 pr-4 py-3 border-2 border-gray-200 rounded-xl text-sm focus:border-red-600 focus:outline-none">
-          <i data-lucide="search" class="w-5 h-5 text-gray-400 absolute left-3.5 top-3.5"></i>
-        </div>
-        <div id="faq-accordion-container" class="space-y-3"></div>
-      </div>
+      <!-- Toggle gaveta de blocos, visual Moodle (semicírculo na borda direita) -->
+      <button type="button" id="btn-toggle-blocks" onclick="toggleBlocksDrawer()" class="drawer-blocks-toggle" title="Abrir gaveta de blocos" data-tour-id="gaveta-blocos" aria-label="Abrir ou fechar gaveta de blocos">
+        <span id="icon-blocks-chevron" class="drawer-blocks-chevron" aria-hidden="true">&lt;</span>
+      </button>
 
-      <div id="tab-content-notas" class="tab-content hidden">
-        <div class="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">
-          <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-            <i data-lucide="award" class="text-red-600"></i> Relatório de Notas (exemplo)
-          </h3>
-          <div class="space-y-3 text-sm">
-            <div class="flex justify-between border-b pb-2"><span>Atividade — Semana 1</span><span class="font-bold text-green-600">— / 10</span></div>
-            <div class="flex justify-between border-b pb-2"><span>Atividade — Semana 2</span><span class="text-gray-400">Aguardando</span></div>
-            <p class="text-xs text-gray-500 bg-gray-50 p-3 rounded">Em geral, atividades no AVA pesam cerca de <strong>40%</strong> e a prova presencial cerca de <strong>60%</strong> (confirme no plano da disciplina e no Manual).</p>
+      <!-- Gaveta de blocos (direita), visual próximo ao Moodle; conteúdo genérico -->
+      <aside id="blocks-drawer" class="blocks-drawer is-closed shrink-0 bg-white">
+        <div class="w-[300px] min-h-full relative pt-2 pb-6 px-4">
+          <button type="button" onclick="toggleBlocksDrawer(false)" class="absolute top-2 right-2 p-1.5 rounded-full text-gray-500 hover:bg-gray-100 hover:text-gray-800" title="Fechar" aria-label="Fechar gaveta">
+            <i data-lucide="x" class="w-4 h-4"></i>
+          </button>
+
+          <div id="professor-card" class="pt-6 text-center">
+            <!-- Avatar genérico (sem foto real) -->
+            <div class="w-[88px] h-[88px] rounded-full mx-auto mb-3 bg-gradient-to-br from-slate-200 to-slate-400 ring-1 ring-black/5 shadow-sm overflow-hidden flex items-center justify-center" aria-hidden="true">
+              <i data-lucide="user" class="w-10 h-10 text-white/90"></i>
+            </div>
+            <h4 class="font-bold text-gray-900 text-[15px] leading-snug px-1">
+              Professor da disciplina
+            </h4>
+            <p class="text-sm text-gray-500 mt-0.5 mb-3">Autor</p>
+
+            <details class="text-left group px-0.5">
+              <summary class="text-sm text-gray-800 cursor-pointer list-none flex items-center gap-1.5 select-none hover:text-gray-950">
+                <span class="text-xs text-gray-600 group-open:rotate-90 transition-transform inline-block" aria-hidden="true">▸</span>
+                <span>Mini currículo</span>
+              </summary>
+              <p class="mt-2 text-[13px] text-gray-700 leading-relaxed">
+                Neste bloco o AVA mostra o <strong>mini currículo</strong> do docente responsável pela disciplina (formação, experiência e áreas de interesse). O conteúdo é definido pela instituição e pode variar por turma.
+              </p>
+            </details>
           </div>
         </div>
-      </div>
-    </main>
-
-    <aside id="sidebar-right" class="w-full lg:w-72 bg-gray-50 border-l border-gray-200 p-5 space-y-4 shrink-0">
-      <div id="professor-card" class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm text-center">
-        <span class="text-[10px] font-bold text-red-700 uppercase tracking-wider block mb-3">Professor responsável</span>
-        <div class="w-16 h-16 rounded-full mx-auto bg-gray-200 flex items-center justify-center text-gray-500 font-bold mb-2">DOC</div>
-        <h4 class="font-bold text-gray-900 text-sm">Docente da disciplina</h4>
-        <p class="text-xs text-gray-500">Nome genérico neste tour</p>
-      </div>
-      <div id="contacts-card" class="bg-white border border-gray-200 rounded-xl p-5 shadow-sm">
-        <h4 class="font-bold text-gray-800 text-sm flex items-center gap-1.5 mb-3 pb-2 border-b">
-          <i data-lucide="message-square" class="w-4 h-4"></i> Mensagens &amp; Grupo
-        </h4>
-        <div class="p-3 bg-gray-50 rounded-lg border text-xs">
-          <div class="text-[10px] uppercase font-bold text-gray-400">Grupo (exemplo)</div>
-          <div class="font-bold text-gray-800 mt-1">COM170-…-DRPXX-…-GX</div>
-          <p class="text-[10px] text-gray-500 mt-1">Código real aparece no AVA da sua turma.</p>
-        </div>
-      </div>
-    </aside>
+      </aside>
+    </div>
   </div>
 
   <!-- Tooltip do tour (fonte ampliada para leitura) -->
@@ -485,7 +884,7 @@
     </div>
   </div>
 
-  <!-- Modal livre (não bloqueante) — perto do FAB (meio da direita) -->
+  <!-- Modal livre (não bloqueante), perto do FAB (meio da direita) -->
   <div id="free-modal" class="fixed top-1/2 -translate-y-1/2 right-20 sm:right-24 z-[65] w-[min(100%-5.5rem,24rem)] bg-white border border-gray-200 shadow-2xl rounded-xl p-5 hidden">
     <div class="flex justify-between items-start gap-2 mb-2">
       <h4 id="free-modal-title" class="font-bold text-base text-gray-900"></h4>
@@ -519,7 +918,7 @@
         <div class="min-w-0">
           <p class="text-xs font-bold text-gray-900">Botão flutuante no lado direto</p>
           <p class="text-[11px] text-gray-600 leading-relaxed mt-0.5">
-            <strong class="text-red-700">Dica</strong>: Reabre o tour, o <strong>FAQ</strong> e as <strong>Pistas</strong> quando quiser.
+            <strong class="text-red-700">Dica</strong>: Reabre o tour, o <strong>FAQ</strong> e o <strong>Bilhete Dourado</strong> quando quiser.
           </p>
         </div>
       </div>
@@ -562,11 +961,12 @@
     <div class="absolute inset-0 bg-black/50"></div>
     <div class="absolute top-1/2 -translate-y-1/2 right-20 sm:right-24 left-4 sm:left-auto sm:max-w-xs bg-white text-gray-800 rounded-xl shadow-xl p-4 border-2 border-red-500 z-10">
       <p class="text-sm font-bold text-gray-900 mb-1">Tour concluído!</p>
-      <p class="text-xs text-gray-600 leading-relaxed">Clique no botão flutuante à direita para abrir o <strong>FAQ</strong> e as <strong>Pistas</strong> — vale a pena guardar esse atalho.</p>
+      <p class="text-sm font-bold text-amber-900 mb-1">Leia o Bilhete Dourado</p>
+      <p class="text-xs text-gray-600 leading-relaxed">Clique no botão flutuante à direita e abra o <strong class="text-amber-700">Bilhete Dourado</strong>, o recado que a gente gostaria de ter recebido no primeiro dia de curso.</p>
     </div>
   </div>
 
-  <!-- Painel do Guia (abre pelo FAB — ancorado ao meio da direita) -->
+  <!-- Painel do Guia (menu curto; FAQ e Cartão abrem em modais próprias) -->
   <div id="guide-panel" class="fixed z-[72] top-1/2 -translate-y-1/2 right-20 sm:right-24 w-[min(100%-5.5rem,22rem)] guide-panel bg-white rounded-2xl shadow-2xl border border-gray-200 hidden flex flex-col overflow-hidden">
     <div class="bg-gradient-to-r from-red-700 to-black text-white px-4 py-3 flex items-start justify-between gap-2 shrink-0">
       <div>
@@ -577,58 +977,76 @@
         <i data-lucide="x" class="w-5 h-5"></i>
       </button>
     </div>
-    <div class="flex border-b border-gray-200 shrink-0 text-xs font-bold">
-      <button type="button" data-guide-tab="inicio" onclick="switchGuideTab('inicio')" class="guide-tab flex-1 py-2.5 text-red-700 border-b-2 border-red-600">Início</button>
-      <button type="button" data-guide-tab="faq" onclick="switchGuideTab('faq')" class="guide-tab flex-1 py-2.5 text-gray-500 border-b-2 border-transparent">FAQ</button>
-      <button type="button" data-guide-tab="pistas" onclick="switchGuideTab('pistas')" class="guide-tab flex-1 py-2.5 text-gray-500 border-b-2 border-transparent">Pistas</button>
+    <div class="p-4 space-y-3">
+      <p class="text-xs text-gray-600 leading-relaxed">Tour da plataforma, FAQ e o Bilhete Dourado.</p>
+      <button type="button" onclick="startTourFromGuide()" class="btn-iniciar-tour w-full text-white font-extrabold py-3.5 rounded-xl flex items-center justify-center gap-2 text-sm uppercase tracking-wide">
+        <i data-lucide="play" class="w-4 h-4"></i> Iniciar tour
+      </button>
+      <button type="button" onclick="openContentModal('faq')" class="w-full border border-gray-200 hover:border-red-300 hover:bg-red-50 font-semibold py-2.5 rounded-xl text-sm flex items-center justify-center gap-2">
+        <i data-lucide="help-circle" class="w-4 h-4 text-red-600"></i> FAQ
+      </button>
+      <button type="button" id="btn-bilhete-dourado" onclick="openContentModal('cartao')" class="btn-bilhete w-full font-extrabold py-3 rounded-xl text-sm flex items-center justify-center gap-2">
+        <i data-lucide="ticket" class="w-4 h-4"></i> Bilhete Dourado
+      </button>
     </div>
-    <div class="overflow-y-auto flex-1 p-4">
-      <div id="guide-tab-inicio" class="guide-tab-panel space-y-3">
-        <p class="text-xs text-gray-600 leading-relaxed">Nada aqui é enviado de verdade. Use o tour para conhecer a tela ou consulte o FAQ e as pistas quando quiser.</p>
-        <button type="button" onclick="startTourFromGuide()" class="btn-iniciar-tour w-full text-white font-extrabold py-3.5 rounded-xl flex items-center justify-center gap-2 text-sm uppercase tracking-wide">
-          <i data-lucide="play" class="w-4 h-4"></i> Iniciar tour
-        </button>
-        <button type="button" onclick="switchGuideTab('faq')" class="w-full border border-gray-200 hover:border-red-300 hover:bg-red-50 font-semibold py-2.5 rounded-xl text-sm flex items-center justify-center gap-2">
-          <i data-lucide="help-circle" class="w-4 h-4 text-red-600"></i> Abrir FAQ
-        </button>
-        <button type="button" onclick="switchGuideTab('pistas')" class="w-full border border-gray-200 hover:border-amber-300 hover:bg-amber-50 font-semibold py-2.5 rounded-xl text-sm flex items-center justify-center gap-2">
-          <i data-lucide="map" class="w-4 h-4 text-amber-600"></i> Ver pistas
-        </button>
-      </div>
-      <div id="guide-tab-faq" class="guide-tab-panel hidden space-y-3">
-        <div class="relative">
-          <input type="text" id="faq-search-guide" oninput="filterFAQGuide()" placeholder="Buscar no FAQ..." class="w-full pl-9 pr-3 py-2 border border-gray-200 rounded-lg text-xs focus:border-red-600 focus:outline-none">
-          <i data-lucide="search" class="w-3.5 h-3.5 text-gray-400 absolute left-3 top-2.5"></i>
+  </div>
+
+  <!-- Modal FAQ, conteúdo fiel da Semana 2 -->
+  <div id="modal-faq" class="fixed inset-0 z-[88] modal-backdrop hidden items-center justify-center p-3 sm:p-6" style="display:none" role="dialog" aria-modal="true" aria-labelledby="modal-faq-title">
+    <div class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl max-h-[90vh] flex flex-col border border-gray-100">
+      <div class="flex items-start justify-between gap-3 px-5 py-4 border-b border-gray-100 shrink-0">
+        <div>
+          <p class="text-[10px] font-bold uppercase tracking-wider text-red-700">Guia do calouro</p>
+          <h2 id="modal-faq-title" class="text-lg font-extrabold text-gray-900">FAQ</h2>
         </div>
-        <div id="faq-guide-container" class="space-y-2"></div>
+        <button type="button" onclick="closeContentModal('faq')" class="p-1.5 rounded-lg text-gray-400 hover:text-gray-700 hover:bg-gray-100" aria-label="Fechar"><i data-lucide="x" class="w-5 h-5"></i></button>
       </div>
-      <div id="guide-tab-pistas" class="guide-tab-panel hidden space-y-3">
-        <p class="text-xs text-gray-600">Resumo rápido do que importa no começo da jornada acadêmica.</p>
-        <div id="pistas-container" class="space-y-2"></div>
+      <div class="px-5 py-3 border-b border-gray-50 shrink-0">
+        <input type="search" id="faq-search-modal" oninput="filterFAQModal()" placeholder="Buscar no FAQ..." class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:border-red-600 focus:outline-none">
       </div>
+      <div id="faq-modal-container" class="overflow-y-auto flex-1 p-4 sm:p-5 space-y-3"></div>
+    </div>
+  </div>
+
+  <!-- Modal Bilhete Dourado, descoberta da trilha dos PIEs (pista 6 do cartão S3), em tom de conversa com o calouro -->
+  <div id="modal-cartao" class="fixed inset-0 z-[88] modal-backdrop hidden items-center justify-center p-3 sm:p-6" style="display:none" role="dialog" aria-modal="true" aria-labelledby="modal-cartao-title">
+    <div class="bilhete-sheet bg-gradient-to-b from-amber-50 via-yellow-50 to-amber-100 rounded-2xl shadow-2xl w-full max-w-lg max-h-[90vh] flex flex-col border-2 border-amber-400 overflow-hidden">
+      <div class="flex items-start justify-between gap-3 px-5 py-4 border-b border-amber-200/80 shrink-0 bg-amber-400/30">
+        <div>
+          <p class="text-[10px] font-bold uppercase tracking-widest text-amber-900">Para o calouro · leia com calma</p>
+          <h2 id="modal-cartao-title" class="text-xl font-black text-amber-950 flex items-center gap-2">
+            <span aria-hidden="true">🎫</span> Bilhete Dourado
+          </h2>
+        </div>
+        <button type="button" onclick="closeContentModal('cartao')" class="p-1.5 rounded-lg text-amber-900/60 hover:text-amber-950 hover:bg-amber-200/50" aria-label="Fechar"><i data-lucide="x" class="w-5 h-5"></i></button>
+      </div>
+      <div id="cartao-modal-body" class="overflow-y-auto flex-1 p-5 sm:p-6 text-[15px] text-amber-950 leading-relaxed"></div>
     </div>
   </div>
 
   <!-- FAB flutuante: meio da borda direita (z alto para aparecer por cima da modal de boas-vindas) -->
   <div id="fab-dock" class="fixed z-[85] flex flex-col items-end gap-2">
-    <div id="fab-label" class="hidden bg-white text-gray-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-lg border border-red-100 max-w-[11rem] text-right leading-tight">
-      Guia<br><span class="font-normal text-gray-500">FAQ · Pistas</span>
+    <div id="fab-label" class="hidden bg-white text-gray-800 text-xs font-bold px-3 py-1.5 rounded-full shadow-lg border border-red-100 max-w-[12rem] text-right leading-tight">
+      Abra o<br><span class="text-amber-700 font-extrabold">Bilhete Dourado</span>
     </div>
-    <button type="button" id="fab-guia" onclick="onFabClick()" class="fab-calm w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-red-600 to-red-800 text-white flex items-center justify-center relative border-4 border-white" aria-label="Abrir guia" title="Guia">
+    <button type="button" id="fab-guia" onclick="onFabClick()" class="fab-urgent w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-gradient-to-br from-red-600 to-red-800 text-white flex items-center justify-center relative border-4 border-white" aria-label="Abrir guia" title="Guia">
       <i data-lucide="graduation-cap" class="w-7 h-7 sm:w-8 sm:h-8"></i>
       <span id="fab-badge" class="hidden absolute -top-1 -right-1 w-5 h-5 bg-amber-400 text-black text-[10px] font-black rounded-full flex items-center justify-center border-2 border-white">!</span>
     </button>
   </div>
 
   <!-- Dropdown perfil -->
-  <div id="user-dropdown" class="fixed right-4 top-14 bg-white border border-gray-200 shadow-xl rounded-xl w-52 text-sm hidden z-50">
-    <div class="p-3 border-b border-gray-100 bg-gray-50 rounded-t-xl">
-      <p class="font-bold text-gray-800">ALUNO</p>
-      <p class="text-[10px] text-gray-500">aluno@exemplo.univesp.br</p>
-    </div>
-    <ul class="py-1 text-gray-700">
-      <li><span class="px-4 py-2 flex items-center gap-2 text-gray-400 cursor-default"><i data-lucide="user" class="w-4 h-4"></i> Perfil (simulado)</span></li>
-      <li><button type="button" onclick="showView('curso'); switchTab('notas');" class="w-full text-left px-4 py-2 hover:bg-gray-100 flex items-center gap-2"><i data-lucide="award" class="w-4 h-4 text-gray-400"></i> Notas</button></li>
+  <div id="user-dropdown" class="fixed right-4 top-14 bg-white border border-gray-200 shadow-xl rounded-lg w-56 text-sm hidden z-50 py-1">
+    <ul class="text-gray-800">
+      <li><span class="block px-4 py-2 hover:bg-gray-100 cursor-default">Perfil</span></li>
+      <li><button type="button" onclick="showView('curso'); switchTab('notas'); document.getElementById('user-dropdown').classList.add('hidden');" class="w-full text-left px-4 py-2 hover:bg-gray-100">Notas</button></li>
+      <li><span class="block px-4 py-2 hover:bg-gray-100 cursor-default">Calendário</span></li>
+      <li><span class="block px-4 py-2 hover:bg-gray-100 cursor-default">Arquivos privados</span></li>
+      <li><span class="block px-4 py-2 hover:bg-gray-100 cursor-default">Relatórios</span></li>
+      <li class="border-t border-gray-200 my-1"></li>
+      <li><span class="block px-4 py-2 hover:bg-gray-100 cursor-default">Preferências</span></li>
+      <li class="border-t border-gray-200 my-1"></li>
+      <li><span class="block px-4 py-2 hover:bg-gray-100 cursor-default text-gray-600">Sair</span></li>
     </ul>
   </div>
 
@@ -639,65 +1057,71 @@
   <script>
     lucide.createIcons();
 
+    /* FAQ fiel da Semana 2 (Atividade_FAQ.md) */
     const FAQ_ITEMS = [
       {
-        q: "O que é o AVA (Moodle) e o que é o Painel (/my/)?",
-        a: "O AVA é a sala de aula virtual. Depois do login você cai no <strong>Painel</strong> (endereço /my/): avisos, atalhos e serviços. As disciplinas ficam em <strong>Meus cursos</strong>."
+        q: "Qual a diferença entre o AVA e o Portal do Aluno?",
+        a: "O <strong>AVA</strong> (Ambiente Virtual de Aprendizagem) é a plataforma focada no cotidiano acadêmico e pedagógico do estudante. É nele que as disciplinas são disponibilizadas em módulos semanais, onde o aluno assiste às videoaulas, acessa os materiais didáticos e realiza as interações e atividades com os facilitadores. Já o <strong>Portal do Aluno</strong> é a interface voltada para a gestão de serviços administrativo-acadêmicos, servindo como canal para solicitações junto à Secretaria de Registro Acadêmico (SRA) e acesso a políticas de atendimento e permanência estudantil.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: PPC Engenharia de Computação 2026. Seções 4.2 e 7.2.</span>"
       },
       {
-        q: "Qual a diferença entre AVA e Portal do Aluno?",
-        a: "O <strong>AVA</strong> é pedagógico (aulas, fóruns, envios). O <strong>Portal do Aluno</strong> é administrativo (requerimentos, serviços, parte do fluxo de provas). Os dois se complementam."
+        q: "Onde eu localizo o meu GRUPO para as atividades?",
+        a: "A organização e alocação dos estudantes nas salas virtuais de trabalho em grupo são realizadas de forma institucional e centralizada pela equipe de Mediação da UNIVESP. O estudante visualiza os integrantes e o código de identificação do seu grupo diretamente dentro do <strong>AVA</strong>, nos espaços dedicados à interação e ao envio de tarefas das disciplinas que exigem práticas colaborativas (como os Projetos Integradores).<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: PPC 2026. Seções 6.2 e 4.2.</span>"
       },
       {
-        q: "Onde vejo meu grupo (DRP / Gx)?",
-        a: "Dentro da disciplina, no bloco de grupo/participantes ou nos fóruns de grupo. O código identifica turma e grupo de trabalho."
+        q: "Como eu falo com os membros do meu GRUPO?",
+        a: "A comunicação e a construção do trabalho coletivo ocorrem de maneira oficial dentro do AVA, por meio das ferramentas de interatividade e das salas de aula virtuais de grupo. Nesses espaços, os integrantes devem formalizar e registrar o <strong>Plano de Ação</strong> do grupo, com objetivos quinzenais, ferramentas e divisão de tarefas e responsabilidades.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: PPC 2026. Seções 4.2 e 4.8.</span>"
       },
       {
-        q: "Como funcionam prazos das atividades semanais?",
-        a: "Cada semana tem materiais e, em geral, uma atividade com prazo no Moodle. Passou o horário, o envio costuma fechar automaticamente. Não conte com “jeitinho” de sistema."
+        q: "O Grupo é permanente? por semana? por matéria? ou por semestre?",
+        a: "Os grupos de trabalho são formados por <strong>semestre letivo</strong> e vinculados à oferta dos componentes curriculares práticos do período, especificamente os <strong>Projetos Integradores Extensionistas</strong>. O acompanhamento e as avaliações ocorrem de maneira contínua ao longo do semestre correspondente.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: PPC 2026. Seções 4.7 e 4.8.</span>"
       },
       {
-        q: "Como é a nota da disciplina (modelo comum)?",
-        a: "Modelo frequente: atividades no AVA (~40%) + prova presencial (~60%). Aprovação e exame seguem o regulamento e o plano da oferta. Confirme sempre no Manual e na disciplina."
+        q: "Se eu não conseguir estudar o que eu faço?",
+        a: "Se a dificuldade for de <strong>conteúdo</strong> ou do <strong>AVA</strong>, recorra aos <strong>Facilitadores de Aprendizagem</strong> na plataforma. Se for de ordem <strong>pessoal ou administrativa</strong> e você precisar interromper os estudos, procure o <strong>Orientador de Polo</strong> para orientações sobre trancamento de matrícula.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: PPC 2026. Seção 6.1; Manual do Aluno. Canais de Comunicação.</span>"
       },
       {
-        q: "O que é o Fórum do Grupo?",
-        a: "Espaço restrito ao seu grupo e acompanhado pelo facilitador. Serve para combinar entregas e registrar a colaboração — em várias atividades a participação conta."
+        q: "Existe algum grupo de estudo para os alunos?",
+        a: "Oficialmente a universidade não gerencia grupos informais externos, mas estrutura o modelo com construção colaborativa no AVA: materiais-base, materiais de apoio, fóruns e espaços de interação com mediação da equipe pedagógica.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: PPC 2026. Seções 4.1, 4.2 e 4.3.</span>"
       },
       {
-        q: "Facilitador x professor responsável?",
-        a: "<strong>Professor:</strong> concebe o material e as aulas. <strong>Facilitador:</strong> acompanha o AVA, tira dúvidas nos fóruns e corrige/orienta as atividades da turma."
+        q: "Como funcionam as provas na UNIVESP? Elas são online ou presenciais?",
+        a: "Dinâmica <strong>híbrida</strong>: no bimestre, atividades e questionários online no AVA; ao final de cada bimestre, <strong>provas presenciais obrigatórias</strong> no Polo de Apoio Presencial, com agendamento prévio.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: Manual do Aluno. Regimes de Avaliação e Provas Presenciais.</span>"
       },
       {
-        q: "O que é o Laboratório de revisão entre pares (Semana 4)?",
-        a: "Atividade em fases: envio → distribuição anônima → rubrica + comentário → devolutiva. É o “passo a mais” em relação a uma semana só com entrega simples."
+        q: "Perdi o prazo de uma atividade avaliativa semanal. Consigo entregar depois ou prorrogar?",
+        a: "A UNIVESP adota cronograma rígido. As Atividades Semanais têm fechamento automático e, em geral, <strong>não permitem atraso</strong>. Em casos excepcionais justificados (legal/médico), submeta documentação oficial em até <strong>3 dias úteis</strong> após a perda do prazo para análise de reposição.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: Regulamento Geral, capítulo Prazos e Frequência.</span>"
       },
       {
-        q: "Perdi um prazo. E agora?",
-        a: "Regra geral: não reabre sozinho. Casos justificados (ex.: atestado) seguem canal oficial de requerimento nos prazos da instituição. Guarde prints se houver falha técnica."
+        q: "O que é o Projeto Integrador (PI) que todo mundo comenta na UNIVESP?",
+        a: "O <strong>Projeto Integrador</strong> é disciplina prática obrigatória semestral: projeto em grupo para resolver problemas reais de comunidade ou empresa, com tema norteador da UNIVESP. O grupo elabora relatório e, ao final, um vídeo de até 5 minutos da solução.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: Guia Geral do Projeto Integrador (UNIVESP).</span>"
       },
       {
-        q: "Onde está o Manual do Aluno?",
-        a: "No menu superior do AVA (e também em blocos do Painel / recursos). É a referência oficial de regras e canais — este tour não substitui o manual."
+        q: "Como faço para solicitar uma carteirinha de estudante ou uma declaração de matrícula?",
+        a: "Documentos acadêmicos saem de forma digital pelo <strong>Portal do Aluno</strong> (não pelo AVA). Acesse Secretaria Virtual ou SAE → Solicitação de Documentos. O documento é gerado com assinatura digital e QR Code.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: Portal de Atendimento UNIVESP. Serviços da Secretaria e SAE.</span>"
+      },
+      {
+        q: "Eu preciso ir ao polo toda semana? Qual é a frequência real de idas ao polo presencial?",
+        a: "<strong>Não</strong> é necessário ir ao polo toda semana. O modelo é semipresencial: estudo diário online. A presença obrigatória é para as <strong>provas presenciais</strong> (uma ou duas vezes por bimestre). O polo fica disponível opcionalmente para internet, computadores, biblioteca ou reuniões de grupo.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: Manual do Aluno. Organização Didático-Pedagógica e Polos.</span>"
       }
     ];
 
-    function buildFaqHtml(containerId, idPrefix) {
-      const el = document.getElementById(containerId);
+    function buildFaqModal() {
+      const el = document.getElementById("faq-modal-container");
+      if (!el) return;
       el.innerHTML = FAQ_ITEMS.map((item, i) => `
         <div class="faq-item border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm" data-faq>
-          <button type="button" onclick="toggleFaqItem('${idPrefix}', ${i})" class="w-full text-left p-4 font-bold text-sm text-gray-800 hover:bg-gray-50 flex justify-between items-center gap-2">
+          <button type="button" onclick="toggleFaqModalItem(${i})" class="w-full text-left p-4 font-bold text-sm text-gray-800 hover:bg-gray-50 flex justify-between items-center gap-2">
             <span><span class="text-red-600 font-mono mr-1">${String(i + 1).padStart(2, "0")}.</span> ${item.q}</span>
             <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 faq-icon shrink-0"></i>
           </button>
-          <div class="faq-content hidden p-4 border-t border-gray-100 bg-gray-50/50 text-xs sm:text-sm text-gray-600 space-y-2">${item.a}</div>
+          <div class="faq-content hidden p-4 border-t border-gray-100 bg-gray-50/50 text-sm text-gray-600 space-y-2 leading-relaxed">${item.a}</div>
         </div>
       `).join("");
       lucide.createIcons();
     }
 
-    function toggleFaqItem(prefix, index) {
-      const root = document.getElementById(prefix === "g" ? "faq-global-container" : "faq-accordion-container");
+    function toggleFaqModalItem(index) {
+      const root = document.getElementById("faq-modal-container");
       const item = root.querySelectorAll(".faq-item")[index];
       const content = item.querySelector(".faq-content");
       const icon = item.querySelector(".faq-icon");
@@ -707,68 +1131,87 @@
       item.classList.toggle("border-red-600", open);
     }
 
-    function filterFAQ() {
-      const q = document.getElementById("faq-search").value.toLowerCase();
-      document.querySelectorAll("#faq-accordion-container .faq-item").forEach(item => {
-        item.style.display = item.innerText.toLowerCase().includes(q) ? "" : "none";
-      });
-    }
-    function filterFAQGuide() {
-      const q = document.getElementById("faq-search-guide").value.toLowerCase();
-      document.querySelectorAll("#faq-guide-container .faq-item").forEach(item => {
+    function filterFAQModal() {
+      const input = document.getElementById("faq-search-modal");
+      if (!input) return;
+      const q = input.value.toLowerCase();
+      document.querySelectorAll("#faq-modal-container .faq-item").forEach(item => {
         item.style.display = item.innerText.toLowerCase().includes(q) ? "" : "none";
       });
     }
 
-    const PISTAS = [
-      {
-        t: "Eixo do curso",
-        d: "Engenharia de Computação está no Eixo de Computação: formação que une prática e evolução constante do mundo digital."
-      },
-      {
-        t: "O que o curso forma",
-        d: "Profissional capaz de pensar hardware e software juntos, resolver problemas complexos e atuar com ética."
-      },
-      {
-        t: "Trilha dos PIEs",
-        d: "Projetos Integradores (um por semestre) são sequenciais. Reprovar em um atrasa o próximo e pode empurrar a formatura."
-      },
-      {
-        t: "AVA × Portal",
-        d: "AVA = sala de aula (aulas, fóruns, envios). Portal = serviços administrativos e parte do fluxo de provas."
-      },
-      {
-        t: "Notas (modelo comum)",
-        d: "Atividades no AVA (~40%) + prova presencial (~60%). Confirme sempre no plano da disciplina e no Manual."
-      },
-      {
-        t: "Semana 4 — Laboratório",
-        d: "Além da entrega, há revisão entre pares: rubrica + comentário no Laboratório do Moodle (fases de envio e avaliação)."
+    /** Bilhete Dourado: descoberta da trilha dos PIEs (pista 6), tom informal e correto */
+    function buildCartaoModal() {
+      const el = document.getElementById("cartao-modal-body");
+      if (!el) return;
+      el.innerHTML = `
+        <p class="text-base font-semibold text-amber-950 mb-3">Calouro, pare um momento e leia com atenção.</p>
+        <p class="mb-3">
+          Quando entramos no curso, a impressão mais comum era a de que o grande desafio seria a
+          <strong>prova presencial no polo</strong>: estudar a teoria, cumprir a atividade no AVA,
+          marcar a data da prova e seguir em frente.
+        </p>
+        <p class="mb-3">
+          Depois de ler o <strong>PPC</strong> com mais cuidado, a conclusão mudou. A estrutura que
+          realmente organiza a Engenharia de Computação não se resume à prova. É a
+          <strong>trilha dos Projetos Integradores Extensionistas (PIEs)</strong>:
+          <strong>um projeto por semestre</strong>, do início ao fim da formação, com complexidade crescente.
+        </p>
+        <p class="mb-3">
+          Há um detalhe que quase ninguém destaca no primeiro dia: essa trilha é
+          <strong>sequencial</strong>. Não existe atalho. Em regra, <strong>não há aproveitamento
+          de outra instituição</strong> e <strong>não há regime especial</strong> fora da ordem correta.
+          Reprovar em um projeto <strong>não é apenas "ficar de DP"</strong>:
+          <strong>impede o próximo</strong> e <strong>atrasa a formatura</strong>, mesmo com bom desempenho
+          nas disciplinas teóricas.
+        </p>
+        <p class="mb-4 p-3 rounded-xl bg-amber-200/60 border border-amber-500/40 font-medium">
+          O recado é objetivo: trate o <strong>PIE</strong> com a mesma seriedade (ou com mais seriedade)
+          que a prova presencial. Organize o grupo, os prazos e as entregas desde o
+          <strong>primeiro semestre</strong>. O atraso na trilha prática costuma ser o mais custoso do curso.
+        </p>
+        <p class="text-sm text-amber-900/80 border-t border-amber-300/50 pt-3">
+          Registro de quem se deparou com essa leitura no PPC e quis deixar o aviso para quem está chegando agora.
+        </p>
+      `;
+    }
+
+
+    function openContentModal(which) {
+      closeGuidePanel();
+      const id = which === "cartao" ? "modal-cartao" : "modal-faq";
+      const el = document.getElementById(id);
+      el.classList.remove("hidden");
+      el.style.display = "flex";
+      if (which === "faq") buildFaqModal();
+      if (which === "cartao") {
+        buildCartaoModal();
+        pendingBilhete = false;
+        const bilheteBtn = document.getElementById("btn-bilhete-dourado");
+        if (bilheteBtn) bilheteBtn.classList.remove("is-highlight");
       }
-    ];
-
-    function buildPistas() {
-      const el = document.getElementById("pistas-container");
-      el.innerHTML = PISTAS.map((p, i) => `
-        <div class="rounded-xl border border-amber-200 bg-gradient-to-br from-amber-50 to-white p-3 shadow-sm">
-          <div class="flex items-center gap-2 mb-1">
-            <span class="w-6 h-6 rounded-full bg-amber-400 text-black text-[11px] font-black flex items-center justify-center">${i + 1}</span>
-            <h4 class="font-bold text-sm text-gray-900">${p.t}</h4>
-          </div>
-          <p class="text-xs text-gray-600 leading-relaxed pl-8">${p.d}</p>
-        </div>
-      `).join("");
+      lucide.createIcons();
     }
 
-    buildFaqHtml("faq-accordion-container", "c");
-    buildFaqHtml("faq-guide-container", "g");
-    buildPistas();
+    function closeContentModal(which) {
+      const id = which === "cartao" ? "modal-cartao" : "modal-faq";
+      const el = document.getElementById(id);
+      el.classList.add("hidden");
+      el.style.display = "none";
+    }
+
+    // FAQ residual na view curso (se existir container)
+    const faqCourse = document.getElementById("faq-accordion-container");
+    if (faqCourse) {
+      faqCourse.innerHTML = "<p class=\"text-sm text-gray-500\">Abra o <strong>FAQ</strong> pelo botão flutuante do Guia.</p>";
+    }
 
     /* ---------- Guia FAB + modais ---------- */
     const STORAGE_POST_TOUR = "guiaCalouro_post_tour_v1";
 
     let guideOpen = false;
     let forcingFab = false;
+    let pendingBilhete = false; // após o tour: guiar o calouro até o Bilhete Dourado
     let postTourDone = localStorage.getItem(STORAGE_POST_TOUR) === "1";
 
     function isWelcomeOpen() {
@@ -823,12 +1266,15 @@
 
     function startFabForce() {
       forcingFab = true;
+      pendingBilhete = true;
       const spot = document.getElementById("fab-spotlight");
       const fab = document.getElementById("fab-guia");
       spot.classList.remove("hidden");
       fab.classList.remove("fab-calm");
       fab.classList.add("fab-urgent");
-      document.getElementById("fab-label").classList.remove("hidden");
+      const label = document.getElementById("fab-label");
+      label.classList.remove("hidden");
+      label.innerHTML = 'Abra o<br><span class="text-amber-700 font-extrabold">Bilhete Dourado</span>';
       document.getElementById("fab-badge").classList.remove("hidden");
       lucide.createIcons();
     }
@@ -838,14 +1284,15 @@
       localStorage.setItem(STORAGE_POST_TOUR, "1");
       document.getElementById("fab-spotlight").classList.add("hidden");
       const fab = document.getElementById("fab-guia");
-      fab.classList.remove("fab-urgent");
-      fab.classList.add("fab-calm");
+      // Continua chamando atenção com pulse; só a exclamação some após o clique
+      fab.classList.remove("fab-calm");
+      fab.classList.add("fab-urgent");
       document.getElementById("fab-badge").classList.add("hidden");
       document.getElementById("fab-label").classList.add("hidden");
     }
 
     function onFabClick() {
-      // Boas-vindas aberta: não pula o tour — só destaca que precisa iniciar
+      // Boas-vindas aberta: não pula o tour, só destaca que precisa iniciar
       if (isWelcomeOpen()) {
         const btn = document.getElementById("welcome-start-btn");
         if (btn) {
@@ -862,34 +1309,29 @@
       }
       if (forcingFab) clearFabForce();
       if (guideOpen) closeGuidePanel();
-      else openGuidePanel();
+      else openGuidePanel({ highlightBilhete: pendingBilhete });
     }
 
-    function openGuidePanel(tab) {
+    function openGuidePanel(opts) {
       guideOpen = true;
       document.getElementById("guide-panel").classList.remove("hidden");
       document.getElementById("guide-panel").classList.add("flex");
-      switchGuideTab(tab || "inicio");
+      const bilheteBtn = document.getElementById("btn-bilhete-dourado");
+      if (bilheteBtn) {
+        if (opts && opts.highlightBilhete) {
+          bilheteBtn.classList.add("is-highlight");
+          // leve atraso para o calouro “ver” o brilho antes de clicar
+          setTimeout(() => bilheteBtn.scrollIntoView({ block: "nearest", behavior: "smooth" }), 50);
+        } else {
+          bilheteBtn.classList.remove("is-highlight");
+        }
+      }
       lucide.createIcons();
     }
     function closeGuidePanel() {
       guideOpen = false;
       document.getElementById("guide-panel").classList.add("hidden");
       document.getElementById("guide-panel").classList.remove("flex");
-    }
-
-    function switchGuideTab(tab) {
-      document.querySelectorAll(".guide-tab").forEach(btn => {
-        const on = btn.getAttribute("data-guide-tab") === tab;
-        btn.classList.toggle("text-red-700", on);
-        btn.classList.toggle("border-red-600", on);
-        btn.classList.toggle("text-gray-500", !on);
-        btn.classList.toggle("border-transparent", !on);
-      });
-      ["inicio", "faq", "pistas"].forEach(id => {
-        document.getElementById("guide-tab-" + id).classList.toggle("hidden", id !== tab);
-      });
-      lucide.createIcons();
     }
 
     function startTourFromGuide() {
@@ -899,7 +1341,6 @@
 
     function initGuideChrome() {
       const fab = document.getElementById("fab-guia");
-      // Enquanto a modal está aberta, o FAB fica em destaque (como na apresentação inicial)
       fab.classList.remove("fab-calm");
       fab.classList.add("fab-urgent");
       document.getElementById("fab-badge").classList.remove("hidden");
@@ -907,14 +1348,14 @@
       openWelcomeModal();
     }
 
-    /** Ao fechar a modal sem forçar clique: FAB volta ao estado normal */
+    /** Após iniciar o tour: tira o “!” e o label, mas mantém o pulse do botão */
     function calmFabAfterWelcome() {
       if (forcingFab) return;
-      const fab = document.getElementById("fab-guia");
-      fab.classList.remove("fab-urgent");
-      fab.classList.add("fab-calm");
       document.getElementById("fab-badge").classList.add("hidden");
       document.getElementById("fab-label").classList.add("hidden");
+      const fab = document.getElementById("fab-guia");
+      fab.classList.remove("fab-calm");
+      fab.classList.add("fab-urgent");
     }
 
     /* ---------- Navegação entre views ---------- */
@@ -938,18 +1379,76 @@
     }
 
     function switchTab(tabId) {
-      document.querySelectorAll(".tab-btn").forEach(btn => {
-        btn.classList.remove("border-b-2", "border-red-600", "text-red-700", "font-bold");
-        btn.classList.add("text-gray-500", "font-medium");
+      document.querySelectorAll("#moodle-tabs .tab-btn").forEach(btn => {
+        btn.classList.remove("active");
       });
       document.querySelectorAll("#view-curso .tab-content").forEach(c => c.classList.add("hidden"));
       const activeBtn = document.getElementById("tab-btn-" + tabId);
-      if (activeBtn) {
-        activeBtn.classList.remove("text-gray-500", "font-medium");
-        activeBtn.classList.add("border-b-2", "border-red-600", "text-red-700", "font-bold");
-      }
+      if (activeBtn) activeBtn.classList.add("active");
       const panel = document.getElementById("tab-content-" + tabId);
       if (panel) panel.classList.remove("hidden");
+    }
+
+    function toggleCourseIndex(forceOpen) {
+      const drawer = document.getElementById("course-index-drawer");
+      const btnOpen = document.getElementById("btn-open-index");
+      let willClose;
+      if (forceOpen === true) willClose = false;
+      else if (forceOpen === false) willClose = true;
+      else willClose = !drawer.classList.contains("is-closed");
+      drawer.classList.toggle("is-closed", willClose);
+      if (btnOpen) btnOpen.classList.toggle("hidden", !willClose);
+      closeCiMenu();
+      lucide.createIcons();
+    }
+
+    function toggleCiSection(btn) {
+      const section = btn.closest("[data-ci-section]");
+      if (section) section.classList.toggle("is-open");
+    }
+
+    function setAllCourseSections(open) {
+      document.querySelectorAll("[data-ci-section]").forEach(sec => {
+        sec.classList.toggle("is-open", open);
+      });
+      closeCiMenu();
+    }
+
+    function toggleCiMenu(e) {
+      e.stopPropagation();
+      const menu = document.getElementById("ci-menu");
+      const btn = document.getElementById("btn-ci-menu");
+      const open = menu.classList.toggle("hidden") === false;
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+      if (open) lucide.createIcons();
+    }
+
+    function closeCiMenu() {
+      const menu = document.getElementById("ci-menu");
+      const btn = document.getElementById("btn-ci-menu");
+      if (menu) menu.classList.add("hidden");
+      if (btn) btn.setAttribute("aria-expanded", "false");
+    }
+
+    document.addEventListener("click", () => closeCiMenu());
+
+    function toggleBlocksDrawer(forceOpen) {
+      const drawer = document.getElementById("blocks-drawer");
+      const btn = document.getElementById("btn-toggle-blocks");
+      const chevron = document.getElementById("icon-blocks-chevron");
+      let willClose;
+      if (forceOpen === true) willClose = false;
+      else if (forceOpen === false) willClose = true;
+      else willClose = !drawer.classList.contains("is-closed");
+      drawer.classList.toggle("is-closed", willClose);
+      if (btn) {
+        btn.classList.toggle("is-open", !willClose);
+        // Gaveta aberta → some o botão; fechou no X → o botão volta
+        btn.classList.toggle("is-hidden", !willClose);
+        btn.title = willClose ? "Abrir gaveta de blocos" : "Fechar gaveta de blocos";
+      }
+      // Seta sempre para a esquerda: <
+      if (chevron) chevron.textContent = "<";
     }
 
     /* ---------- Perfil dropdown ---------- */
@@ -967,14 +1466,14 @@
         view: "painel",
         elementId: "univesp-header",
         title: "Barra superior do AVA",
-        description: "Depois do login você está no ambiente da <strong>UNIVESP</strong>. Por aqui você encontra <strong>recados importantes</strong>, <strong>Portal do Aluno</strong>, <strong>tutoriais</strong>, <strong>biblioteca virtual</strong> e muito mais — vamos passar por cada um deles.",
+        description: "Depois do login você está no ambiente da <strong>UNIVESP</strong>. Por aqui você encontra <strong>recados importantes</strong>, <strong>Portal do Aluno</strong>, <strong>tutoriais</strong>, <strong>biblioteca virtual</strong> e muito mais, vamos passar por cada um deles.",
         placement: "bottom"
       },
       {
         view: "painel",
         elementId: "painel-banners",
         title: "Avisos e campanhas",
-        description: "Banners no topo do <strong>Painel</strong> trazem <strong>prazos</strong> e <strong>orientações institucionais</strong>. Vale a pena ler sempre que entrar — o conteúdo muda a cada ciclo.",
+        description: "Banners no topo do <strong>Painel</strong> trazem <strong>prazos</strong> e <strong>orientações institucionais</strong>. Vale a pena ler sempre que entrar. O conteúdo muda a cada ciclo.",
         placement: "bottom"
       },
       {
@@ -995,7 +1494,7 @@
         view: "painel",
         elementId: "hotspot-office365",
         title: "E-mail e Teams (Office 365)",
-        description: "Aqui ficam o <strong>e-mail institucional</strong>, o <strong>Teams</strong> e outras ferramentas Microsoft da conta de estudante — comunicação oficial e colaboração.",
+        description: "Aqui ficam o <strong>e-mail institucional</strong>, o <strong>Teams</strong> e outras ferramentas Microsoft da conta de estudante, comunicação oficial e colaboração.",
         placement: "bottom"
       },
       {
@@ -1049,23 +1548,75 @@
       },
       {
         view: "curso",
-        elementId: "sidebar-left",
-        title: "Menu da disciplina",
-        description: "As <strong>semanas</strong> e <strong>atividades</strong> ficam organizadas à esquerda. O padrão se repete: <strong>materiais</strong> + <strong>tarefa</strong>. A <strong>Semana 4</strong> pode incluir o <strong>Laboratório de revisão entre pares</strong>.",
-        placement: "right"
+        elementId: "course-header",
+        title: "Página da disciplina",
+        description: "Você entrou na <strong>sala virtual</strong> da disciplina. O título identifica o componente, o código e a turma.",
+        placement: "bottom"
       },
       {
         view: "curso",
-        elementId: "lab-section",
-        title: "Laboratório (Semana 4)",
-        description: "<strong>Envio</strong> + <strong>revisão anônima</strong> com <strong>rubrica</strong> e <strong>comentário</strong>. É o passo extra em relação a uma semana só com entrega simples.",
-        placement: "top"
+        elementId: "course-index-drawer",
+        title: "Índice do curso",
+        description: "Use o menu lateral à esquerda para navegar e acessar o conteúdo <strong>semanal</strong> ou atividade. Em <strong>Geral</strong> ficam os itens fixos da disciplina; abaixo, o conteúdo organizado por semana.",
+        placement: "right",
+        scroll: "none"
       },
       {
         view: "curso",
         elementId: "moodle-tabs",
-        title: "Abas do curso",
-        description: "Alterne entre o <strong>conteúdo do curso</strong>, o <strong>FAQ do calouro</strong> e o <strong>boletim de notas</strong> da disciplina.",
+        title: "Abas da disciplina",
+        description: "Navegação secundária: <strong>Curso</strong> (conteúdo semanal), <strong>Informação</strong>, <strong>Participantes</strong>, <strong>Notas</strong> e <strong>Competências</strong>.",
+        placement: "bottom"
+      },
+      {
+        view: "curso",
+        elementId: "section-geral",
+        title: "Seção Geral",
+        description: "No topo do conteúdo ficam itens permanentes: <strong>live</strong>, <strong>fórum de dúvidas</strong>, <strong>manual</strong> e <strong>avisos</strong>.",
+        placement: "top"
+      },
+      {
+        view: "curso",
+        elementId: "section-s4",
+        title: "Semana 4",
+        description: "Em cada <strong>semana</strong> há materiais e atividades, com status <strong>Concluído</strong> ou <strong>Pendente</strong>. A <strong>Semana 4</strong> inclui o Laboratório de revisão entre pares.",
+        placement: "top",
+        alsoHighlight: ["ci-section-s4"]
+      },
+      {
+        view: "curso",
+        elementId: "lab-section",
+        title: "Laboratório",
+        description: "<strong>Envio</strong> e <strong>revisão anônima</strong> com <strong>rubrica</strong> e <strong>comentário</strong>. É o passo extra em relação a uma semana só com entrega simples.",
+        placement: "top",
+        alsoHighlight: ["sidebar-lab-s4"]
+      },
+      {
+        view: "curso",
+        elementId: "btn-toggle-blocks",
+        title: "Gaveta de blocos",
+        description: "Esse botão abre a <strong>gaveta da direita</strong>. Em geral ela começa <strong>fechada</strong>.",
+        placement: "left"
+      },
+      {
+        view: "curso",
+        elementId: "professor-card",
+        title: "Professor e autor",
+        description: "Aqui aparece o <strong>docente responsável</strong> pela disciplina, com o papel de <strong>Autor</strong>. Em <strong>Mini currículo</strong> você lê um resumo da formação e da atuação do professor.",
+        placement: "left"
+      },
+      {
+        view: "curso",
+        elementId: "btn-messages",
+        title: "Menu de mensagens",
+        description: "Pelo ícone de <strong>mensagens</strong> você acessa o chat do AVA: conversa com o <strong>grupo</strong>, envia <strong>mensagens privadas</strong> a colegas adicionados como contato e ajusta as <strong>configurações do chat</strong>.",
+        placement: "bottom"
+      },
+      {
+        view: "curso",
+        elementId: "btn-user-menu",
+        title: "Menu do perfil",
+        description: "No menu do avatar você encontra: <strong>Perfil</strong>, <strong>Notas</strong>, <strong>Calendário</strong>, <strong>Arquivos privados</strong>, <strong>Relatórios</strong>, <strong>Preferências</strong> e a opção de <strong>Sair</strong>.",
         placement: "bottom"
       }
     ];
@@ -1093,19 +1644,19 @@
       const completed = !!(opts && opts.completed);
       tourActive = false;
       if (completed) tourCompleted = true;
-      document.querySelectorAll(".tour-highlight").forEach(el => el.classList.remove("tour-highlight"));
+      clearTourHighlights();
       const tooltip = document.getElementById("tour-tooltip");
       tooltip.classList.add("hidden", "opacity-0", "scale-95");
       closeAbandonModal();
       if (enableFree !== false) {
         freeExplore = true;
         if (completed && !postTourDone) {
-          // Tour concluído de verdade → obrigar abrir o guia (FAQ/Pistas)
+          // Tour concluído → chamar atenção para o Bilhete Dourado
           startFabForce();
         } else if (completed) {
           openFreeModal(
             "Tour concluído",
-            "Explore à vontade: clique nas áreas da tela para ver dicas. O botão à direita reabre o tour, o FAQ e as pistas."
+            "Explore à vontade. Quando quiser, o botão à direita reabre o tour, o FAQ e o Bilhete Dourado."
           );
         } else {
           openFreeModal(
@@ -1116,25 +1667,68 @@
       }
     }
 
-    function showStep(index) {
+    function clearTourHighlights() {
       document.querySelectorAll(".tour-highlight").forEach(el => el.classList.remove("tour-highlight"));
+      document.querySelectorAll(".tour-highlight-secondary").forEach(el => el.classList.remove("tour-highlight-secondary"));
+    }
+
+    function applyAlsoHighlights(ids) {
+      if (!ids || !ids.length) return;
+      ids.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        el.classList.add("tour-highlight-secondary");
+        // Garante seção do índice aberta (ex.: Semana 4) se o item estiver dentro
+        const parentSection = el.closest("[data-ci-section]");
+        if (parentSection && !parentSection.classList.contains("is-open")) {
+          parentSection.classList.add("is-open");
+        }
+        if (el.classList.contains("ci-section") && !el.classList.contains("is-open")) {
+          el.classList.add("is-open");
+        }
+      });
+    }
+
+    function showStep(index) {
+      clearTourHighlights();
       if (index < 0 || index >= tourSteps.length) {
         endTour(true, { completed: true });
         return;
       }
       const step = tourSteps[index];
       if (step.view) showView(step.view);
-      if (step.view === "curso") switchTab("curso");
+      if (step.view === "curso") {
+        switchTab("curso");
+        // Garante índice aberto no tour da disciplina
+        toggleCourseIndex(true);
+        // No passo do botão: gaveta fechada (botão visível). No passo do professor: abre e esconde o botão.
+        if (step.elementId === "btn-toggle-blocks") {
+          toggleBlocksDrawer(false);
+        } else if (step.elementId === "professor-card") {
+          toggleBlocksDrawer(true);
+        }
+      }
 
       const targetEl = document.getElementById(step.elementId);
       const tooltip = document.getElementById("tour-tooltip");
       if (!targetEl) return;
 
       targetEl.classList.add("tour-highlight");
-      // Centraliza o alvo, mas deixa espaço para o card do tour (evita sobrepor a borda)
+      applyAlsoHighlights(step.alsoHighlight);
+      // scroll: "none" | "nearest" | "center" (padrão)
+      const scrollMode = step.scroll || "center";
       setTimeout(() => {
-        targetEl.scrollIntoView({ behavior: "smooth", block: "center" });
-        setTimeout(() => positionTooltip(targetEl, tooltip, step.placement), 280);
+        if (scrollMode === "none") {
+          // Não rola a página (ex.: índice lateral, o conteúdo útil já está à vista)
+          positionTooltip(targetEl, tooltip, step.placement);
+        } else {
+          targetEl.scrollIntoView({
+            behavior: "smooth",
+            block: scrollMode === "nearest" ? "nearest" : "center",
+            inline: "nearest"
+          });
+          setTimeout(() => positionTooltip(targetEl, tooltip, step.placement), 280);
+        }
       }, 40);
 
       document.getElementById("tour-badge").innerText = `Passo ${index + 1} de ${tourSteps.length}`;
@@ -1272,17 +1866,19 @@
     /* ---------- Modo livre / modais ---------- */
     const freeCopy = {
       notificacoes: ["Notificações", "Alertas de fórum, prazos e avisos do sistema. Vale conferir com frequência no começo do curso."],
-      mensagens: ["Mensagens", "Chat interno do Moodle com colegas, facilitador e outros usuários do AVA."],
-      ajuda: ["Ajuda", "Atalhos de ajuda do ambiente. Para regras oficiais, use também o Manual do Aluno."],
-      perfil: ["Perfil", "Preferências da conta, foto e dados do usuário. Neste tour o perfil é genérico (ALUNO)."],
+      mensagens: ["Mensagens", "Chat do AVA: mensagens para o grupo, conversas privadas com contatos e configurações do chat."],
+      perfil: ["Menu do usuário", "Perfil, Notas, Calendário, Arquivos privados, Relatórios, Preferências e Sair."],
       manual: ["Manual do Aluno", "Documento oficial com normas, prazos e canais. No AVA real o link abre o material institucional."],
-      "card-destino": ["Escolha seu destino", "Atalhos para Portal do Aluno, e-mail/Teams, atendimento e carreira — vida administrativa e de apoio."],
+      "card-destino": ["Escolha seu destino", "Atalhos para Portal do Aluno, e-mail/Teams, atendimento e carreira, vida administrativa e de apoio."],
       "card-recursos": ["Recursos didáticos", "Bibliotecas, manuais e repositórios de conteúdo para estudar além do material da semana."],
       "card-provas": ["Provas", "Central de orientações sobre avaliações: calendário, FAQ, recurso de questão e fluxos no Portal."],
       "filtro-todos": ["Filtro Todos", "Mostra todas as disciplinas da lista (ou outros agrupamentos, se a instituição configurar)."],
       "filtro-buscar": ["Buscar", "Digite parte do nome da disciplina para filtrar os cartões."],
       "filtro-ordenar": ["Ordenar", "Muda a ordem da lista (por nome, etc.)."],
-      "filtro-cartao": ["Visualização", "Alterna entre modos de exibição — em geral Cartão (como nesta tela) ou lista."]
+      "filtro-cartao": ["Visualização", "Alterna entre modos de exibição, em geral Cartão (como nesta tela) ou lista."],
+      "indice-fechar": ["Fechar índice", "Recolhe a gaveta esquerda do índice do curso. Use o botão na borda para reabrir."],
+      "indice-abrir": ["Abrir índice", "Reabre o índice do curso (semanas e atividades) na gaveta esquerda."],
+      "gaveta-blocos": ["Gaveta de blocos", "Abre a gaveta da direita (perfil do docente e mini currículo). Em geral começa fechada."]
     };
 
     function openFreeModal(title, body) {
@@ -1319,6 +1915,9 @@
     /* Estado inicial: Painel /my/ + chrome do guia */
     showView("painel");
     initGuideChrome();
+    // Índice do curso começa aberto; gaveta de blocos fechada (como no print)
+    toggleCourseIndex(true);
+    toggleBlocksDrawer(false);
   </script>
 </body>
 </html>
