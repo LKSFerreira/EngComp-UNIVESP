@@ -1,0 +1,330 @@
+{
+  "voice": "Aoede",
+  "model": "gemini-3.1-flash-tts-preview",
+  "notes": {
+    "scope": "Narração do conteúdo dos passos e da modal de boas-vindas. FAQ fora. Bilhete Dourado = voz masculina em etapa futura.",
+    "runtime": "Nenhuma API no browser. MP3 estáticos versionados."
+  },
+  "clips": {
+    "welcome": {
+      "file": "welcome.mp3",
+      "voice": "Aoede",
+      "textHash": "3c111fa001a20cf9",
+      "chars": 236,
+      "bytes": 322944,
+      "updatedAt": "2026-07-16T03:28:09.733Z",
+      "script": "scripts/welcome.md",
+      "scope": "welcome-body"
+    },
+    "tour-01-barra-superior": {
+      "file": "tour-01-barra-superior.mp3",
+      "voice": "Aoede",
+      "textHash": "1d3ca2fdc9de49e2",
+      "chars": 186,
+      "bytes": 241536,
+      "updatedAt": "2026-07-16T03:22:40.082Z",
+      "script": "scripts/tour-01-barra-superior.md",
+      "scope": "tour-step-body"
+    },
+    "tour-02-avisos-campanhas": {
+      "file": "tour-02-avisos-campanhas.mp3",
+      "voice": "Aoede",
+      "textHash": "f40779ed0834d0f4",
+      "chars": 134,
+      "bytes": 167424,
+      "updatedAt": "2026-07-16T03:23:07.454Z",
+      "script": "scripts/tour-02-avisos-campanhas.md",
+      "scope": "tour-step-body"
+    },
+    "tour-03-atalhos-estudante": {
+      "file": "tour-03-atalhos-estudante.mp3",
+      "voice": "Aoede",
+      "textHash": "622c92814c14f222",
+      "chars": 170,
+      "bytes": 254976,
+      "updatedAt": "2026-07-16T03:23:38.611Z",
+      "script": "scripts/tour-03-atalhos-estudante.md",
+      "scope": "tour-step-body"
+    },
+    "tour-04-portal-aluno": {
+      "file": "tour-04-portal-aluno.mp3",
+      "voice": "Aoede",
+      "textHash": "6f0563cf95375637",
+      "chars": 159,
+      "bytes": 220416,
+      "updatedAt": "2026-07-16T03:32:13.284Z",
+      "script": "scripts/tour-04-portal-aluno.md",
+      "scope": "tour-step-body"
+    },
+    "tour-05-email-teams": {
+      "file": "tour-05-email-teams.mp3",
+      "voice": "Aoede",
+      "textHash": "e70138843771f30c",
+      "chars": 131,
+      "bytes": 165888,
+      "updatedAt": "2026-07-16T03:32:25.147Z",
+      "script": "scripts/tour-05-email-teams.md",
+      "scope": "tour-step-body"
+    },
+    "tour-06-sae": {
+      "file": "tour-06-sae.mp3",
+      "voice": "Aoede",
+      "textHash": "d1ad98bd97e209e6",
+      "chars": 102,
+      "bytes": 115968,
+      "updatedAt": "2026-07-16T03:32:41.389Z",
+      "script": "scripts/tour-06-sae.md",
+      "scope": "tour-step-body"
+    },
+    "tour-07-minha-biblioteca": {
+      "file": "tour-07-minha-biblioteca.mp3",
+      "voice": "Aoede",
+      "textHash": "be521c9e48335552",
+      "chars": 72,
+      "bytes": 92544,
+      "updatedAt": "2026-07-16T03:32:49.608Z",
+      "script": "scripts/tour-07-minha-biblioteca.md",
+      "scope": "tour-step-body"
+    },
+    "tour-08-manual-aluno": {
+      "file": "tour-08-manual-aluno.mp3",
+      "voice": "Aoede",
+      "textHash": "39457871d2f32851",
+      "chars": 115,
+      "bytes": 171648,
+      "updatedAt": "2026-07-16T03:33:01.588Z",
+      "script": "scripts/tour-08-manual-aluno.md",
+      "scope": "tour-step-body"
+    },
+    "tour-09-bloco-provas": {
+      "file": "tour-09-bloco-provas.mp3",
+      "voice": "Aoede",
+      "textHash": "0ca86ddeebddcaf1",
+      "chars": 142,
+      "bytes": 201216,
+      "updatedAt": "2026-07-16T03:33:13.157Z",
+      "script": "scripts/tour-09-bloco-provas.md",
+      "scope": "tour-step-body"
+    },
+    "tour-10-meus-cursos": {
+      "file": "tour-10-meus-cursos.mp3",
+      "voice": "Aoede",
+      "textHash": "e4380a0452a08f25",
+      "chars": 107,
+      "bytes": 137088,
+      "updatedAt": "2026-07-16T03:33:23.874Z",
+      "script": "scripts/tour-10-meus-cursos.md",
+      "scope": "tour-step-body"
+    },
+    "tour-11-resumo-cursos": {
+      "file": "tour-11-resumo-cursos.mp3",
+      "voice": "Aoede",
+      "textHash": "a5f5f6e1bebc8249",
+      "chars": 136,
+      "bytes": 217344,
+      "updatedAt": "2026-07-16T03:33:46.309Z",
+      "script": "scripts/tour-11-resumo-cursos.md",
+      "scope": "tour-step-body"
+    },
+    "tour-12-cartao-disciplina": {
+      "file": "tour-12-cartao-disciplina.mp3",
+      "voice": "Aoede",
+      "textHash": "50556074e85ccb72",
+      "chars": 108,
+      "bytes": 163584,
+      "updatedAt": "2026-07-16T03:34:08.213Z",
+      "script": "scripts/tour-12-cartao-disciplina.md",
+      "scope": "tour-step-body"
+    },
+    "tour-13-pagina-disciplina": {
+      "file": "tour-13-pagina-disciplina.mp3",
+      "voice": "Aoede",
+      "textHash": "34c57079d8911aeb",
+      "chars": 96,
+      "bytes": 139776,
+      "updatedAt": "2026-07-16T03:36:23.783Z",
+      "script": "scripts/tour-13-pagina-disciplina.md",
+      "scope": "tour-step-body"
+    },
+    "tour-14-indice-curso": {
+      "file": "tour-14-indice-curso.mp3",
+      "voice": "Aoede",
+      "textHash": "eca7c90f6f83c478",
+      "chars": 172,
+      "bytes": 225408,
+      "updatedAt": "2026-07-16T03:37:17.534Z",
+      "script": "scripts/tour-14-indice-curso.md",
+      "scope": "tour-step-body"
+    },
+    "tour-15-abas-disciplina": {
+      "file": "tour-15-abas-disciplina.mp3",
+      "voice": "Aoede",
+      "textHash": "042a657357354158",
+      "chars": 101,
+      "bytes": 187776,
+      "updatedAt": "2026-07-16T03:37:35.128Z",
+      "script": "scripts/tour-15-abas-disciplina.md",
+      "scope": "tour-step-body"
+    },
+    "tour-16-secao-geral": {
+      "file": "tour-16-secao-geral.mp3",
+      "voice": "Aoede",
+      "textHash": "78cee44518a80bd6",
+      "chars": 85,
+      "bytes": 150528,
+      "updatedAt": "2026-07-16T03:37:50.558Z",
+      "script": "scripts/tour-16-secao-geral.md",
+      "scope": "tour-step-body"
+    },
+    "tour-17-semana-4": {
+      "file": "tour-17-semana-4.mp3",
+      "voice": "Aoede",
+      "textHash": "f0cdde5f70364f3e",
+      "chars": 131,
+      "bytes": 185088,
+      "updatedAt": "2026-07-16T03:38:07.710Z",
+      "script": "scripts/tour-17-semana-4.md",
+      "scope": "tour-step-body"
+    },
+    "tour-18-laboratorio": {
+      "file": "tour-18-laboratorio.mp3",
+      "voice": "Aoede",
+      "textHash": "f8dcd3db0fba30da",
+      "chars": 113,
+      "bytes": 157824,
+      "updatedAt": "2026-07-16T03:38:24.243Z",
+      "script": "scripts/tour-18-laboratorio.md",
+      "scope": "tour-step-body"
+    },
+    "tour-19-gaveta-blocos": {
+      "file": "tour-19-gaveta-blocos.mp3",
+      "voice": "Aoede",
+      "textHash": "16020e9c02045326",
+      "chars": 65,
+      "bytes": 86784,
+      "updatedAt": "2026-07-16T03:38:41.850Z",
+      "script": "scripts/tour-19-gaveta-blocos.md",
+      "scope": "tour-step-body"
+    },
+    "tour-20-professor-autor": {
+      "file": "tour-20-professor-autor.mp3",
+      "voice": "Aoede",
+      "textHash": "3e437899a24715b1",
+      "chars": 148,
+      "bytes": 183168,
+      "updatedAt": "2026-07-16T03:38:58.665Z",
+      "script": "scripts/tour-20-professor-autor.md",
+      "scope": "tour-step-body"
+    },
+    "tour-21-menu-mensagens": {
+      "file": "tour-21-menu-mensagens.mp3",
+      "voice": "Aoede",
+      "textHash": "f5db3d2277fffc31",
+      "chars": 167,
+      "bytes": 205824,
+      "updatedAt": "2026-07-16T03:39:15.918Z",
+      "script": "scripts/tour-21-menu-mensagens.md",
+      "scope": "tour-step-body"
+    },
+    "tour-22-menu-perfil": {
+      "file": "tour-22-menu-perfil.mp3",
+      "voice": "Aoede",
+      "textHash": "aa2d795bc40a3099",
+      "chars": 122,
+      "bytes": 212736,
+      "updatedAt": "2026-07-16T03:40:27.271Z",
+      "script": "scripts/tour-22-menu-perfil.md",
+      "scope": "tour-step-body"
+    },
+    "sample-voz-charon": {
+      "file": "sample-voz-charon.mp3",
+      "voice": "Charon",
+      "textHash": "7036effa39922426",
+      "chars": 208,
+      "bytes": 294528,
+      "updatedAt": "2026-07-16T04:01:17.144Z",
+      "script": "scripts/sample-voz-charon.md",
+      "scope": "tour-step-body"
+    },
+    "sample-voz-puck": {
+      "file": "sample-voz-puck.mp3",
+      "voice": "Puck",
+      "textHash": "4840dfe8f5215ae5",
+      "chars": 172,
+      "bytes": 247296,
+      "updatedAt": "2026-07-16T03:55:27.391Z",
+      "script": "scripts/sample-voz-puck.md",
+      "scope": "tour-step-body"
+    },
+    "sample-voz-fenrir": {
+      "file": "sample-voz-fenrir.mp3",
+      "voice": "Fenrir",
+      "textHash": "d34acaa306f9a185",
+      "chars": 174,
+      "bytes": 263424,
+      "updatedAt": "2026-07-16T03:56:46.023Z",
+      "script": "scripts/sample-voz-fenrir.md",
+      "scope": "tour-step-body"
+    },
+    "sample-voz-orus": {
+      "file": "sample-voz-orus.mp3",
+      "voice": "Orus",
+      "textHash": "0aba5d31509cacfd",
+      "chars": 206,
+      "bytes": 269184,
+      "updatedAt": "2026-07-16T04:01:39.654Z",
+      "script": "scripts/sample-voz-orus.md",
+      "scope": "tour-step-body"
+    },
+    "sample-voz-enceladus": {
+      "file": "sample-voz-enceladus.mp3",
+      "voice": "Enceladus",
+      "textHash": "94e17f1f3af2feec",
+      "chars": 211,
+      "bytes": 306048,
+      "updatedAt": "2026-07-16T04:02:03.736Z",
+      "script": "scripts/sample-voz-enceladus.md",
+      "scope": "tour-step-body"
+    },
+    "sample-voz-iapetus": {
+      "file": "sample-voz-iapetus.mp3",
+      "voice": "Iapetus",
+      "textHash": "8cf7d1f1f074f60a",
+      "chars": 209,
+      "bytes": 287616,
+      "updatedAt": "2026-07-16T04:02:25.947Z",
+      "script": "scripts/sample-voz-iapetus.md",
+      "scope": "tour-step-body"
+    },
+    "sample-voz-algenib": {
+      "file": "sample-voz-algenib.mp3",
+      "voice": "Algenib",
+      "textHash": "e68f1abb00fb34ef",
+      "chars": 209,
+      "bytes": 283008,
+      "updatedAt": "2026-07-16T04:02:51.217Z",
+      "script": "scripts/sample-voz-algenib.md",
+      "scope": "tour-step-body"
+    },
+    "sample-voz-alnilam": {
+      "file": "sample-voz-alnilam.mp3",
+      "voice": "Alnilam",
+      "textHash": "e78e0f283b09cda3",
+      "chars": 209,
+      "bytes": 294528,
+      "updatedAt": "2026-07-16T04:03:16.893Z",
+      "script": "scripts/sample-voz-alnilam.md",
+      "scope": "tour-step-body"
+    },
+    "bilhete-dourado": {
+      "file": "bilhete-dourado.mp3",
+      "voice": "Algenib",
+      "textHash": "622c4786c8d8c809",
+      "chars": 1177,
+      "bytes": 1465728,
+      "updatedAt": "2026-07-16T04:05:27.200Z",
+      "script": "scripts/bilhete-dourado.md",
+      "scope": "tour-step-body"
+    }
+  }
+}
