@@ -1106,67 +1106,142 @@
   <script>
     lucide.createIcons();
 
-    /* FAQ fiel da Semana 2 (Atividade_FAQ.md) */
+    /* FAQ fiel da Semana 2 (Atividade_FAQ.md). audioId = um MP3 por item (pergunta + pausa + resposta). */
     const FAQ_ITEMS = [
       {
+        audioId: "faq-01-ava-portal",
         q: "Qual a diferença entre o AVA e o Portal do Aluno?",
         a: "O <strong>AVA</strong> (Ambiente Virtual de Aprendizagem) é a plataforma focada no cotidiano acadêmico e pedagógico do estudante. É nele que as disciplinas são disponibilizadas em módulos semanais, onde o aluno assiste às videoaulas, acessa os materiais didáticos e realiza as interações e atividades com os facilitadores. Já o <strong>Portal do Aluno</strong> é a interface voltada para a gestão de serviços administrativo-acadêmicos, servindo como canal para solicitações junto à Secretaria de Registro Acadêmico (SRA) e acesso a políticas de atendimento e permanência estudantil.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: PPC Engenharia de Computação 2026. Seções 4.2 e 7.2.</span>"
       },
       {
+        audioId: "faq-02-localizar-grupo",
         q: "Onde eu localizo o meu GRUPO para as atividades?",
         a: "A organização e alocação dos estudantes nas salas virtuais de trabalho em grupo são realizadas de forma institucional e centralizada pela equipe de Mediação da UNIVESP. O estudante visualiza os integrantes e o código de identificação do seu grupo diretamente dentro do <strong>AVA</strong>, nos espaços dedicados à interação e ao envio de tarefas das disciplinas que exigem práticas colaborativas (como os Projetos Integradores).<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: PPC 2026. Seções 6.2 e 4.2.</span>"
       },
       {
+        audioId: "faq-03-falar-grupo",
         q: "Como eu falo com os membros do meu GRUPO?",
         a: "A comunicação e a construção do trabalho coletivo ocorrem de maneira oficial dentro do AVA, por meio das ferramentas de interatividade e das salas de aula virtuais de grupo. Nesses espaços, os integrantes devem formalizar e registrar o <strong>Plano de Ação</strong> do grupo, com objetivos quinzenais, ferramentas e divisão de tarefas e responsabilidades.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: PPC 2026. Seções 4.2 e 4.8.</span>"
       },
       {
+        audioId: "faq-04-grupo-semestre",
         q: "O Grupo é permanente? por semana? por matéria? ou por semestre?",
         a: "Os grupos de trabalho são formados por <strong>semestre letivo</strong> e vinculados à oferta dos componentes curriculares práticos do período, especificamente os <strong>Projetos Integradores Extensionistas</strong>. O acompanhamento e as avaliações ocorrem de maneira contínua ao longo do semestre correspondente.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: PPC 2026. Seções 4.7 e 4.8.</span>"
       },
       {
+        audioId: "faq-05-dificuldade-estudo",
         q: "Se eu não conseguir estudar o que eu faço?",
         a: "Se a dificuldade for de <strong>conteúdo</strong> ou do <strong>AVA</strong>, recorra aos <strong>Facilitadores de Aprendizagem</strong> na plataforma. Se for de ordem <strong>pessoal ou administrativa</strong> e você precisar interromper os estudos, procure o <strong>Orientador de Polo</strong> para orientações sobre trancamento de matrícula.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: PPC 2026. Seção 6.1; Manual do Aluno. Canais de Comunicação.</span>"
       },
       {
+        audioId: "faq-06-grupo-estudo",
         q: "Existe algum grupo de estudo para os alunos?",
         a: "Oficialmente a universidade não gerencia grupos informais externos, mas estrutura o modelo com construção colaborativa no AVA: materiais-base, materiais de apoio, fóruns e espaços de interação com mediação da equipe pedagógica.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: PPC 2026. Seções 4.1, 4.2 e 4.3.</span>"
       },
       {
+        audioId: "faq-07-provas",
         q: "Como funcionam as provas na UNIVESP? Elas são online ou presenciais?",
         a: "Dinâmica <strong>híbrida</strong>: no bimestre, atividades e questionários online no AVA; ao final de cada bimestre, <strong>provas presenciais obrigatórias</strong> no Polo de Apoio Presencial, com agendamento prévio.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: Manual do Aluno. Regimes de Avaliação e Provas Presenciais.</span>"
       },
       {
+        audioId: "faq-08-prazo-atividade",
         q: "Perdi o prazo de uma atividade avaliativa semanal. Consigo entregar depois ou prorrogar?",
         a: "A UNIVESP adota cronograma rígido. As Atividades Semanais têm fechamento automático e, em geral, <strong>não permitem atraso</strong>. Em casos excepcionais justificados (legal/médico), submeta documentação oficial em até <strong>3 dias úteis</strong> após a perda do prazo para análise de reposição.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: Regulamento Geral, capítulo Prazos e Frequência.</span>"
       },
       {
+        audioId: "faq-09-projeto-integrador",
         q: "O que é o Projeto Integrador (PI) que todo mundo comenta na UNIVESP?",
         a: "O <strong>Projeto Integrador</strong> é disciplina prática obrigatória semestral: projeto em grupo para resolver problemas reais de comunidade ou empresa, com tema norteador da UNIVESP. O grupo elabora relatório e, ao final, um vídeo de até 5 minutos da solução.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: Guia Geral do Projeto Integrador (UNIVESP).</span>"
       },
       {
+        audioId: "faq-10-documentos",
         q: "Como faço para solicitar uma carteirinha de estudante ou uma declaração de matrícula?",
         a: "Documentos acadêmicos saem de forma digital pelo <strong>Portal do Aluno</strong> (não pelo AVA). Acesse Secretaria Virtual ou SAE → Solicitação de Documentos. O documento é gerado com assinatura digital e QR Code.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: Portal de Atendimento UNIVESP. Serviços da Secretaria e SAE.</span>"
       },
       {
+        audioId: "faq-11-frequencia-polo",
         q: "Eu preciso ir ao polo toda semana? Qual é a frequência real de idas ao polo presencial?",
         a: "<strong>Não</strong> é necessário ir ao polo toda semana. O modelo é semipresencial: estudo diário online. A presença obrigatória é para as <strong>provas presenciais</strong> (uma ou duas vezes por bimestre). O polo fica disponível opcionalmente para internet, computadores, biblioteca ou reuniões de grupo.<br><span class=\"text-[11px] text-gray-500 mt-2 block\">Fonte: Manual do Aluno. Organização Didático-Pedagógica e Polos.</span>"
       }
     ];
 
+    let faqPlayingIndex = null;
+
     function buildFaqModal() {
       const el = document.getElementById("faq-modal-container");
       if (!el) return;
+      faqPlayingIndex = null;
       el.innerHTML = FAQ_ITEMS.map((item, i) => `
-        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm" data-faq>
-          <button type="button" onclick="toggleFaqModalItem(${i})" class="w-full text-left p-4 font-bold text-sm text-gray-800 hover:bg-gray-50 flex justify-between items-center gap-2">
-            <span><span class="text-red-600 font-mono mr-1">${String(i + 1).padStart(2, "0")}.</span> ${item.q}</span>
-            <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 faq-icon shrink-0"></i>
-          </button>
+        <div class="faq-item border border-gray-200 rounded-xl overflow-hidden bg-white shadow-sm" data-faq data-faq-index="${i}">
+          <div class="flex items-stretch">
+            <button type="button" onclick="toggleFaqModalItem(${i})" class="flex-1 min-w-0 text-left p-4 font-bold text-sm text-gray-800 hover:bg-gray-50 flex justify-between items-center gap-2">
+              <span><span class="text-red-600 font-mono mr-1">${String(i + 1).padStart(2, "0")}.</span> ${item.q}</span>
+              <i data-lucide="chevron-down" class="w-5 h-5 text-gray-400 faq-icon shrink-0"></i>
+            </button>
+            <button type="button"
+              class="faq-listen-btn shrink-0 w-12 sm:w-14 border-l border-gray-100 flex items-center justify-center text-red-600 hover:bg-red-50 transition-colors"
+              onclick="playFaqClip(${i})"
+              title="Ouvir pergunta e resposta"
+              aria-label="Ouvir pergunta e resposta da questão ${i + 1}">
+              <i data-lucide="volume-2" class="w-5 h-5 faq-listen-icon"></i>
+            </button>
+          </div>
           <div class="faq-content hidden p-4 border-t border-gray-100 bg-gray-50/50 text-sm text-gray-600 space-y-2 leading-relaxed">${item.a}</div>
         </div>
       `).join("");
       lucide.createIcons();
+    }
+
+    function setFaqListenUi(activeIndex) {
+      document.querySelectorAll(".faq-item").forEach((row, i) => {
+        const btn = row.querySelector(".faq-listen-btn");
+        const icon = row.querySelector(".faq-listen-icon");
+        if (!btn || !icon) return;
+        const playing = activeIndex === i;
+        btn.classList.toggle("bg-red-50", playing);
+        btn.classList.toggle("text-red-700", playing);
+        icon.setAttribute("data-lucide", playing ? "square" : "volume-2");
+      });
+      lucide.createIcons();
+    }
+
+    /**
+     * Narração cirúrgica do FAQ: só no clique do usuário, um MP3 por item
+     * (pergunta + pausa ~1s + resposta). Clique de novo no mesmo item para.
+     */
+    function playFaqClip(index) {
+      const item = FAQ_ITEMS[index];
+      if (!item || !item.audioId) return;
+      // segundo clique no mesmo item = parar
+      if (faqPlayingIndex === index && !tourAudio.paused) {
+        stopTourNarration();
+        faqPlayingIndex = null;
+        setFaqListenUi(null);
+        return;
+      }
+      stopTourNarration();
+      faqPlayingIndex = index;
+      setFaqListenUi(index);
+      const src = audioSrc(item.audioId);
+      tourAudio.muted = false;
+      tourAudio.src = src;
+      tourAudio.playbackRate = NARRATION_RATE;
+      tourAudio.defaultPlaybackRate = NARRATION_RATE;
+      const onEnd = function () {
+        if (faqPlayingIndex === index) {
+          faqPlayingIndex = null;
+          setFaqListenUi(null);
+        }
+        tourAudio.removeEventListener("ended", onEnd);
+      };
+      tourAudio.addEventListener("ended", onEnd);
+      const p = tourAudio.play();
+      if (p && typeof p.then === "function") {
+        p.catch(function () {
+          faqPlayingIndex = null;
+          setFaqListenUi(null);
+        });
+      }
     }
 
     function toggleFaqModalItem(index) {
@@ -1236,8 +1311,9 @@
       el.style.display = "flex";
       if (which === "faq") {
         buildFaqModal();
-        // FAQ sem narração
+        // FAQ não auto-narra: só no clique do ícone de áudio de cada item
         stopTourNarration();
+        faqPlayingIndex = null;
       }
       if (which === "cartao") {
         buildCartaoModal();
@@ -1259,7 +1335,10 @@
       const el = document.getElementById(id);
       el.classList.add("hidden");
       el.style.display = "none";
-      if (which === "cartao") stopTourNarration();
+      if (which === "cartao" || which === "faq") {
+        stopTourNarration();
+        faqPlayingIndex = null;
+      }
     }
 
     // FAQ residual na view curso (se existir container)
@@ -1284,6 +1363,24 @@
     tourAudio.preload = "none";
     tourAudio.playbackRate = NARRATION_RATE;
     tourAudio.defaultPlaybackRate = NARRATION_RATE;
+
+    /**
+     * Uma só pasta de áudio: ao lado do tour.html (atividade).
+     * No Pages (index.html na raiz) aponta para o caminho completo até a atividade.
+     */
+    function audioSrc(idOrFile) {
+      const file = /\.mp3$/i.test(idOrFile) ? idOrFile : idOrFile + ".mp3";
+      const path = (location.pathname || "").replace(/\\/g, "/");
+      const localTour =
+        /atividade_semanal/i.test(path) ||
+        /tour\.html$/i.test(path) ||
+        // file:// abrindo tour.html direto
+        (location.protocol === "file:" && /tour\.html$/i.test(path));
+      const base = localTour
+        ? "audio/"
+        : "01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/semana-04/atividade_semanal/audio/";
+      return encodeURI(base + file);
+    }
 
     function isWelcomeOpen() {
       const el = document.getElementById("welcome-modal");
@@ -1343,7 +1440,7 @@
       };
       try {
         tourAudio.muted = true;
-        tourAudio.src = "audio/welcome.mp3";
+        tourAudio.src = audioSrc("welcome");
         tourAudio.playbackRate = NARRATION_RATE;
         const p = tourAudio.play();
         if (p && typeof p.then === "function") {
@@ -1373,7 +1470,7 @@
     function playNarrationClip(audioId) {
       stopTourNarration();
       if (!narrationEnabled || !audioId) return;
-      const src = "audio/" + audioId + ".mp3";
+      const src = audioSrc(audioId);
       tourAudio.muted = false;
       tourAudio.src = src;
       tourAudio.playbackRate = NARRATION_RATE;
