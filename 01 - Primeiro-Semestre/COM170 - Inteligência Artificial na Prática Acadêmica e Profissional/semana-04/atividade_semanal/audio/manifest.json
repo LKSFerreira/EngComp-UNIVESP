@@ -139,12 +139,12 @@
     "tour-13-pagina-disciplina": {
       "file": "clips/tour-13-pagina-disciplina.mp3",
       "voice": "Aoede",
-      "textHash": "34c57079d8911aeb",
-      "chars": 96,
-      "bytes": 139776,
-      "updatedAt": "2026-07-16T03:36:23.783Z",
+      "textHash": "dec4a9aef0fac769",
+      "chars": 289,
+      "bytes": 426624,
+      "updatedAt": "2026-07-16T23:32:57.123Z",
       "script": "roteiros/tour-13-pagina-disciplina.md",
-      "scope": "tour-step-body"
+      "scope": "tour"
     },
     "tour-14-indice-curso": {
       "file": "clips/tour-14-indice-curso.mp3",
