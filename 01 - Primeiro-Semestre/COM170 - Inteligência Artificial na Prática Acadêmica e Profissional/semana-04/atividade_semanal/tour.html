@@ -108,6 +108,18 @@
     .panel-card-links a:hover {
       background: #e6e6e6;
     }
+    /* Grupo Pearson + Minha Biblioteca: um contorno no tour (acervos digitais) */
+    .panel-card-links .tour-link-group {
+      display: block;
+    }
+    .panel-card-links .tour-link-group a:first-child {
+      border-top: 3px solid var(--ava-bg);
+    }
+    /* Halo do tour não deve ser cortado pelo overflow do card */
+    .panel-card:has(.tour-highlight),
+    .panel-card:has(.tour-highlight-secondary) {
+      overflow: visible;
+    }
     .banner-grupos {
       background: var(--banner-grupos);
       color: #fff;
@@ -782,8 +794,11 @@
           />
         </div>
         <div class="panel-card-links">
-          <a id="hotspot-pearson" href="#" onclick="return explainLink(event, 'Pearson', 'Parceiro de conteúdo / biblioteca digital quando a disciplina utilizar.')">Pearson</a>
-          <a id="hotspot-biblioteca" href="#" onclick="return explainLink(event, 'Minha Biblioteca', 'Acervo digital de livros e materiais de apoio para as disciplinas.')">Minha Biblioteca</a>
+          <!-- Grupo visual: Pearson + Minha Biblioteca (mesmo passo do tour, sem mudar texto/áudio) -->
+          <div id="hotspot-acervos-digitais" class="tour-link-group">
+            <a id="hotspot-pearson" href="#" onclick="return explainLink(event, 'Pearson', 'Parceiro de conteúdo / biblioteca digital quando a disciplina utilizar.')">Pearson</a>
+            <a id="hotspot-biblioteca" href="#" onclick="return explainLink(event, 'Minha Biblioteca', 'Acervo digital de livros e materiais de apoio para as disciplinas.')">Minha Biblioteca</a>
+          </div>
           <a id="hotspot-manual" href="#" onclick="return explainLink(event, 'Manual do Aluno', 'Documento oficial com regras, prazos, canais e orientações do estudante UNIVESP.')">Manual do Aluno</a>
           <a href="#" onclick="return explainLink(event, 'Apps Univesp', 'Repositório de recursos educacionais abertos (REAs) e apps institucionais.')">Apps Univesp - Repositório de Recursos Educacionais Abertos (REAs)</a>
         </div>
@@ -2096,13 +2111,12 @@
       },
       {
         view: "painel",
-        elementId: "hotspot-biblioteca",
+        // Contorna Pearson + Minha Biblioteca juntos (acervos digitais); título/áudio inalterados
+        elementId: "hotspot-acervos-digitais",
         audioId: "tour-07-minha-biblioteca",
         title: "Minha Biblioteca",
         description: "Acesso ao <strong>acervo digital</strong> de livros e materiais de apoio das disciplinas.",
-        placement: "bottom",
-        // Destaque visual extra: Pearson fica no mesmo bloco de recursos (sem mudar texto/narração)
-        alsoHighlight: ["hotspot-pearson"]
+        placement: "bottom"
       },
       {
         view: "painel",
