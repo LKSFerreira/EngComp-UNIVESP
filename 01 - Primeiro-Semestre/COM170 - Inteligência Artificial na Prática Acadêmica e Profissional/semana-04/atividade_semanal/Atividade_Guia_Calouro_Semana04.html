@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia do Calouro: Tour interativo do AVA | COM170 · Semana 4</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --color-primary: #D13239;
+      --color-secondary: #808285;
+      --color-dark: #2c3e50;
+      --color-light: #f8f9fa;
+      --color-border: #e9ecef;
+      --color-section: #1e3a5f;
+      --font-title: 'Barlow', 'Inter', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #f0f2f5;
+      font-family: var(--font-body);
+      color: #333;
+      line-height: 1.6;
+      padding: 40px 20px;
+    }
+
+    .paper {
+      background: #ffffff;
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 25mm 20mm;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      border-radius: 8px;
+      position: relative;
+      overflow: hidden;
+      border-top: 5px solid var(--color-primary);
+    }
+
+    .toolbar {
+      max-width: 820px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 15px 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .toolbar-info { font-size: 14px; color: #666; }
+
+    .btn-print {
+      background-color: var(--color-primary);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-family: var(--font-title);
+      font-weight: 600;
+      font-size: 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease-in-out;
+      box-shadow: 0 4px 6px rgba(209, 50, 57, 0.2);
+    }
+
+    .btn-print:hover {
+      background-color: #b0242a;
+      transform: translateY(-1px);
+    }
+
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 2px solid var(--color-primary);
+      padding-bottom: 15px;
+      margin-bottom: 25px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .logo-container img {
+      height: 200px;
+      width: auto;
+      display: block;
+      margin-left: -22px;
+      margin-top: -15px;
+    }
+
+    .doc-info {
+      text-align: right;
+      font-family: var(--font-title);
+      font-size: 12px;
+      color: #444;
+      line-height: 1.6;
+      padding-top: 35px;
+    }
+
+    .doc-info strong { color: var(--color-dark); font-weight: 600; }
+
+    .doc-title {
+      font-family: var(--font-title);
+      font-size: 22px;
+      color: var(--color-dark);
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .doc-subtitle {
+      font-size: 14px;
+      color: var(--color-secondary);
+      margin-bottom: 28px;
+      font-style: italic;
+      border-left: 3px solid var(--color-primary);
+      padding-left: 10px;
+    }
+
+    .section-banner {
+      background: var(--color-section);
+      color: #fff;
+      font-family: var(--font-title);
+      font-weight: 600;
+      font-size: 15px;
+      padding: 12px 18px;
+      border-radius: 8px;
+      margin: 28px 0 16px 0;
+      letter-spacing: 0.2px;
+    }
+
+    .section-banner.link { background: #2563a8; }
+
+    p, li {
+      font-size: 14px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    ul {
+      margin: 8px 0 16px 22px;
+    }
+
+    li { margin-bottom: 6px; }
+
+    .link-box {
+      background: #eef6ff;
+      border: 1px solid #bfd7f2;
+      border-left: 4px solid #2563a8;
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin: 16px 0 20px 0;
+    }
+
+    .link-box .label {
+      font-family: var(--font-title);
+      font-size: 12px;
+      font-weight: 600;
+      color: #2563a8;
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+      margin-bottom: 8px;
+    }
+
+    .link-box a {
+      color: #0b4f9c;
+      font-weight: 600;
+      font-size: 15px;
+      word-break: break-all;
+      text-decoration: underline;
+    }
+
+    .meta-list {
+      list-style: none;
+      margin: 0 0 18px 0;
+      padding: 0;
+    }
+
+    .meta-list li {
+      margin-bottom: 4px;
+      font-size: 13px;
+    }
+
+    .footer-doc {
+      margin-top: 32px;
+      padding-top: 14px;
+      border-top: 1px solid var(--color-border);
+      font-size: 12px;
+      color: var(--color-secondary);
+      text-align: center;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .toolbar { display: none !important; }
+      .paper {
+        box-shadow: none;
+        border-radius: 0;
+        max-width: 100%;
+        padding: 15mm 15mm;
+      }
+      .logo-container img {
+        height: 140px;
+        margin-left: -16px;
+        margin-top: -10px;
+      }
+      a { color: #000; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <div class="toolbar-info">
+      Abra no navegador e use <strong>Imprimir → Salvar como PDF</strong> para gerar o anexo do Laboratório.
+    </div>
+    <button type="button" class="btn-print" onclick="window.print()">
+      Imprimir / Salvar PDF
+    </button>
+  </div>
+
+  <div class="paper">
+    <div class="header-container">
+      <div class="logo-container">
+        <img src="univesp_logo_png_rgb.png" alt="Logotipo UNIVESP" height="90" style="display: block;">
+      </div>
+      <div class="doc-info">
+        <strong>COM170</strong><br>
+        Inteligência Artificial na Prática<br>
+        Acadêmica e Profissional<br>
+        <strong>Semana 4</strong> · Laboratório<br>
+        Turma T001 · <strong>Grupo G5</strong>
+      </div>
+    </div>
+
+    <h1 class="doc-title">Trabalho final · Grupo G5</h1>
+    <p class="doc-subtitle">
+      Guia do Calouro: tour interativo do AVA da UNIVESP
+    </p>
+
+    <ul class="meta-list">
+      <li><strong>Disciplina:</strong> COM170</li>
+      <li><strong>Turma:</strong> COM170-EC-DRP11-2026S2-T001</li>
+      <li><strong>Grupo:</strong> G5</li>
+      <li><strong>Atividade:</strong> Produção do material para o Guia dos Calouros (Semana 4)</li>
+      <li><strong>Formato:</strong> material interativo online (HTML) + este documento de apresentação</li>
+    </ul>
+
+    <div class="section-banner">1. O que é este material</div>
+    <p>
+      Este material é uma <strong>simulação educativa</strong> (casca visual) do Ambiente Virtual de Aprendizagem
+      (AVA / Moodle) da UNIVESP. <strong>Não é o AVA real</strong>: não há login, envio de nota nem qualquer
+      operação institucional.
+    </p>
+    <p>
+      O objetivo é ensinar o calouro a reconhecer as telas principais e a usar a plataforma com segurança,
+      por meio de um <strong>tour guiado</strong> passo a passo e de <strong>exploração livre</strong> com explicações.
+    </p>
+    <p>
+      Além do tour, o material inclui o <strong>FAQ</strong> e o <strong>Bilhete Dourado</strong>
+      (recado sobre a trilha dos Projetos Integradores Extensionistas, com base na leitura do PPC).
+    </p>
+
+    <div class="section-banner">2. Para quem é</div>
+    <p>
+      Estudantes ingressantes na UNIVESP que ainda não dominam o Painel, a lista Meus cursos, a página da disciplina,
+      o índice lateral, a gaveta de blocos, o chat de mensagens e o menu do perfil.
+    </p>
+
+    <div class="section-banner link">3. Link do material interativo (GitHub Pages)</div>
+    <p>
+      O Laboratório do Moodle exige anexo em arquivo. Por isso o envio é este documento em PDF
+      (gerado a partir deste HTML), com o endereço público do material hospedado no GitHub Pages.
+    </p>
+
+    <div class="link-box">
+      <div class="label">Acesse o tour interativo neste link</div>
+      <a href="https://lksferreira.github.io/EngComp-UNIVESP/" target="_blank" rel="noopener">
+        https://lksferreira.github.io/EngComp-UNIVESP/
+      </a>
+    </div>
+
+    <p><strong>Como usar:</strong></p>
+    <ul>
+      <li>Abra o link no navegador.</li>
+      <li>Clique em <strong>Iniciar tour</strong> e siga os passos.</li>
+      <li>Ao final, use o botão flutuante à direita para abrir o <strong>FAQ</strong> e o <strong>Bilhete Dourado</strong>.</li>
+    </ul>
+
+    <div class="section-banner">4. O que o tour cobre</div>
+    <ul>
+      <li><strong>Painel (/my/):</strong> avisos e atalhos (Portal do Aluno, Office 365, atendimento, biblioteca, manual, provas)</li>
+      <li><strong>Meus cursos:</strong> resumo dos cursos e cartão da disciplina</li>
+      <li><strong>Página da disciplina:</strong> índice lateral, abas, seções semanais, Laboratório de revisão entre pares</li>
+      <li><strong>Gaveta de blocos</strong> (direita), <strong>mensagens</strong> e <strong>menu do perfil</strong></li>
+      <li><strong>FAQ</strong> e <strong>Bilhete Dourado</strong> (aviso sobre a trilha dos PIEs no PPC)</li>
+    </ul>
+
+    <div class="section-banner">5. Aviso importante</div>
+    <p>
+      Este material é uma simulação educativa produzida por estudantes para o Guia dos Calouros.
+      Não substitui o AVA oficial, o Portal do Aluno, o Manual do Aluno nem comunicados da UNIVESP.
+      Nomes e dados exibidos no tour são genéricos, salvo o título da disciplina de exemplo.
+    </p>
+
+    <div class="section-banner">6. Uso de IA neste material</div>
+    <p>
+      Foi utilizada ferramenta de IA para apoiar a organização do conteúdo, a estruturação do tour e a
+      redação deste documento de envio, conforme a missão da semana (IA para sintetizar e organizar
+      informações reunidas nas semanas anteriores). A decisão de formato (tour interativo + PDF), o
+      roteiro pedagógico e a revisão final são de responsabilidade do grupo.
+    </p>
+
+    <div class="footer-doc">
+      COM170 · Semana 4 · Laboratório · Grupo G5 · Simulação educativa do AVA
+    </div>
+  </div>
+
+</body>
+</html>
