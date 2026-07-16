@@ -1,20 +1,19 @@
 /**
  * Gerador de áudios do tour COM170 S4 (Guia do Calouro).
  *
- * - Fonte: scripts/*.md (texto falado = corpo do roteiro; sem título no áudio)
- * - Voz padrão: Aoede (feminina, Gemini TTS)
- * - Saída: ./tour-XX-....mp3 + manifest.json
- * - Reaproveita deps e .env do projeto learning-artificial-intelligence
+ * Estrutura:
+ *   roteiros/*.md   → texto fonte
+ *   clips/*.mp3     → saída de produção (tour, faq, welcome, bilhete)
+ *   amostras/*.mp3  → amostras de voz (sample-voz-*)
+ *   manifest.json   → mapa id → arquivo
  *
  * Uso (PowerShell, a partir desta pasta audio/):
- *   node gerar-audios.mjs              # só o que falta
- *   node gerar-audios.mjs --force      # regenera todos
+ *   node gerar-audios.mjs
+ *   node gerar-audios.mjs --force
  *   node gerar-audios.mjs --only tour-01-barra-superior
- *   node gerar-audios.mjs --dry-run    # lista sem chamar API
+ *   node gerar-audios.mjs --dry-run
  *
- * Variáveis:
- *   LAI_ROOT  caminho do repo learning-artificial-intelligence (opcional)
- *   GEMINI_API_KEY  se não houver .env no LAI_ROOT
+ * Key: EngComp-UNIVESP/.env (prioridade). Deps: LAI node_modules.
  */
 
 import fs from "fs";
@@ -33,9 +32,16 @@ const SAMPLE_RATE = 24000;
 /** Pausa entre clips (free tier Gemini TTS costuma limitar ~10 req/min). */
 const DELAY_MS = 6500;
 
-const DIR_SCRIPTS = path.join(__dirname, "scripts");
-const DIR_OUT = __dirname;
+const DIR_ROTEIROS = path.join(__dirname, "roteiros");
+const DIR_CLIPS = path.join(__dirname, "clips");
+const DIR_AMOSTRAS = path.join(__dirname, "amostras");
 const MANIFEST_PATH = path.join(__dirname, "manifest.json");
+
+/** Amostras de voz vão para amostras/; o restante (tour/faq/welcome/bilhete) para clips/. */
+function dirSaidaParaId(id) {
+  if (String(id).startsWith("sample-voz-")) return DIR_AMOSTRAS;
+  return DIR_CLIPS;
+}
 
 /** Repo LAI: deps (@google/genai, lamejs) + .env com GEMINI_API_KEY */
 // audio/ → atividade_semanal → semana-04 → COM170 → 01… → EngComp-UNIVESP → GitHub/
@@ -62,8 +68,13 @@ function resolveLaiRoot() {
 
 const laiRoot = resolveLaiRoot();
 
-function loadEnv(envPath) {
-  if (!fs.existsSync(envPath)) return;
+/**
+ * @param {string} envPath
+ * @param {{ overwrite?: boolean }} [opts] overwrite=true substitui chaves já carregadas
+ */
+function loadEnv(envPath, opts = {}) {
+  if (!fs.existsSync(envPath)) return false;
+  const overwrite = !!opts.overwrite;
   const content = fs.readFileSync(envPath, "utf-8");
   for (const line of content.split("\n")) {
     const trimmed = line.trim();
@@ -75,12 +86,21 @@ function loadEnv(envPath) {
       .slice(i + 1)
       .trim()
       .replace(/^["']|["']$/g, "");
-    if (!process.env[key]) process.env[key] = val;
+    if (overwrite || !process.env[key]) process.env[key] = val;
   }
+  return true;
 }
 
-loadEnv(path.join(laiRoot, ".env"));
-loadEnv(path.join(__dirname, "../../../../../.env")); // EngComp se existir
+// Prioridade da API key:
+// 1) variável de ambiente já exportada no shell (se o usuário setou)
+// 2) .env do EngComp-UNIVESP (este projeto) — sobrescreve o LAI
+// 3) .env do learning-artificial-intelligence (só deps/fallback)
+const engCompRoot = path.resolve(__dirname, "../../../../../");
+const engCompEnv = path.join(engCompRoot, ".env");
+const laiEnv = path.join(laiRoot, ".env");
+
+loadEnv(laiEnv, { overwrite: false });
+const loadedEng = loadEnv(engCompEnv, { overwrite: true });
 
 const apiKey = process.env.GEMINI_API_KEY || process.env.VITE_GEMINI_API_KEY;
 
@@ -114,10 +134,14 @@ function extrairFrontmatter(conteudo) {
   return { meta, corpo: match[2].trim() };
 }
 
-/** Limpa markdown residual; o áudio usa só o corpo do roteiro (sem título). */
+/**
+ * Limpa markdown residual; o áudio usa só o corpo do roteiro (sem título).
+ * Marcador [[PAUSA_1S]] vira token interno <<<PAUSA>>> (FAQ: pergunta / resposta).
+ */
 function limparParaFala(texto) {
   if (!texto) return "";
   let t = texto;
+  t = t.replace(/\[\[PAUSA_1S\]\]/gi, " <<<PAUSA>>> ");
   t = t.replace(/<!-- audio-skip-start -->[\s\S]*?<!-- audio-skip-end -->/g, "");
   t = t.replace(/```[\s\S]*?```/g, " ");
   t = t.replace(/`([^`]+)`/g, "$1");
@@ -132,6 +156,7 @@ function limparParaFala(texto) {
   t = t.replace(/<[^>]+>/g, " ");
   t = t.replace(/\n+/g, " ");
   t = t.replace(/\s+/g, " ");
+  t = t.replace(/\s*<<<PAUSA>>>\s*/g, " <<<PAUSA>>> ");
   return t.trim();
 }
 
@@ -167,26 +192,30 @@ function pcmParaMp3(pcmData, sampleRate, Mp3Encoder) {
 }
 
 function listarScripts() {
-  if (!fs.existsSync(DIR_SCRIPTS)) return [];
+  if (!fs.existsSync(DIR_ROTEIROS)) return [];
   return fs
-    .readdirSync(DIR_SCRIPTS)
+    .readdirSync(DIR_ROTEIROS)
     .filter((f) => f.endsWith(".md"))
     .sort()
     .map((f) => {
-      const full = path.join(DIR_SCRIPTS, f);
+      const full = path.join(DIR_ROTEIROS, f);
       const raw = fs.readFileSync(full, "utf-8");
       const { meta, corpo } = extrairFrontmatter(raw);
       const id = meta.id || path.basename(f, ".md");
       const fala = limparParaFala(corpo);
+      const tipo = meta.tipo || (fala.includes("<<<PAUSA>>>") ? "faq" : "tour");
+      const dirOut = dirSaidaParaId(id);
+      const relDir = path.basename(dirOut); // clips | amostras
       return {
         id,
         titulo: meta.titulo || id,
+        tipo,
         voz: meta.voz || VOZ_PADRAO,
         fala,
         textHash: hashTexto(fala),
         scriptFile: f,
-        outFile: `${id}.mp3`,
-        outPath: path.join(DIR_OUT, `${id}.mp3`),
+        outFile: `${relDir}/${id}.mp3`,
+        outPath: path.join(dirOut, `${id}.mp3`),
       };
     });
 }
@@ -209,12 +238,31 @@ function salvarManifest(m) {
 async function sintetizarUm(ai, Mp3Encoder, clip) {
   // Sempre pt-BR: sotaque brasileiro, sem Portugal e sem inglês.
   // Tom neutro (não forçar "mentora"/feminino) para vozes masculinas e femininas.
-  const prompt =
-    "Fale exclusivamente em português do Brasil (pt-BR), com sotaque brasileiro natural. " +
-    "Não use sotaque de Portugal, não misture inglês e não traduza o texto. " +
-    "Tom calmo, acolhedor e didático, como um guia de estudos da universidade. " +
-    "Leia o texto a seguir de forma limpa e direta, sem introduções, sem comentários e sem ler metadados: " +
-    clip.fala;
+  let prompt;
+  const isFaq = clip.tipo === "faq" || clip.fala.includes("<<<PAUSA>>>");
+  if (isFaq) {
+    // Prompt curto (prompts longos/estruturados no TTS já retornaram 400).
+    // Pausa: reticências longas + instrução mínima de 1s de silêncio.
+    const partes = clip.fala.split("<<<PAUSA>>>");
+    const pergunta = (partes[0] || "").trim();
+    const respostaTxt = (partes[1] || "").trim();
+    const textoFaq =
+      pergunta +
+      " ... ... ... " +
+      respostaTxt;
+    prompt =
+      "Leia em voz alta, em português do Brasil, tom calmo e didático. " +
+      "Leia a primeira frase (a pergunta), faça cerca de um segundo de silêncio, " +
+      "depois leia o restante (a resposta). Sem introduções e sem comentar: " +
+      textoFaq;
+  } else {
+    prompt =
+      "Fale exclusivamente em português do Brasil (pt-BR), com sotaque brasileiro natural. " +
+      "Não use sotaque de Portugal, não misture inglês e não traduza o texto. " +
+      "Tom calmo, acolhedor e didático, como um guia de estudos da universidade. " +
+      "Leia o texto a seguir de forma limpa e direta, sem introduções, sem comentários e sem ler metadados: " +
+      clip.fala;
+  }
 
   const resposta = await ai.interactions.create({
     model: MODEL,
@@ -237,28 +285,34 @@ async function sintetizarUm(ai, Mp3Encoder, clip) {
 async function main() {
   const opts = parseArgs(process.argv);
   console.log("\n=== Gerador de áudios — Tour AVA COM170 S4 ===");
-  console.log(`LAI_ROOT : ${laiRoot}`);
-  console.log(`Scripts  : ${DIR_SCRIPTS}`);
-  console.log(`Saída    : ${DIR_OUT}`);
-  console.log(`Voz      : ${VOZ_PADRAO} (só feminina nesta fase)`);
-  console.log(`Modo     : ${opts.dryRun ? "dry-run" : opts.force ? "force" : "incremental"}\n`);
+  console.log(`LAI_ROOT   : ${laiRoot} (só node_modules / fallback)`);
+  console.log(`EngComp.env: ${engCompEnv} ${loadedEng ? "(carregado, prioridade)" : "(ausente)"}`);
+  console.log(`API key    : ${apiKey ? `ok (len ${apiKey.length}, …${apiKey.slice(-4)})` : "AUSENTE"}`);
+  console.log(`Roteiros   : ${DIR_ROTEIROS}`);
+  console.log(`Clips      : ${DIR_CLIPS}`);
+  console.log(`Amostras   : ${DIR_AMOSTRAS}`);
+  console.log(`Voz        : ${VOZ_PADRAO} (padrão; frontmatter do roteiro prevalece)`);
+  console.log(`Modo       : ${opts.dryRun ? "dry-run" : opts.force ? "force" : "incremental"}\n`);
 
   if (!fs.existsSync(laiRoot)) {
     console.error(`✖ Repo LAI não encontrado. Defina LAI_ROOT. Tentou: ${laiRoot}`);
     process.exit(1);
   }
 
+  fs.mkdirSync(DIR_CLIPS, { recursive: true });
+  fs.mkdirSync(DIR_AMOSTRAS, { recursive: true });
+
   let clips = listarScripts();
   if (opts.only) {
     clips = clips.filter((c) => c.id === opts.only || c.id.includes(opts.only));
     if (!clips.length) {
-      console.error(`✖ Nenhum script bate com --only ${opts.only}`);
+      console.error(`✖ Nenhum roteiro bate com --only ${opts.only}`);
       process.exit(1);
     }
   }
 
   if (!clips.length) {
-    console.error("✖ Nenhum .md em scripts/");
+    console.error("✖ Nenhum .md em roteiros/");
     process.exit(1);
   }
 
@@ -299,7 +353,7 @@ async function main() {
 
   if (!apiKey) {
     console.error(
-      "\n✖ GEMINI_API_KEY ausente. Coloque no .env do learning-artificial-intelligence ou exporte a variável.\n",
+      "\n✖ GEMINI_API_KEY ausente. Defina em EngComp-UNIVESP/.env (preferido) ou exporte a variável.\n",
     );
     process.exit(1);
   }
@@ -323,9 +377,8 @@ async function main() {
         chars: c.fala.length,
         bytes,
         updatedAt: new Date().toISOString(),
-        script: `scripts/${c.scriptFile}`,
-        // FAQ e Bilhete ficam de fora deste manifesto de tour
-        scope: "tour-step-body",
+        script: `roteiros/${c.scriptFile}`,
+        scope: c.tipo || "tour",
       };
       salvarManifest(manifest);
       console.log(`ok (${(bytes / 1024).toFixed(1)} KB)`);
@@ -340,8 +393,7 @@ async function main() {
     }
   }
 
-  console.log("\n✔ Lote concluído. MP3s em audio/ + manifest.json atualizado.\n");
-  console.log("Próximo: ligar player no tour.html (consentimento → play por passo).\n");
+  console.log("\n✔ Lote concluído. MP3s em audio/clips (e amostras/) + manifest.json.\n");
 }
 
 main().catch((e) => {

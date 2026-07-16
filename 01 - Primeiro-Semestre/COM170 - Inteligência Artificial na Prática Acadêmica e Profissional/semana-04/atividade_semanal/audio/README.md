@@ -1,113 +1,62 @@
-# Áudios do tour (narração premium)
+# Áudios do Guia do Calouro (COM170 · Semana 4)
 
-> **Status:** scripts prontos · geração via `gerar-audios.mjs` · runtime no `tour.html` em seguida.  
-> **Voz desta fase:** só **Aoede** (feminina, Gemini TTS).  
-> **Fora do escopo agora:** FAQ · Bilhete Dourado (depois, voz masculina).
-
-## Princípio
-
-O guia funciona **100% sem áudio**.  
-A narração é **opt-in** após um clique (política de autoplay dos navegadores).
-
-## Orquestração (pipeline)
+## Organização
 
 ```text
-1. Textos na tela (tour.html → description de cada passo)
-        ↓  espelhar / ajustar oralidade
-2. Roteiro falado (audio/scripts/tour-XX-*.md)  ← fonte da síntese
-        ↓  node gerar-audios.mjs
-3. Gemini TTS (voz Aoede) → PCM → MP3
-        ↓
-4. audio/tour-XX-*.mp3 + manifest.json
-        ↓  commit
-5. Runtime: modal "Tour narrado?" → se Sim, play do clip ao abrir cada passo
+audio/
+  README.md              ← este arquivo
+  gerar-audios.mjs       ← CLI de geração (dev)
+  manifest.json          ← id → arquivo + hash do texto
+  roteiros/              ← texto fonte (.md), um por clip
+  clips/                 ← MP3 de produção (tour, FAQ, welcome, bilhete)
+  amostras/              ← MP3 de teste de vozes (sample-voz-*)
 ```
 
-| Camada | O quê | Onde |
-|--------|--------|------|
-| **Roteiro** | Texto falado = conteúdo do card (sem botões, sem "Passo N", sem FAQ) | `audio/scripts/*.md` |
-| **Geração** | Node + Gemini + lamejs (reusa deps do repo LAI) | `audio/gerar-audios.mjs` |
-| **Artefato** | 1 MP3 por passo + hash do texto | `audio/*.mp3`, `manifest.json` |
-| **Runtime** | `HTMLAudioElement` após gesto do usuário | `tour.html` |
+| Pasta | Conteúdo |
+|--------|----------|
+| `roteiros/` | Markdown com frontmatter (`id`, `voz`, `tipo`) |
+| `clips/` | Só MP3 usados no site |
+| `amostras/` | Só 4 amostras de referência (não entram no tour) |
 
-### O que é falado
+**Não** misturar MP3 soltos na raiz de `audio/`.
 
-- **Sim:** conteúdo da boas-vindas (`welcome.mp3`) e o parágrafo de cada passo do tour.
-- **Não:** título do card (fica só visual), botões, modal de consentimento, **FAQ**, **Bilhete Dourado** (fase 2, voz masculina).
+## Runtime (`tour.html`)
 
-## Voz
+- Caminho dos clips: `audio/clips/<id>.mp3`
+- Tour / welcome: após **Sim, narrar**
+- FAQ: só no clique do ícone 🔊 (pergunta → pausa ~1s → resposta)
+- Bilhete: voz **Algenib** se narração ativa
+- Sem áudio / 404 → só texto
 
-| Uso | Voz Gemini | Fase |
-|-----|------------|------|
-| Tour (todos os passos) | **Aoede** | agora |
-| Bilhete Dourado | Puck / Charon / Fenrir | depois |
-| FAQ | — | sem narração |
+## Gerar (dev)
 
-## Como gerar
-
-Pré-requisitos:
-
-1. Repo **`learning-artificial-intelligence`** com `npm install` (tem `@google/genai` e `lamejs`).
-2. `GEMINI_API_KEY` no `.env` desse repo (ou variável de ambiente).
-3. Node 18+.
-
-Na pasta `audio/`:
+Pré-requisitos: `GEMINI_API_KEY` em `EngComp-UNIVESP/.env`; deps no repo LAI (`@google/genai`, `lamejs`).
 
 ```powershell
-# Lista o que seria gerado (sem gastar cota)
+cd .../atividade_semanal/audio
 node gerar-audios.mjs --dry-run
-
-# Gera só os MP3 que faltam ou cujo texto mudou
 node gerar-audios.mjs
-
-# Regenera um passo
-node gerar-audios.mjs --only tour-01-barra-superior --force
-
-# Regenera tudo
-node gerar-audios.mjs --force
+node gerar-audios.mjs --only faq-01-ava-portal --force
 ```
 
-Se o LAI não estiver no caminho padrão:
+- Tour / FAQ / welcome: voz padrão **Aoede** (no frontmatter do roteiro)
+- Bilhete: **Algenib**
+- Free tier TTS: ~**3 RPM** e ~**10 RPD** (ver AI Studio)
 
-```powershell
-$env:LAI_ROOT = "C:\Users\LKSFERREIRA\Documents\GitHub\learning-artificial-intelligence"
-node gerar-audios.mjs
-```
+### Amostras de voz (só referência)
 
-O script **não** usa o `sintetizar.js` solto na raiz do EngComp (cópia do LAI).  
-Ele reutiliza a **mesma stack** (Gemini `gemini-3.1-flash-tts-preview` + lamejs) com pastas certas deste tour.
+Mantidas em `amostras/` (todo o resto foi removido):
 
-## Nomenclatura
+| Arquivo | Voz | Papel |
+|---------|-----|--------|
+| `sample-voz-aoede.mp3` | Aoede | feminina (tour / FAQ) |
+| `sample-voz-kore.mp3` | Kore | feminina (alternativa) |
+| `sample-voz-algenib.mp3` | Algenib | masculina (Bilhete) |
+| `sample-voz-charon.mp3` | Charon | masculina (referência) |
 
-| Arquivo | Onde |
-|---------|------|
-| `welcome.mp3` | Modal de boas-vindas |
-| `tour-01-barra-superior.mp3` | Barra superior |
-| `tour-02-avisos-campanhas.mp3` | Avisos |
-| … | … |
-| `tour-22-menu-perfil.mp3` | Menu do perfil |
+## Quando o texto mudar
 
-Roteiro espelhado em `scripts/` com o mesmo `id`.
-
-## Runtime planejado (próximo passo no `tour.html`)
-
-1. **Antes** da modal de boas-vindas: modal  
-   *“Deseja um tour narrado?”* → **Sim** / **Não**.
-2. **Sim** = gesto do usuário → `narracaoAtiva = true` (+ `localStorage` opcional) e desbloqueia `Audio`.
-3. Em cada `showStep(i)`: se narrado, `audio.src = "audio/" + step.audioId + ".mp3"` e `play()`; ao mudar de passo, `pause()` + troca.
-4. **Não** / falha 404 / erro de rede → só texto (como hoje).
-5. FAQ e Bilhete **não** entram no player nesta fase.
-
-## Acessibilidade
-
-- Texto sempre na tela.
-- Sem autoplay no load da página.
-- Áudio ausente não trava o tour.
-- Preferência narrado/mudo respeitada após o consentimento.
-
-## Quando o texto do tour mudar
-
-1. Atualizar `description` em `tour.html`.
-2. Atualizar o `.md` correspondente em `scripts/`.
-3. `node gerar-audios.mjs` (detecta `textHash` diferente e regenera).
-4. Commitar MP3 + `manifest.json` + script.
+1. Editar o `.md` em `roteiros/`
+2. Ajustar o texto na tela (`tour.html`), se for o caso
+3. `node gerar-audios.mjs` (regenera se o `textHash` mudou)
+4. Commitar `roteiros/` + `clips/` + `manifest.json`
