@@ -45,6 +45,15 @@
       outline: none;
       pointer-events: none;
       animation: tour-border-pulse 1.6s ease-in-out infinite;
+      /* Evita “borda cortada” em flex/header sticky */
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+      background-clip: padding-box;
+    }
+    /* Alvo do menu superior: retângulo estável para o highlight */
+    #hotspot-meus-cursos-manual.tour-highlight {
+      display: inline-flex !important;
+      background-color: rgba(202, 49, 32, 0.12);
     }
     .panel-card {
       border-radius: 8px;
@@ -142,15 +151,18 @@
 <body class="min-h-screen flex flex-col text-gray-800 overflow-x-hidden">
 
   <!-- HEADER (barra superior do AVA) — layout limpo, sem faixa extra -->
-  <header id="univesp-header" class="bg-black text-white px-3 sm:px-4 py-2.5 flex items-center justify-between sticky top-0 z-40 shadow">
-    <div class="flex items-center gap-4 sm:gap-6 min-w-0">
+  <header id="univesp-header" class="bg-black text-white px-3 sm:px-4 py-2.5 flex items-center justify-between sticky top-0 z-40 shadow overflow-visible">
+    <div class="flex items-center gap-4 sm:gap-6 min-w-0 overflow-visible">
       <button type="button" onclick="showView('painel')" class="flex items-center shrink-0" title="Painel">
         <span class="text-lg sm:text-xl font-black tracking-wider">UNIV<span class="text-red-600">E</span>SP</span>
       </button>
-      <nav id="main-nav" class="hidden sm:flex items-center gap-1 text-xs font-medium text-gray-300">
+      <nav id="main-nav" class="hidden sm:flex items-center gap-2 text-xs font-medium text-gray-300 overflow-visible">
         <button type="button" data-nav="painel" onclick="showView('painel')" class="nav-link px-2 py-1 hover:text-white transition nav-active">Painel</button>
-        <button type="button" data-nav="cursos" onclick="showView('cursos')" class="nav-link px-2 py-1 hover:text-white transition">Meus cursos</button>
-        <button type="button" id="nav-manual" class="nav-link px-2 py-1 hover:text-white transition" data-tour-id="manual" title="No AVA real abre o Manual do Aluno">Manual do Aluno</button>
+        <!-- Alvo limpo do tour (Meus cursos + Manual) — evita borda “quebrada” no nav inteiro -->
+        <span id="hotspot-meus-cursos-manual" class="inline-flex items-center gap-1 rounded-md px-1 py-0.5">
+          <button type="button" data-nav="cursos" onclick="showView('cursos')" class="nav-link px-2 py-1 hover:text-white transition">Meus cursos</button>
+          <button type="button" id="nav-manual" class="nav-link px-2 py-1 hover:text-white transition" data-tour-id="manual" title="No AVA real abre o Manual do Aluno">Manual do Aluno</button>
+        </span>
       </nav>
     </div>
     <div class="flex items-center gap-2 sm:gap-3">
@@ -991,9 +1003,9 @@
       },
       {
         view: "painel",
-        elementId: "main-nav",
+        elementId: "hotspot-meus-cursos-manual",
         title: "Meus cursos",
-        description: "Para estudar de verdade, abra <strong>Meus cursos</strong> e entre na <strong>disciplina</strong>. O <strong>Painel</strong> organiza serviços; a disciplina concentra <strong>aulas</strong> e <strong>atividades</strong>.",
+        description: "Para acessar o conteúdo das <strong>matérias</strong>, abra <strong>Meus cursos</strong> ou clique em <strong>Manual do Aluno</strong> para ser redirecionado.",
         placement: "bottom"
       },
       {
