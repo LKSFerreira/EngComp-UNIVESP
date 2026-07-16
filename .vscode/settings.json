@@ -19,5 +19,6 @@
     "reportMissingImports": "none",
     "reportMissingModuleSource": "none"
   },
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501,
+  "html.validate.styles": false
 }
