@@ -319,10 +319,10 @@
     "bilhete-dourado": {
       "file": "clips/bilhete-dourado.mp3",
       "voice": "Algenib",
-      "textHash": "9af3845ba385f52c",
-      "chars": 1394,
-      "bytes": 1685376,
-      "updatedAt": "2026-07-17T21:13:59.530Z",
+      "textHash": "13e070b2bd5b2769",
+      "chars": 1393,
+      "bytes": 1662336,
+      "updatedAt": "2026-07-17T23:52:14.868Z",
       "script": "roteiros/bilhete-dourado.md",
       "scope": "tour"
     },
