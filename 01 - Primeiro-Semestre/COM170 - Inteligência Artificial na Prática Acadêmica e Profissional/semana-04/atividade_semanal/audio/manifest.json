@@ -319,12 +319,12 @@
     "bilhete-dourado": {
       "file": "clips/bilhete-dourado.mp3",
       "voice": "Algenib",
-      "textHash": "622c4786c8d8c809",
-      "chars": 1177,
-      "bytes": 1465728,
-      "updatedAt": "2026-07-16T04:05:27.2Z",
+      "textHash": "9af3845ba385f52c",
+      "chars": 1394,
+      "bytes": 1685376,
+      "updatedAt": "2026-07-17T21:13:59.530Z",
       "script": "roteiros/bilhete-dourado.md",
-      "scope": "tour-step-body"
+      "scope": "tour"
     },
     "faq-01-ava-portal": {
       "file": "clips/faq-01-ava-portal.mp3",

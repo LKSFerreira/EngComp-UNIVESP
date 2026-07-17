@@ -1,9 +1,3 @@
----
-id: bilhete-dourado
-titulo: Bilhete Dourado
-voz: Algenib
----
-
 Calouras e calouros, parem um momento e foquem sua atenção.
 
 Quando entramos em uma graduação, a impressão mais comum é de que os grandes desafios serão as provas presenciais nos polos: estudar as teorias, cumprir as atividades no AVA, realizar as provas e repetir todo o processo no semestre que vem.
