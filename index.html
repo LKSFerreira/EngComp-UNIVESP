@@ -1752,10 +1752,15 @@
      * Áudios de produção em audio/clips/ (roteiros em audio/roteiros/).
      * - tour.html local → audio/clips/relativo
      * - GitHub Pages → URL absoluta até .../audio/clips/
+     * Query ?v= evita cache agressivo de MP3 no browser/CDN (HTML muda, áudio antigo fica).
+     * Bump AUDIO_CACHE_BUST quando regenerar clips e republicar no Pages.
      */
+    const AUDIO_CACHE_BUST = "20260717-bilhete-v2";
     function audioSrc(idOrFile) {
       const file = /\.mp3$/i.test(idOrFile) ? idOrFile : idOrFile + ".mp3";
-      return activityAsset("audio/clips/" + file);
+      const base = activityAsset("audio/clips/" + file);
+      const sep = base.indexOf("?") >= 0 ? "&" : "?";
+      return base + sep + "v=" + encodeURIComponent(AUDIO_CACHE_BUST);
     }
 
     function isWelcomeOpen() {
