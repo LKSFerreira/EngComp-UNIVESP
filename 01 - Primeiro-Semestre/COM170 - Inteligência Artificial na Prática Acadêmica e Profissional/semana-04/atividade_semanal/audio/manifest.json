@@ -49,12 +49,12 @@
     "tour-04-portal-aluno": {
       "file": "clips/tour-04-portal-aluno.mp3",
       "voice": "Aoede",
-      "textHash": "6f0563cf95375637",
-      "chars": 159,
-      "bytes": 220416,
-      "updatedAt": "2026-07-16T03:32:13.284Z",
+      "textHash": "b19b4d0f7f1408d0",
+      "chars": 254,
+      "bytes": 326784,
+      "updatedAt": "2026-07-19T23:06:12.957Z",
       "script": "roteiros/tour-04-portal-aluno.md",
-      "scope": "tour-step-body"
+      "scope": "tour"
     },
     "tour-05-email-teams": {
       "file": "clips/tour-05-email-teams.mp3",
