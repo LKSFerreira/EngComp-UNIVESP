@@ -179,12 +179,12 @@
     "tour-17-semana-4": {
       "file": "clips/tour-17-semana-4.mp3",
       "voice": "Aoede",
-      "textHash": "f0cdde5f70364f3e",
-      "chars": 131,
-      "bytes": 185088,
-      "updatedAt": "2026-07-16T03:38:07.71Z",
+      "textHash": "b5fda24cdda4d0fc",
+      "chars": 153,
+      "bytes": 223488,
+      "updatedAt": "2026-07-19T23:47:13.596Z",
       "script": "roteiros/tour-17-semana-4.md",
-      "scope": "tour-step-body"
+      "scope": "tour"
     },
     "tour-18-laboratorio": {
       "file": "clips/tour-18-laboratorio.mp3",
