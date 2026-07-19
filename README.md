@@ -29,7 +29,8 @@ Semestre Atual      [                    ]   0%  (1º Semestre — Bimestre Ímp
 
 | # | Disciplina | Semana | Completada em | Rev 1d | Rev 3d | Rev 7d | Rev 21d |
 |---|------------|--------|---------------|--------|--------|--------|---------|
-| — | (nenhuma semana completa ainda) | — | — | ☐ | ☐ | ☐ | ☐ |
+| 1 | COM170 | [Semana 01](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/semana-01/semana-01.md>) | 21/06 | 22/06 ☑ | 24/06 ☑ | 28/06 ☑ | 12/07 ☑ |
+| 2 | COM170 | [Semana 02](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/semana-02/semana-02.md>) | 29/06 | 30/06 ☑ | 02/07 ☑ | 06/07 ☑ | 20/07 ☑ |
 
 > Quando completar uma semana: adicione uma linha, calcule as datas, e marque ☐ → ☑ conforme revisar.
 

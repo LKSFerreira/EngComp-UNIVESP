@@ -49,9 +49,9 @@
 
 | Semana | Tema | Status | Recall | Resumo |
 |--------|------|--------|--------|--------|
-| [01](<./semana-01/semana-01.md>) | O Começo de Tudo | 🔵 Em andamento | ☐ | ☐ |
-| [02](<./semana-02/semana-02.md>) | (Disponível 29/06) | ⚫ Pendente | ☐ | ☐ |
-| [03](<./semana-03/semana-03.md>) | (Disponível 06/07) | ⚫ Pendente | ☐ | ☐ |
+| [01](<./semana-01/semana-01.md>) | O Começo de Tudo | 🟢 Completa | ☑ | ☑ |
+| [02](<./semana-02/semana-02.md>) | O Mapa da Univesp e FAQ | 🟢 Completa | ☑ | ☑ |
+| [03](<./semana-03/semana-03.md>) | (Disponível 06/07) | 🔵 Em andamento | ☐ | ☐ |
 | [04](<./semana-04/semana-04.md>) | (Disponível 13/07) | ⚫ Pendente | ☐ | ☐ |
 
 > **Legenda:** ⚫ Pendente | 🔵 Em andamento | 🟢 Completa | ☐→☑ Atividades entregues

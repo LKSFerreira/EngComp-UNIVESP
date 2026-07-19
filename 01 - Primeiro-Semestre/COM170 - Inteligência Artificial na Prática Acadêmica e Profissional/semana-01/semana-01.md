@@ -81,4 +81,4 @@ Apesar de não ter concluído exatamente todas as epatas como em um script, acre
 | 1ª (1 dia depois) | 22/06 | ☑ |
 | 2ª (3 dias depois) | 24/06 | ☑ |
 | 3ª (7 dias depois) | 28/06 | ☑ |
-| 4ª (21 dias depois) | 12/07 | ☐ |
+| 4ª (21 dias depois) | 12/07 | ☑ |

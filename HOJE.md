@@ -11,13 +11,13 @@
 
 ## Semana Atual
 
-📂 **[Semana 01 — O Começo de Tudo](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/semana-01/semana-01.md>)**
+📂 **[Semana 03 — COM170](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/semana-03/semana-03.md>)**
 
 ## ⚡ Sua Próxima Ação
 
 | # | O quê | Tempo | Feito? |
 |---|--------|-------|--------|
-| 1 | Assistir videoaula da semana 01 | 25 min | ☐ |
+| 1 | Assistir videoaula da semana 03 | 25 min | ☐ |
 | 2 | Preencher Active Recall (3 perguntas) | 10 min | ☐ |
 | 3 | Resumo em 5 frases | 10 min | ☐ |
 
