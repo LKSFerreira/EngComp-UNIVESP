@@ -65,8 +65,8 @@ O espaço virtual da disciplina no AVA é organizado em **duas grandes partes**:
 |:------:|------|:------:|:------------------:|
 | **01** | O Começo de Tudo & Ambientação | 🟢 Completa | [Semana 01](<./AIA - Ambientação e Integração Acadêmica/semana-01/semana-01.md>) |
 | **02** | O Mapa da Univesp & Colaboração | 🟢 Completa | [Semana 02](<./AIA - Ambientação e Integração Acadêmica/semana-02/semana-02.md>) |
-| **03** | Meu Curso em 6 Pistas | 🔵 Em andamento | [Semana 03](<./AIA - Ambientação e Integração Acadêmica/semana-03/semana-03.md>) |
-| **04** | Guia dos Calouros & Revisão por Pares | ⚫ Pendente | [Semana 04](<./AIA - Ambientação e Integração Acadêmica/semana-04/semana-04.md>) |
+| **03** | Meu Curso em 6 Pistas | 🟢 Completa | [Semana 03](<./AIA - Ambientação e Integração Acadêmica/semana-03/semana-03.md>) |
+| **04** | Guia dos Calouros & Revisão por Pares | 🔵 Em andamento | [Semana 04](<./AIA - Ambientação e Integração Acadêmica/semana-04/semana-04.md>) |
 
 ### 📘 Part 2: COM170 — Disciplina Regular (Quinzenas)
 

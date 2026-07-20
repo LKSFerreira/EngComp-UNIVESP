@@ -11,13 +11,13 @@
 
 ## Semana Atual
 
-📂 **[AIA — Semana 03](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/AIA - Ambientação e Integração Acadêmica/semana-03/semana-03.md>)**
+📂 **[AIA — Semana 04](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/AIA - Ambientação e Integração Acadêmica/semana-04/semana-04.md>)**
 
 ## ⚡ Sua Próxima Ação
 
 | # | O quê | Tempo | Feito? |
 |---|--------|-------|--------|
-| 1 | Assistir videoaula da semana 03 | 25 min | ☐ |
+| 1 | Assistir videoaula da semana 04 | 25 min | ☐ |
 | 2 | Preencher Active Recall (3 perguntas) | 10 min | ☐ |
 | 3 | Resumo em 5 frases | 10 min | ☐ |
 
