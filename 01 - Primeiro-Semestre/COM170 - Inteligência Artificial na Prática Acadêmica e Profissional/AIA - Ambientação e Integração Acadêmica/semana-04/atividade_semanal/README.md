@@ -3,7 +3,8 @@
 > **Material da Semana 4 · COM170**  
 > Inteligência Artificial na Prática Acadêmica e Profissional  
 > **Grupo:** COM170-EC-DRP11-2026S2-T001-G5  
-> **Formato:** tour interativo (casca estática do AVA/Moodle) + FAQ do ingressante
+> **Formato:** tour interativo (casca estática do AVA/Moodle) + FAQ do ingressante  
+> 🌐 **Deploy ao Vivo:** [https://lksferreira.github.io/EngComp-UNIVESP/](https://lksferreira.github.io/EngComp-UNIVESP/)
 
 ---
 

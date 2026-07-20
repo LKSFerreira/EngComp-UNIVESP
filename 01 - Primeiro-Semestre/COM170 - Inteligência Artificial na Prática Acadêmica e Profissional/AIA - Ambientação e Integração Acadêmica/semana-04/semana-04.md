@@ -52,7 +52,8 @@ A Semana 4 encerra o Minicurso AIA consolidando todo o aprendizado em um Guia do
 
 ## 6. Exercícios e Práticas
 
-* [Atividade_Guia_Calouro_Semana04.html](<./atividade_semanal/Atividade_Guia_Calouro_Semana04.html>) — Tour Interativo do AVA & Guia do Calouro
+* 🌐 **[Deploy ao Vivo (GitHub Pages)](https://lksferreira.github.io/EngComp-UNIVESP/)** — Versão interativa online do Guia do Calouro
+* [Atividade_Guia_Calouro_Semana04.html](<./atividade_semanal/Atividade_Guia_Calouro_Semana04.html>) — Tour Interativo do AVA & Guia do Calouro (Código Local)
 * [revisao_bilhete.md](<./revisao_bilhete.md>) — Bilhete Dourado e Revisão por Pares
 
 ---
