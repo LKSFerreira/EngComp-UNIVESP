@@ -44,8 +44,8 @@ function dirSaidaParaId(id) {
 }
 
 /** Repo LAI: deps (@google/genai, lamejs) + .env com GEMINI_API_KEY */
-// audio/ → atividade_semanal → semana-04 → COM170 → 01… → EngComp-UNIVESP → GitHub/
-const LAI_DEFAULT = path.resolve(__dirname, "../../../../../../learning-artificial-intelligence");
+// audio/ → atividade_semanal → semana-04 → AIA → COM170 → 01… → EngComp-UNIVESP → GitHub/
+const LAI_DEFAULT = path.resolve(__dirname, "../../../../../../../learning-artificial-intelligence");
 
 const LAI_ROOT = process.env.LAI_ROOT
   ? path.resolve(process.env.LAI_ROOT)

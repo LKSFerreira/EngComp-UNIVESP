@@ -1,10 +1,22 @@
 # COM170 — Inteligência Artificial na Prática Acadêmica e Profissional
 
-> **Carga Horária:** 80h | **Bimestre:** Ímpar (1º Semestre)
+> **Carga Horária:** 80h | **Bimestre:** Ímpar (1º Semestre)  
+> **Código AVA:** `COM170-EC-DRP11-2026S2-T001`
 
 ---
 
-## Ementa e Objetivos
+## 🏛️ Arquitetura do Espaço da Matéria no AVA
+
+O espaço virtual da disciplina no AVA é organizado em **duas grandes partes**:
+
+1. 🔰 **[AIA — Ambientação e Integração Acadêmica](./AIA%20-%20Ambientação%20e%20Integração%20Acadêmica/)** (Minicurso de 4 Semanas)
+   - Contém a live com facilitador, fórum geral, manual do ingressante, avisos e as Semanas 1, 2, 3 e 4.
+2. 📘 **[COM170 — Disciplina Regular](./COM170%20-%20Disciplina/)** (Módulo por Quinzenas)
+   - Contém a Apresentação da disciplina, o Guia da disciplina e os conteúdos acadêmicos por quinzenas (Quinzena 1 em diante).
+
+---
+
+## 🎯 Ementa e Objetivos
 
 **Objetivos:** Compreender os fundamentos e as aplicações da Inteligência Artificial, com ênfase no uso prático e crítico de ferramentas de IA generativa nos contextos pessoal, acadêmico e profissional. Desenvolver a autonomia acadêmica do estudante por meio do uso crítico, ético e responsável da Inteligência Artificial aplicada à escrita, à pesquisa, à aprendizagem de línguas e à organização dos estudos.
 
@@ -12,7 +24,7 @@
 
 ---
 
-## Bibliografia
+## 📚 Bibliografia
 
 **Base:**
 - RUSSELL, Stuart; NORVIG, Peter. Inteligência Artificial: Uma Abordagem Moderna. 4. ed. Rio de Janeiro: LTC (GEN), 2025.
@@ -25,7 +37,7 @@
 
 ---
 
-## Monitoramento
+## 📊 Monitoramento
 
 | Componente | Peso | Nota | Status |
 |------------|------|------|--------|
@@ -37,7 +49,7 @@
 
 ---
 
-## Progresso
+## 📈 Progresso
 
 ```
 [                    ] 0%
@@ -45,13 +57,24 @@
 
 ---
 
-## Cronograma Semanal
+## 🗓️ Cronograma Completo
 
-| Semana | Tema | Status | Recall | Resumo |
-|--------|------|--------|--------|--------|
-| [01](<./semana-01/semana-01.md>) | O Começo de Tudo | 🟢 Completa | ☑ | ☑ |
-| [02](<./semana-02/semana-02.md>) | O Mapa da Univesp e FAQ | 🟢 Completa | ☑ | ☑ |
-| [03](<./semana-03/semana-03.md>) | (Disponível 06/07) | 🔵 Em andamento | ☐ | ☐ |
-| [04](<./semana-04/semana-04.md>) | (Disponível 13/07) | ⚫ Pendente | ☐ | ☐ |
+### 🔰 Part 1: AIA — Minicurso de Ambientação e Integração Acadêmica (4 Semanas)
 
-> **Legenda:** ⚫ Pendente | 🔵 Em andamento | 🟢 Completa | ☐→☑ Atividades entregues
+| Semana | Tema | Status | Caderno de Estudos |
+|:------:|------|:------:|:------------------:|
+| **01** | O Começo de Tudo & Ambientação | 🟢 Completa | [Semana 01](<./AIA - Ambientação e Integração Acadêmica/semana-01/semana-01.md>) |
+| **02** | O Mapa da Univesp & Colaboração | 🟢 Completa | [Semana 02](<./AIA - Ambientação e Integração Acadêmica/semana-02/semana-02.md>) |
+| **03** | Meu Curso em 6 Pistas | 🔵 Em andamento | [Semana 03](<./AIA - Ambientação e Integração Acadêmica/semana-03/semana-03.md>) |
+| **04** | Guia dos Calouros & Revisão por Pares | ⚫ Pendente | [Semana 04](<./AIA - Ambientação e Integração Acadêmica/semana-04/semana-04.md>) |
+
+### 📘 Part 2: COM170 — Disciplina Regular (Quinzenas)
+
+| Quinzena | Tema | Status | Caderno de Estudos |
+|:--------:|------|:------:|:------------------:|
+| **01** | Apresentação e Fundamentos da IA | ⚫ Pendente | [Quinzena 01](<./COM170 - Disciplina/quinzena-01/quinzena-01.md>) |
+| **02** | Prompts e Escrita Acadêmica com IA | ⚫ Pendente | Quinzena 02 |
+| **03** | Pesquisa, Leitura Mediada e Integridade | ⚫ Pendente | Quinzena 03 |
+| **04** | Aprendizagem de Línguas e Projetos Práticos | ⚫ Pendente | Quinzena 04 |
+
+> **Legenda:** ⚫ Pendente | 🔵 Em andamento | 🟢 Completa

@@ -67,9 +67,13 @@ Isso NÃO é fracasso. Consistência > perfeição.
 📁 HOJE.md               ← "O que fazer AGORA" (ponto de entrada diário)
 📁 01 - Primeiro-Semestre/
   📁 COM170 - .../
-    📄 README.md          ← Ementa + Monitoramento + Cronograma
-    📁 semana-01/
-      📄 semana-01.md     ← Seu caderno de estudos (Active Recall aqui)
+    📄 README.md          ← Ementa + Arquitetura AVA + Cronograma
+    📁 AIA - Ambientação e Integração Acadêmica/   ← Minicurso (4 semanas)
+      📁 semana-01/
+        📄 semana-01.md   ← Seu caderno de estudos (Active Recall)
+    📁 COM170 - Disciplina/                       ← Módulo regular (Quinzenas)
+      📁 quinzena-01/
+        📄 quinzena-01.md
 ```
 
 ### Fluxo Semanal

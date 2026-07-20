@@ -11,7 +11,7 @@
 
 ## Semana Atual
 
-📂 **[Semana 03 — COM170](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/semana-03/semana-03.md>)**
+📂 **[AIA — Semana 03](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/AIA - Ambientação e Integração Acadêmica/semana-03/semana-03.md>)**
 
 ## ⚡ Sua Próxima Ação
 
