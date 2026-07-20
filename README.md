@@ -25,12 +25,12 @@ Semestre Atual      [                    ]   0%  (1º Semestre — Bimestre Ímp
 ## 📋 Revisões Pendentes (Repetição Espaçada)
 
 > Preencha aqui as revisões conforme completar semanas.
-> Regra: revisar **1 dia → 3 dias → 7 dias → 21 dias** após completar.
+> Regra: revisar **1 dia → 3 dias → 7 dias** após completar (encerra definitivamente em 7 dias).
 
-| # | Disciplina | Semana | Completada em | Rev 1d | Rev 3d | Rev 7d | Rev 21d |
-|---|------------|--------|---------------|--------|--------|--------|---------|
-| 1 | COM170 | [AIA — Semana 01](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/AIA - Ambientação e Integração Acadêmica/semana-01/semana-01.md>) | 21/06 | 22/06 ☑ | 24/06 ☑ | 28/06 ☑ | 12/07 ☑ |
-| 2 | COM170 | [AIA — Semana 02](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/AIA - Ambientação e Integração Acadêmica/semana-02/semana-02.md>) | 29/06 | 30/06 ☑ | 02/07 ☑ | 06/07 ☑ | 20/07 ☑ |
+| # | Disciplina | Semana | Completada em | Rev 1d | Rev 3d | Rev 7d |
+|---|------------|--------|---------------|--------|--------|--------|
+| 1 | COM170 | [AIA — Semana 01](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/AIA - Ambientação e Integração Acadêmica/semana-01/semana-01.md>) | 21/06 | 22/06 ☑ | 24/06 ☑ | 28/06 ☑ |
+| 2 | COM170 | [AIA — Semana 02](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/AIA - Ambientação e Integração Acadêmica/semana-02/semana-02.md>) | 29/06 | 30/06 ☑ | 02/07 ☑ | 06/07 ☑ |
 
 > Quando completar uma semana: adicione uma linha, calcule as datas, e marque ☐ → ☑ conforme revisar.
 

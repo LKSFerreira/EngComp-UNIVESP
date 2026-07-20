@@ -69,4 +69,3 @@ A Semana 3 focou na análise do Projeto Pedagógico do Curso (PPC) de Engenharia
 | 1ª (1 dia depois) | 11/07 | ☑ |
 | 2ª (3 dias depois) | 13/07 | ☑ |
 | 3ª (7 dias depois) | 17/07 | ☑ |
-| 4ª (21 dias depois) | 31/07 | ☐ |

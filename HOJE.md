@@ -32,7 +32,7 @@
 | (nenhuma pendente ainda) | — | — | — |
 
 > As revisões aparecerão aqui conforme você completar semanas.
-> Regra: 1 dia → 3 dias → 7 dias → 21 dias após completar a semana.
+> Regra: 1 dia → 3 dias → 7 dias (encerra definitivamente em 7 dias).
 
 ---
 

@@ -68,4 +68,3 @@ Essa semana o grupo 05 a qual pertenço deve criar um FAQ, materail com possa sa
 | 1ª (1 dia depois) | 30/06 | ☑ |
 | 2ª (3 dias depois) | 02/07 | ☑ |
 | 3ª (7 dias depois) | 06/07 | ☑ |
-| 4ª (21 dias depois) | 20/07 | ☑ |

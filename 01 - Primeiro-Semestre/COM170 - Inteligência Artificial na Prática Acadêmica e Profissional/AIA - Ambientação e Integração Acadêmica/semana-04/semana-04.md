@@ -68,4 +68,3 @@ Após assistir as videoaulas, feche tudo e responda:
 | 1ª (1 dia depois) | | |
 | 2ª (3 dias depois) | | |
 | 3ª (7 dias depois) | | |
-| 4ª (21 dias depois) | | |

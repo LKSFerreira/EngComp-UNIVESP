@@ -56,7 +56,7 @@ Isso NÃO é fracasso. Consistência > perfeição.
 | Técnica | O que é | Onde está aqui |
 |---------|---------|----------------|
 | **Active Recall** | Testar a memória SEM consultar | Seção 1 de cada `semana-XX.md` |
-| **Repetição Espaçada** | Revisar no timing certo (1→3→7→21 dias) | Seção 8 + painel em [HOJE.md](../HOJE.md) |
+| **Repetição Espaçada** | Revisar no timing certo (1→3→7 dias, encerra em 7d) | Seção 8 + painel em [HOJE.md](../HOJE.md) |
 | **Elaboração** (Feynman) | Explicar com suas palavras | Seção 2 de cada `semana-XX.md` |
 | **Interleaving** | Conectar com outras disciplinas | Seção 3 (Mapa de Conexões) |
 | **Prática Distribuída** | Pomodoros curtos ao longo da semana | Ritual acima |
