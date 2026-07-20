@@ -14,7 +14,8 @@
 📂 **[AIA — Semana 04](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/AIA - Ambientação e Integração Acadêmica/semana-04/semana-04.md>)**
 
 > 🚨 **COM170 QUINZENA 01 (Início 20/07/2026):**  
-> ⭐ **PRAZO DO MÓDULO 4 (LIBERAR GRUPO):** **DOMINGO, 26 DE JULHO DE 2026 (26/07/2026) ÀS 23H59**  
+> ⭐ **PRAZO DA ATIVIDADE INDIVIDUAL (MÓDULO 4):** **DOMINGO, 26 DE JULHO DE 2026 (26/07/2026) ÀS 23H59**  
+> *(Entregar a atividade individual até domingo libera seu acesso ao grupo na 2ª semana)*  
 > 🔗 Caderno: **[Quinzena 01](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/COM170 - Disciplina/quinzena-01/quinzena-01.md>)**
 
 ## ⚡ Sua Próxima Ação

@@ -1,6 +1,7 @@
 # Quinzena 01 — Apresentação, Guia e Fundamentos da IA
 
-> 🚨 **DATA DO DOMINGO DO MÓDULO 4 (LIBERAR GRUPO):** **DOMINGO, 26 DE JULHO DE 2026 (26/07/2026) ÀS 23H59**  
+> 🚨 **PRAZO DA ATIVIDADE INDIVIDUAL (MÓDULO 4):** **DOMINGO, 26 DE JULHO DE 2026 (26/07/2026) ÀS 23H59**  
+> 💡 *Entregar a sua atividade individual no prazo é o que DESBLOQUEIA a sua participação no Trabalho em Grupo (Módulo 7).*  
 > 🗓️ **Duração da Quinzena 1:** 20/07/2026 (Segunda) a 02/08/2026 (Domingo)  
 > ⚡ **MODO MÍNIMO (dia ruim de TDAH):** Assista 1 vídeo (M2) + responda P1 abaixo. Só isso. Amanhã você completa.
 
@@ -9,15 +10,16 @@
 ## 📌 Estrutura da Quinzena 1 com Datas Exatas (7 Módulos)
 
 ### 🔹 Semana 1 — Base Individual (De 20/07 a 26/07/2026)
-- **Módulo 1:** Leitura e Estudo de Fundamentos
-- **Módulo 2:** Videoaulas e Aplicação Prática
-- **Módulo 3:** Quizzes e Testes de Conhecimento
-- **Módulo 4 (⭐ LIMITE DO GRUPO):** Atividade Individual — **ENTREGA ATÉ DOMINGO, 26/07/2026 ÀS 23H59**
+- **Módulo 1:** Leitura e Estudo de Fundamentos (Estudo Individual)
+- **Módulo 2:** Videoaulas e Aplicação Prática (Estudo Individual)
+- **Módulo 3:** Quizzes e Testes de Conhecimento (Estudo Individual)
+- **Módulo 4 (⭐ ATIVIDADE INDIVIDUAL FINAL):** **ENTREGA INDIVIDUAL ATÉ DOMINGO, 26/07/2026 ÀS 23H59**  
+  *(Concluir no prazo libera o acesso ao Fórum do Grupo M7 na semana seguinte)*
 
 ### 🔹 Semana 2 — Laboratório e Fase Coletiva (De 27/07 a 02/08/2026)
-- **Módulo 5:** O Problema da Quinzena (Instruções) — Abre 27/07
-- **Módulo 6:** Portfólio Individual (*O que pensava → O que mudou*) — Abre 27/07
-- **Módulo 7 (🤝 TRABALHO EM GRUPO):** Fórum do Grupo — **Abre 27/07 APENAS se o M4 foi entregue até 26/07**
+- **Módulo 5:** O Problema da Quinzena (Instruções) — Abre 27/07 para todos
+- **Módulo 6:** Portfólio Individual (*O que pensava → O que mudou*) — Abre 27/07 para todos
+- **Módulo 7 (🤝 TRABALHO EM GRUPO):** Fórum do Grupo — **Abre 27/07 APENAS para quem entregou a atividade individual M4 no prazo**
 
 ---
 
@@ -57,8 +59,8 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 ### 📖 Módulos 1 a 3 (Estudo Individual)
 * **Videoaulas e Leituras:**
 
-### 📝 Módulo 4 (Atividade Individual - PRAZO: DOMINGO 26/07 ÀS 23H59)
-* **Resumo / Entrega:**
+### 📝 Módulo 4 (Atividade INDIVIDUAL - PRAZO: DOMINGO 26/07 ÀS 23H59)
+* **Resumo / Entrega Individual:**
 
 ### 🧪 Módulos 5, 6 e 7 (Laboratório & Portfólio / Grupo)
 * **M5 (Problema):**
