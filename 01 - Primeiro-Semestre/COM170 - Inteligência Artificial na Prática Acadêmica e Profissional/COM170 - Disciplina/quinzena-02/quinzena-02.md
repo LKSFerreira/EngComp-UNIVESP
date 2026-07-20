@@ -1,4 +1,4 @@
-# Quinzena 01 — Apresentação, Guia e Fundamentos da IA
+# Quinzena 02 — Prompts e Escrita Acadêmica com IA
 
 > ⚡ **MODO MÍNIMO (dia ruim de TDAH):** Assista 1 vídeo (M2) + responda P1 abaixo. Só isso. Amanhã você completa.
 
@@ -7,7 +7,7 @@
 ## 📌 Estrutura da Quinzena (7 Módulos)
 
 ### 🔹 Semana 1 — Base Individual (Prazo M4: Domingo às 23h59)
-- **Módulo 1:** Leitura e Estudo de Fundamentos (Conceitos iniciais)
+- **Módulo 1:** Leitura e Estudo de Fundamentos (Engenharia de Prompts)
 - **Módulo 2:** Videoaulas e Aplicação Prática
 - **Módulo 3:** Quizzes e Testes de Conhecimento
 - **Módulo 4 (⭐ PRAZO FIXO):** Atividade Individual final (Libera o Laboratório)
@@ -23,13 +23,13 @@
 
 Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 
-* **P1:** (escreva uma pergunta sobre os fundamentos da IA apresentados no M1 e M2)
+* **P1:** (escreva uma pergunta sobre o conceito principal da quinzena)
 * **R1:**
 
-* **P2:** (escreva uma pergunta sobre a aplicação prática ou regras da quinzena)
+* **P2:** (escreva uma segunda pergunta)
 * **R2:**
 
-* **P3:** (pergunta sobre o problema investigado no M5 ou reflexão do M6)
+* **P3:** (pergunta sobre a aplicação prática)
 * **R3:**
 
 > Dica: se não conseguir responder, é sinal de que precisa revisitar o material.
@@ -38,7 +38,7 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 
 ## 2. Resumo em Minhas Palavras (máx. 5 frases)
 
-(explique o conteúdo e aprendizado desta quinzena como se estivesse ensinando a alguém)
+(explique o conteúdo desta quinzena como se estivesse ensinando a alguém)
 
 ---
 
