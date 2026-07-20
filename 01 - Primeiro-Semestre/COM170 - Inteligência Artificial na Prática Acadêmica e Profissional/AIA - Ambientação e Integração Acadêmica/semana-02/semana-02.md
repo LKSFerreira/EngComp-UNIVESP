@@ -38,7 +38,7 @@ Essa semana o grupo 05 a qual pertenço deve criar um FAQ, materail com possa sa
 
 ## 4. Videoaulas e Anotações
 
-* **[Ambientação e Integração Acadêmica - O mapa da Univesp](https://youtu.be/mvqsisqrwoc?si=xBUWEXc9oh0jNbB7)** – **Vídeo Completo**
+* **[O mapa da Univesp](https://www.youtube.com/watch?v=mvqsisqrwoc)** – **Vídeo Completo**
   * Anotação
 
 ---
