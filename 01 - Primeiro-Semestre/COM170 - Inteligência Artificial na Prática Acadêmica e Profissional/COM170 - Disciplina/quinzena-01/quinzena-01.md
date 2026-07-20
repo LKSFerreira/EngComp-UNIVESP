@@ -1,21 +1,23 @@
 # Quinzena 01 — Apresentação, Guia e Fundamentos da IA
 
+> 🗓️ **Período da Quinzena:** 20/07/2026 a 02/08/2026  
+> ⭐ **PRAZO CRÍTICO MÓDULO 4 (Liberar Grupo):** Domingo, **26/07/2026 às 23h59**  
 > ⚡ **MODO MÍNIMO (dia ruim de TDAH):** Assista 1 vídeo (M2) + responda P1 abaixo. Só isso. Amanhã você completa.
 
 ---
 
 ## 📌 Estrutura da Quinzena (7 Módulos)
 
-### 🔹 Semana 1 — Base Individual (Prazo M4: Domingo às 23h59)
+### 🔹 Semana 1 — Base Individual (20/07 a 26/07/2026)
 - **Módulo 1:** Leitura e Estudo de Fundamentos (Conceitos iniciais)
 - **Módulo 2:** Videoaulas e Aplicação Prática
 - **Módulo 3:** Quizzes e Testes de Conhecimento
-- **Módulo 4 (⭐ PRAZO FIXO):** Atividade Individual final (Libera o Laboratório)
+- **Módulo 4 (⭐ PRAZO FIXO):** Atividade Individual final — **Entrega até 26/07 às 23h59** (Libera o Grupo M7)
 
-### 🔹 Semana 2 — Laboratório e Fase Coletiva
+### 🔹 Semana 2 — Laboratório e Fase Coletiva (27/07 a 02/08/2026)
 - **Módulo 5:** O Problema da Quinzena (Investigação e instruções)
 - **Módulo 6:** Portfólio Individual (Registro de reflexão: *O que pensava → O que mudou*)
-- **Módulo 7 (🤝 GRUPO):** Trabalho em Grupo (Disponível se M4 foi entregue a tempo)
+- **Módulo 7 (🤝 GRUPO):** Trabalho em Grupo (Disponível se M4 foi entregue até 26/07)
 
 ---
 
@@ -55,7 +57,7 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 ### 📖 Módulos 1 a 3 (Estudo Individual)
 * **Videoaulas e Leituras:**
 
-### 📝 Módulo 4 (Atividade Individual - Entrega até Domingo 23h59)
+### 📝 Módulo 4 (Atividade Individual - Entrega até 26/07 às 23h59)
 * **Resumo / Entrega:**
 
 ### 🧪 Módulos 5, 6 e 7 (Laboratório & Portfólio / Grupo)
@@ -87,6 +89,6 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 
 | Revisão | Data Prevista | Feito? |
 |----------|---------------|--------|
-| 1ª (1 dia depois) | | |
-| 2ª (3 dias depois) | | |
-| 3ª (7 dias depois) | | |
+| 1ª (1 dia depois) | 27/07 | ☐ |
+| 2ª (3 dias depois) | 29/07 | ☐ |
+| 3ª (7 dias depois) | 02/08 | ☐ |
