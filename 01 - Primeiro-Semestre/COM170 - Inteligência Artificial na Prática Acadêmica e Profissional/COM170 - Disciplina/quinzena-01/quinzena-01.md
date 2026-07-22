@@ -69,7 +69,13 @@ No Módulo 1, vimos que existem 4 paradigmas no campo da Inteligência Artificia
 
 ### 📖 Módulos 1 a 3 (Estudo Individual)
 
-- **Videoaulas e Leituras:**
+- **Videoaula M1:** [O que a IA realmente é?](https://www.youtube.com/watch?v=tEYnhnJfRe4)
+  - Conceituação dos 4 paradigmas de Russell & Norvig e história da IA.
+
+- **Videoaula M2:** [Os Tipos de Aprendizado de Máquina](https://www.youtube.com/watch?v=5VVd3_DpLjc)
+  - **1. Aprendizado Supervisionado:** Treinamento de modelos com rotulagem prévia de dados (dado + etiqueta). Exemplo: mostrar fotos de cachorros e capivaras identificando cada uma. *Alerta:* Exige cuidado extremo pois pode carregar e perpetuar vieses humanos e preconceitos não intencionais (ex: IAs para filtragem de currículos).
+  - **2. Aprendizado Não Supervisionado:** Treinamento alimentado com grandes volumes de dados sem rótulos, onde o modelo busca identificar padrões em meio ao caos (agrupamento/clustering). *Alerta:* Pode gerar "câmaras de eco" (sempre mais do mesmo). Utilizado em algoritmos de recomendação de plataformas de streaming.
+  - **3. Aprendizado por Reforço:** O modelo interage por tentativa e erro com o ambiente a partir de regras predefinidas. Ele aproxima ou afasta suas ações do objetivo por meio de recompensas e punições. Exemplo: aplicativo de GPS otimizando rotas (menor tempo = maior recompensa).
 
 
 ### 📝 Módulo 4 (Atividade INDIVIDUAL - PRAZO: DOMINGO 26/07 ÀS 23H59)
