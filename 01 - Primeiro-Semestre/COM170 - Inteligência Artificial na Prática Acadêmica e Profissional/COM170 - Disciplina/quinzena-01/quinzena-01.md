@@ -39,6 +39,26 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 * **P3:** Qual paper/artigo científico foi crucial para os modelos modernos de IA?
 * **R3:** O paper do Google chamado *"Attention Is All You Need"* (em tradução livre: *"Atenção É Tudo que Você Precisa"*).
 
+
+### Módulo 2.1
+* **P1:** Cite as 3 formas de aprendizado atuais.
+* **R1:** Supervisionado (*Supervised Learning*), Não Supervisionado (*Unsupervised Learning*) e Aprendizado por Reforço (*Reinforcement Learning*).
+
+* **P2:** Explique cada um dos tipos de aprendizado da forma mais curta e simples possível.
+* **R2:** Supervisionado (*Supervised Learning*) é quando o modelo aprende com base na rotulagem de dados / *data labeling* (exemplo: mostramos uma foto de capivara e dizemos para o modelo que é uma capivara, repetindo isso centenas de milhares de vezes com diversos dados). Não supervisionado (*Unsupervised Learning*) é quando o modelo tenta descobrir padrões (*clustering*) em meio a uma grande quantidade de dados não rotulados. Aprendizado por reforço (*Reinforcement Learning*) é quando o modelo é recompensado ou punido de acordo com o objetivo estabelecido (*reward function*).
+
+* **P3:** Quais os problemas de cada um dos tipos de aprendizado?
+* **R3:** No supervisionado, se os dados não forem cuidadosamente tratados, podem conter viés de treinamento (*training bias*), comprometendo o resultado final com respostas indesejáveis. No não supervisionado, o problema está nas chamadas "câmaras/bolhas de eco" (*echo chambers*), onde o modelo apresenta mais do mesmo infinitamente em um ciclo vicioso. Por fim, no aprendizado por reforço, o problema está na forma como damos as recompensas e definimos os objetivos: se não forem bem calibrados e definidos, o modelo pode agir de forma inesperada com comportamentos não desejados.
+
+### Módulo 2.2
+* **P1:** Quais tipos/fases de IA surgiram ao longo do tempo?
+* **R1:** Simbólica (*Symbolic AI / Rule-based AI*), Conexionista (*Connectionist AI*) e Generativa (*Generative AI*).
+
+* **P2:** Explique cada um desses tipos.
+* **R2:** A IA Simbólica (*Symbolic AI*) foi idealizada como uma programação determinística (como se fossem blocos de `IF` e `ELSE` em um amplo escopo para prever nuances e comportamentos); ela se destaca quando temos controle total das regras e do ambiente (ex: jogo de xadrez, jogo da velha, precificação básica). A IA Conexionista (*Connectionist AI*) tenta simular o cérebro por meio de redes neurais artificiais (*Artificial Neural Networks*) para prever padrões complexos (ideal para reconhecimento de fotos, voz e detecção de padrões). Por último, a IA Generativa / *Generative AI* (como os LLMs - *Large Language Models*) é treinada com massivas quantidades de dados da internet; em vez de regras fixas, utiliza padrões linguísticos, matemáticos e estatísticos para prever conteúdo em determinado contexto (puramente probabilística, por isso um mesmo *input* nem sempre gera o exato mesmo *output*).
+
+* **P3:** Quais os problemas de cada um dos tipos de IA?
+* **R3:** Na Simbólica, o maior problema é lidar com a complexidade do mundo real, pois é impossível determinar de forma determinística toda a causalidade. Na Conexionista, muitas vezes nem os próprios pesquisadores sabem exatamente qual padrão interno o modelo utilizou para gerar a resposta (problema da "caixa-preta" / *black-box problem*), além de exigir alto poder computacional e massa de dados. Já na Generativa, por ser uma versão em grande escala da conexionista, o maior problema é que ela sempre responderá alguma coisa — independente de estar certa ou errada —, frequentemente afirmando erros com total convicção, o que chamamos de Alucinação (*Hallucination*).
 > Dica: se não conseguir responder, é sinal de que precisa revisitar o material.
 
 ---
@@ -60,8 +80,10 @@ No Módulo 1, vimos que existem 4 paradigmas no campo da Inteligência Artificia
 ## 3. Mapa de Conexões
 
 | Conceito desta quinzena | Se conecta com...         | Como?                               |
-| O que é IA              | O uso da IA no dia a dia  | Aprendendo o que é e o que não é IA |
-
+|-------------------------|---------------------------|-------------------------------------|
+| O que é IA              | O uso da IA no dia a dia  | Aprendendo o que é e o que não é IA através de critérios e paradigmas formais. |
+| Tipos de Aprendizado (M2.1) | Engenharia e Ética em IA | Definindo a abordagem (Supervisionado, Não Supervisionado ou Reforço) e prevenindo viés, câmaras de eco e recompensas descalibradas. |
+| Fases da IA (M2.2)      | Evolução Tecnológica     | Compreendendo a transição da lógica determinística (Simbólica) para a identificação de padrões (Conexionista) e modelos probabilísticos (Generativa/LLMs). |
 
 ---
 
@@ -76,6 +98,11 @@ No Módulo 1, vimos que existem 4 paradigmas no campo da Inteligência Artificia
   - **1. Aprendizado Supervisionado:** Treinamento de modelos com rotulagem prévia de dados (dado + etiqueta). Exemplo: mostrar fotos de cachorros e capivaras identificando cada uma. *Alerta:* Exige cuidado extremo pois pode carregar e perpetuar vieses humanos e preconceitos não intencionais (ex: IAs para filtragem de currículos).
   - **2. Aprendizado Não Supervisionado:** Treinamento alimentado com grandes volumes de dados sem rótulos, onde o modelo busca identificar padrões em meio ao caos (agrupamento/clustering). *Alerta:* Pode gerar "câmaras de eco" (sempre mais do mesmo). Utilizado em algoritmos de recomendação de plataformas de streaming.
   - **3. Aprendizado por Reforço:** O modelo interage por tentativa e erro com o ambiente a partir de regras predefinidas. Ele aproxima ou afasta suas ações do objetivo por meio de recompensas e punições. Exemplo: aplicativo de GPS otimizando rotas (menor tempo = maior recompensa).
+
+- **Videoaula M2:** [As Três Fases da IA: Simbólica, Conexionista e Generativa](https://www.youtube.com/watch?v=nUvmG-nXd7Q)
+  - **1. IA Simbólica (Anos 50-80):** Baseada em regras determinísticas e lógica formal (`IF/ELSE`). Ideal para ambientes fechados com regras conhecidas (Xadrez, Jogo da Velha, tabelas de precificação). *Limitação:* Inviável para mapear a complexidade imprevisível do mundo real.
+  - **2. IA Conexionista (Anos 80-2010):** Inspirada na estrutura do cérebro via Redes Neurais Artificiais. Aprende padrões complexos diretamente dos dados. Ideal para reconhecimento de voz, visão computacional e OCR. *Limitação:* Problema da "caixa-preta" (baixa explicabilidade) e alta exigência de dados e hardware (GPUs).
+  - **3. IA Generativa / LLMs (2017-Presente):** Impulsionada pela arquitetura Transformer e treinamento com imensos corpora de dados. Prevê probabilisticamente o próximo elemento/token com base no contexto. *Limitação:* Tendência à "Alucinação" (afirmar dados falsos com convicção).
 
 
 ### 📝 Módulo 4 (Atividade INDIVIDUAL - PRAZO: DOMINGO 26/07 ÀS 23H59)
