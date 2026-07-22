@@ -29,14 +29,15 @@
 
 Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 
-- **P1:** (escreva uma pergunta sobre os fundamentos da IA apresentados no M1 e M2)
-- **R1:**
+### Módulo 1
+* **P1:** Qual é o objetivo do Módulo 1?
+* **R1:** Fazer com que saibamos e entendamos que existem diversos tipos de Inteligência Artificial. Podemos compará-los a diversos tipos de ferramentas: cada uma possui um formato e uma finalidade. Da mesma forma que não podemos usar uma chave de fenda para fixar um prego, não podemos assumir que todas as IAs são ou servem para a mesma coisa.
 
-- **P2:** (escreva uma pergunta sobre a aplicação prática ou regras da quinzena)
-- **R2:**
+* **P2:** Cite 1 tipo de aplicação de IA mencionado no M1.
+* **R2:** Sistema de otimização de rotas para GPS.
 
-- **P3:** (pergunta sobre o problema investigado no M5 ou reflexão do M6)
-- **R3:**
+* **P3:** Qual paper/artigo científico foi crucial para os modelos modernos de IA?
+* **R3:** O paper do Google chamado *"Attention Is All You Need"* (em tradução livre: *"Atenção É Tudo que Você Precisa"*).
 
 > Dica: se não conseguir responder, é sinal de que precisa revisitar o material.
 
@@ -44,15 +45,23 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 
 ## 2. Resumo em Minhas Palavras (máx. 5 frases)
 
-(explique o conteúdo e aprendizado desta quinzena como se estivesse ensinando a alguém)
+No Módulo 1, vimos que existem 4 paradigmas no campo da Inteligência Artificial:
+
+* **Pensar como humano:** O problema é que nós mesmos não sabemos como o cérebro humano funciona em sua magnitude. Ou seja, para que um sistema pudesse alcançar esse estado de perfeição, deveríamos mapear e conhecer cada aspecto intrínseco de todo o raciocínio humano, o que estamos eternamente longe de descobrir. No entanto, não somos completamente leigos, e uma técnica chamada Redes Neurais Artificiais tenta replicar esse funcionamento dos neurônios.
+
+* **Agir como humano:** Não necessariamente significa ser inteligente, pois esse paradigma apenas tenta convencer de que o sistema artificial por trás é humano e nada além disso. Caso esse método convença de que o modelo por trás agiu perfeitamente como uma pessoa, não importa o tipo de mecanismo que foi usado, seja um bloco infinito de `IF` e `ELSE` ou redes neurais artificiais profundas, contanto que ele consiga te convencer (Teste de Turing).
+
+* **Pensar racionalmente (logicamente):** Em muitos casos pode até funcionar, mas aqui a especificidade é tão grande que, para cada situação ou evento do mundo real, teríamos que criar uma IA específica, tornando-se praticamente inviável. Afinal de contas, o mundo ao nosso redor não é binário (preto ou branco, seco ou molhado).
+
+* **Agir racionalmente:** Chegamos ao paradigma mais comum e de maior sucesso, pois parte de uma premissa funcional clara: dado um *input* que deve ser processado de alguma forma, o modelo fornece um *output*. Ou seja, o modelo é treinado para que, ao receber um dado ou ser alimentado com texto, vídeo, cliques ou comportamento, essa informação seja processada para que o algoritmo alcance um objetivo e maximize a recompensa na sua saída. Pense, por exemplo, nos algoritmos das redes sociais. Determinamos um objetivo: reter o usuário pelo maior tempo possível na tela do celular. *Input* do usuário: cliques, engajamento, comentários e tudo o que a plataforma puder rastrear. Essas informações são enviadas a um algoritmo treinado, os dados são processados e, como *output*/resposta, a plataforma passa a exibir conteúdos cada vez mais apelativos, sensacionalistas ou extremistas, fechando um ciclo vicioso.
 
 ---
 
 ## 3. Mapa de Conexões
 
-| Conceito desta quinzena | Se conecta com... | Como? |
-| ----------------------- | ----------------- | ----- |
-|                         |                   |       |
+| Conceito desta quinzena | Se conecta com...         | Como?                               |
+| O que é IA              | O uso da IA no dia a dia  | Aprendendo o que é e o que não é IA |
+
 
 ---
 
@@ -61,6 +70,7 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 ### 📖 Módulos 1 a 3 (Estudo Individual)
 
 - **Videoaulas e Leituras:**
+
 
 ### 📝 Módulo 4 (Atividade INDIVIDUAL - PRAZO: DOMINGO 26/07 ÀS 23H59)
 
