@@ -65,7 +65,7 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 
 ## 2. Resumo em Minhas Palavras (máx. 5 frases)
 
-No Módulo 1, vimos que existem 4 paradigmas no campo da Inteligência Artificial:
+### No Módulo 1, vimos que existem 4 paradigmas no campo da Inteligência Artificial:
 
 * **Pensar como humano:** O problema é que nós mesmos não sabemos como o cérebro humano funciona em sua magnitude. Ou seja, para que um sistema pudesse alcançar esse estado de perfeição, deveríamos mapear e conhecer cada aspecto intrínseco de todo o raciocínio humano, o que estamos eternamente longe de descobrir. No entanto, não somos completamente leigos, e uma técnica chamada Redes Neurais Artificiais tenta replicar esse funcionamento dos neurônios.
 
@@ -74,6 +74,28 @@ No Módulo 1, vimos que existem 4 paradigmas no campo da Inteligência Artificia
 * **Pensar racionalmente (logicamente):** Em muitos casos pode até funcionar, mas aqui a especificidade é tão grande que, para cada situação ou evento do mundo real, teríamos que criar uma IA específica, tornando-se praticamente inviável. Afinal de contas, o mundo ao nosso redor não é binário (preto ou branco, seco ou molhado).
 
 * **Agir racionalmente:** Chegamos ao paradigma mais comum e de maior sucesso, pois parte de uma premissa funcional clara: dado um *input* que deve ser processado de alguma forma, o modelo fornece um *output*. Ou seja, o modelo é treinado para que, ao receber um dado ou ser alimentado com texto, vídeo, cliques ou comportamento, essa informação seja processada para que o algoritmo alcance um objetivo e maximize a recompensa na sua saída. Pense, por exemplo, nos algoritmos das redes sociais. Determinamos um objetivo: reter o usuário pelo maior tempo possível na tela do celular. *Input* do usuário: cliques, engajamento, comentários e tudo o que a plataforma puder rastrear. Essas informações são enviadas a um algoritmo treinado, os dados são processados e, como *output*/resposta, a plataforma passa a exibir conteúdos cada vez mais apelativos, sensacionalistas ou extremistas, fechando um ciclo vicioso.
+
+### No Módulo 2, abordamos os tipos de IA, como funcionam e seus treinamentos:
+
+Desde a idealização desse campo, o desenvolvimento de IA passou por pelo menos 2 notáveis invernos (períodos pouco ou quase nada produtivos). Para focar nas partes de atenção, vamos separar basicamente em 3 tipos de IAs: Simbólica, Conexionista e Generativa, sendo essa última a evolução da conexionista.
+
+Para a IA Simbólica (como o MYCIN, que foi um dos pioneiros), o funcionamento se dava basicamente por um conjunto de regras pré-estabelecidas pelos pesquisadores da época para tentarem prever um tipo de doença com base nos sintomas. No entanto, conforme o cenário foi ficando cada vez mais complexo, esse tipo de abordagem tornou-se limitada.
+
+Para resolver isso, surgiu a IA Conexionista. O pioneiro para esse tipo foi o Perceptron, que ao tentar recriar o funcionamento do cérebro humano usando como base redes neurais artificiais e um grande volume de dados, obteve-se o primeiro tipo de IA realmente capaz de aprender formas complexas e dinâmicas de acordo com as regras do mundo. Esse feito notável de *Deep Learning* foi realizado de forma significativa quando o modelo AlexNet ganhou em primeiro lugar a competição ImageNet. Mas um detalhe importante é que muitas vezes não conseguimos debugar e descobrir qual padrão interno foi responsável pela resposta (mesmo que correta); essa situação é conhecida como "Caixa-Preta" (*Black Box*).
+
+Por último e mais recente, temos as IAs Generativas, que são treinadas com uma quantidade absurda de bilhões de parâmetros, dados e informações, reunindo quase todo conhecimento produzido pela humanidade. No entanto, por se tratar de um modelo probabilístico, ele não entende ou compreende realmente o que está sendo respondido; por isso, modelos de LLM baseiam-se em calcular qual a maior probabilidade do próximo *token*. Isso gera também um efeito colateral conhecido como "Alucinação" (*Hallucination*), no qual a IA muitas vezes pode enganar o usuário fornecendo uma informação falsa com absoluta convicção de verdade. O funcionamento desses modelos se dá pela entrada de texto (*inputs*), que são quebrados em pedaços chamados *tokens*; esses *tokens* viram um vetor numérico e são processados pela arquitetura *Transformer*, que calcula o quão uma palavra é importante para outra no entendimento do contexto. Por fim, o modelo escolhe qual o próximo *token* mais provável com base no treinamento recebido (Obs: esse processo foi simplificado para entendimento do conceito).
+
+Quanto aos treinamentos dos modelos, temos 3 tipos principais:
+1. **Supervisionado (*Supervised Learning*):** Rotulamos a informação para que a IA saiba exatamente o que é.
+2. **Não Supervisionado (*Unsupervised Learning*):** O modelo tenta descobrir o padrão em meio a uma quantidade massiva de dados sem rótulo.
+3. **Aprendizado por Reforço (*Reinforcement Learning*):** Definimos um objetivo e o modelo recebe recompensas e punições conforme se aproxima ou se afasta da meta.
+
+Para treinarmos modelos eficientes como ChatGPT, Claude, Gemini, aplicam-se diversas técnicas:
+- **Pré-treinamento (*Pre-training*):** Fase onde são definidos os dados, parâmetros, pesos e a base de conhecimento do modelo.
+- **Ajuste Fino (*Fine-Tuning*):** Ajuste de precisão, estilo e tarefas específicas que potencializam a capacidade do modelo.
+- **RLHF (*Reinforcement Learning with Human Feedback* - Aprendizado por Reforço com Feedback Humano):** Humanos comparam as respostas do modelo, e a IA aprende a preferir as respostas melhor avaliadas, moldando o comportamento final.
+
+Esse último processo, como consequência social/ética, pode gerar situações como o surgimento dos *Ghost Workers* (Trabalhadores Fantasmas) — pessoas mal remuneradas, frequentemente em situações precárias de trabalho em países emergentes, contratadas para realizar a rotulagem e moderação desse *feedback*.
 
 ---
 
@@ -104,6 +126,7 @@ No Módulo 1, vimos que existem 4 paradigmas no campo da Inteligência Artificia
   - **2. IA Conexionista (Anos 80-2010):** Inspirada na estrutura do cérebro via Redes Neurais Artificiais. Aprende padrões complexos diretamente dos dados. Ideal para reconhecimento de voz, visão computacional e OCR. *Limitação:* Problema da "caixa-preta" (baixa explicabilidade) e alta exigência de dados e hardware (GPUs).
   - **3. IA Generativa / LLMs (2017-Presente):** Impulsionada pela arquitetura Transformer e treinamento com imensos corpora de dados. Prevê probabilisticamente o próximo elemento/token com base no contexto. *Limitação:* Tendência à "Alucinação" (afirmar dados falsos com convicção).
 
+O custo invisível da IA - https://www.youtube.com/watch?v=2nGbIV6dT50
 
 ### 📝 Módulo 4 (Atividade INDIVIDUAL - PRAZO: DOMINGO 26/07 ÀS 23H59)
 
