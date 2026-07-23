@@ -107,6 +107,15 @@ Para treinarmos modelos eficientes como ChatGPT, Claude, Gemini, aplicam-se dive
 
 Esse último processo, como consequência social/ética, pode gerar situações como o surgimento dos *Ghost Workers* (Trabalhadores Fantasmas) — pessoas mal remuneradas, frequentemente em situações precárias de trabalho em países emergentes, contratadas para realizar a rotulagem e moderação desse *feedback*.
 
+### No Módulo 3, tocamos em um assunto mais delicado:
+
+Aqui o objetivo não é causar crise ou perturbar a consciência moral, uma vez que o uso consciente serve justamente para o oposto disso. Estamos falando de ética, uso responsável e uso estrutural do que é feito com a IA. 
+
+Existem 2 momentos distintos de consumo de recursos: durante o **treinamento** da IA e durante o **uso** da IA (no qual o recurso é gasto no exato momento em que o modelo realiza a inferência). Esse tipo de impacto pode ser medido quantitativamente, como foi feito por uma equipe de pesquisadores do MIT, que chegaram aos valores de que a cada 100 palavras em inglês um modelo utiliza cerca de 519 ml de água para sua refrigeração. 
+
+Também precisamos lidar com os *Ghost Workers* (Trabalhadores Fantasmas) citados anteriormente, e muitas vezes a realidade é pior do que imaginamos. É o caso descoberto por investigações jornalísticas de trabalhadores no Quênia que recebiam aproximadamente 2 dólares por hora para trabalhos de classificação e *feedback* altamente sensíveis (incluindo, mas não se limitando a, conteúdos de extrema violência e muitas vezes ilegais). Essas pessoas não recebiam nenhum suporte ou amparo psicológico por parte das empresas contratantes (como a OpenAI). 
+
+Por fim, muitas vezes esquecemos da energia elétrica consumida por esses grandes *data centers* e suas pegadas de carbono que, dependendo do país onde se encontram, geram emissões massivas de centenas de toneladas de $\text{CO}_2$ para a atmosfera, e pouco se fala sobre isso.
 ---
 
 ## 3. Mapa de Conexões
