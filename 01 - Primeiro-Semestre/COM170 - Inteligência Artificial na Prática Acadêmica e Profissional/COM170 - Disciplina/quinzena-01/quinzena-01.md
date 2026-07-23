@@ -29,7 +29,7 @@
 
 Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 
-### Módulo 1
+### Módulo 1 - O que é e o que não é IA.
 * **P1:** Qual é o objetivo do Módulo 1?
 * **R1:** Fazer com que saibamos e entendamos que existem diversos tipos de Inteligência Artificial. Podemos compará-los a diversos tipos de ferramentas: cada uma possui um formato e uma finalidade. Da mesma forma que não podemos usar uma chave de fenda para fixar um prego, não podemos assumir que todas as IAs são ou servem para a mesma coisa.
 
@@ -40,7 +40,7 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 * **R3:** O paper do Google chamado *"Attention Is All You Need"* (em tradução livre: *"Atenção É Tudo que Você Precisa"*).
 
 
-### Módulo 2.1
+### Módulo 2.1 - Como IA aprende?
 * **P1:** Cite as 3 formas de aprendizado atuais.
 * **R1:** Supervisionado (*Supervised Learning*), Não Supervisionado (*Unsupervised Learning*) e Aprendizado por Reforço (*Reinforcement Learning*).
 
@@ -50,7 +50,7 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 * **P3:** Quais os problemas de cada um dos tipos de aprendizado?
 * **R3:** No supervisionado, se os dados não forem cuidadosamente tratados, podem conter viés de treinamento (*training bias*), comprometendo o resultado final com respostas indesejáveis. No não supervisionado, o problema está nas chamadas "câmaras/bolhas de eco" (*echo chambers*), onde o modelo apresenta mais do mesmo infinitamente em um ciclo vicioso. Por fim, no aprendizado por reforço, o problema está na forma como damos as recompensas e definimos os objetivos: se não forem bem calibrados e definidos, o modelo pode agir de forma inesperada com comportamentos não desejados.
 
-### Módulo 2.2
+### Módulo 2.2 - Como IA aprende?
 * **P1:** Quais tipos/fases de IA surgiram ao longo do tempo?
 * **R1:** Simbólica (*Symbolic AI / Rule-based AI*), Conexionista (*Connectionist AI*) e Generativa (*Generative AI*).
 
@@ -59,8 +59,18 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 
 * **P3:** Quais os problemas de cada um dos tipos de IA?
 * **R3:** Na Simbólica, o maior problema é lidar com a complexidade do mundo real, pois é impossível determinar de forma determinística toda a causalidade. Na Conexionista, muitas vezes nem os próprios pesquisadores sabem exatamente qual padrão interno o modelo utilizou para gerar a resposta (problema da "caixa-preta" / *black-box problem*), além de exigir alto poder computacional e massa de dados. Já na Generativa, por ser uma versão em grande escala da conexionista, o maior problema é que ela sempre responderá alguma coisa — independente de estar certa ou errada —, frequentemente afirmando erros com total convicção, o que chamamos de Alucinação (*Hallucination*).
-> Dica: se não conseguir responder, é sinal de que precisa revisitar o material.
 
+### Módulo 3 - O custo invisível da IA
+* **P1:** O que está por trás da IA?
+* **R1:** O conceito de Externalização (*externalization*) ocorre quando transferimos um custo (que não é necessariamente monetário) de uma etapa física ou ambiental para outro local. Podemos chamar isso de custos invisíveis da IA, refletindo o que é exigido para treinar e utilizar um modelo: mineração de minerais raros, consumo de água para refrigeração de *data centers*, consumo elevado de eletricidade para processamento computacional e trabalho humano precarizado (*Ghost Work*).
+
+* **P2:** Cite alguns fatos concretos dos custos invisíveis da IA.
+* **R2:** Um estudo do MIT, por exemplo, quantificou que, para cada 100 palavras geradas em inglês, o consumo de água utilizada na refrigeração dos servidores é de aproximadamente 519 ml. Além disso, em 2023, investigações jornalísticas revelaram que a OpenAI contratou uma empresa terceirizada no Quênia que submetia trabalhadores a uma cultura de trabalho precarizado, pagando cerca de 2 dólares por hora para que pessoas fornecessem *feedback* e filtrassem conteúdos psicologicamente danosos, ilegais e violentos. Vários processos dessa natureza foram abertos desde então, representando apenas os casos descobertos e relatados.
+
+* **P3:** Qual a finalidade de conhecer esses custos invisíveis?
+* **R3:** Permite um uso consciente da tecnologia, orientando escolhas mais precisas sobre como e quando utilizar sistemas de IA, desenvolvendo nosso papel como usuários críticos, éticos e responsáveis.
+
+> Dica: se não conseguir responder, é sinal de que precisa revisitar o material.
 ---
 
 ## 2. Resumo em Minhas Palavras (máx. 5 frases)
