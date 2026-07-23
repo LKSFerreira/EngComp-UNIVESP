@@ -126,7 +126,8 @@ Esse último processo, como consequência social/ética, pode gerar situações 
   - **2. IA Conexionista (Anos 80-2010):** Inspirada na estrutura do cérebro via Redes Neurais Artificiais. Aprende padrões complexos diretamente dos dados. Ideal para reconhecimento de voz, visão computacional e OCR. *Limitação:* Problema da "caixa-preta" (baixa explicabilidade) e alta exigência de dados e hardware (GPUs).
   - **3. IA Generativa / LLMs (2017-Presente):** Impulsionada pela arquitetura Transformer e treinamento com imensos corpora de dados. Prevê probabilisticamente o próximo elemento/token com base no contexto. *Limitação:* Tendência à "Alucinação" (afirmar dados falsos com convicção).
 
-O custo invisível da IA - https://www.youtube.com/watch?v=2nGbIV6dT50
+- **Videoaula M3:** [O Custo Invisível da IA](https://www.youtube.com/watch?v=2nGbIV6dT50)
+  - Análise dos impactos ambientais e sociais da IA: consumo de energia/água em data centers, emissão de $\text{CO}_2$ no treinamento de LLMs e a exploração de *Ghost Workers* (trabalho precarizado de moderação/rotulagem).
 
 ### 📝 Módulo 4 (Atividade INDIVIDUAL - PRAZO: DOMINGO 26/07 ÀS 23H59)
 
