@@ -168,9 +168,18 @@ A naturalização acontece quando 4 conceitos começam a ficar permanentemente c
 
 ### 📝 Módulo 5 (⭐ Atividade INDIVIDUAL - PRAZO: DOMINGO 26/07 ÀS 23H59)
 
-- **Caso em Investigação:** *"Ele está te ouvindo?"* (O caso de Marina e a coincidência do anúncio do tênis de corrida no Instagram).
-- **Pergunta Central:** *Se não foi o microfone, o que explica a coincidência entre o que Marina disse — e nunca digitou — e o anúncio que viu no dia seguinte?*
-- **Entregável:** **Portfólio Individual** (*O que eu pensava → O que mudou → Evidências e Hipóteses investigadas*).
+#### 🕵️ Estudo de Caso: *"Ele está te ouvindo?"*
+> **Cenário:**  
+> Marina, aluna do segundo semestre, está na casa de uma amiga numa tarde de sábado. Em determinado momento da conversa, comenta que pretende recomeçar a correr e que precisa comprar um tênis novo, chegando a descrever o modelo que viu na vitrine de uma loja no caminho. A conversa segue, breve e despretensiosa, sem que o celular esteja sequer sobre a mesa.  
+> No dia seguinte, ao abrir o Instagram, Marina se depara com um anúncio de uma loja esportiva, exibindo precisamente o tipo de tênis de corrida que havia descrito na véspera.
+
+#### ❓ A Pergunta Central
+> **"Se não foi o microfone, o que explica a coincidência entre o que Marina disse — e nunca digitou — e o anúncio que viu no dia seguinte?"**
+
+#### 🎯 Objetivos e Metodologia de Investigação
+- **Desmistificação:** Investigar se a hipótese do "microfone sempre ligado" resiste ao exame técnico e empírico ou se é uma explicação simplista baseada em intuição.
+- **Identificação de Evidências:** Mapear o funcionamento real de rastreamento algorítmico, geolocalização cruzada, grafos sociais (*lookalike audiences*), histórico de buscas de redes de contatos/amigos, perfil de navegação e inferência probabilística.
+- **Entregável:** **Portfólio Individual** (*O que eu pensava → O que mudou → Evidências e Hipóteses investigadas*) a ser submetido até **26/07 às 23h59**.
 
 ### 🧪 Módulos 6 e 7 (Laboratório & Trabalho em Grupo)
 
