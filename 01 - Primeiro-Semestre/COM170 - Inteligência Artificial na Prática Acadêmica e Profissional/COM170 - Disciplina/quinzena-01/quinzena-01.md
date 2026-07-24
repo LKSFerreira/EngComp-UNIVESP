@@ -10,18 +10,16 @@
 ## 📌 Estrutura da Quinzena 1 com Datas Exatas (7 Módulos)
 
 ### 🔹 Semana 1 — Base Individual (De 20/07 a 26/07/2026)
-
 - **Módulo 1:** Leitura e Estudo de Fundamentos (Estudo Individual)
-- **Módulo 2:** Videoaulas e Aplicação Prática (Estudo Individual)
-- **Módulo 3:** Quizzes e Testes de Conhecimento (Estudo Individual)
-- **Módulo 4 (⭐ ATIVIDADE INDIVIDUAL FINAL):** **ENTREGA INDIVIDUAL ATÉ DOMINGO, 26/07/2026 ÀS 23H59**  
-  _(Concluir no prazo libera o acesso ao Fórum do Grupo M7 na semana seguinte)_
+- **Módulo 2:** Videoaulas e Aplicação Prática + Quiz (Estudo Individual)
+- **Módulo 3:** O Custo Invisível da IA + Quiz (Estudo Individual)
+- **Módulo 4:** Vieses Algorítmicos e Naturalização + Quiz (Estudo Individual)
+- **Módulo 5 (⭐ ATIVIDADE INDIVIDUAL FINAL):** **"Ele está te ouvindo?" — ENTREGA DO PORTFÓLIO INDIVIDUAL ATÉ DOMINGO, 26/07/2026 ÀS 23H59**  
+  *(Concluir o Portfólio no prazo e submeter via ferramenta Laboratório M6 libera o acesso ao Fórum do Grupo M7 na semana seguinte)*
 
 ### 🔹 Semana 2 — Laboratório e Fase Coletiva (De 27/07 a 02/08/2026)
-
-- **Módulo 5:** O Problema da Quinzena (Instruções) — Abre 27/07 para todos
-- **Módulo 6:** Portfólio Individual (_O que pensava → O que mudou_) — Abre 27/07 para todos
-- **Módulo 7 (🤝 TRABALHO EM GRUPO):** Fórum do Grupo — **Abre 27/07 APENAS para quem entregou a atividade individual M4 no prazo**
+- **Módulo 6:** Tutorial da Ferramenta Laboratório & Revisão entre pares do Portfólio Individual (Abre 27/07)
+- **Módulo 7 (🤝 TRABALHO EM GRUPO):** Fórum do Grupo — Ponto de Encontro & Revisão entre Pares do Trabalho de Grupo (Abre 27/07 APENAS para quem entregou o Portfólio Individual M5 no prazo)
 
 ---
 
@@ -168,15 +166,16 @@ A naturalização acontece quando 4 conceitos começam a ficar permanentemente c
 - **Videoaula M4:** [Naturalização e Vieses Algorítmicos](https://www.youtube.com/watch?v=aOx-YIs0Pb0)
   - Discussão sobre reprodução de preconceitos históricos por modelos treinados com dados viciados (ex: caso Amazon 2018) e o racismo algorítmico na segurança pública (reconhecimento facial e prisões injustas).
 
-### 📝 Módulo 4 (Atividade INDIVIDUAL - PRAZO: DOMINGO 26/07 ÀS 23H59)
+### 📝 Módulo 5 (⭐ Atividade INDIVIDUAL - PRAZO: DOMINGO 26/07 ÀS 23H59)
 
-- **Resumo / Entrega Individual:**
+- **Caso em Investigação:** *"Ele está te ouvindo?"* (O caso de Marina e a coincidência do anúncio do tênis de corrida no Instagram).
+- **Pergunta Central:** *Se não foi o microfone, o que explica a coincidência entre o que Marina disse — e nunca digitou — e o anúncio que viu no dia seguinte?*
+- **Entregável:** **Portfólio Individual** (*O que eu pensava → O que mudou → Evidências e Hipóteses investigadas*).
 
-### 🧪 Módulos 5, 6 e 7 (Laboratório & Portfólio / Grupo)
+### 🧪 Módulos 6 e 7 (Laboratório & Trabalho em Grupo)
 
-- **M5 (Problema):**
-- **M6 (Portfólio Individual):** _O que eu pensava → O que mudou → Como contribuí_
-- **M7 (Trabalho em Grupo):**
+- **M6 (Ferramenta Laboratório & Revisão por Pares):** Submissão e avaliação por pares do Portfólio Individual via rubrica (Clareza, Utilidade, Organização).
+- **M7 (Trabalho em Grupo):** Fórum do grupo e consolidação da resposta final coletiva (Abre 27/07 apenas para quem entregou a atividade M5/M6 no prazo).
 
 ---
 
