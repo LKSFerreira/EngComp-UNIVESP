@@ -70,6 +70,17 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 * **P3:** Qual a finalidade de conhecer esses custos invisíveis?
 * **R3:** Permite um uso consciente da tecnologia, orientando escolhas mais precisas sobre como e quando utilizar sistemas de IA, desenvolvendo nosso papel como usuários críticos, éticos e responsáveis.
 
+### Módulo 4 - Naturalização e vieses algorítmicos
+* **P1:** Quais problemas dados ruins podem gerar?
+* **R1:** A qualidade ou o tipo dos dados usados no treinamento dos modelos podem gerar vieses algorítmicos (*algorithmic bias*), preconceitos, segregação e discriminação automatizada.
+
+* **P2:** Cite um exemplo desses problemas.
+* **R2:** Em 2018, quando a Amazon treinou um modelo de triagem de currículos baseado em 10 anos de histórico de recrutamento da empresa, o algoritmo aprendeu o padrão histórico de que a empresa priorizava a contratação de homens. Como consequência, currículos que continham termos como "feminino" (ex: "clube de xadrez feminino") sofriam penalização automática no sistema.
+
+* **P3:** Quais impactos modelos mal treinados podem gerar na sociedade?
+* **R3:** No Brasil, por exemplo, onde a privação de liberdade é o grau máximo de punição do Estado, ocorrem injustiças graves. É o caso de um homem negro que ficou preso injustamente de 2020 a 2023 após sua foto ser identificada erroneamente em mais de 62 processos por um algoritmo de reconhecimento facial — fenômeno denominado racismo algorítmico (*algorithmic racism*).
+
+
 > Dica: se não conseguir responder, é sinal de que precisa revisitar o material.
 ---
 
@@ -147,6 +158,9 @@ Por fim, muitas vezes esquecemos da energia elétrica consumida por esses grande
 
 - **Videoaula M3:** [O Custo Invisível da IA](https://www.youtube.com/watch?v=2nGbIV6dT50)
   - Análise dos impactos ambientais e sociais da IA: consumo de energia/água em data centers, emissão de $\text{CO}_2$ no treinamento de LLMs e a exploração de *Ghost Workers* (trabalho precarizado de moderação/rotulagem).
+
+- **Videoaula M4:** [Naturalização e Vieses Algorítmicos](https://www.youtube.com/watch?v=aOx-YIs0Pb0)
+  - Discussão sobre reprodução de preconceitos históricos por modelos treinados com dados viciados (ex: caso Amazon 2018) e o racismo algorítmico na segurança pública (reconhecimento facial e prisões injustas).
 
 ### 📝 Módulo 4 (Atividade INDIVIDUAL - PRAZO: DOMINGO 26/07 ÀS 23H59)
 
