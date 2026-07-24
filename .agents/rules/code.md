@@ -1,4 +1,4 @@
-﻿---
+---
 trigger: always_on
 ---
 
@@ -21,6 +21,7 @@ trigger: always_on
    - É **proibido degradar** palavras em português para versões sem acento (`acao`, `configuracao`, `nao`, `revisao`, etc.) quando o arquivo suportar UTF-8 normalmente.
    - A preferência genérica por ASCII só pode valer para identificadores estritamente técnicos ou trechos estruturais onde não haja perda semântica.
    - Se o arquivo já estiver com acentuação correta, mantenha o padrão existente e não "normalize" para ASCII.
+   - **Fidelidade à autoria:** Correções de texto do usuário limitam-se a ortografia, pontuação e gramática. É proibido alterar o sentido original, desviar a intenção ou acrescentar invenções semânticas.
 
 4. **Foco em Produção e Manutenibilidade:**
    - O código final deve priorizar **performance, segurança e legibilidade** estrutural.

@@ -194,6 +194,10 @@ A naturalização acontece quando 4 conceitos começam a ficar permanentemente c
 > - **Modelo Utilizado:** Gemini 3.6 Flash (Raciocínio)
 > - **Prompt Utilizado:**
 >   ```text
+>   Analise a seguinte situação:
+>
+>   Cenário: Marina, aluna do segundo semestre, está na casa de uma amiga numa tarde de sábado. Em determinado momento da conversa, comenta que pretende recomeçar a correr e que precisa comprar um tênis novo, chegando a descrever o modelo que viu na vitrine de uma loja no caminho. A conversa segue, breve e despretensiosa, sem que o celular esteja sequer sobre a mesa. No dia seguinte, ao abrir o Instagram, Marina se depara com um anúncio de uma loja esportiva, exibindo precisamente o tipo de tênis de corrida que havia descrito na véspera.
+>
 >   Existe algum estudo científico ou paper que comprove o uso do microfone dos celulares para uso de algoritmos de recomendações de anúncios? Cite fontes e referências com links clicáveis ou acessíveis.
 >   ```
 > - **Resumo da Resposta da IA:**
@@ -210,8 +214,7 @@ A naturalização acontece quando 4 conceitos começam a ficar permanentemente c
 > **Pergunta:** *Qual é a sua explicação para o que aconteceu com Marina, com a fonte que a sustenta? O que você buscou e não conseguiu responder (ponto cego)?*
 >
 > **Resposta:**
-> - **Explicação Final:** O anúncio resultou do cruzamento preditivo de metadados: histórico de localização por GPS (passagem em frente à loja), conexão ao mesmo Wi-Fi/Bluetooth da amiga e perfilagem estatística por *lookalike audiences* (públicos semelhantes). O estudo da Northeastern University (2018) sustenta que o uso de áudio constante é inviável e desnecessário, pois os dados de contexto e geolocalização já são suficientes para fazer previsões com precisão assustadora.
-> - **Ponto Cego (O que ficou sem resposta):** Não consegui determinar a janela de tempo exata que o algoritmo de leilão de anúncios (*ad auction*) leva entre a identificação do cruzamento de IPs/GPS no ambiente físico e a entrega da impressão do anúncio no feed do Instagram.
+> Aconteceu, na verdade, um cruzamento de diversos dados e metadados como reposicionamento, buscas, referências, tendências, etc., para que os anúncios fossem disparados de forma estatisticamente precisa ao perfil da Marina. O que encontramos, na verdade, foram diversos artigos e estudos provando que o uso de áudio para esse tipo de situação seria inviável e impraticável nos dias atuais.
 
 ---
 
@@ -219,7 +222,7 @@ A naturalização acontece quando 4 conceitos começam a ficar permanentemente c
 > **Pergunta:** *Depois desta semana, alguma coisa mudou na forma como você vê a IA que usa no dia a dia? Qual a razão concreta?*
 >
 > **Resposta:**
-> **Sim, mudei de ideia e desenvolvi um olhar técnico muito mais crítico.** Antes, eu tendia a aceitar a explicação popular de que "o celular ouve tudo pelo microfone". Após a investigação, percebi que a realidade do rastreamento algorítmico é muito mais complexa e sutil: os modelos de IA não precisam "ouvir" nossas conversas porque a quantidade de rastros digitais de geolocalização, hábitos e redes de contatos já permite prever nossos comportamentos de forma probabilística. Isso alterou a forma como utilizo a IA no dia a dia, fazendo com que eu passe a exigir fontes verificáveis e audite as permissões de privacidade dos meus dispositivos.
+> Melhorou o meu lado crítico quanto ao uso consciente de IA. A forma como a aplico no meu dia a dia também foi impactada positivamente, uma vez que passei a exigir fontes e referências verificáveis.
 
 ---
 

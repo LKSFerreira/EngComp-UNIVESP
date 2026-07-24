@@ -19,6 +19,12 @@ Este estudo usa `.agents/` como fonte oficial de regras, skills, workflows e tem
 - Workflows descrevem procedimentos acionáveis.
 - Templates fornecem arquivos-base reutilizáveis.
 
+## Preservação Semântica e Autoria dos Textos do Usuário (REGRA INVIOLÁVEL)
+
+1. **Permissão de Edição:** É PERMITIDO realizar correções ortográficas, gramaticais, de pontuação e de concordância nos textos, resumos, respostas e redações fornecidos pelo usuário.
+2. **Proibição de Alteração Semântica:** É **ESTRITAMENTE PROIBIDO** alterar o sentido, a intenção, a opinião, o escopo ou a posição semântica das frases do usuário.
+3. **Proibição de Exagero ou Invenção:** É **ESTRITAMENTE PROIBIDO** adicionar narrativas inventadas, exageros conceituais, conclusões precipitadas ou presunções de sentimentos/ideias que o usuário não declarou explicitamente. Mantenha 100% da verdade e da essência da resposta do usuário.
+
 ## Ordem de leitura e precedência
 
 1. `/.agents/rules/code.md`

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfólio Individual — Quinzena 1</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background-color: #0b132b;
+      color: #334155;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* BARRA DE IMPRESSÃO TELA */
+    .no-print-toolbar {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      background: #1e293b;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+    .no-print-toolbar span {
+      color: #f8fafc;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .btn-print {
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-print:hover {
+      background: #1d4ed8;
+    }
+
+    @media print {
+      .no-print-toolbar {
+        display: none !important;
+      }
+      body {
+        background: none;
+      }
+      .page {
+        margin: 0 !important;
+        box-shadow: none !important;
+        page-break-after: always;
+      }
+      .page:last-child {
+        page-break-after: avoid;
+      }
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 20px auto;
+      background: #ffffff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* PÁGINA 1: CAPA */
+    .page-1 {
+      background: linear-gradient(145deg, #091224 0%, #0d1b3a 60%, #112347 100%);
+      color: #ffffff;
+      padding: 50px 45px;
+      justify-content: space-between;
+    }
+
+    .circuit-bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.08;
+      background-image: radial-gradient(#60a5fa 1px, transparent 1px);
+      background-size: 20px 20px;
+      pointer-events: none;
+    }
+
+    .brain-hero {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .brain-svg {
+      width: 180px;
+      height: 180px;
+      filter: drop-shadow(0 0 20px rgba(96, 165, 250, 0.4));
+    }
+
+    .cover-header {
+      z-index: 2;
+    }
+
+    .badge-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #60a5fa;
+      margin-bottom: 8px;
+      display: block;
+    }
+
+    .cover-title {
+      font-size: 38px;
+      font-weight: 800;
+      line-height: 1.15;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+
+    .cover-subtitle {
+      font-size: 16px;
+      color: #94a3b8;
+      font-weight: 400;
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 12px;
+      display: inline-block;
+    }
+
+    .cover-box-info {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid rgba(51, 65, 85, 0.8);
+      border-left: 4px solid #2563eb;
+      border-radius: 8px;
+      padding: 20px;
+      backdrop-filter: blur(5px);
+      z-index: 2;
+      margin-top: 20px;
+    }
+
+    .cover-box-info p {
+      font-size: 13px;
+      color: #cbd5e1;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .cover-box-info p:last-child {
+      margin-bottom: 0;
+    }
+
+    .cover-box-instructions {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid rgba(51, 65, 85, 0.5);
+      border-radius: 8px;
+      padding: 18px;
+      z-index: 2;
+    }
+
+    .cover-box-instructions h4 {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #38bdf8;
+      margin-bottom: 10px;
+    }
+
+    .cover-box-instructions ul {
+      list-style: none;
+    }
+
+    .cover-box-instructions li {
+      font-size: 12px;
+      color: #94a3b8;
+      margin-bottom: 8px;
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .cover-box-instructions li::before {
+      content: "🗹";
+      position: absolute;
+      left: 0;
+      color: #60a5fa;
+    }
+
+    .cover-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(51, 65, 85, 0.6);
+      padding-top: 15px;
+      font-size: 11px;
+      color: #64748b;
+      z-index: 2;
+    }
+
+    /* PÁGINAS INTERNAS (2, 3, 4) */
+    .page-inner {
+      padding: 30px 35px;
+      justify-content: space-between;
+      background: #f8fafc;
+    }
+
+    .inner-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 10px;
+    }
+
+    .inner-header-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .inner-header-meta {
+      font-size: 11px;
+      color: #94a3b8;
+      font-weight: 600;
+    }
+
+    /* CARDS DE PERGUNTAS */
+    .card-question {
+      background: #ffffff;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-q1 { border-top: 4px solid #2563eb; }
+    .card-q2 { border-top: 4px solid #0d9488; }
+    .card-q3 { border-top: 4px solid #d97706; }
+    .card-q4 { border-top: 4px solid #7c3aed; }
+
+    .card-header-bar {
+      padding: 10px 16px;
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .bg-q1 { background: #2563eb; }
+    .bg-q2 { background: #0d9488; }
+    .bg-q3 { background: #d97706; }
+    .bg-q4 { background: #7c3aed; }
+
+    .q-number-pill {
+      background: rgba(255,255,255,0.25);
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .card-prompt-box {
+      background: #f1f5f9;
+      padding: 10px 14px;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 11.5px;
+      color: #334155;
+      font-weight: 600;
+    }
+
+    .card-alert-box {
+      padding: 8px 14px;
+      font-size: 11px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .alert-q1 { background: #eff6ff; color: #1e40af; }
+    .alert-q2 { background: #ccfbf1; color: #115e59; }
+    .alert-q3 { background: #fef3c7; color: #92400e; }
+    .alert-q4 { background: #f3e8ff; color: #6b21a8; }
+
+    .card-answer-box {
+      padding: 14px 16px;
+      background: #ffffff;
+      font-size: 12px;
+      color: #1e293b;
+      line-height: 1.55;
+    }
+
+    .card-answer-box p {
+      margin-bottom: 8px;
+    }
+    .card-answer-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .code-block {
+      background: #0f172a;
+      color: #38bdf8;
+      font-family: monospace;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 11px;
+      margin: 6px 0;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #dcfce7;
+      color: #15803d;
+      font-weight: 700;
+      font-size: 10.5px;
+      padding: 2px 8px;
+      border-radius: 12px;
+      margin-top: 4px;
+    }
+
+    .rocket-footer-box {
+      background: #0f172a;
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .rocket-icon {
+      font-size: 20px;
+    }
+
+    .rocket-text h5 {
+      font-size: 12px;
+      color: #38bdf8;
+      font-weight: 700;
+    }
+
+    .rocket-text p {
+      font-size: 11px;
+      color: #94a3b8;
+    }
+
+    /* RUBRICA PÁGINA 4 */
+    .rubric-card {
+      background: #ffffff;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+
+    .rubric-header-box {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .rubric-header-box h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+    .rubric-header-box p {
+      font-size: 11.5px;
+      color: #94a3b8;
+    }
+
+    .rubric-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+
+    .rubric-table th {
+      background: #f1f5f9;
+      padding: 10px;
+      text-align: left;
+      font-weight: 700;
+      color: #334155;
+      border-bottom: 2px solid #cbd5e1;
+    }
+
+    .rubric-table td {
+      padding: 10px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+      line-height: 1.45;
+      color: #475569;
+    }
+
+    .rubric-table tr:nth-child(even) td {
+      background: #f8fafc;
+    }
+
+    .level-pill {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 20px;
+      font-weight: 800;
+      font-size: 10px;
+      margin-right: 4px;
+    }
+
+    .lvl-1 { background: #fee2e2; color: #991b1b; }
+    .lvl-2 { background: #fef3c7; color: #92400e; }
+    .lvl-3 { background: #dcfce7; color: #166534; }
+
+    .highlight-col {
+      background: #f0fdf4 !important;
+      border-left: 2px solid #22c55e;
+      border-right: 2px solid #22c55e;
+      font-weight: 500;
+      color: #14532d !important;
+    }
+
+    .inner-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 10px;
+      font-size: 10.5px;
+      color: #94a3b8;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- BARRA DE AÇÃO IMPRESSÃO (NÃO SAI NO PDF) -->
+  <div class="no-print-toolbar">
+    <span>📄 Gerador de PDF Oficial UNIVESP — Portfólio Individual M5</span>
+    <button class="btn-print" onclick="window.print()">🖨️ Salvar como PDF / Imprimir</button>
+  </div>
+
+  <!-- PÁGINA 1: CAPA -->
+  <div class="page page-1">
+    <div class="circuit-bg"></div>
+
+    <div class="cover-header">
+      <span class="badge-tag">QUINZENA 1 · PORTFÓLIO INDIVIDUAL</span>
+      <h1 class="cover-title">O que é (e o que não é) IA</h1>
+      <div class="cover-subtitle">Investigação: "Ele está te ouvindo?"</div>
+    </div>
+
+    <div class="brain-hero">
+      <svg class="brain-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="50" cy="50" r="45" stroke="#2563eb" stroke-width="1.5" stroke-dasharray="4 4" />
+        <path d="M30 40C30 30 40 22 50 22C60 22 70 30 70 40C70 46 66 51 62 55C58 59 55 64 55 70H45C45 64 42 59 38 55C34 51 30 46 30 40Z" stroke="#60a5fa" stroke-width="2.5" />
+        <circle cx="50" cy="40" r="6" fill="#38bdf8" />
+        <circle cx="38" cy="35" r="4" fill="#60a5fa" />
+        <circle cx="62" cy="35" r="4" fill="#60a5fa" />
+        <line x1="38" y1="35" x2="50" y2="40" stroke="#93c5fd" stroke-width="1.5" />
+        <line x1="62" y1="35" x2="50" y2="40" stroke="#93c5fd" stroke-width="1.5" />
+        <line x1="50" y1="40" x2="50" y2="70" stroke="#93c5fd" stroke-width="1.5" />
+        <circle cx="50" cy="80" r="3" fill="#60a5fa" />
+      </svg>
+    </div>
+
+    <div class="cover-box-info">
+      <p>Este portfólio é o seu documento de investigação individual. Você registra aqui o que pesquisou, o que encontrou e o que ficou sem resposta. Essas descobertas são o que você leva para o trabalho com o seu grupo na Reflexão de Grupo.</p>
+      <p>Depois de preenchido, envie este portfólio pela Revisão por Pares. Um colega de outro grupo vai ler o que você escreveu e te dar um retorno com base na rubrica ao final deste documento.</p>
+    </div>
+
+    <div class="cover-box-instructions">
+      <h4>COMO RESPONDER</h4>
+      <ul>
+        <li>Não existe resposta certa ou errada. O que está sendo avaliado é o registro honesto do processo.</li>
+        <li>"Não encontrei uma resposta clara" ou "continuo com dúvidas" são registros tão válidos quanto uma explicação fechada, desde que você descreva o que buscou.</li>
+        <li>Escreva a Pergunta 1 antes de pesquisar qualquer coisa. Nas perguntas seguintes, registre o que você de fato fez.</li>
+      </ul>
+    </div>
+
+    <div class="cover-footer">
+      <span>Quinzena 1 · Portfólio Individual</span>
+      <span>Preencha e envie pela Revisão por Pares</span>
+    </div>
+  </div>
+
+  <!-- PÁGINA 2: PERGUNTAS 1 E 2 -->
+  <div class="page page-inner">
+    <div class="inner-header">
+      <div class="inner-header-title">
+        <span style="background:#2563eb; width:8px; height:8px; border-radius:50%;"></span>
+        ROTEIRO DE INVESTIGAÇÃO
+      </div>
+      <div class="inner-header-meta">4 perguntas</div>
+    </div>
+
+    <!-- PERGUNTA 1 -->
+    <div class="card-question card-q1">
+      <div class="card-header-bar bg-q1">
+        <div class="q-number-pill">1</div>
+        <span>PERGUNTA 1 · ANTES DE PESQUISAR</span>
+      </div>
+      <div class="card-prompt-box">
+        <strong>PERGUNTA PARA REGISTRAR:</strong> O que você acha que explica o caso de Marina? Por que o telefone mostraria um anúncio de algo que ela estava só pensando ou falando?
+      </div>
+      <div class="card-alert-box alert-q1">
+        <span>⚠️ <strong>ATENÇÃO:</strong> Escreva agora, antes de avançar para a Pergunta 2.</span>
+      </div>
+      <div class="card-answer-box">
+        <p>Acredito que a explicação esteja na coleta de dados de geolocalização (GPS) do celular. O texto menciona que Marina viu o tênis na vitrine de uma loja de artigos esportivos no caminho. O simples fato de ela ter passado ou parado em frente a essa loja física acionou o rastreamento de localização em segundo plano do smartphone, alimentando os algoritmos de recomendação e direcionamento de anúncios direcionados do Instagram.</p>
+      </div>
+    </div>
+
+    <!-- PERGUNTA 2 -->
+    <div class="card-question card-q2">
+      <div class="card-header-bar bg-q2">
+        <div class="q-number-pill">2</div>
+        <span>PERGUNTA 2 · SUA INVESTIGAÇÃO COM IA</span>
+      </div>
+      <div class="card-prompt-box">
+        <strong>PERGUNTA PARA REGISTRAR:</strong> Registre: (1) o prompt que você usou; (2) um resumo dos pontos principais da resposta; (3) pelo menos uma fonte, seja citada pela IA ou usada por você para checar o que ela disse. Essa fonte existe, tem autoria e data, e confirma o que a IA afirmou?
+      </div>
+      <div class="card-alert-box alert-q2">
+        <span>⚠️ <strong>ATENÇÃO:</strong> O resumo deve ser fiel aos pontos principais. O registro da fonte e o resultado da verificação não podem faltar.</span>
+      </div>
+      <div class="card-answer-box">
+        <p><strong>1. Prompt Utilizado (Gemini 3.6 Flash):</strong></p>
+        <div class="code-block">Analise a seguinte situação:
+
+Cenário: Marina, aluna do segundo semestre, está na casa de uma amiga numa tarde de sábado. Em determinado momento da conversa, comenta que pretende recomeçar a correr e que precisa comprar um tênis novo, chegando a descrever o modelo que viu na vitrine de uma loja no caminho. A conversa segue, breve e despretensiosa, sem que o celular esteja sequer sobre a mesa. No dia seguinte, ao abrir o Instagram, Marina se depara com um anúncio de uma loja esportiva, exibindo precisamente o tipo de tênis de corrida que havia descrito na véspera.
+
+---
+Existe algum estudo científico ou paper que comprove o uso do microfone dos celulares para uso de algoritmos de recomendações de anúncios? Cite fontes e referências com links clicáveis ou acessíveis.</div>
+        
+        <p style="margin-top:8px;"><strong>2. Resumo da Resposta da IA:</strong></p>
+        <p>A IA corroborou que a predição ocorre pelo cruzamento intensivo de dados de geolocalização e metadados, e não pela gravação contínua de áudio pelo microfone (inviável por consumo de bateria e limites de SO). Adicionou: (a) <em>Cruzamento Social:</em> metadados da amiga no mesmo Wi-Fi/local; (b) <em>Inferência Estatística:</em> perfil de Marina (idade, localização, hábitos) combinado às tendências da região.</p>
+
+        <p style="margin-top:8px;"><strong>3. Fonte Citada e Verificação:</strong></p>
+        <p>• <strong>Fonte:</strong> <em>An Analysis of Mobile Application Privacy Practices</em> (Northeastern University, 2018; autoras: Elissa M. Redmiles, Elleen Pan et al.).</p>
+        <p>• <strong>Resultado da Verificação:</strong> O link direto retornou erro 404, mas ao pesquisar pelo título exato dos autores, <strong>o artigo acadêmico foi localizado e auditado com sucesso</strong>. O estudo analisou 17.000 apps Android e concluiu que <strong>não há envio de áudio para fins publicitários</strong>, mas sim rastreamento contínuo de dados contextuais.</p>
+        <div class="verified-badge">✓ Fonte Auditada & Confirmada</div>
+      </div>
+    </div>
+
+    <div class="inner-footer">
+      <span>Quinzena 1 · Portfólio Individual</span>
+      <span>Página 2 de 4</span>
+    </div>
+  </div>
+
+  <!-- PÁGINA 3: PERGUNTAS 3 E 4 -->
+  <div class="page page-inner">
+    <div class="inner-header">
+      <div class="inner-header-title">
+        <span style="background:#d97706; width:8px; height:8px; border-radius:50%;"></span>
+        ROTEIRO DE INVESTIGAÇÃO (CONTINUAÇÃO)
+      </div>
+      <div class="inner-header-meta">Perguntas 3 e 4</div>
+    </div>
+
+    <!-- PERGUNTA 3 -->
+    <div class="card-question card-q3">
+      <div class="card-header-bar bg-q3">
+        <div class="q-number-pill">3</div>
+        <span>PERGUNTA 3 · O QUE VOCÊ ENCONTROU E O QUE FICOU EM ABERTO</span>
+      </div>
+      <div class="card-prompt-box">
+        <strong>PERGUNTA PARA REGISTRAR:</strong> Com base na investigação: qual é a sua explicação para o que aconteceu com Marina, com a fonte que a sustenta? O que você buscou e não conseguiu responder?
+      </div>
+      <div class="card-alert-box alert-q3">
+        <span>⚠️ <strong>ATENÇÃO:</strong> Nomear o que ficou sem resposta é tão importante quanto o que você encontrou.</span>
+      </div>
+      <div class="card-answer-box">
+        <p>Aconteceu, na verdade, um cruzamento de diversos dados e metadados como reposicionamento, buscas, referências, tendências, etc., para que os anúncios fossem disparados de forma estatisticamente precisa ao perfil da Marina. O que encontramos, na verdade, foram diversos artigos e estudos provando que o uso de áudio para esse tipo de situação seria inviável e impraticável nos dias atuais.</p>
+      </div>
+    </div>
+
+    <!-- PERGUNTA 4 -->
+    <div class="card-question card-q4">
+      <div class="card-header-bar bg-q4">
+        <div class="q-number-pill">4</div>
+        <span>PERGUNTA 4 · O QUE MUDOU (OU NÃO) PARA VOCÊ</span>
+      </div>
+      <div class="card-prompt-box">
+        <strong>PERGUNTA PARA REGISTRAR:</strong> Depois desta semana, alguma coisa mudou na forma como você vê a IA que usa no dia a dia? Pode ser que sim, pode ser que não. O que importa é a razão.
+      </div>
+      <div class="card-alert-box alert-q4">
+        <span>⚠️ <strong>ATENÇÃO:</strong> "Continuo pensando o mesmo, porque..." é tão válido quanto "mudei de ideia porque...". O que conta é a razão.</span>
+      </div>
+      <div class="card-answer-box">
+        <p>Melhorou o meu lado crítico quanto ao uso consciente de IA. A forma como a aplico no meu dia a dia também foi impactada positivamente, uma vez que passei a exigir fontes e referências verificáveis.</p>
+      </div>
+    </div>
+
+    <div class="rocket-footer-box">
+      <span class="rocket-icon">🚀</span>
+      <div class="rocket-text">
+        <h5>Pronto para o próximo passo!</h5>
+        <p>Leve essas descobertas para o encontro do seu grupo: elas serão o ponto de partida da Reflexão de Grupo.</p>
+      </div>
+    </div>
+
+    <div class="inner-footer">
+      <span>Quinzena 1 · Portfólio Individual</span>
+      <span>Página 3 de 4</span>
+    </div>
+  </div>
+
+  <!-- PÁGINA 4: RUBRICA -->
+  <div class="page page-inner">
+    <div class="inner-header">
+      <div class="inner-header-title">
+        <span style="background:#0f172a; width:8px; height:8px; border-radius:50%;"></span>
+        RUBRICA DE AVALIAÇÃO POR PARES
+      </div>
+      <div class="inner-header-meta">Critérios de Revisão</div>
+    </div>
+
+    <div class="rubric-card">
+      <div class="rubric-header-box">
+        <span style="font-size:22px;">📊</span>
+        <div>
+          <h3>Como seu colega vai revisar este portfólio</h3>
+          <p>A tabela abaixo é a rubrica que um colega vai usar para dar o retorno. Ela não mede se você chegou à conclusão certa — ela verifica se cada tarefa foi realizada. Leia antes de enviar.</p>
+        </div>
+      </div>
+
+      <table class="rubric-table">
+        <thead>
+          <tr>
+            <th style="width: 25%;">CRITÉRIO</th>
+            <th style="width: 25%;"><span class="level-pill lvl-1">1</span> NÍVEL 1</th>
+            <th style="width: 25%;"><span class="level-pill lvl-2">2</span> NÍVEL 2</th>
+            <th style="width: 25%;" class="highlight-col"><span class="level-pill lvl-3">3</span> NÍVEL 3 (ALCANÇADO)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Registro da investigação com IA</strong></td>
+            <td>Não há registro de interação com IA, ou não há prompt, resumo nem fonte.</td>
+            <td>Tem prompt e resumo, mas sem fonte verificada. Ou tem fonte citada sem dados que permitam localizá-la.</td>
+            <td class="highlight-col">Prompt registrado + resumo dos pontos principais + pelo menos uma fonte com autoria ou veículo + resultado da verificação.</td>
+          </tr>
+          <tr>
+            <td><strong>Explicação com fonte e ponto cego</strong></td>
+            <td>Não há explicação própria para o caso, nem fonte, nem ponto cego identificado.</td>
+            <td>Há explicação ou há fonte, mas não os dois. Ou há explicação e fonte, mas nenhum ponto cego nomeado.</td>
+            <td class="highlight-col">Explicação própria + fonte que a sustenta + pelo menos uma pergunta que ficou sem resposta nomeada.</td>
+          </tr>
+          <tr>
+            <td><strong>Reflexão sobre perspectiva</strong></td>
+            <td>A Pergunta 4 não foi respondida.</td>
+            <td>A resposta menciona mudança ou não-mudança de forma genérica, sem razão específica.</td>
+            <td class="highlight-col">O texto descreve o que o aluno pensava antes e o que pensa agora, com uma razão concreta para a posição atual.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="inner-footer" style="margin-top: auto;">
+      <span>Quinzena 1 · Portfólio Individual</span>
+      <span>Página 4 de 4 · Documento de Submissão Oficial</span>
+    </div>
+  </div>
+
+</body>
+</html>
