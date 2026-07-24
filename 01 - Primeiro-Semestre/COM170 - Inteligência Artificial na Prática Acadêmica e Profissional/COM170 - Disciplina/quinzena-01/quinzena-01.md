@@ -127,6 +127,12 @@ Existem 2 momentos distintos de consumo de recursos: durante o **treinamento** d
 Também precisamos lidar com os *Ghost Workers* (Trabalhadores Fantasmas) citados anteriormente, e muitas vezes a realidade é pior do que imaginamos. É o caso descoberto por investigações jornalísticas de trabalhadores no Quênia que recebiam aproximadamente 2 dólares por hora para trabalhos de classificação e *feedback* altamente sensíveis (incluindo, mas não se limitando a, conteúdos de extrema violência e muitas vezes ilegais). Essas pessoas não recebiam nenhum suporte ou amparo psicológico por parte das empresas contratantes (como a OpenAI). 
 
 Por fim, muitas vezes esquecemos da energia elétrica consumida por esses grandes *data centers* e suas pegadas de carbono que, dependendo do país onde se encontram, geram emissões massivas de centenas de toneladas de $\text{CO}_2$ para a atmosfera, e pouco se fala sobre isso.
+
+### No Módulo 4, voltamos nossa atenção para a Naturalização Tecnológica e os vieses algorítmicos:
+
+Isso acontece quando uma tecnologia se torna tão presente e corriqueira na sociedade que apenas os aspectos positivos ficam visíveis para as pessoas. Quando aplicada em massa, notamos que essa naturalização pode ser implementada propositalmente com o objetivo de disseminar o uso da tecnologia; em outros aspectos, como nos vieses algorítmicos, pode não ser proposital, no entanto reflete dados históricos, culturais e estruturais. Vale ressaltar que esse processo de naturalização não é exclusivo da tecnologia: podemos observá-lo em diversas áreas, como por exemplo na indústria têxtil, na indústria de fármacos e cosméticos, e também na mais antiga delas, que é a agricultura. Alguns estudos públicos revelaram grandes preocupações, como os estudos de *Gender Shades*, *COMPAS*, *Amazon Recruiting Tool*, etc. O objetivo deste módulo não é interromper o uso da IA, mas exercitar nosso senso crítico para que possamos enxergar o que está oculto.
+
+A naturalização acontece quando 4 conceitos começam a ficar permanentemente consolidados: Confiabilidade, Neutralidade, Gratuidade e Universalidade. Dessa forma, a tecnologia é absorvida no cotidiano, fazendo com que fiquemos cada vez mais dependentes de seu uso contínuo, em um processo retroalimentado que diz que, se não usarmos a IA, por exemplo, ficaremos cada vez mais para trás em comparação com quem usa. Mas, nesse jogo de poderes, existe apenas 1 ganhador.
 ---
 
 ## 3. Mapa de Conexões
