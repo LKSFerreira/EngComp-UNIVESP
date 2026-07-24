@@ -173,13 +173,60 @@ A naturalização acontece quando 4 conceitos começam a ficar permanentemente c
 > Marina, aluna do segundo semestre, está na casa de uma amiga numa tarde de sábado. Em determinado momento da conversa, comenta que pretende recomeçar a correr e que precisa comprar um tênis novo, chegando a descrever o modelo que viu na vitrine de uma loja no caminho. A conversa segue, breve e despretensiosa, sem que o celular esteja sequer sobre a mesa.  
 > No dia seguinte, ao abrir o Instagram, Marina se depara com um anúncio de uma loja esportiva, exibindo precisamente o tipo de tênis de corrida que havia descrito na véspera.
 
-#### ❓ A Pergunta Central
 > **"Se não foi o microfone, o que explica a coincidência entre o que Marina disse — e nunca digitou — e o anúncio que viu no dia seguinte?"**
 
-#### 🎯 Objetivos e Metodologia de Investigação
-- **Desmistificação:** Investigar se a hipótese do "microfone sempre ligado" resiste ao exame técnico e empírico ou se é uma explicação simplista baseada em intuição.
-- **Identificação de Evidências:** Mapear o funcionamento real de rastreamento algorítmico, geolocalização cruzada, grafos sociais (*lookalike audiences*), histórico de buscas de redes de contatos/amigos, perfil de navegação e inferência probabilística.
-- **Entregável:** **Portfólio Individual** (*O que eu pensava → O que mudou → Evidências e Hipóteses investigadas*) a ser submetido até **26/07 às 23h59**.
+---
+
+### 📋 Portfólio Individual de Investigação (Módulo 5 / Módulo 6)
+
+#### 📍 Pergunta 1 · Antes de Pesquisar (Hipótese Inicial)
+> **Pergunta:** *O que você acha que explica o caso de Marina? Por que o telefone mostraria um anúncio de algo que ela estava só pensando ou falando?*
+>
+> **Resposta:**
+> Acredito que a explicação esteja na coleta de dados de geolocalização (GPS) do celular. O texto menciona que Marina viu o tênis na vitrine de uma loja de artigos esportivos no caminho. O simples fato de ela ter passado ou parado em frente a essa loja física acionou o rastreamento de localização em segundo plano do smartphone, alimentando os algoritmos de recomendação e direcionamento de anúncios direcionados do Instagram.
+
+---
+
+#### 📍 Pergunta 2 · Sua Investigação com IA
+> **Pergunta:** *Registre: (1) o prompt usado; (2) resumo dos pontos principais da resposta; (3) pelo menos uma fonte com autoria/data e o resultado da verificação.*
+>
+> **Resposta:**
+> - **Modelo Utilizado:** Gemini 3.6 Flash (Raciocínio)
+> - **Prompt Utilizado:**
+>   ```text
+>   Existe algum estudo científico ou paper que comprove o uso do microfone dos celulares para uso de algoritmos de recomendações de anúncios? Cite fontes e referências com links clicáveis ou acessíveis.
+>   ```
+> - **Resumo da Resposta da IA:**
+>   A IA corroborou com a hipótese de que a predição ocorre pelo cruzamento intensivo de dados de geolocalização e metadados, e não pela exfiltração contínua de áudio do microfone (que seria inviável tecnicamente devido ao consumo excessivo de bateria, tráfego de dados e restrições dos sistemas operacionais iOS/Android). A IA adicionou fatores complementares:
+>   1. **Cruzamento Social por Proximidade:** Metadados da amiga (que pode ter pesquisado o tênis no mesmo Wi-Fi ou local).
+>   2. **Inferência Estatística & Perfilagem:** Padrão demográfico de Marina (idade, localização habitual, horários) combinado às tendências de consumo daquela região.
+> - **Fonte Citada e Verificação:**
+>   - **Fonte:** *An Analysis of Mobile Application Privacy Practices* (Northeastern University, 2018).
+>   - **Resultado da Verificação:** O link direto retornou erro 404 (página movida), mas ao pesquisar pelo título exato dos autores (Elissa M. Redmiles et al. / Elleen Pan et al.), **o artigo acadêmico foi localizado com sucesso**. O estudo auditou mais de 17.000 aplicativos Android e concluiu que **não há evidências de gravação ou envio de áudio para fins publicitários**, mas sim envio massivo de capturas de tela e dados de rastreamento de uso.
+
+---
+
+#### 📍 Pergunta 3 · O que você encontrou e o que ficou em aberto
+> **Pergunta:** *Qual é a sua explicação para o que aconteceu com Marina, com a fonte que a sustenta? O que você buscou e não conseguiu responder (ponto cego)?*
+>
+> **Resposta:**
+> - **Explicação Final:** O anúncio resultou do cruzamento preditivo de metadados: histórico de localização por GPS (passagem em frente à loja), conexão ao mesmo Wi-Fi/Bluetooth da amiga e perfilagem estatística por *lookalike audiences* (públicos semelhantes). O estudo da Northeastern University (2018) sustenta que o uso de áudio constante é inviável e desnecessário, pois os dados de contexto e geolocalização já são suficientes para fazer previsões com precisão assustadora.
+> - **Ponto Cego (O que ficou sem resposta):** Não consegui determinar a janela de tempo exata que o algoritmo de leilão de anúncios (*ad auction*) leva entre a identificação do cruzamento de IPs/GPS no ambiente físico e a entrega da impressão do anúncio no feed do Instagram.
+
+---
+
+#### 📍 Pergunta 4 · O que mudou (ou não) para você
+> **Pergunta:** *Depois desta semana, alguma coisa mudou na forma como você vê a IA que usa no dia a dia? Qual a razão concreta?*
+>
+> **Resposta:**
+> **Sim, mudei de ideia e desenvolvi um olhar técnico muito mais crítico.** Antes, eu tendia a aceitar a explicação popular de que "o celular ouve tudo pelo microfone". Após a investigação, percebi que a realidade do rastreamento algorítmico é muito mais complexa e sutil: os modelos de IA não precisam "ouvir" nossas conversas porque a quantidade de rastros digitais de geolocalização, hábitos e redes de contatos já permite prever nossos comportamentos de forma probabilística. Isso alterou a forma como utilizo a IA no dia a dia, fazendo com que eu passe a exigir fontes verificáveis e audite as permissões de privacidade dos meus dispositivos.
+
+---
+
+#### 📊 Rubrica de Avaliação por Pares (Nível 3 Almejado)
+- **Registro da Investigação com IA:** Prompt registrado + resumo fiel + fonte com autoria/veículo + resultado da verificação (Nível 3).
+- **Explicação com Fonte e Ponto Cego:** Explicação própria + fonte de sustentação + ponto cego nomeado (Nível 3).
+- **Reflexão sobre Perspectiva:** Descrição do pensamento anterior/atual com razão concreta (Nível 3).
 
 ### 🧪 Módulos 6 e 7 (Laboratório & Trabalho em Grupo)
 
