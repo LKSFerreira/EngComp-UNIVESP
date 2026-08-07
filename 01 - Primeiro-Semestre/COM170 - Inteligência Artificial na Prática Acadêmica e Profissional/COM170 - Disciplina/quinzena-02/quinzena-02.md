@@ -73,7 +73,44 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 
 ## 6. Exercícios e Práticas
 
-* (resoluções, códigos, anotações)
+### 🧪 Atividade Extracurricular: Laboratório Mão na Massa (Tokenização & Comparação de Modelos no PC)
+
+Esta atividade prática permite testar diretamente no seu computador a diferença entre um **Modelo Didático** e um **Modelo Ultracompactado** rodando em CPU.
+
+---
+
+#### 📍 Parte 1: Experimento de Tokenização (e-Book Módulo 1)
+Preencha/Revise a tabela de testes feita no tokenizador interativo:
+
+| Categoria | Texto Testado | Previsão | Resultado Real | Aprendizado Observado |
+| :--- | :--- | :---: | :---: | :--- |
+| **Nome Completo** | `Lucas da Silva Ferreira` | 7 tokens | **6 tokens** | Nomes comuns entram como tokens inteiros; palavras longas/sobrenomes são divididos em subpalavras. |
+| **Cidade Brasileira** | `São José do Rio Preto` | 5 tokens | **7 tokens** | Acentuações (`ã`, `é`) dividem os radicais, aumentando a quantidade de tokens. |
+| **Termo em Inglês** | `Senior Software Engineering` | 3 tokens | **3 tokens** | **100% de eficiência**: Palavras inteiras em inglês existem como entradas prontas no vocabulário. |
+
+---
+
+#### 💻 Parte 2: Executar no seu PC (Modelo Didático vs. Modelo Ultracompactado em CPU)
+
+O código prático em Python foi separado no arquivo dedicado:
+👉 [laboratorio_modelos.py](./laboratorio_modelos.py)
+
+##### Como rodar:
+1. Instale as dependências no terminal (se ainda não tiver instalado):
+   ```bash
+   pip install transformers torch
+   ```
+2. Execute o arquivo diretamente no terminal a partir desta pasta:
+   ```bash
+   python laboratorio_modelos.py
+   ```
+
+---
+
+#### ❓ Roteiro de Reflexão (Para registrar após rodar o código)
+1. **Inspeção de Embeddings**: No modelo didático (`GPT-2`), confirme se a saída mostrou a matriz de formato `[1, 3, 768]`. O que o número `768` representa?
+2. **Desempenho em CPU**: Quanto tempo o modelo ultracompactado (`Qwen2.5-0.5B-Instruct`) levou para responder na CPU do seu PC? 
+3. **Qualidade vs. Tamanho**: O modelo de ~350MB conseguiu formular uma resposta com sentido sobre tokens?
 
 ---
 
