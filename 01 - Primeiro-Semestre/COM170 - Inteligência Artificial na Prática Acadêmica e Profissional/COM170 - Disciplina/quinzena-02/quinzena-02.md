@@ -56,16 +56,14 @@ Após o processo de tokenização, aplica-se o Embedding, que é a vetorização
 
 ## 4. Anotações dos Módulos
 
-### 📖 Módulos 1 a 3 (Estudo Individual)
-* **Tokens: como a máquina lê o que você escreve:** [Videoaula VA Q2-M1 (YouTube)](https://www.youtube.com/watch?v=9qZB4G9seX4)
+### 📖 Módulos 1 a 4 (Estudo Individual / Videoaulas)
 
-Q2-M2
-Mecanismo de Atenção: como o modelo... https://www.youtube.com/watch?v=PSnIRwliyAo
-
-Temperatura e plausibilidade... https://www.youtube.com/watch?v=w855eod3xBo
-
-Q2-M3
-Alucinação como design, não como bug https://www.youtube.com/watch?v=am4maHREyQo
+* **Q2-M1 — Tokens: como a máquina lê o que você escreve:** [Videoaula VA Q2-M1 (YouTube)](https://www.youtube.com/watch?v=9qZB4G9seX4)
+* **Q2-M2 — Mecanismo de atenção — como o modelo decide o que importa:** [Videoaula VA Q2-M2 (YouTube)](https://www.youtube.com/watch?v=PSnIRwliyAo)
+* **Q2-M2 — Temperatura e plausibilidade estatística:** [Videoaula VA Q2-M2.2 (YouTube)](https://www.youtube.com/watch?v=w855eod3xBo)
+* **Q2-M3 — Alucinação como design, não como bug:** [Videoaula VA Q2-M3 (YouTube)](https://www.youtube.com/watch?v=am4maHREyQo)
+* **Q2-M4 — RLHF e ghost work — quem ensina a IA a parecer útil:** [Videoaula VA Q2-M4 (YouTube)](https://www.youtube.com/watch?v=Gsd1L--UYbs)
+* **Q2-M4 — A ilusão de universalidade e a voz padronizada da máquina**
 
 ### 📝 Módulo 4 (Atividade Individual - Entrega até Domingo 23h59)
 * **Resumo / Entrega:**
