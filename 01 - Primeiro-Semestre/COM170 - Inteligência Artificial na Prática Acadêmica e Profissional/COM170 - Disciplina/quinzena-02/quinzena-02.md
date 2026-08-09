@@ -64,6 +64,9 @@ Mecanismo de Atenção: como o modelo... https://www.youtube.com/watch?v=PSnIRwl
 
 Temperatura e plausibilidade... https://www.youtube.com/watch?v=w855eod3xBo
 
+Q2-M3
+Alucinação como design, não como bug https://www.youtube.com/watch?v=am4maHREyQo
+
 ### 📝 Módulo 4 (Atividade Individual - Entrega até Domingo 23h59)
 * **Resumo / Entrega:**
 
@@ -111,6 +114,10 @@ As atividades práticas de laboratório estão estruturadas em **Jupyter Noteboo
    👉 [laboratorio_Q2_M2.ipynb](./laboratorio_Q2_M2.ipynb)
    - *Tópicos:* Mecanismo de atenção ($Q, K, V$), desambiguação semântica de "banco", extração de matrizes reais de atenção do GPT-2, cálculo matemático da temperatura ($T$) e diagnóstico de plausibilidade estatística vs. verdade.
 
+3. 📗 **Módulo 3 — Alucinação como Consequência Estrutural:**
+   👉 [laboratorio_Q2_M3.ipynb](./laboratorio_Q2_M3.ipynb)
+   - *Tópicos:* Causa raiz probabilística da alucinação, alucinação intrínseca vs. extrínseca (*Mata v. Avianca*), ancoragem de contexto (*Grounding*), taxonomia dos 5 tipos de erro e matriz de verificação acadêmica.
+
 ##### ⚙️ Como rodar (Isolamento com Ambiente Virtual `venv`):
 1. **Criar e ativar o ambiente virtual** na pasta do projeto:
    ```bash
@@ -129,7 +136,7 @@ As atividades práticas de laboratório estão estruturadas em **Jupyter Noteboo
    pip install transformers torch ipykernel
    ```
 3. **Abrir e executar os notebooks**:
-   - Abra [laboratorio_Q2_M1.ipynb](./laboratorio_Q2_M1.ipynb) ou [laboratorio_Q2_M2.ipynb](./laboratorio_Q2_M2.ipynb) no VS Code.
+   - Abra [laboratorio_Q2_M1.ipynb](./laboratorio_Q2_M1.ipynb), [laboratorio_Q2_M2.ipynb](./laboratorio_Q2_M2.ipynb) ou [laboratorio_Q2_M3.ipynb](./laboratorio_Q2_M3.ipynb) no VS Code.
    - No canto superior direito, clique em **Select Kernel** $\rightarrow$ **Python Environments...** $\rightarrow$ selecione o `.venv` recém-criado.
    - Execute as células sequencialmente.
 
