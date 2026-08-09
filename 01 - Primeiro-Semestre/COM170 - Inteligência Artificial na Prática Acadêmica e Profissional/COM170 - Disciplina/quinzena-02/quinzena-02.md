@@ -23,14 +23,14 @@
 
 Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 
-* **P1:** (escreva uma pergunta sobre o conceito principal da quinzena)
-* **R1:**
+* **P1:** Como funciona o processo de input nas IAs Generativas?
+* **R1:** Os modelos não leem o texto puro, tampouco processam strings. Usando como exemplo os inputs de texto, esses valores são convertidos em tokens; esses tokens passam por uma vetorização (embedding) na qual posteriormente é aplicado o algoritmo de self-attention. Com base nisso, é calculada a probabilidade do próximo token e a resposta é gerada.
 
-* **P2:** (escreva uma segunda pergunta)
-* **R2:**
+* **P2:** Quais os nomes e a ordem dos processos?
+* **R2:** 1 - Input (Ex.: texto); 2 - Tokenização (o texto é convertido em tokens por meio de um processo chamado Tokenizer usando o Tokenizer Vocabulary); 3 - Esse token vira um Embedding (vetor multidimensional no qual tokens relacionados ficam próximos no espaço vetorial, associado a um Token ID inteiro); 4 - O algoritmo de Self-Attention é aplicado usando esses valores de embedding dos tokens, calculando qual o próximo token com maior probabilidade de ser gerado.
 
-* **P3:** (pergunta sobre a aplicação prática)
-* **R3:**
+* **P3:** Todos os modelos funcionam da mesma forma?
+* **R3:** Não, modelos diferentes possuem formas diferentes de realizar a mesma tarefa, usando métodos e arquiteturas distintas. A forma como se processa texto é diferente da forma como se processa imagem, vídeo, etc.
 
 > Dica: se não conseguir responder, é sinal de que precisa revisitar o material.
 
@@ -38,7 +38,9 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 
 ## 2. Resumo em Minhas Palavras (máx. 5 frases)
 
-(explique o conteúdo desta quinzena como se estivesse ensinando a alguém)
+As respostas geradas por LLMs generativos não passam de cálculos matemáticos probabilísticos complexos. Por mais que esses cálculos sejam avançados, é perfeitamente possível manipular esses valores para validação (por exemplo: Rei - Homem + Mulher = Rainha); esses cálculos são verificáveis quando se levantam as cortinas de um modelo.
+O processo se inicia com o input (por exemplo, um texto), que é quebrado por um processo de Tokenizer. Lembrando que, devido ao modelo ter sido treinado com mais de 90% dos dados em inglês, seu Tokenizer Vocabulary é mais eficiente em inglês do que em qualquer outro idioma. A frase "Senior Software Engineering" possui 27 caracteres e gera 3 tokens; no entanto, o mesmo termo em português "Programador Engenheiro Sênior" possui 29 caracteres, mas gera 8 tokens (testado no [Tokenizer Playground](https://huggingface.co/spaces/Xenova/the-tokenizer-playground)). Isso significa que as interações em inglês podem ser mais de 2,6 vezes mais eficientes do que em pt-BR.
+Após o processo de tokenização, aplica-se o Embedding, que é a vetorização desses tokens em uma matriz multidimensional, na qual tokens correlacionados ficam próximos uns dos outros. Com isso, obtém-se o valor inteiro conhecido como Token ID, que será usado no algoritmo de Self-Attention determinando o quão importantes esses tokens são uns para os outros. Isso permite que o modelo entenda a frase "Saquei meu dinheiro no banco", compreendendo que a palavra "banco" aqui se refere a uma instituição financeira e não a um objeto físico, justamente porque as palavras "dinheiro" e "saquei" estão fortemente vinculadas a "banco". Esse processo é repetido diversas vezes para obter a resposta gerada pelo modelo.
 
 ---
 
@@ -46,14 +48,21 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 
 | Conceito desta quinzena | Se conecta com... | Como? |
 |-------------------------|--------------------|-------|
-| | | |
+| **Tokenização (BPE)** | Custo de API e Eficiência de Prompts | O número de tokens gerados determina o uso da janela de contexto e o custo da requisição; em português a quebra gera mais subpalavras do que em inglês. |
+| **Embeddings (Vetores)** | Álgebra Linear e Geometria do Significado | Representa palavras como vetores numéricos em espaço multidimensional, permitindo operações aritméticas conceituais (`Rei - Homem + Mulher = Rainha`). |
+| **Self-Attention (Atenção)** | Desambiguação de Contexto | Calcula o peso de influência entre os tokens da sequência (ex.: vincula "dinheiro" e "saquei" ao token "banco" para definir o sentido de instituição financeira). |
 
 ---
 
 ## 4. Anotações dos Módulos
 
 ### 📖 Módulos 1 a 3 (Estudo Individual)
-* **Videoaulas e Leituras:**
+* **Tokens: como a máquina lê o que você escreve:** [Videoaula VA Q2-M1 (YouTube)](https://www.youtube.com/watch?v=9qZB4G9seX4)
+
+Q2-M2
+Mecanismo de Atenção: como o modelo... https://www.youtube.com/watch?v=PSnIRwliyAo
+
+Temperatura e plausibilidade... https://www.youtube.com/watch?v=w855eod3xBo
 
 ### 📝 Módulo 4 (Atividade Individual - Entrega até Domingo 23h59)
 * **Resumo / Entrega:**
