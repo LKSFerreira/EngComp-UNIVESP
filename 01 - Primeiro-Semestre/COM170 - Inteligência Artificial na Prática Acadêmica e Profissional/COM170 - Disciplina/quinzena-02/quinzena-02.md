@@ -99,27 +99,39 @@ Preencha/Revise a tabela de testes feita no tokenizador interativo:
 
 ---
 
-#### 💻 Parte 2: Executar no seu PC (Modelo Didático vs. Modelo Ultracompactado em CPU)
+#### 💻 Parte 2: Notebooks Práticos no seu PC (Laboratórios Interativos em Células)
 
-O código prático em Python foi separado no arquivo dedicado:
-👉 [laboratorio_modelos.py](./laboratorio_modelos.py)
+As atividades práticas de laboratório estão estruturadas em **Jupyter Notebooks interativos (`.ipynb`)**, com explicações conceituais passo a passo e visualizações concretas:
 
-##### Como rodar:
-1. Instale as dependências no terminal (se ainda não tiver instalado):
+1. 📘 **Módulo 1 — Tokenização, Embeddings e Inferência em CPU:**
+   👉 [laboratorio_Q2_M1.ipynb](./laboratorio_Q2_M1.ipynb)
+   - *Tópicos:* Fragmentação BPE, IDs de tokens, matriz de embeddings `wte` ($d_{model} = 768$) e inferência com Qwen 2.5 0.5B.
+
+2. 📙 **Módulo 2 — Atenção, Temperatura e Plausibilidade:**
+   👉 [laboratorio_Q2_M2.ipynb](./laboratorio_Q2_M2.ipynb)
+   - *Tópicos:* Mecanismo de atenção ($Q, K, V$), desambiguação semântica de "banco", extração de matrizes reais de atenção do GPT-2, cálculo matemático da temperatura ($T$) e diagnóstico de plausibilidade estatística vs. verdade.
+
+##### ⚙️ Como rodar (Isolamento com Ambiente Virtual `venv`):
+1. **Criar e ativar o ambiente virtual** na pasta do projeto:
    ```bash
-   pip install transformers torch
+   python -m venv .venv
+   
+   # No Windows (PowerShell):
+   .venv\Scripts\Activate.ps1
+   # No Windows (CMD):
+   .venv\Scripts\activate.bat
+   # No Linux / macOS:
+   source .venv/bin/activate
    ```
-2. Execute o arquivo diretamente no terminal a partir desta pasta:
+2. **Instalar as dependências e o suporte a notebooks (`ipykernel`)**:
    ```bash
-   python laboratorio_modelos.py
+   pip install --upgrade pip
+   pip install transformers torch ipykernel
    ```
-
----
-
-#### ❓ Roteiro de Reflexão (Para registrar após rodar o código)
-1. **Inspeção de Embeddings**: No modelo didático (`GPT-2`), confirme se a saída mostrou a matriz de formato `[1, 3, 768]`. O que o número `768` representa?
-2. **Desempenho em CPU**: Quanto tempo o modelo ultracompactado (`Qwen2.5-0.5B-Instruct`) levou para responder na CPU do seu PC? 
-3. **Qualidade vs. Tamanho**: O modelo de ~350MB conseguiu formular uma resposta com sentido sobre tokens?
+3. **Abrir e executar os notebooks**:
+   - Abra [laboratorio_Q2_M1.ipynb](./laboratorio_Q2_M1.ipynb) ou [laboratorio_Q2_M2.ipynb](./laboratorio_Q2_M2.ipynb) no VS Code.
+   - No canto superior direito, clique em **Select Kernel** $\rightarrow$ **Python Environments...** $\rightarrow$ selecione o `.venv` recém-criado.
+   - Execute as células sequencialmente.
 
 ---
 
@@ -136,3 +148,6 @@ O código prático em Python foi separado no arquivo dedicado:
 | 1ª (1 dia depois) | | |
 | 2ª (3 dias depois) | | |
 | 3ª (7 dias depois) | | |
+
+
+Mudou que não se deve confiar de maneira alguma em um texto gerado por probabilidade, mesmo quando se é possível controlar a temperatura de um modelo, pois isso não significa chance de acerto, significa chances de geração do próximo token,
