@@ -128,6 +128,29 @@ As atividades práticas de laboratório estão estruturadas em **Jupyter Noteboo
 
 ---
 
+#### 📰 Conexão com o Mundo Real: Assinatura Estatística e Watermarking em LLMs (Claude & AI Act)
+
+> **Artigo de Referência:** [AiDrop News — Sorria, você está sendo simulado](https://www.aidrop.news/p/sorria-voce-esta-sendo-simulado)
+
+**Claude agora assina tudo que escreve**  
+A Anthropic anunciou que todos os novos modelos do Claude virão com uma marca d’água invisível e legível por máquinas.
+
+A proposta comercial feita em 10 minutos. O TCC terminado em 1 dia. Aquele post inteligente do LinkedIn... todos os conteúdos gerados pelo Claude e postados por humanos agora virão com uma assinatura. Sim, a Anthropic decidiu que todo modelo a partir de 2/ago vai embutir uma marca d'água invisível nos textos.
+
+* **O Motivo:** É menos virtude e mais Bruxelas: o Artigo 50(2) do AI Act europeu exige que todo conteúdo de IA seja identificável por máquina.
+* **Quem assinou:** OpenAI, Meta, Microsoft e Google (que já faz desde 2024).
+* **Quem não assinou:** a xAI (e os chineses, que nem foram convidados).
+
+##### 🔬 Como funciona a engenharia por trás:
+Para imagens, as marcas d’água como o SynthID do Google são mais simples de serem integradas. No caso dos textos, a Anthropic precisou de um truque estatístico: o modelo divide o vocabulário em tokens "verdes" e "vermelhos" com uma chave secreta e inclina de leve as escolhas de palavra.
+
+* **Em textos curtos:** Fica invisível e indetectável.
+* **Em textos longos (algumas centenas de palavras):** Um detector com a chave enxerga um padrão que não existe na natureza.
+
+**Bom por um lado, ruim por outro:** Até textos escritos por humanos que passarem pelo Claude por uma edição ou revisão podem voltar com um carimbo de “passou pelo Claude”, mesmo que não tenham sido “inventados pelo Claude”.
+
+---
+
 ## 7. Dúvidas Restantes
 
 * (anotar o que não ficou claro para perguntar no fórum ao facilitador)
@@ -142,5 +165,8 @@ As atividades práticas de laboratório estão estruturadas em **Jupyter Noteboo
 | 2ª (3 dias depois) | | |
 | 3ª (7 dias depois) | | |
 
+---
 
-Mudou que não se deve confiar de maneira alguma em um texto gerado por probabilidade, mesmo quando se é possível controlar a temperatura de um modelo, pois isso não significa chance de acerto, significa chances de geração do próximo token,
+## 9. Registro de Reflexão (Portfólio / Aprendizado)
+
+* **O que mudou na percepção:** Não se deve confiar de maneira alguma em um texto gerado por probabilidade, mesmo quando se é possível controlar a temperatura de um modelo, pois isso não significa chance de acerto, significa chances de geração do próximo token.
