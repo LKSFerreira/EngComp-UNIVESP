@@ -116,26 +116,14 @@ As atividades práticas de laboratório estão estruturadas em **Jupyter Noteboo
    👉 [laboratorio_Q2_M3.ipynb](./laboratorio_Q2_M3.ipynb)
    - *Tópicos:* Causa raiz probabilística da alucinação, alucinação intrínseca vs. extrínseca (*Mata v. Avianca*), ancoragem de contexto (*Grounding*), taxonomia dos 5 tipos de erro e matriz de verificação acadêmica.
 
-##### ⚙️ Como rodar (Isolamento com Ambiente Virtual `venv`):
-1. **Criar e ativar o ambiente virtual** na pasta do projeto:
+##### ⚙️ Como rodar (Isolamento com Ambiente Virtual via `uv`):
+1. **Inicializar e instalar as dependências com `uv` na raiz do repositório:**
    ```bash
-   python -m venv .venv
-   
-   # No Windows (PowerShell):
-   .venv\Scripts\Activate.ps1
-   # No Windows (CMD):
-   .venv\Scripts\activate.bat
-   # No Linux / macOS:
-   source .venv/bin/activate
+   uv add torch transformers ipykernel
    ```
-2. **Instalar as dependências e o suporte a notebooks (`ipykernel`)**:
-   ```bash
-   pip install --upgrade pip
-   pip install transformers torch ipykernel
-   ```
-3. **Abrir e executar os notebooks**:
+2. **Abrir e executar os notebooks:**
    - Abra [laboratorio_Q2_M1.ipynb](./laboratorio_Q2_M1.ipynb), [laboratorio_Q2_M2.ipynb](./laboratorio_Q2_M2.ipynb) ou [laboratorio_Q2_M3.ipynb](./laboratorio_Q2_M3.ipynb) no VS Code.
-   - No canto superior direito, clique em **Select Kernel** $\rightarrow$ **Python Environments...** $\rightarrow$ selecione o `.venv` recém-criado.
+   - No canto superior direito, clique em **Select Kernel** $\rightarrow$ **Python Environments...** $\rightarrow$ selecione o `.venv` criado pelo `uv` na raiz.
    - Execute as células sequencialmente.
 
 ---
