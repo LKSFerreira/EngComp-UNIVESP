@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Individual M5 - Por Dentro dos LLMs (Quinzena 2)</title>
+  
+  <!-- Fontes Acessíveis (Lexend para máxima legibilidade e conforto visual) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= RESET & CONFIGURAÇÃO A4 ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    body {
+      background-color: #525659;
+      font-family: 'Lexend', system-ui, -apple-system, sans-serif;
+      color: #1e293b;
+      letter-spacing: 0.15px;
+      margin: 0;
+      padding: 30px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    /* PÁGINA A4 EXATA */
+    .page {
+      width: 210mm;
+      height: 297mm;
+      background-color: #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+        gap: 0 !important;
+      }
+      .page {
+        box-shadow: none !important;
+        page-break-after: always !important;
+        page-break-inside: avoid !important;
+        height: 297mm !important;
+      }
+      .no-print-toolbar {
+        display: none !important;
+      }
+    }
+
+    /* BARRA DE IMPRESSÃO SUPERIOR */
+    .no-print-toolbar {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 1000;
+      background: #13324d;
+      color: #ffffff;
+      padding: 9px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 13.5px;
+      font-weight: 500;
+      font-family: 'Lexend', sans-serif;
+    }
+
+    .btn-print {
+      background: #f2a900;
+      color: #0f172a;
+      border: none;
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 12.5px;
+      font-family: 'Lexend', sans-serif;
+      cursor: pointer;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+
+    .btn-print:hover {
+      background: #e59d00;
+      transform: scale(1.04);
+    }
+
+    /* ================= PÁGINA 1: CABEÇALHO UNIVESP ================= */
+    .header-banner {
+      background-color: #13324d;
+      color: #ffffff;
+      padding: 24px 38px;
+    }
+
+    .banner-top-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #cbd5e1;
+      margin-bottom: 12px;
+    }
+
+    .banner-content {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .badge-template-sq {
+      background-color: #f2a900;
+      color: #0f172a;
+      width: 72px;
+      height: 72px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .badge-template-sq .badge-label {
+      font-family: 'Lexend', sans-serif;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+
+    .badge-template-sq .badge-num {
+      font-family: 'Lexend', sans-serif;
+      font-size: 36px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .banner-text .quinzena-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #f1f5f9;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .banner-text h1 {
+      font-family: 'Lexend', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+      line-height: 1.15;
+    }
+
+    .banner-text .subtitle {
+      font-family: 'Lexend', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      color: #e2e8f0;
+      margin-top: 3px;
+    }
+
+    /* PÁGINA 1: CORPO */
+    .page-1-body {
+      padding: 16px 38px 0 38px;
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .fields-row {
+      display: flex;
+      gap: 22px;
+    }
+
+    .field-item {
+      flex: 1;
+    }
+
+    .field-label {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-bottom: 4px;
+    }
+
+    .field-line {
+      border-bottom: 2.5px solid #13324d;
+      padding-bottom: 4px;
+      font-family: 'Lexend', sans-serif;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #1e293b;
+      min-height: 22px;
+    }
+
+    /* CAIXA AMARELA: ANTES DE COMEÇAR */
+    .box-optional {
+      background-color: #fef8e8;
+      border-left: 4.5px solid #f2a900;
+      padding: 11px 16px;
+    }
+
+    .box-optional h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #92400e;
+      margin-bottom: 4px;
+    }
+
+    .box-optional p {
+      font-family: 'Lexend', sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.55;
+      color: #334155;
+    }
+
+    /* CAIXA AZUL-CINZA: O QUE FAZER */
+    .box-todo {
+      background-color: #eaf0f6;
+      border-left: 4.5px solid #13324d;
+      padding: 11px 16px;
+    }
+
+    .box-todo h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #13324d;
+      margin-bottom: 4px;
+    }
+
+    .box-todo p {
+      font-family: 'Lexend', sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.55;
+      color: #334155;
+      margin-bottom: 5px;
+    }
+    .box-todo p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* TABELA DE TAXONOMIA */
+    .taxonomy-section {
+      margin-top: 2px;
+    }
+
+    .taxonomy-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #13324d;
+      margin-bottom: 6px;
+    }
+
+    .taxonomy-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+    }
+
+    .taxonomy-table th {
+      background-color: #13324d;
+      color: #ffffff;
+      font-family: 'Lexend', sans-serif;
+      font-weight: 500;
+      text-align: left;
+      padding: 7px 11px;
+      letter-spacing: 0.5px;
+      font-size: 10.5px;
+      text-transform: uppercase;
+    }
+
+    .taxonomy-table td {
+      padding: 7px 11px;
+      border-bottom: 1px solid #cbd5e1;
+      vertical-align: top;
+      line-height: 1.5;
+      color: #334155;
+    }
+
+    .taxonomy-table tr:nth-child(even) {
+      background-color: #f8fafc;
+    }
+
+    .taxonomy-table .col-tipo {
+      font-family: 'Lexend', sans-serif;
+      font-weight: 600;
+      color: #1e293b;
+      font-size: 11.5px;
+    }
+
+    .taxonomy-table .col-humano {
+      font-family: 'Lexend', sans-serif;
+      color: #b45309;
+      font-weight: 500;
+      font-size: 11.5px;
+    }
+
+    .taxonomy-table .col-como {
+      font-family: 'Lexend', sans-serif;
+      font-weight: 300;
+      color: #334155;
+      font-size: 11px;
+    }
+
+    /* ================= PÁGINAS INTERNAS (2, 3 E 4) ================= */
+    .inner-header {
+      padding: 18px 38px 10px 38px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #13324d;
+      border-bottom: 2.5px solid #13324d;
+      margin: 0 38px;
+    }
+
+    .inner-body {
+      padding: 16px 38px 0 38px;
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+    }
+
+    /* BLOCO DE PERGUNTA */
+    .question-block {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .question-title-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+    }
+
+    .q-badge {
+      background-color: #f2a900;
+      color: #0f172a;
+      font-family: 'Lexend', sans-serif;
+      font-size: 15px;
+      font-weight: 700;
+      width: 26px;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .question-title-text {
+      font-family: 'Lexend', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #13324d;
+      line-height: 1.35;
+    }
+
+    .question-prompt {
+      font-family: 'Lexend', sans-serif;
+      font-size: 11.5px;
+      font-weight: 300;
+      color: #475569;
+      line-height: 1.5;
+      padding-left: 37px;
+      margin-top: -2px;
+    }
+
+    /* ÁREA DE RESPOSTA FORMATADA */
+    .answer-container {
+      padding-left: 37px;
+    }
+
+    .answer-box {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-left: 4px solid #13324d;
+      border-radius: 4px;
+      padding: 11px 16px;
+      font-family: 'Lexend', sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.6;
+      color: #1e293b;
+    }
+
+    .answer-box p {
+      margin-bottom: 6px;
+    }
+    .answer-box p:last-child {
+      margin-bottom: 0;
+    }
+
+    .answer-box blockquote {
+      background-color: #f8fafc;
+      border-left: 3.5px solid #f2a900;
+      padding: 8px 12px;
+      margin: 8px 0;
+      font-size: 11.5px;
+      font-weight: 300;
+      color: #334155;
+      line-height: 1.55;
+    }
+
+    /* ITENS AUDITADOS DA PERGUNTA 2 */
+    .audit-list {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 8px;
+    }
+
+    .audit-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 7px 12px;
+      font-size: 11.5px;
+      line-height: 1.45;
+    }
+
+    .audit-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2px;
+    }
+
+    .audit-fact {
+      font-family: 'Lexend', sans-serif;
+      font-weight: 600;
+      color: #1e293b;
+      font-size: 11.5px;
+    }
+
+    .tag-veridico {
+      background: #dcfce7;
+      color: #15803d;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      border: 1px solid #bbf7d0;
+    }
+
+    .tag-falso {
+      background: #fee2e2;
+      color: #b91c1c;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 3px;
+      text-transform: uppercase;
+      border: 1px solid #fecaca;
+    }
+
+    .audit-detail {
+      font-family: 'Lexend', sans-serif;
+      font-weight: 300;
+      color: #334155;
+      font-size: 11px;
+      line-height: 1.5;
+    }
+
+    /* REFERÊNCIAS AUDITADAS COM LINKS */
+    .abnt-section {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 9px 12px;
+      margin-top: 4px;
+    }
+
+    .abnt-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      color: #13324d;
+      margin-bottom: 5px;
+    }
+
+    .abnt-ref {
+      font-family: 'Lexend', sans-serif;
+      font-size: 10.5px;
+      font-weight: 300;
+      color: #334155;
+      line-height: 1.5;
+      margin-bottom: 6px;
+    }
+    .abnt-ref:last-child {
+      margin-bottom: 0;
+    }
+
+    .abnt-ref a {
+      color: #0d5bb5;
+      font-weight: 500;
+      text-decoration: underline;
+      word-break: break-all;
+    }
+
+    .abnt-ref a:hover {
+      color: #13324d;
+    }
+
+    /* BOX EXPERIMENTO OPCIONAL (PÁGINA 4) */
+    .box-experiment-header {
+      background-color: #fef8e8;
+      border: 1.5px solid #f2a900;
+      border-left: 5px solid #f2a900;
+      padding: 10px 16px;
+      border-radius: 4px;
+    }
+
+    .box-experiment-header h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #92400e;
+      margin-bottom: 3px;
+    }
+
+    .box-experiment-header p {
+      font-family: 'Lexend', sans-serif;
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 1.55;
+      color: #334155;
+    }
+
+    .experiment-card {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      padding: 11px 16px;
+      font-size: 11.5px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .exp-field-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 600;
+      color: #13324d;
+      text-transform: uppercase;
+    }
+
+    .exp-link-box {
+      font-family: 'Lexend', sans-serif;
+      font-size: 11px;
+      color: #334155;
+    }
+
+    .exp-link-box a {
+      color: #0d5bb5;
+      font-weight: 500;
+      text-decoration: underline;
+    }
+
+    .exp-prompt-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 3.5px solid #64748b;
+      padding: 8px 12px;
+      font-family: 'Lexend', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      color: #334155;
+      line-height: 1.55;
+    }
+
+    .exp-response-box {
+      background: #fefce8;
+      border: 1px solid #fef08a;
+      border-left: 3.5px solid #f2a900;
+      padding: 8px 12px;
+      font-family: 'Lexend', sans-serif;
+      font-size: 11px;
+      font-weight: 300;
+      color: #1e293b;
+      line-height: 1.55;
+    }
+
+    .diag-point {
+      margin-bottom: 5px;
+      line-height: 1.5;
+      font-family: 'Lexend', sans-serif;
+      font-size: 11.5px;
+      font-weight: 300;
+      color: #334155;
+    }
+    .diag-point strong {
+      font-family: 'Lexend', sans-serif;
+      color: #13324d;
+      font-weight: 600;
+    }
+
+    .img-proof-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 8px;
+    }
+
+    .img-proof-container img {
+      max-width: 280px;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.14);
+    }
+
+    .img-caption {
+      font-family: 'Lexend', sans-serif;
+      font-size: 10.5px;
+      font-weight: 300;
+      color: #475569;
+      text-align: center;
+      margin-top: 6px;
+      line-height: 1.45;
+    }
+
+    /* RODAPÉ PADRONIZADO */
+    .page-footer {
+      padding: 12px 38px 0 38px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #64748b;
+      border-top: 1px solid #e2e8f0;
+      margin: 0 38px 14px 38px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- BARRA DE IMPRESSÃO (INVISÍVEL NO PDF) -->
+  <div class="no-print-toolbar">
+    <span>📄 Template Oficial UNIVESP - Quinzena 2</span>
+    <button class="btn-print" onclick="window.print()">🖨️ Salvar como PDF / Imprimir</button>
+  </div>
+
+  <!-- ================= PÁGINA 1: CABEÇALHO + TAXONOMIA ================= -->
+  <div class="page">
+    <div>
+      <div class="header-banner">
+        <div class="banner-top-meta">
+          <span>IA na Prática Acadêmica e Profissional</span>
+          <span>UNIVESP</span>
+        </div>
+        <div class="banner-content">
+          <div class="badge-template-sq">
+            <span class="badge-label">TEMPLATE</span>
+            <span class="badge-num">1</span>
+          </div>
+          <div class="banner-text">
+            <span class="quinzena-tag">Quinzena 2 · Por Dentro dos LLMs</span>
+            <h1>Template individual</h1>
+            <div class="subtitle">A metacognição da alucinação</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-1-body">
+        <div class="fields-row">
+          <div class="field-item">
+            <span class="field-label">Nome</span>
+            <div class="field-line">Lucas da Silva Ferreira</div>
+          </div>
+          <div class="field-item">
+            <span class="field-label">Caso Recebido (A a E)</span>
+            <div class="field-line">Caso A</div>
+          </div>
+        </div>
+
+        <div class="box-optional">
+          <h4>Antes de Começar: Escrever aqui é opcional</h4>
+          <p>Você não precisa preencher este documento. Se preferir, copie as quatro perguntas e responda em um arquivo novo, no editor que você quiser, ou até à mão. O template existe só para organizar o raciocínio: o que vale é o conteúdo das suas respostas, não o formato em que elas chegam.</p>
+        </div>
+
+        <div class="box-todo">
+          <h4>O que fazer</h4>
+          <p>Você recebeu um caso com três partes: uma situação, a pergunta que a pessoa fez a uma IA e a resposta que a IA deu. A resposta não vem marcada como certa ou errada. O seu papel é o de investigador: ler com desconfiança, sair para conferir e chegar às suas próprias conclusões.</p>
+          <p>Responda às quatro perguntas com as suas palavras. Não existe resposta única: o que vale é o seu raciocínio e a sua verificação. Use como referência a tabela dos cinco tipos.</p>
+        </div>
+
+        <div class="taxonomy-section">
+          <div class="taxonomy-title">Os cinco tipos de alucinação</div>
+          <table class="taxonomy-table">
+            <thead>
+              <tr>
+                <th style="width: 24%;">Tipo</th>
+                <th style="width: 24%;">Comportamento Humano</th>
+                <th style="width: 52%;">Como Reconhecer</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-tipo">Alucinação factual</td>
+                <td class="col-humano">O blefe</td>
+                <td class="col-como">Uma afirmação falsa com estrutura correta. Um dado, um nome, um número ou uma referência inventados, com aparência confiável.</td>
+              </tr>
+              <tr>
+                <td class="col-tipo">Coerência sem verdade</td>
+                <td class="col-humano">O sofisma</td>
+                <td class="col-como">Uma explicação que flui com lógica aparente, mas está conceitualmente errada. O erro está no raciocínio inteiro, não em um dado isolado.</td>
+              </tr>
+              <tr>
+                <td class="col-tipo">Viés de corpus</td>
+                <td class="col-humano">O preconceito automático</td>
+                <td class="col-como">O modelo reproduz padrões e desigualdades dos textos de treino, como se fossem um retrato completo da realidade.</td>
+              </tr>
+              <tr>
+                <td class="col-tipo">Vagueza confortável</td>
+                <td class="col-humano">A evasão</td>
+                <td class="col-como">O modelo evita uma posição clara mesmo quando ela era possível e necessária. Fala muito e não se compromete.</td>
+              </tr>
+              <tr>
+                <td class="col-tipo">Ausência de contexto</td>
+                <td class="col-humano">A generalização</td>
+                <td class="col-como">O modelo responde ao geral quando a pergunta era específica, por não saber seu país, sua norma, seu nível ou sua finalidade.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Quinzena 2 · Template Individual · UNIVESP</span>
+      <span>1 / 4</span>
+    </div>
+  </div>
+
+  <!-- ================= PÁGINA 2: PERGUNTAS 1 E 2 ================= -->
+  <div class="page">
+    <div>
+      <div class="inner-header">
+        <span>Template Individual · Suas Respostas</span>
+        <span>Quinzena 2</span>
+      </div>
+
+      <div class="inner-body">
+        <!-- PERGUNTA 1 -->
+        <div class="question-block">
+          <div class="question-title-row">
+            <div class="q-badge">1</div>
+            <div class="question-title-text">Ao ler a resposta da IA, o que você decidiria conferir antes de confiar, e por quê?</div>
+          </div>
+          <div class="question-prompt">
+            Aponte os trechos que você trataria com desconfiança e explique por quê. Aqui você ainda não precisa dizer se estão certos ou errados, apenas o que merece conferência.
+          </div>
+          <div class="answer-container">
+            <div class="answer-box">
+              <p>Começaria conferindo as datas e os locais, pois é um dos tipos de alucinação mais comuns e fáceis de checar. Depois, faria as validações factuais do texto, como, por exemplo, o relato sobre o Prêmio Deutsch e a invenção do Demoiselle. Além disso, checaria todos os fatos, mesmo aqueles sobre os quais já tenho conhecimento prévio, como o relato do 14-Bis.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERGUNTA 2 -->
+        <div class="question-block">
+          <div class="question-title-row">
+            <div class="q-badge">2</div>
+            <div class="question-title-text">Vá conferir: pesquise na internet ou compare com o que você já sabe. O que você encontrou?</div>
+          </div>
+          <div class="question-prompt">
+            Conte onde foi conferir, um site confiável, um livro ou o seu próprio conhecimento, e o que descobriu. Se você não achar a informação em lugar nenhum, isso também é um resultado importante.
+          </div>
+          <div class="answer-container">
+            <div class="audit-list">
+              <div class="audit-item">
+                <div class="audit-item-header">
+                  <span class="audit-fact">20 de julho de 1873 / Fazenda Cabangu (MG)</span>
+                  <span class="tag-veridico">Verídico [1, 2]</span>
+                </div>
+                <div class="audit-detail">Nascimento e localização factual confirmados nos registros oficiais da história brasileira.</div>
+              </div>
+
+              <div class="audit-item">
+                <div class="audit-item-header">
+                  <span class="audit-fact">1901 / Contorno da Torre Eiffel & Prêmio Deutsch</span>
+                  <span class="tag-veridico">Verídico [1, 2]</span>
+                </div>
+                <div class="audit-detail">O dirigível Nº 6 realizou com pleno sucesso a prova oficial estabelecida pelo Aeroclube da França.</div>
+              </div>
+
+              <div class="audit-item">
+                <div class="audit-item-header">
+                  <span class="audit-fact">23 de out. de 1906 / Campo de Bagatelle (Paris) / 14-Bis</span>
+                  <span class="tag-veridico">Verídico [1, 2]</span>
+                </div>
+                <div class="audit-detail">Primeiro voo público autopropulsionado homologado da história (marca oficial de 60 metros na prova, ~70m em testes da época). Recorde posterior de 220m em 12 de novembro.</div>
+              </div>
+
+              <div class="audit-item">
+                <div class="audit-item-header">
+                  <span class="audit-fact">Criação do Demoiselle e mais de 20 aparelhos voadores</span>
+                  <span class="tag-veridico">Verídico [1, 3]</span>
+                </div>
+                <div class="audit-detail">Desenvolvimento de aviões leves pioneiros e projetos mecânicos inovadores ao longo de sua vida.</div>
+              </div>
+
+              <div class="audit-item" style="border-left: 4px solid #dc2626; background: #fffaf0;">
+                <div class="audit-item-header">
+                  <span class="audit-fact">Patente do 14-Bis, royalties e sucesso financeiro</span>
+                  <span class="tag-falso">Falso · Alucinação [3, 4]</span>
+                </div>
+                <div class="audit-detail"><strong>Alucinação identificada:</strong> Santos Dumont recusava-se terminantemente a patentear suas invenções, disponibilizando todos os projetos e plantas em domínio público para que a humanidade desenvolvesse livremente a aviação.</div>
+              </div>
+            </div>
+
+            <div class="abnt-section">
+              <div class="abnt-title">Referências Bibliográficas Auditadas</div>
+              <div class="abnt-ref">
+                <strong>[1]</strong> VISONI, R. M.; CANALLE, J. B. G. Como Santos Dumont inventou o avião. <em>Revista Brasileira de Ensino de Física</em>, v. 31, n. 3, 2009. <br>
+                Link: <a href="https://doi.org/10.1590/S1806-11172009000300015" target="_blank">https://doi.org/10.1590/S1806-11172009000300015</a>
+              </div>
+              <div class="abnt-ref">
+                <strong>[2]</strong> ARQUIVO NACIONAL (Brasil). <em>Santos Dumont: Exposições Virtuais</em>. Rio de Janeiro: Arquivo Nacional, 2016. <br>
+                Link: <a href="https://exposicoesvirtuais.an.gov.br/index.php/galerias/92-exposicoes/franca/saiba-mais/259-santos-dumont.html" target="_blank">https://exposicoesvirtuais.an.gov.br/index.php/galerias/92-exposicoes/franca/saiba-mais/259-santos-dumont.html</a>
+              </div>
+              <div class="abnt-ref">
+                <strong>[3]</strong> MULTIRIO. <em>Santos Dumont, um inventor genial</em>. Rio de Janeiro: Empresa Municipal de Multimeios, 2018. <br>
+                Link: <a href="https://multi.rio/index.php/reportagens/15266-santos-dumont,-um-inventor-genial" target="_blank">https://multi.rio/index.php/reportagens/15266-santos-dumont,-um-inventor-genial</a>
+              </div>
+              <div class="abnt-ref">
+                <strong>[4]</strong> ABPI. <em>Patentes. Patentear. Patenteamento. Que história é essa?</em> Associação Brasileira da Propriedade Intelectual, 2020. <br>
+                Link: <a href="https://abpi.org.br/blog/patentes-patentear-patenteamento-que-historia-e-essa/" target="_blank">https://abpi.org.br/blog/patentes-patentear-patenteamento-que-historia-e-essa/</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Quinzena 2 · Template Individual · UNIVESP</span>
+      <span>2 / 4</span>
+    </div>
+  </div>
+
+  <!-- ================= PÁGINA 3: PERGUNTAS 3 E 4 ================= -->
+  <div class="page">
+    <div>
+      <div class="inner-header">
+        <span>Template Individual · Suas Respostas</span>
+        <span>Quinzena 2</span>
+      </div>
+
+      <div class="inner-body">
+        <!-- PERGUNTA 3 -->
+        <div class="question-block">
+          <div class="question-title-row">
+            <div class="q-badge">3</div>
+            <div class="question-title-text">Que tipo de alucinação é essa, pela tabela, e por que o modelo pode tê-la produzido?</div>
+          </div>
+          <div class="question-prompt">
+            Escolha o tipo e explique o que na resposta levou você até ele. Depois, arrisque uma explicação de por que o modelo pode ter chegado a esse resultado.
+          </div>
+          <div class="answer-container">
+            <div class="answer-box">
+              <p>Acredito que identificamos uma alucinação de <strong>Viés de corpus</strong>, uma vez que são extremamente raros os casos em que inventores não patenteiam suas invenções. Em um mundo dominado pelo capitalismo, no qual o sistema de patentes foi inventado justamente para isso, a quantidade de inventores que patentearam suas invenções representa a grande e esmagadora maioria dos casos.</p>
+              <p>Assim, quando nos deparamos com um inventor que se recusava a patentear suas invenções por motivos ideológicos, o modelo não sabe disso, não porque distingue ideologias, mas sim porque a probabilidade de saída do token que geraria a resposta correta é ínfima em comparação com a situação descrita na alucinação.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERGUNTA 4 -->
+        <div class="question-block">
+          <div class="question-title-row">
+            <div class="q-badge">4</div>
+            <div class="question-title-text">Que comportamento humano essa forma de errar representa?</div>
+          </div>
+          <div class="question-prompt">
+            Use o nome da tabela como ponto de partida e descreva uma situação em que uma pessoa se comportaria de um jeito parecido.
+          </div>
+          <div class="answer-container">
+            <div class="answer-box">
+              <p>Representa <strong>o preconceito automático</strong>, mas não no sentido ideológico da palavra, e sim no modo como a informação foi preconcebida. Devido ao fato de que o modelo foi treinado com tantos exemplos de inventores que patentearam suas invenções, no momento de gerar o texto:</p>
+              <blockquote>
+                "Um ponto interessante para a sua apresentação: Santos Dumont patenteou o projeto do 14-bis e passou a receber royalties pelo uso da tecnologia, o que o tornou um dos inventores mais bem-sucedidos financeiramente da sua época."
+              </blockquote>
+              <p>O modelo preconcebeu, por razões estatísticas e probabilísticas, que o mesmo ocorrera com Santos Dumont, mas a realidade factual é de que ele nunca patenteou suas invenções.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Quinzena 2 · Template Individual · UNIVESP</span>
+      <span>3 / 4</span>
+    </div>
+  </div>
+
+  <!-- ================= PÁGINA 4: EXPERIMENTO OPCIONAL ================= -->
+  <div class="page">
+    <div>
+      <div class="inner-header">
+        <span>Template Individual · Experimento Opcional</span>
+        <span>Quinzena 2</span>
+      </div>
+
+      <div class="inner-body">
+        <div class="box-experiment-header">
+          <h4>Experimento Opcional · Sem Nota</h4>
+          <p>Investigação pessoal de alucinação e limites probabilísticos da IA em um domínio de conhecimento especializado e empírico do aluno.</p>
+        </div>
+
+        <div class="experiment-card">
+          <div>
+            <span class="exp-field-label">Tema / Domínio:</span>
+            <span style="font-family: 'Lexend', sans-serif; font-size: 11.5px; color: #1e293b; font-weight: 400;"> Otimização de build e compensação de latência (Ping ~200ms) para Warrior no <em>TERA Console</em> (Xbox Series S).</span>
+          </div>
+
+          <div class="exp-link-box">
+            <span class="exp-field-label">Link Público da Conversa:</span>
+            <a href="https://share.gemini.google/lKpwfFq7lA8N" target="_blank">https://share.gemini.google/lKpwfFq7lA8N</a>
+          </div>
+
+          <div class="exp-prompt-box">
+            <strong>Prompt enviado:</strong> "Você deve responder o seguinte questionamento sem uso da internet, apenas com o seu corpus de treinamento [...]: Qual o valores mínimos que devo usar para o CDR e Velocidade de ataque para compensar ping de ~200ms no Warrior? TERA Console - Xbox Series S."
+          </div>
+
+          <div class="exp-response-box">
+            <strong>Resposta da IA (Alucinação/Erro):</strong> Recomendou Velocidade de Ataque de +50 a +60 e CDR de 14% a 18%, orientando focar o restante em atributos padrão de dano.
+          </div>
+
+          <div>
+            <span class="exp-field-label">Diagnóstico e Causa Raiz:</span>
+            <div class="diag-point" style="margin-top: 3px;">
+              <strong>1. Dinâmica do META e Defasagem:</strong> O balanceamento do jogo evolui constantemente, tornando materiais abertos e antigos da web obsoletos.
+            </div>
+            <div class="diag-point">
+              <strong>2. Conhecimento Fechado da Comunidade:</strong> Informações de ponta circulam em servidores privados de Discord ou por transmissão oral entre veteranos.
+            </div>
+            <div class="diag-point">
+              <strong>3. Compensação de Latência Real (Ping 200ms):</strong> Jogadores brasileiros em servidores norte-americanos necessitam de patamares mínimos bem mais agressivos: <strong>Velocidade de Ataque +180</strong> e <strong>CDR mínimo de 56%</strong> para manter a fluidez de rotação antes de investir em dano (especialmente operando em papéis híbridos de <em>Tank</em> e <em>DPS</em>).
+            </div>
+          </div>
+
+          <div class="img-proof-container">
+            <img src="tempo_de_jogo.png" alt="Registro de 12.946h no TERA Console">
+            <div class="img-caption">
+              Comprovação de vivência empírica no TERA Console (Xbox Series S): 1000/1000 GamerScore, 25/25 Conquistas e 12.946h 11min registrados (equivalente a <strong>539 dias e 10 horas ininterruptas</strong> ou cerca de <strong>1,47 anos de gameplay contínuo 24h/dia</strong>).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Quinzena 2 · Template Individual · UNIVESP</span>
+      <span>4 / 4</span>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Template do Grupo — Quinzena 2 · Por Dentro dos LLMs</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      background-color: #1e293b;
+      color: #1e293b;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    /* BARRA DE IMPRESSÃO TELA */
+    .no-print-toolbar {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      background: #0f172a;
+      padding: 12px 20px;
+      border-radius: 8px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+    }
+    .no-print-toolbar span {
+      color: #f8fafc;
+      font-size: 13px;
+      font-weight: 500;
+    }
+    .btn-print {
+      background: #f2a900;
+      color: #0f172a;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-print:hover {
+      background: #d99200;
+    }
+
+    @media print {
+      .no-print-toolbar {
+        display: none !important;
+      }
+      body {
+        background: none;
+      }
+      .page {
+        margin: 0 !important;
+        box-shadow: none !important;
+        page-break-after: always;
+        page-break-inside: avoid;
+      }
+      .page:last-child {
+        page-break-after: avoid;
+      }
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      margin: 20px auto;
+      background: #ffffff;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0 0 25px 0;
+    }
+
+    /* TOPO BANNER DA PÁGINA 1 */
+    .header-banner {
+      background-color: #13324d;
+      color: #ffffff;
+      padding: 24px 40px 22px 40px;
+      position: relative;
+    }
+
+    .banner-top-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #cbd5e1;
+      margin-bottom: 16px;
+    }
+
+    .banner-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .badge-template-sq {
+      background-color: #f2a900;
+      color: #0f172a;
+      width: 68px;
+      height: 68px;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .badge-template-sq .badge-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    .badge-template-sq .badge-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 30px;
+      font-weight: 900;
+      line-height: 1;
+      margin-top: 1px;
+    }
+
+    .banner-text .quinzena-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #cbd5e1;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .banner-text h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 1.1;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    .banner-text .subtitle {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 15px;
+      color: #cbd5e1;
+      margin-top: 3px;
+      font-weight: 400;
+    }
+
+    /* CORPO DA PÁGINA 1 */
+    .page-1-body {
+      padding: 24px 40px 0 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* CAMPOS DE METADADOS (GRUPO / INTEGRANTES) */
+    .fields-row {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 25px;
+      margin-bottom: 4px;
+    }
+
+    .field-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .field-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-bottom: 8px;
+    }
+
+    .field-line {
+      border-bottom: 1.5px solid #13324d;
+      padding-bottom: 4px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #0f172a;
+      min-height: 22px;
+    }
+
+    /* CAIXA AMARELA: ANTES DE COMEÇAR */
+    .box-optional {
+      background-color: #fef8e8;
+      border-left: 4px solid #f2a900;
+      padding: 14px 18px;
+    }
+
+    .box-optional h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #92400e;
+      margin-bottom: 6px;
+    }
+
+    .box-optional p {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: #1e293b;
+    }
+
+    /* CAIXA AZUL-CINZA: O QUE FAZER */
+    .box-todo {
+      background-color: #eaf0f6;
+      padding: 14px 18px;
+    }
+
+    .box-todo h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #13324d;
+      margin-bottom: 6px;
+    }
+
+    .box-todo p {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 12.5px;
+      line-height: 1.45;
+      color: #1e293b;
+      margin-bottom: 6px;
+    }
+    .box-todo p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* CABEÇALHOS DAS PÁGINAS 2 E 3 */
+    .inner-header {
+      padding: 24px 40px 10px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #13324d;
+      border-bottom: 2px solid #13324d;
+      margin: 0 40px 20px 40px;
+    }
+
+    /* CONTEÚDO DAS PÁGINAS INTERNAS */
+    .inner-body {
+      padding: 0 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      flex-grow: 1;
+    }
+
+    /* BLOCOS DE PERGUNTAS */
+    .question-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .question-title-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 8px;
+    }
+
+    .q-badge {
+      background-color: #f2a900;
+      color: #0f172a;
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 900;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .question-title-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 800;
+      color: #13324d;
+      line-height: 1.3;
+    }
+
+    .question-prompt {
+      font-family: 'Lora', Georgia, serif;
+      font-style: italic;
+      font-size: 12.5px;
+      color: #475569;
+      line-height: 1.45;
+      margin-bottom: 12px;
+      padding-left: 42px;
+    }
+
+    /* ÁREA DE RESPOSTA FORMATADA E EDITÁVEL */
+    .answer-container {
+      margin-left: 42px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 8px;
+    }
+
+    .answer-text-area {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 12.5px;
+      line-height: 1.6;
+      color: #0f172a;
+      min-height: 140px;
+    }
+
+    .answer-text-area p {
+      margin-bottom: 8px;
+    }
+    .answer-text-area p:last-child {
+      margin-bottom: 0;
+    }
+
+    .answer-placeholder {
+      color: #94a3b8;
+      font-style: italic;
+      border: 1px dashed #cbd5e1;
+      background-color: #f8fafc;
+      padding: 12px 16px;
+      border-radius: 4px;
+    }
+
+    /* CHECKLIST BOX (PÁGINA 3) */
+    .box-checklist {
+      border: 1.5px solid #13324d;
+      background-color: #ffffff;
+      padding: 16px 20px;
+      margin-top: 10px;
+    }
+
+    .box-checklist h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #13324d;
+      margin-bottom: 10px;
+    }
+
+    .box-checklist ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .box-checklist li {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 12.5px;
+      color: #1e293b;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .checkbox-icon {
+      width: 14px;
+      height: 14px;
+      border: 1.5px solid #13324d;
+      border-radius: 2px;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    /* RODAPÉ PADRONIZADO */
+    .page-footer {
+      padding: 14px 40px 0 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #64748b;
+      border-top: 1px solid #e2e8f0;
+      margin: 0 40px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- BARRA DE IMPRESSÃO (INVISÍVEL NO PDF) -->
+  <div class="no-print-toolbar">
+    <span>📄 Template Oficial UNIVESP — Quinzena 2 (Grupo)</span>
+    <button class="btn-print" onclick="window.print()">🖨️ Salvar como PDF / Imprimir</button>
+  </div>
+
+  <!-- ================= PÁGINA 1: CABEÇALHO + PERGUNTA 1 ================= -->
+  <div class="page">
+    <div>
+      <div class="header-banner">
+        <div class="banner-top-meta">
+          <span>IA na Prática Acadêmica e Profissional</span>
+          <span>UNIVESP</span>
+        </div>
+        <div class="banner-content">
+          <div class="badge-template-sq">
+            <span class="badge-label">TEMPLATE</span>
+            <span class="badge-num">2</span>
+          </div>
+          <div class="banner-text">
+            <span class="quinzena-tag">Quinzena 2 · Por Dentro dos LLMs</span>
+            <h1>Template do grupo</h1>
+            <div class="subtitle">A metacognição da alucinação</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-1-body">
+        <div class="fields-row">
+          <div class="field-item">
+            <span class="field-label">Grupo</span>
+            <div class="field-line">Grupo 05</div>
+          </div>
+          <div class="field-item">
+            <span class="field-label">Integrantes</span>
+            <div class="field-line">Caroline, Lucas, Thales</div>
+          </div>
+        </div>
+
+        <div class="box-optional">
+          <h4>Antes de Começar: Escrever aqui é opcional</h4>
+          <p>O grupo não precisa preencher este documento. Se preferir, copiem as quatro perguntas e respondam em um arquivo novo, no editor que quiserem, ou direto no fórum. O template existe só para organizar a discussão: o que vale é o conteúdo das respostas, não o formato em que elas chegam.</p>
+        </div>
+
+        <div class="box-todo">
+          <h4>O que fazer</h4>
+          <p>Depois que cada integrante analisou o seu caso sozinho, o grupo se reúne no fórum para discutir. O objetivo não é somar as respostas individuais, e sim refletir juntos, trocar ideias, discordar quando for o caso e chegar a conclusões em comum.</p>
+          <p>Respondam às perguntas como grupo. Uma resposta boa mostra a discussão de vocês, não apenas a conclusão.</p>
+        </div>
+
+        <!-- PERGUNTA 1 -->
+        <div class="question-block" style="margin-top: 4px;">
+          <div class="question-title-row">
+            <div class="q-badge">1</div>
+            <div class="question-title-text">Partilha: cada integrante apresenta o seu caso, o que foi conferir, o que encontrou e o tipo de alucinação.</div>
+          </div>
+          <div class="question-prompt">
+            Façam um resumo rápido de cada caso e anotem aqui os tipos que apareceram no grupo, um por integrante.
+          </div>
+          <div class="answer-container">
+            <div class="answer-text-area" style="min-height: 100px;">
+              <div class="answer-placeholder">
+                [Espaço para síntese da partilha dos casos do grupo: sintetize os casos investigados pelos integrantes (A, B, C, D, E), as fontes verificadas e a taxonomia identificada para cada um.]
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Quinzena 2 · Template do Grupo · UNIVESP</span>
+      <span>1 / 3</span>
+    </div>
+  </div>
+
+  <!-- ================= PÁGINA 2: PERGUNTAS 2 E 3 ================= -->
+  <div class="page">
+    <div>
+      <div class="inner-header">
+        <span>Template do Grupo · Discussão</span>
+        <span>Quinzena 2</span>
+      </div>
+
+      <div class="inner-body">
+        <!-- PERGUNTA 2 -->
+        <div class="question-block">
+          <div class="question-title-row">
+            <div class="q-badge">2</div>
+            <div class="question-title-text">Comparando os casos de todos, qual o grupo considera o mais difícil de perceber e qual o mais perigoso na vida real?</div>
+          </div>
+          <div class="question-prompt">
+            Esta pergunta não tem resposta certa. Discutam, defendam pontos de vista diferentes e cheguem juntos a uma posição, explicando o motivo da escolha.
+          </div>
+          <div class="answer-container">
+            <div class="answer-text-area">
+              <div class="answer-placeholder">
+                [Espaço para resposta do grupo: Registre a comparação coletiva entre os casos, pontuando qual é o mais sutil/imperceptível e qual apresenta maior risco na prática real, justificando o posicionamento.]
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PERGUNTA 3 -->
+        <div class="question-block">
+          <div class="question-title-row">
+            <div class="q-badge">3</div>
+            <div class="question-title-text">O que os casos têm em comum na forma como o erro nasce? Por que dá para dizer que a alucinação é estrutural, e não um defeito que a próxima versão vai corrigir?</div>
+          </div>
+          <div class="question-prompt">
+            Pensem no que une casos tão diferentes. O que existe, ou não existe, no funcionamento do modelo que faz o erro aparecer em todos eles?
+          </div>
+          <div class="answer-container">
+            <div class="answer-text-area">
+              <div class="answer-placeholder">
+                [Espaço para resposta do grupo: Explique a causa raiz estrutural dos LLMs (geração probabilística de tokens, ausência de verificação factual intrínseca) que une todos os casos.]
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Quinzena 2 · Template do Grupo · UNIVESP</span>
+      <span>2 / 3</span>
+    </div>
+  </div>
+
+  <!-- ================= PÁGINA 3: PERGUNTA 4 E CHECKLIST ================= -->
+  <div class="page">
+    <div>
+      <div class="inner-header">
+        <span>Template do Grupo · Discussão</span>
+        <span>Quinzena 2</span>
+      </div>
+
+      <div class="inner-body">
+        <!-- PERGUNTA 4 -->
+        <div class="question-block">
+          <div class="question-title-row">
+            <div class="q-badge">4</div>
+            <div class="question-title-text">Os erros têm nome de comportamento humano. O que significa a máquina errar como a gente erra, e o que isso muda no jeito de vocês confiarem na IA?</div>
+          </div>
+          <div class="question-prompt">
+            Conversem sobre o que muda, na prática de vocês, saber que a máquina repete jeitos humanos de errar.
+          </div>
+          <div class="answer-container">
+            <div class="answer-text-area">
+              <div class="answer-placeholder">
+                [Espaço para resposta do grupo: Registre a discussão sobre como a semelhança entre erros humanos e erros de IA afeta a postura crítica e a confiança prática na tecnologia.]
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CHECKLIST ANTES DE POSTAR NO FÓRUM -->
+        <div class="box-checklist">
+          <h4>Antes de postar no fórum</h4>
+          <ul>
+            <li><span class="checkbox-icon"></span> Todos os casos do grupo aparecem na resposta.</li>
+            <li><span class="checkbox-icon"></span> A discussão está visível, inclusive onde vocês discordaram.</li>
+            <li><span class="checkbox-icon"></span> As escolhas do grupo vêm com o motivo, não só com a conclusão.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-footer">
+      <span>Quinzena 2 · Template do Grupo · UNIVESP</span>
+      <span>3 / 3</span>
+    </div>
+  </div>
+
+</body>
+</html>
