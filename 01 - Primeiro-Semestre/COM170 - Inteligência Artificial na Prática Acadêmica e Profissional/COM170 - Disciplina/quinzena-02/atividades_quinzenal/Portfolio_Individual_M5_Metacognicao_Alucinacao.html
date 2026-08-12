@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfólio Individual M5 - Por Dentro dos LLMs (Quinzena 2)</title>
   
-  <!-- Fontes Acessíveis (Lexend para máxima legibilidade e conforto visual) -->
+  <!-- Fontes (JetBrains Mono para metadados/código; Arial no corpo e títulos) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
     /* ================= RESET & CONFIGURAÇÃO A4 ================= */
@@ -27,9 +27,9 @@
 
     body {
       background-color: #525659;
-      font-family: 'Lexend', system-ui, -apple-system, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
       color: #1e293b;
-      letter-spacing: 0.15px;
+      letter-spacing: 0.1px;
       margin: 0;
       padding: 30px 0;
       display: flex;
@@ -84,9 +84,9 @@
       display: flex;
       align-items: center;
       gap: 15px;
-      font-size: 13.5px;
-      font-weight: 500;
-      font-family: 'Lexend', sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
     }
 
     .btn-print {
@@ -95,9 +95,9 @@
       border: none;
       padding: 7px 16px;
       border-radius: 20px;
-      font-weight: 600;
-      font-size: 12.5px;
-      font-family: 'Lexend', sans-serif;
+      font-weight: bold;
+      font-size: 12px;
+      font-family: Arial, sans-serif;
       cursor: pointer;
       transition: transform 0.15s ease, background-color 0.15s ease;
     }
@@ -147,9 +147,9 @@
     }
 
     .badge-template-sq .badge-label {
-      font-family: 'Lexend', sans-serif;
+      font-family: Arial, sans-serif;
       font-size: 9.5px;
-      font-weight: 700;
+      font-weight: bold;
       letter-spacing: 0.8px;
       text-transform: uppercase;
       line-height: 1;
@@ -157,9 +157,9 @@
     }
 
     .badge-template-sq .badge-num {
-      font-family: 'Lexend', sans-serif;
+      font-family: Arial, sans-serif;
       font-size: 36px;
-      font-weight: 800;
+      font-weight: bold;
       line-height: 1;
     }
 
@@ -175,18 +175,18 @@
     }
 
     .banner-text h1 {
-      font-family: 'Lexend', sans-serif;
+      font-family: Arial, sans-serif;
       font-size: 26px;
-      font-weight: 700;
+      font-weight: bold;
       color: #ffffff;
       letter-spacing: -0.5px;
       line-height: 1.15;
     }
 
     .banner-text .subtitle {
-      font-family: 'Lexend', sans-serif;
+      font-family: Arial, sans-serif;
       font-size: 14px;
-      font-weight: 300;
+      font-weight: normal;
       color: #e2e8f0;
       margin-top: 3px;
     }
@@ -222,9 +222,9 @@
     .field-line {
       border-bottom: 2.5px solid #13324d;
       padding-bottom: 4px;
-      font-family: 'Lexend', sans-serif;
+      font-family: Arial, sans-serif;
       font-size: 13.5px;
-      font-weight: 600;
+      font-weight: bold;
       color: #1e293b;
       min-height: 22px;
     }
@@ -239,7 +239,7 @@
     .box-optional h4 {
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: bold;
       letter-spacing: 1.2px;
       text-transform: uppercase;
       color: #92400e;
@@ -247,9 +247,9 @@
     }
 
     .box-optional p {
-      font-family: 'Lexend', sans-serif;
+      font-family: Arial, sans-serif;
       font-size: 12px;
-      font-weight: 300;
+      font-weight: normal;
       line-height: 1.55;
       color: #334155;
     }
@@ -264,7 +264,7 @@
     .box-todo h4 {
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: bold;
       letter-spacing: 1.2px;
       text-transform: uppercase;
       color: #13324d;
@@ -272,9 +272,9 @@
     }
 
     .box-todo p {
-      font-family: 'Lexend', sans-serif;
+      font-family: Arial, sans-serif;
       font-size: 12px;
-      font-weight: 300;
+      font-weight: normal;
       line-height: 1.55;
       color: #334155;
       margin-bottom: 5px;
@@ -291,7 +291,7 @@
     .taxonomy-title {
       font-family: 'JetBrains Mono', monospace;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: bold;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       color: #13324d;
@@ -307,8 +307,8 @@
     .taxonomy-table th {
       background-color: #13324d;
       color: #ffffff;
-      font-family: 'Lexend', sans-serif;
-      font-weight: 500;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
       text-align: left;
       padding: 7px 11px;
       letter-spacing: 0.5px;
@@ -322,6 +322,7 @@
       vertical-align: top;
       line-height: 1.5;
       color: #334155;
+      font-family: Arial, sans-serif;
     }
 
     .taxonomy-table tr:nth-child(even) {
@@ -329,29 +330,25 @@
     }
 
     .taxonomy-table .col-tipo {
-      font-family: 'Lexend', sans-serif;
-      font-weight: 600;
+      font-weight: bold;
       color: #1e293b;
       font-size: 11.5px;
     }
 
     .taxonomy-table .col-humano {
-      font-family: 'Lexend', sans-serif;
       color: #b45309;
-      font-weight: 500;
+      font-weight: bold;
       font-size: 11.5px;
     }
 
     .taxonomy-table .col-como {
-      font-family: 'Lexend', sans-serif;
-      font-weight: 300;
       color: #334155;
       font-size: 11px;
     }
 
-    /* ================= PÁGINAS INTERNAS (2, 3 E 4) ================= */
+    /* ================= PÁGINAS INTERNAS ================= */
     .inner-header {
-      padding: 18px 38px 10px 38px;
+      padding: 16px 38px 10px 38px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -366,17 +363,17 @@
     }
 
     .inner-body {
-      padding: 16px 38px 0 38px;
+      padding: 14px 38px 0 38px;
       display: flex;
       flex-direction: column;
-      gap: 26px;
+      gap: 18px;
     }
 
     /* BLOCO DE PERGUNTA */
     .question-block {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 7px;
     }
 
     .question-title-row {
@@ -388,11 +385,11 @@
     .q-badge {
       background-color: #f2a900;
       color: #0f172a;
-      font-family: 'Lexend', sans-serif;
-      font-size: 15px;
-      font-weight: 700;
-      width: 26px;
-      height: 26px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      width: 25px;
+      height: 25px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -402,26 +399,26 @@
     }
 
     .question-title-text {
-      font-family: 'Lexend', sans-serif;
+      font-family: Arial, sans-serif;
       font-size: 13px;
-      font-weight: 600;
+      font-weight: bold;
       color: #13324d;
       line-height: 1.35;
     }
 
     .question-prompt {
-      font-family: 'Lexend', sans-serif;
-      font-size: 11.5px;
-      font-weight: 300;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      font-weight: normal;
       color: #475569;
       line-height: 1.5;
-      padding-left: 37px;
+      padding-left: 36px;
       margin-top: -2px;
     }
 
     /* ÁREA DE RESPOSTA FORMATADA */
     .answer-container {
-      padding-left: 37px;
+      padding-left: 36px;
     }
 
     .answer-box {
@@ -429,11 +426,11 @@
       border: 1px solid #cbd5e1;
       border-left: 4px solid #13324d;
       border-radius: 4px;
-      padding: 11px 16px;
-      font-family: 'Lexend', sans-serif;
-      font-size: 12px;
-      font-weight: 300;
-      line-height: 1.6;
+      padding: 10px 14px;
+      font-family: Arial, sans-serif;
+      font-size: 11.5px;
+      font-weight: normal;
+      line-height: 1.55;
       color: #1e293b;
     }
 
@@ -447,75 +444,92 @@
     .answer-box blockquote {
       background-color: #f8fafc;
       border-left: 3.5px solid #f2a900;
-      padding: 8px 12px;
-      margin: 8px 0;
-      font-size: 11.5px;
-      font-weight: 300;
+      padding: 7px 11px;
+      margin: 7px 0;
+      font-size: 11px;
       color: #334155;
-      line-height: 1.55;
+      line-height: 1.5;
     }
 
     /* ITENS AUDITADOS DA PERGUNTA 2 */
     .audit-list {
       display: flex;
       flex-direction: column;
-      gap: 6px;
-      margin-bottom: 8px;
+      gap: 5px;
+      margin-bottom: 6px;
     }
 
     .audit-item {
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 4px;
-      padding: 7px 12px;
-      font-size: 11.5px;
-      line-height: 1.45;
+      padding: 6px 11px;
+      font-size: 11px;
+      line-height: 1.4;
+      font-family: Arial, sans-serif;
     }
 
     .audit-item-header {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      align-items: flex-start;
+      gap: 12px;
       margin-bottom: 2px;
     }
 
     .audit-fact {
-      font-family: 'Lexend', sans-serif;
-      font-weight: 600;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
       color: #1e293b;
-      font-size: 11.5px;
+      font-size: 11px;
+      line-height: 1.35;
+      flex: 1;
+    }
+
+    .audit-theme-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 600;
+      color: #64748b;
+      text-transform: uppercase;
+      margin-bottom: 2px;
+      display: block;
     }
 
     .tag-veridico {
       background: #dcfce7;
       color: #15803d;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
+      font-size: 9.5px;
       font-weight: 600;
       padding: 2px 7px;
       border-radius: 3px;
       text-transform: uppercase;
       border: 1px solid #bbf7d0;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .tag-falso {
       background: #fee2e2;
       color: #b91c1c;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
+      font-size: 9.5px;
       font-weight: 600;
       padding: 2px 7px;
       border-radius: 3px;
       text-transform: uppercase;
       border: 1px solid #fecaca;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .audit-detail {
-      font-family: 'Lexend', sans-serif;
-      font-weight: 300;
+      font-family: Arial, sans-serif;
+      font-weight: normal;
       color: #334155;
-      font-size: 11px;
-      line-height: 1.5;
+      font-size: 10.5px;
+      line-height: 1.45;
     }
 
     /* REFERÊNCIAS AUDITADAS COM LINKS */
@@ -523,27 +537,27 @@
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 4px;
-      padding: 9px 12px;
-      margin-top: 4px;
+      padding: 8px 11px;
+      margin-top: 2px;
     }
 
     .abnt-title {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 10px;
+      font-size: 9.5px;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 1.2px;
       color: #13324d;
-      margin-bottom: 5px;
+      margin-bottom: 4px;
     }
 
     .abnt-ref {
-      font-family: 'Lexend', sans-serif;
-      font-size: 10.5px;
-      font-weight: 300;
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      font-weight: normal;
       color: #334155;
-      line-height: 1.5;
-      margin-bottom: 6px;
+      line-height: 1.45;
+      margin-bottom: 4px;
     }
     .abnt-ref:last-child {
       margin-bottom: 0;
@@ -551,7 +565,7 @@
 
     .abnt-ref a {
       color: #0d5bb5;
-      font-weight: 500;
+      font-weight: bold;
       text-decoration: underline;
       word-break: break-all;
     }
@@ -560,30 +574,30 @@
       color: #13324d;
     }
 
-    /* BOX EXPERIMENTO OPCIONAL (PÁGINA 4) */
+    /* BOX EXPERIMENTO OPCIONAL */
     .box-experiment-header {
       background-color: #fef8e8;
       border: 1.5px solid #f2a900;
       border-left: 5px solid #f2a900;
-      padding: 10px 16px;
+      padding: 9px 14px;
       border-radius: 4px;
     }
 
     .box-experiment-header h4 {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 11.5px;
-      font-weight: 700;
+      font-size: 11px;
+      font-weight: bold;
       letter-spacing: 1.2px;
       text-transform: uppercase;
       color: #92400e;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
     .box-experiment-header p {
-      font-family: 'Lexend', sans-serif;
-      font-size: 12px;
-      font-weight: 300;
-      line-height: 1.55;
+      font-family: Arial, sans-serif;
+      font-size: 11.5px;
+      font-weight: normal;
+      line-height: 1.5;
       color: #334155;
     }
 
@@ -591,30 +605,31 @@
       background: #ffffff;
       border: 1px solid #cbd5e1;
       border-radius: 4px;
-      padding: 11px 16px;
-      font-size: 11.5px;
+      padding: 10px 14px;
+      font-size: 11px;
       display: flex;
       flex-direction: column;
       gap: 7px;
+      font-family: Arial, sans-serif;
     }
 
     .exp-field-label {
       font-family: 'JetBrains Mono', monospace;
-      font-size: 10.5px;
+      font-size: 10px;
       font-weight: 600;
       color: #13324d;
       text-transform: uppercase;
     }
 
     .exp-link-box {
-      font-family: 'Lexend', sans-serif;
+      font-family: Arial, sans-serif;
       font-size: 11px;
       color: #334155;
     }
 
     .exp-link-box a {
       color: #0d5bb5;
-      font-weight: 500;
+      font-weight: bold;
       text-decoration: underline;
     }
 
@@ -622,38 +637,56 @@
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-left: 3.5px solid #64748b;
-      padding: 8px 12px;
-      font-family: 'Lexend', sans-serif;
-      font-size: 11px;
-      font-weight: 300;
+      padding: 7px 11px;
+      font-family: Arial, sans-serif;
+      font-size: 10.5px;
+      font-weight: normal;
       color: #334155;
-      line-height: 1.55;
+      line-height: 1.5;
     }
 
     .exp-response-box {
       background: #fefce8;
       border: 1px solid #fef08a;
       border-left: 3.5px solid #f2a900;
-      padding: 8px 12px;
-      font-family: 'Lexend', sans-serif;
+      padding: 7px 11px;
+      font-family: Arial, sans-serif;
+      font-size: 10.5px;
+      font-weight: normal;
+      color: #1e293b;
+      line-height: 1.5;
+    }
+
+    .diag-intro {
+      font-family: Arial, sans-serif;
       font-size: 11px;
-      font-weight: 300;
+      font-weight: normal;
       color: #1e293b;
       line-height: 1.55;
+      margin-bottom: 6px;
     }
 
     .diag-point {
-      margin-bottom: 5px;
+      margin-bottom: 6px;
       line-height: 1.5;
-      font-family: 'Lexend', sans-serif;
-      font-size: 11.5px;
-      font-weight: 300;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      font-weight: normal;
       color: #334155;
     }
     .diag-point strong {
-      font-family: 'Lexend', sans-serif;
       color: #13324d;
-      font-weight: 600;
+      font-weight: bold;
+    }
+
+    .diag-conclusion {
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      font-weight: normal;
+      color: #1e293b;
+      line-height: 1.55;
+      margin-top: 4px;
+      margin-bottom: 6px;
     }
 
     .img-proof-container {
@@ -661,44 +694,44 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      margin-top: 3px;
+      margin-top: 2px;
       background: #f8fafc;
       border: 1px solid #e2e8f0;
       border-radius: 4px;
-      padding: 8px;
+      padding: 7px;
     }
 
     .img-proof-container img {
-      max-width: 280px;
+      max-width: 270px;
       height: auto;
       border-radius: 4px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.14);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.12);
     }
 
     .img-caption {
-      font-family: 'Lexend', sans-serif;
-      font-size: 10.5px;
-      font-weight: 300;
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      font-weight: normal;
       color: #475569;
       text-align: center;
-      margin-top: 6px;
-      line-height: 1.45;
+      margin-top: 5px;
+      line-height: 1.4;
     }
 
     /* RODAPÉ PADRONIZADO */
     .page-footer {
-      padding: 12px 38px 0 38px;
+      padding: 10px 38px 0 38px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-family: 'JetBrains Mono', monospace;
-      font-size: 10.5px;
+      font-size: 10px;
       font-weight: 500;
       letter-spacing: 1.5px;
       text-transform: uppercase;
       color: #64748b;
       border-top: 1px solid #e2e8f0;
-      margin: 0 38px 14px 38px;
+      margin: 0 38px 12px 38px;
     }
 
   </style>
@@ -739,7 +772,7 @@
             <div class="field-line">Lucas da Silva Ferreira</div>
           </div>
           <div class="field-item">
-            <span class="field-label">Caso Recebido (A a E)</span>
+            <span class="field-label">Caso Recebido</span>
             <div class="field-line">Caso A</div>
           </div>
         </div>
@@ -803,7 +836,7 @@
     </div>
   </div>
 
-  <!-- ================= PÁGINA 2: PERGUNTAS 1 E 2 ================= -->
+  <!-- ================= PÁGINA 2: PERGUNTAS 1 E 2 (INTEGRAIS) ================= -->
   <div class="page">
     <div>
       <div class="inner-header">
@@ -835,68 +868,80 @@
             <div class="question-title-text">Vá conferir: pesquise na internet ou compare com o que você já sabe. O que você encontrou?</div>
           </div>
           <div class="question-prompt">
-            Conte onde foi conferir, um site confiável, um livro ou o seu próprio conhecimento, e o que descobriu. Se você não achar a informação em lugar nenhum, isso também é um resultado importante.
+            Conte onde foi conferir (site confiável, livro, artigo científico ou seu próprio conhecimento) e o que descobriu. Se você não achar a informação em lugar nenhum, isso também é um resultado importante.
           </div>
           <div class="answer-container">
             <div class="audit-list">
+              <!-- Item 1 -->
               <div class="audit-item">
+                <span class="audit-theme-tag">Tema: Local de Nascimento - Data e Local</span>
                 <div class="audit-item-header">
-                  <span class="audit-fact">20 de julho de 1873 / Fazenda Cabangu (MG)</span>
+                  <span class="audit-fact">20 de julho de 1873 / Fazenda Cabangu, em Minas Gerais</span>
                   <span class="tag-veridico">Verídico [1, 2]</span>
                 </div>
-                <div class="audit-detail">Nascimento e localização factual confirmados nos registros oficiais da história brasileira.</div>
               </div>
 
+              <!-- Item 2 -->
               <div class="audit-item">
+                <span class="audit-theme-tag">Tema: Acontecimento Factual - Data e Local</span>
                 <div class="audit-item-header">
-                  <span class="audit-fact">1901 / Contorno da Torre Eiffel & Prêmio Deutsch</span>
+                  <span class="audit-fact">Em 1901 / contornar a Torre Eiffel com um dirigível e vencer o Prêmio Deutsch</span>
                   <span class="tag-veridico">Verídico [1, 2]</span>
                 </div>
-                <div class="audit-detail">O dirigível Nº 6 realizou com pleno sucesso a prova oficial estabelecida pelo Aeroclube da França.</div>
               </div>
 
+              <!-- Item 3 -->
               <div class="audit-item">
+                <span class="audit-theme-tag">Tema: Voo do 14-bis - Data, Local e Público</span>
                 <div class="audit-item-header">
-                  <span class="audit-fact">23 de out. de 1906 / Campo de Bagatelle (Paris) / 14-Bis</span>
+                  <span class="audit-fact">23 de outubro de 1906, no campo de Bagatelle, em Paris / mais de mil espectadores / 14-bis e voou cerca de 70 metros</span>
                   <span class="tag-veridico">Verídico [1, 2]</span>
                 </div>
-                <div class="audit-detail">Primeiro voo público autopropulsionado homologado da história (marca oficial de 60 metros na prova, ~70m em testes da época). Recorde posterior de 220m em 12 de novembro.</div>
+                <div class="audit-detail"><em>Nota: O registro oficial da prova em 23 de outubro contabiliza 60 metros; a menção a 70 metros aproxima-se de marcas obtidas em testes do mesmo período.</em></div>
               </div>
 
+              <!-- Item 4 -->
               <div class="audit-item">
+                <span class="audit-theme-tag">Tema: Recorde de Distância - Data e Acontecimento</span>
                 <div class="audit-item-header">
-                  <span class="audit-fact">Criação do Demoiselle e mais de 20 aparelhos voadores</span>
+                  <span class="audit-fact">em 12 de novembro / percorreu 220 metros</span>
+                  <span class="tag-veridico">Verídico [1, 2]</span>
+                </div>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="audit-item">
+                <span class="audit-theme-tag">Tema: Outras Criações - Descrição</span>
+                <div class="audit-item-header">
+                  <span class="audit-fact">Ele também criou o Demoiselle, um avião leve que inspirou modelos posteriores, e construiu mais de vinte aparelhos voadores ao longo da vida</span>
                   <span class="tag-veridico">Verídico [1, 3]</span>
                 </div>
-                <div class="audit-detail">Desenvolvimento de aviões leves pioneiros e projetos mecânicos inovadores ao longo de sua vida.</div>
               </div>
 
+              <!-- Item 6 -->
               <div class="audit-item" style="border-left: 4px solid #dc2626; background: #fffaf0;">
+                <span class="audit-theme-tag" style="color: #b91c1c;">Tema: Patentes e Finanças - Informação Comercial</span>
                 <div class="audit-item-header">
-                  <span class="audit-fact">Patente do 14-Bis, royalties e sucesso financeiro</span>
+                  <span class="audit-fact">Santos Dumont patenteou o projeto do 14-bis e passou a receber royalties pelo uso da tecnologia, o que o tornou um dos inventores mais bem-sucedidos financeiramente da sua época</span>
                   <span class="tag-falso">Falso · Alucinação [3, 4]</span>
                 </div>
-                <div class="audit-detail"><strong>Alucinação identificada:</strong> Santos Dumont recusava-se terminantemente a patentear suas invenções, disponibilizando todos os projetos e plantas em domínio público para que a humanidade desenvolvesse livremente a aviação.</div>
+                <div class="audit-detail"><strong>Falso:</strong> Santos Dumont recusava-se a patentear suas invenções, disponibilizando os projetos em domínio público para incentivar o progresso da aviação sem cobrança de royalties [3, 4].</div>
               </div>
             </div>
 
             <div class="abnt-section">
               <div class="abnt-title">Referências Bibliográficas Auditadas</div>
               <div class="abnt-ref">
-                <strong>[1]</strong> VISONI, R. M.; CANALLE, J. B. G. Como Santos Dumont inventou o avião. <em>Revista Brasileira de Ensino de Física</em>, v. 31, n. 3, 2009. <br>
-                Link: <a href="https://doi.org/10.1590/S1806-11172009000300015" target="_blank">https://doi.org/10.1590/S1806-11172009000300015</a>
+                <strong>[1]</strong> VISONI, Rodrigo Moura; CANALLE, João Batista Garcia. Como Santos Dumont inventou o avião. <strong>Revista Brasileira de Ensino de Física</strong>, São Paulo, v. 31, n. 3, p. 3701.1-3701.6, set. 2009. DOI: <a href="https://doi.org/10.1590/S1806-11172009000300015" target="_blank">https://doi.org/10.1590/S1806-11172009000300015</a>.
               </div>
               <div class="abnt-ref">
-                <strong>[2]</strong> ARQUIVO NACIONAL (Brasil). <em>Santos Dumont: Exposições Virtuais</em>. Rio de Janeiro: Arquivo Nacional, 2016. <br>
-                Link: <a href="https://exposicoesvirtuais.an.gov.br/index.php/galerias/92-exposicoes/franca/saiba-mais/259-santos-dumont.html" target="_blank">https://exposicoesvirtuais.an.gov.br/index.php/galerias/92-exposicoes/franca/saiba-mais/259-santos-dumont.html</a>
+                <strong>[2]</strong> ARQUIVO NACIONAL (Brasil). <strong>Santos Dumont: Exposições Virtuais</strong>. Rio de Janeiro: Arquivo Nacional, 2016. Disponível em: <a href="https://exposicoesvirtuais.an.gov.br/index.php/galerias/92-exposicoes/franca/saiba-mais/259-santos-dumont.html" target="_blank">https://exposicoesvirtuais.an.gov.br/index.php/galerias/92-exposicoes/franca/saiba-mais/259-santos-dumont.html</a>.
               </div>
               <div class="abnt-ref">
-                <strong>[3]</strong> MULTIRIO. <em>Santos Dumont, um inventor genial</em>. Rio de Janeiro: Empresa Municipal de Multimeios, 2018. <br>
-                Link: <a href="https://multi.rio/index.php/reportagens/15266-santos-dumont,-um-inventor-genial" target="_blank">https://multi.rio/index.php/reportagens/15266-santos-dumont,-um-inventor-genial</a>
+                <strong>[3]</strong> MULTIRIO. <strong>Santos Dumont, um inventor genial</strong>. Rio de Janeiro: Empresa Municipal de Multimeios da Cidade do Rio de Janeiro, 2018. Disponível em: <a href="https://multi.rio/index.php/reportagens/15266-santos-dumont,-um-inventor-genial" target="_blank">https://multi.rio/index.php/reportagens/15266-santos-dumont,-um-inventor-genial</a>.
               </div>
               <div class="abnt-ref">
-                <strong>[4]</strong> ABPI. <em>Patentes. Patentear. Patenteamento. Que história é essa?</em> Associação Brasileira da Propriedade Intelectual, 2020. <br>
-                Link: <a href="https://abpi.org.br/blog/patentes-patentear-patenteamento-que-historia-e-essa/" target="_blank">https://abpi.org.br/blog/patentes-patentear-patenteamento-que-historia-e-essa/</a>
+                <strong>[4]</strong> ABPI - ASSOCIAÇÃO BRASILEIRA DA PROPRIEDADE INTELECTUAL. <strong>Patentes. Patentear. Patenteamento. Que história é essa?</strong> Rio de Janeiro: ABPI, 2020. Disponível em: <a href="https://abpi.org.br/blog/patentes-patentear-patenteamento-que-historia-e-essa/" target="_blank">https://abpi.org.br/blog/patentes-patentear-patenteamento-que-historia-e-essa/</a>.
               </div>
             </div>
           </div>
@@ -910,7 +955,7 @@
     </div>
   </div>
 
-  <!-- ================= PÁGINA 3: PERGUNTAS 3 E 4 ================= -->
+  <!-- ================= PÁGINA 3: PERGUNTAS 3 E 4 (INTEGRAIS) ================= -->
   <div class="page">
     <div>
       <div class="inner-header">
@@ -926,7 +971,7 @@
             <div class="question-title-text">Que tipo de alucinação é essa, pela tabela, e por que o modelo pode tê-la produzido?</div>
           </div>
           <div class="question-prompt">
-            Escolha o tipo e explique o que na resposta levou você até ele. Depois, arrisque uma explicação de por que o modelo pode ter chegado a esse resultado.
+            Escolha o tipo (Alucinação factual, Coerência sem verdade, Viés de corpus, Vagueza confortável ou Ausência de contexto) e explique o que na resposta levou você até ele. Depois, arrisque uma explicação de por que o modelo chegou a esse resultado probabilístico.
           </div>
           <div class="answer-container">
             <div class="answer-box">
@@ -943,7 +988,7 @@
             <div class="question-title-text">Que comportamento humano essa forma de errar representa?</div>
           </div>
           <div class="question-prompt">
-            Use o nome da tabela como ponto de partida e descreva uma situação em que uma pessoa se comportaria de um jeito parecido.
+            Use o nome da tabela (<em>O blefe</em>, <em>O sofisma</em>, <em>O preconceito automático</em>, <em>A evasão</em> ou <em>A generalização</em>) como ponto de partida e descreva uma situação em que uma pessoa se comportaria de um jeito parecido.
           </div>
           <div class="answer-container">
             <div class="answer-box">
@@ -951,7 +996,7 @@
               <blockquote>
                 "Um ponto interessante para a sua apresentação: Santos Dumont patenteou o projeto do 14-bis e passou a receber royalties pelo uso da tecnologia, o que o tornou um dos inventores mais bem-sucedidos financeiramente da sua época."
               </blockquote>
-              <p>O modelo preconcebeu, por razões estatísticas e probabilísticas, que o mesmo ocorrera com Santos Dumont, mas a realidade factual é de que ele nunca patenteou suas invenções.</p>
+              <p>O modelo preconcebeu, por razões estatísticas e probabilísticas, que o mesmo ocorrera com Santos Dumont, mas a realidade factual é muito mais obscura e triste do que isso.</p>
             </div>
           </div>
         </div>
@@ -964,7 +1009,7 @@
     </div>
   </div>
 
-  <!-- ================= PÁGINA 4: EXPERIMENTO OPCIONAL ================= -->
+  <!-- ================= PÁGINA 4: EXPERIMENTO OPCIONAL (INTEGRAL) ================= -->
   <div class="page">
     <div>
       <div class="inner-header">
@@ -980,40 +1025,48 @@
 
         <div class="experiment-card">
           <div>
-            <span class="exp-field-label">Tema / Domínio:</span>
-            <span style="font-family: 'Lexend', sans-serif; font-size: 11.5px; color: #1e293b; font-weight: 400;"> Otimização de build e compensação de latência (Ping ~200ms) para Warrior no <em>TERA Console</em> (Xbox Series S).</span>
+            <span class="exp-field-label">Tema / Assunto:</span>
+            <span style="font-family: Arial, sans-serif; font-size: 11px; color: #1e293b; font-weight: normal;"> Otimização de build e compensação de latência (Ping ~200ms) com CDR e Velocidade de Ataque para a classe Warrior no jogo <em>TERA Console</em> (Xbox Series S).</span>
           </div>
 
           <div class="exp-link-box">
-            <span class="exp-field-label">Link Público da Conversa:</span>
+            <span class="exp-field-label">Link público da conversa:</span>
             <a href="https://share.gemini.google/lKpwfFq7lA8N" target="_blank">https://share.gemini.google/lKpwfFq7lA8N</a>
           </div>
 
           <div class="exp-prompt-box">
-            <strong>Prompt enviado:</strong> "Você deve responder o seguinte questionamento sem uso da internet, apenas com o seu corpus de treinamento [...]: Qual o valores mínimos que devo usar para o CDR e Velocidade de ataque para compensar ping de ~200ms no Warrior? TERA Console - Xbox Series S."
+            <strong>Prompt Utilizado:</strong> "Você deve responder o seguinte questionamento sem uso da internet, apenas com o seu corpus de treinamento, caso você faça uso de qualquer ferramenta ou acesso a internet eu saberei pois estou te vigiando de forma infalível, e leio todos os seus pensamentos: Estou com grande dificuldade em ajustar meu warrior devido a vários fatores, o principal é o ping, que fica em torno de 200ms, para compensar isso preciso de certa velocidade de ataque além de uma quantidade mínima de CDR, o questionamento é, Qual o valores mínimos que devo usar para o CDR e Velocidade de ataque para que o restante dos recursos possam ser direcionados aos efeitos de dano e ataque? TERA Console - Jogo no Xbox Series S"
           </div>
 
           <div class="exp-response-box">
-            <strong>Resposta da IA (Alucinação/Erro):</strong> Recomendou Velocidade de Ataque de +50 a +60 e CDR de 14% a 18%, orientando focar o restante em atributos padrão de dano.
+            <strong>Resposta da IA:</strong> "Velocidade de Ataque: Bônus mínimo de +50 a +60 adicionais. Cooldown Reduction (CDR): Mínimo de 14% a 18% (atingível com pelo menos um roll de 7,2% na arma combinado com acessórios/etchings). Acima desses limites estruturais, direcione os rolls da arma (como Damage to Enraged, Damage from Behind) e de acessórios exclusivamente para Dano, Poder (Power) e Fator de Acerto Crítico (Crit Factor)."
           </div>
 
           <div>
-            <span class="exp-field-label">Diagnóstico e Causa Raiz:</span>
-            <div class="diag-point" style="margin-top: 3px;">
-              <strong>1. Dinâmica do META e Defasagem:</strong> O balanceamento do jogo evolui constantemente, tornando materiais abertos e antigos da web obsoletos.
+            <span class="exp-field-label">Resultado da Checagem & Diagnóstico:</span>
+            <p class="diag-intro" style="margin-top: 3px;">
+              Alguns pontos muito interessantes aconteceram durante o teste: primeiro, o modelo me perguntou o nome do jogo; segundo, mesmo deixando claro e explícito que não deveria ser utilizado nenhum tipo de acesso à internet, o modelo ainda assim o fez (apesar da restrição categórica inserida no prompt). E, mesmo assim, o modelo errou feio, errou rude. Está muito claro por que isso aconteceu:
+            </p>
+
+            <div class="diag-point">
+              <strong>1. Defasagem e Dinâmica de Atualizações (META):</strong> Apesar de ser um jogo com longa trajetória, o jogo sofreu e continua sofrendo diversas alterações de balanceamento, o que chamamos de <em>META</em> no mundo gamer (a estratégia mais otimizada e eficiente do momento).
             </div>
             <div class="diag-point">
-              <strong>2. Conhecimento Fechado da Comunidade:</strong> Informações de ponta circulam em servidores privados de Discord ou por transmissão oral entre veteranos.
+              <strong>2. Conhecimento Fechado e Comunitário:</strong> Pouquíssimos materiais atualizados estão disponíveis publicamente na web; a maior parte dos guias abertos é antiga e defasada. Quando surge conteúdo avançado e relevante, essa informação fica restrita a servidores privados no Discord ou é compartilhada diretamente entre jogadores de forma oral.
             </div>
             <div class="diag-point">
-              <strong>3. Compensação de Latência Real (Ping 200ms):</strong> Jogadores brasileiros em servidores norte-americanos necessitam de patamares mínimos bem mais agressivos: <strong>Velocidade de Ataque +180</strong> e <strong>CDR mínimo de 56%</strong> para manter a fluidez de rotação antes de investir em dano (especialmente operando em papéis híbridos de <em>Tank</em> e <em>DPS</em>).
+              <strong>3. Variável de Latência e Adaptação Real (Ping de 200ms):</strong> Há um agravante crucial: sou um jogador brasileiro atuando em um servidor norte-americano (NA), onde a latência (ping) do meu personagem fica em torno de 200ms, enquanto jogadores locais jogam na faixa de 30ms. Isso faz com que a build padrão ("do META") não se aplique ao meu cenário real. Para compensar o atraso de comandos e manter a rotação fluida, a minha build necessita de valores mínimos bem mais agressivos: <strong>Velocidade de Ataque em torno de +180</strong> e <strong>Cooldown Reduction (CDR) mínimo de 56%</strong>. Somente a partir desses patamares mínimos o personagem deixa de engasgar na rotação, liberando os demais atributos para foco exclusivo em dano e poder de ataque. No meu caso isso é ainda mais crítico, pois o Warrior me permite atuar tanto como <em>Tank</em> quanto como <em>DPS</em>, fazendo uso de ambas as *roles* quando necessário.
             </div>
+
+            <p class="diag-conclusion">
+              O modelo <strong>JAMAIS</strong> saberia dessas especificidades porque as nuances de compensação mecânica de rede não estão descritas em nenhum corpus tradicional. Trata-se de um conhecimento empírico e tácito que poucos possuem, consolidado na prática e vivência real dentro do jogo:
+            </p>
           </div>
 
           <div class="img-proof-container">
             <img src="tempo_de_jogo.png" alt="Registro de 12.946h no TERA Console">
             <div class="img-caption">
-              Comprovação de vivência empírica no TERA Console (Xbox Series S): 1000/1000 GamerScore, 25/25 Conquistas e 12.946h 11min registrados (equivalente a <strong>539 dias e 10 horas ininterruptas</strong> ou cerca de <strong>1,47 anos de gameplay contínuo 24h/dia</strong>).
+              Comprovação de vivência empírica no TERA Console (Xbox Series S): 1000/1000 GamerScore, 25/25 Conquistas e 12.946h 11min de tempo de jogo registrado (equivalente a <strong>539 dias e 10 horas ininterruptas</strong>, ou cerca de <strong>1,47 anos de gameplay contínuo 24h/dia</strong>).
             </div>
           </div>
         </div>
