@@ -52,7 +52,7 @@ O espaço virtual da disciplina no AVA é organizado em **duas grandes partes**:
 ## 📈 Progresso
 
 ```
-[                    ] 0%
+[█████               ] 25%
 ```
 
 ---
@@ -66,15 +66,15 @@ O espaço virtual da disciplina no AVA é organizado em **duas grandes partes**:
 | **01** | O Começo de Tudo & Ambientação | 🟢 Completa | [Semana 01](<./AIA - Ambientação e Integração Acadêmica/semana-01/semana-01.md>) |
 | **02** | O Mapa da Univesp & Colaboração | 🟢 Completa | [Semana 02](<./AIA - Ambientação e Integração Acadêmica/semana-02/semana-02.md>) |
 | **03** | Meu Curso em 6 Pistas | 🟢 Completa | [Semana 03](<./AIA - Ambientação e Integração Acadêmica/semana-03/semana-03.md>) |
-| **04** | Guia dos Calouros & Revisão por Pares | 🔵 Em andamento | [Semana 04](<./AIA - Ambientação e Integração Acadêmica/semana-04/semana-04.md>) |
+| **04** | Guia dos Calouros & Revisão por Pares | 🟢 Completa | [Semana 04](<./AIA - Ambientação e Integração Acadêmica/semana-04/semana-04.md>) |
 
 ### 📘 Part 2: COM170 — Disciplina Regular (8 Quinzenas com Módulos de M4 até Domingo)
 
 | Quinzena | Tema Principal | Início | Prazo M4 (Liberar Grupo) | Término | Status | Caderno de Estudos |
 |:--------:|----------------|:------:|:-----------------------:|:-------:|:------:|:------------------:|
-| **Q1** | Apresentação e Fundamentos da IA | **20/07** | **26/07 (23h59)** | **02/08** | 🔵 Em andamento | [Quinzena 01](<./COM170 - Disciplina/quinzena-01/quinzena-01.md>) |
-| **Q2** | Prompts e Escrita Acadêmica com IA | 03/08 | **09/08 (23h59)** | 16/08 | ⚫ Pendente | [Quinzena 02](<./COM170 - Disciplina/quinzena-02/quinzena-02.md>) |
-| **Q3** | Pesquisa, Leitura Mediada e Integridade | 17/08 | **23/08 (23h59)** | 30/08 | ⚫ Pendente | [Quinzena 03](<./COM170 - Disciplina/quinzena-03/quinzena-03.md>) |
+| **Q1** | Apresentação e Fundamentos da IA | **20/07** | **26/07 (23h59)** | **02/08** | 🟢 Completa | [Quinzena 01](<./COM170 - Disciplina/quinzena-01/quinzena-01.md>) |
+| **Q2** | Prompts e Escrita Acadêmica com IA | 03/08 | **09/08 (23h59)** | 16/08 | 🟢 Completa | [Quinzena 02](<./COM170 - Disciplina/quinzena-02/quinzena-02.md>) |
+| **Q3** | Pesquisa, Leitura Mediada e Integridade | 17/08 | **23/08 (23h59)** | 30/08 | 🔵 Em andamento | [Quinzena 03](<./COM170 - Disciplina/quinzena-03/quinzena-03.md>) |
 | **Q4** | IA na Gestão de Estudos e Autonomia | 31/08 | **06/09 (23h59)** | 13/09 | ⚫ Pendente | [Quinzena 04](<./COM170 - Disciplina/quinzena-04/quinzena-04.md>) |
 | **Q5** | Aprendizagem de Línguas Estrangeiras | 14/09 | **20/09 (23h59)** | 27/09 | ⚫ Pendente | [Quinzena 05](<./COM170 - Disciplina/quinzena-05/quinzena-05.md>) |
 | **Q6** | Análise Crítica e Desafios Étimos da IA | 28/09 | **04/10 (23h59)** | 11/10 | ⚫ Pendente | [Quinzena 06](<./COM170 - Disciplina/quinzena-06/quinzena-06.md>) |

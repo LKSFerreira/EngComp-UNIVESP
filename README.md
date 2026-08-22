@@ -62,7 +62,7 @@ Semestre Atual      [                    ]   0%  (1º Semestre — Bimestre Ímp
 
 | # | Código | Disciplina | CH | Bimestre | Status | Progresso | Nota |
 |---|--------|------------|----|----------|--------|-----------|------|
-| 1 | COM170 | [IA na Prática Acadêmica e Profissional](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/>) | 80h | Ímpar | `Em Andamento` | `[                    ]` 0% | — |
+| 1 | COM170 | [IA na Prática Acadêmica e Profissional](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/>) | 80h | Ímpar | `Em Andamento` | `[█████               ]` 25% | — |
 | 2 | COM100 | [Pensamento Computacional](<./01 - Primeiro-Semestre/COM100 - Pensamento Computacional/>) | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
 | 3 | LET110 | [Leitura e Produção de Textos](<./01 - Primeiro-Semestre/LET110 - Leitura e Produção de Textos/>) | 80h | Ímpar | `A Cursar` | `[                    ]` 0% | — |
 | 4 | SOC100 | [Ética, Cidadania e Sociedade](<./01 - Primeiro-Semestre/SOC100 - Ética, Cidadania e Sociedade/>) | 40h | Ímpar | `A Cursar` | `[                    ]` 0% | — |

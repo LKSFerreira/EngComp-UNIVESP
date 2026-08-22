@@ -18,7 +18,7 @@ O minicurso de **Ambientação e Integração Acadêmica (AIA)** tem como objeti
 | **01** | O Começo de Tudo & Ambientação | Primeiros passos no AVA, fórum e uso do Gemini com conta acadêmica | [Semana 01](<./semana-01/semana-01.md>) | 🟢 Completa |
 | **02** | O Mapa da Univesp & Colaboração | Construção colaborativa do FAQ de Calouros no Moodle | [Semana 02](<./semana-02/semana-02.md>) | 🟢 Completa |
 | **03** | Meu Curso em 6 Pistas | Elaboração do Cartão Orientador em 6 pistas do curso | [Semana 03](<./semana-03/semana-03.md>) | 🟢 Completa |
-| **04** | Guia dos Calouros & Revisão por Pares | Produção do material final e avaliação via Laboratório Moodle | [Semana 04](<./semana-04/semana-04.md>) | 🔵 Em andamento |
+| **04** | Guia dos Calouros & Revisão por Pares | Produção do material final e avaliação via Laboratório Moodle | [Semana 04](<./semana-04/semana-04.md>) | 🟢 Completa |
 
 ---
 

@@ -37,9 +37,9 @@ Cada Quinzena tem a duração de **2 semanas** e é estruturada rigorosamente em
 
 | Quinzena | Tema Principal | Início | Prazo M4 (Liberar Grupo) | Término da Q | Status | Caderno de Estudos |
 |:--------:|----------------|:------:|:-----------------------:|:------------:|:------:|:------------------:|
-| **Q1** | Apresentação e Fundamentos da IA | **20/07/2026** | **26/07/2026 (23h59)** | **02/08/2026** | 🔵 Em andamento | [Quinzena 01](<./quinzena-01/quinzena-01.md>) |
-| **Q2** | Prompts e Escrita Acadêmica com IA | 03/08/2026 | **09/08/2026 (23h59)** | 16/08/2026 | ⚫ Pendente | [Quinzena 02](<./quinzena-02/quinzena-02.md>) |
-| **Q3** | Pesquisa, Leitura Mediada e Integridade | 17/08/2026 | **23/08/2026 (23h59)** | 30/08/2026 | ⚫ Pendente | [Quinzena 03](<./quinzena-03/quinzena-03.md>) |
+| **Q1** | Apresentação e Fundamentos da IA | **20/07/2026** | **26/07/2026 (23h59)** | **02/08/2026** | 🟢 Completa | [Quinzena 01](<./quinzena-01/quinzena-01.md>) |
+| **Q2** | Prompts e Escrita Acadêmica com IA | 03/08/2026 | **09/08/2026 (23h59)** | 16/08/2026 | 🟢 Completa | [Quinzena 02](<./quinzena-02/quinzena-02.md>) |
+| **Q3** | Pesquisa, Leitura Mediada e Integridade | 17/08/2026 | **23/08/2026 (23h59)** | 30/08/2026 | 🔵 Em andamento | [Quinzena 03](<./quinzena-03/quinzena-03.md>) |
 | **Q4** | IA na Gestão de Estudos e Autonomia | 31/08/2026 | **06/09/2026 (23h59)** | 13/09/2026 | ⚫ Pendente | [Quinzena 04](<./quinzena-04/quinzena-04.md>) |
 | **Q5** | Aprendizagem de Línguas Estrangeiras | 14/09/2026 | **20/09/2026 (23h59)** | 27/09/2026 | ⚫ Pendente | [Quinzena 05](<./quinzena-05/quinzena-05.md>) |
 | **Q6** | Análise Crítica e Desafios Étimos da IA | 28/09/2026 | **04/10/2026 (23h59)** | 11/10/2026 | ⚫ Pendente | [Quinzena 06](<./quinzena-06/quinzena-06.md>) |
