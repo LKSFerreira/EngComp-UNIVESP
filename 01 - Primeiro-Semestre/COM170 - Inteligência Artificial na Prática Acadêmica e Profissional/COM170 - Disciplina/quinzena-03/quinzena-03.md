@@ -89,10 +89,10 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 ## 8. Revisão Espaçada (Régua de 7 Dias)
 
 | Revisão | Data Prevista | Feito? |
-|---------|---------------|:------:|
-| 1ª (1 dia depois) | 24/08 | ☐ |
-| 2ª (3 dias depois) | 26/08 | ☐ |
-| 3ª (7 dias depois) | 30/08 | ☐ |
+|---------|:-------------:|:------:|
+| 1ª (1 dia depois) | 23/08/2026 | ☐ |
+| 2ª (3 dias depois) | 25/08/2026 | ☐ |
+| 3ª (7 dias depois) | 29/08/2026 | ☐ |
 
 ---
 

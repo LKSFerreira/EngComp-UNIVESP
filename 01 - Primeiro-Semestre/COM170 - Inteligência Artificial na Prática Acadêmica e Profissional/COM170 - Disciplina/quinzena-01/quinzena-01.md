@@ -259,7 +259,7 @@ A naturalização acontece quando 4 conceitos começam a ficar permanentemente c
 ## 8. Revisão Espaçada (Régua de 7 Dias)
 
 | Revisão            | Data Prevista | Feito? |
-| ------------------ | ------------- | ------ |
-| 1ª (1 dia depois)  | 27/07/2026    | ☐      |
-| 2ª (3 dias depois) | 29/07/2026    | ☐      |
-| 3ª (7 dias depois) | 02/08/2026    | ☐      |
+| ------------------ | ------------- | :----: |
+| 1ª (1 dia depois)  | 27/07/2026    | ☑      |
+| 2ª (3 dias depois) | 29/07/2026    | ☑      |
+| 3ª (7 dias depois) | 02/08/2026    | ☑      |

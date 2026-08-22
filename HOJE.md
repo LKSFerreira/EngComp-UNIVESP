@@ -32,9 +32,11 @@
 
 ## 📋 Revisões Pendentes (Repetição Espaçada)
 
-| Revisão                  | Disciplina | Semana / Quinzena | Prazo |
-| ------------------------ | ---------- | ----------------- | ----- |
-| (nenhuma pendente ainda) | —          | —                 | —     |
+| Revisão | Disciplina | Semana / Quinzena | Prazo |
+| ------- | ---------- | ----------------- | :---: |
+| 1ª Revisão (1d) | COM170 | [Quinzena 03](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/COM170 - Disciplina/quinzena-03/quinzena-03.md>) | **23/08/2026** |
+| 2ª Revisão (3d) | COM170 | [Quinzena 03](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/COM170 - Disciplina/quinzena-03/quinzena-03.md>) | 25/08/2026 |
+| 3ª Revisão (7d) | COM170 | [Quinzena 03](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/COM170 - Disciplina/quinzena-03/quinzena-03.md>) | 29/08/2026 |
 
 > As revisões aparecerão aqui conforme você completar semanas.
 > Regra: 1 dia → 3 dias → 7 dias (encerra definitivamente em 7 dias).

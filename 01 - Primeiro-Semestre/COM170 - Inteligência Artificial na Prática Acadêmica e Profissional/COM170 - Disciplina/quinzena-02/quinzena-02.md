@@ -160,10 +160,10 @@ Para imagens, as marcas d’água como o SynthID do Google são mais simples de 
 ## 8. Revisão Espaçada (Régua de 7 Dias)
 
 | Revisão | Data Prevista | Feito? |
-|----------|---------------|--------|
-| 1ª (1 dia depois) | | |
-| 2ª (3 dias depois) | | |
-| 3ª (7 dias depois) | | |
+|---------|:-------------:|:------:|
+| 1ª (1 dia depois) | 10/08/2026 | ☑ |
+| 2ª (3 dias depois) | 12/08/2026 | ☑ |
+| 3ª (7 dias depois) | 16/08/2026 | ☑ |
 
 ---
 

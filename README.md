@@ -27,10 +27,15 @@ Semestre Atual      [                    ]   0%  (1º Semestre — Bimestre Ímp
 > Preencha aqui as revisões conforme completar semanas.
 > Regra: revisar **1 dia → 3 dias → 7 dias** após completar (encerra definitivamente em 7 dias).
 
-| # | Disciplina | Semana | Completada em | Rev 1d | Rev 3d | Rev 7d |
-|---|------------|--------|---------------|--------|--------|--------|
+| # | Disciplina | Semana / Quinzena | Completada / Iniciada em | Rev 1d | Rev 3d | Rev 7d |
+|---|------------|-------------------|--------------------------|:------:|:------:|:------:|
 | 1 | COM170 | [AIA — Semana 01](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/AIA - Ambientação e Integração Acadêmica/semana-01/semana-01.md>) | 21/06 | 22/06 ☑ | 24/06 ☑ | 28/06 ☑ |
 | 2 | COM170 | [AIA — Semana 02](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/AIA - Ambientação e Integração Acadêmica/semana-02/semana-02.md>) | 29/06 | 30/06 ☑ | 02/07 ☑ | 06/07 ☑ |
+| 3 | COM170 | [AIA — Semana 03](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/AIA - Ambientação e Integração Acadêmica/semana-03/semana-03.md>) | 06/07 | 07/07 ☑ | 09/07 ☑ | 13/07 ☑ |
+| 4 | COM170 | [AIA — Semana 04](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/AIA - Ambientação e Integração Acadêmica/semana-04/semana-04.md>) | 16/07 | 17/07 ☑ | 19/07 ☑ | 23/07 ☑ |
+| 5 | COM170 | [Quinzena 01](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/COM170 - Disciplina/quinzena-01/quinzena-01.md>) | 26/07 | 27/07 ☑ | 29/07 ☑ | 02/08 ☑ |
+| 6 | COM170 | [Quinzena 02](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/COM170 - Disciplina/quinzena-02/quinzena-02.md>) | 09/08 | 10/08 ☑ | 12/08 ☑ | 16/08 ☑ |
+| 7 | COM170 | [Quinzena 03](<./01 - Primeiro-Semestre/COM170 - Inteligência Artificial na Prática Acadêmica e Profissional/COM170 - Disciplina/quinzena-03/quinzena-03.md>) | 22/08 | 23/08 ☐ | 25/08 ☐ | 29/08 ☐ |
 
 > Quando completar uma semana: adicione uma linha, calcule as datas, e marque ☐ → ☑ conforme revisar.
 
