@@ -55,10 +55,10 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 
 ### 📖 Módulos 1 a 4 (Estudo Individual / Videoaulas)
 
-* **Q3-M1 — Leitura e Estudo de Fundamentos:**
-* **Q3-M2 — Videoaulas e Aplicação Prática:**
-* **Q3-M3 — Quizzes e Testes de Conhecimento:**
-* **Q3-M4 — Atividade Individual (Prazo 23/08 às 23h59):**
+* **Q3-M1 — Competências Profissionais na Era da IA:** [Notas Detalhadas e Atividades do Módulo 1](./conteudo_q3_m1.md) │ [Videoaula 1: Da Manchete à Taxonomia Bailey (YouTube)](https://www.youtube.com/watch?v=y94_bMWTiWA)
+* **Q3-M2 — Centauro e Ciborgue (Modos de Colaboração):** [Notas Detalhadas e Mapa de Tarefas do Módulo 2](./conteudo_q3_m2.md) │ [Videoaula 2: Centauro e Ciborgue (YouTube)](https://www.youtube.com/watch?v=k6I-fZFOpuI)
+* **Q3-M3 — Fronteira Serrilhada e Validação de Erros Invisíveis:** [Notas Detalhadas e Atividades do Módulo 3](./conteudo_q3_m3.md) │ [Videoaula 3: Quando a IA Acerta uma Tarefa e Erra a Vizinha (YouTube)](https://www.youtube.com/watch?v=Ilg1uYHwOnE)
+* **Q3-M4 — Custo Computacional e Síntese da Quinzena:** [Notas Detalhadas e Miniquiz do Módulo 4](./conteudo_q3_m4.md) │ [Videoaula 4: O Custo Invisível de Cada Conversa com a IA (YouTube)](https://www.youtube.com/watch?v=ZHlHULBahpQ)
 
 ### 📝 Módulo 4 (Atividade Individual - Entrega até Domingo 23h59)
 * **Resumo / Entrega:**
