@@ -1,6 +1,6 @@
-# Quinzena 03 — Módulo 2: Centauro e Ciborgue | Dois Modos de Colaborar
+# Quinzena 03 - Módulo 2: Centauro e Ciborgue | Dois Modos de Colaborar
 
-> **Disciplina:** COM170 — Inteligência Artificial na Prática Acadêmica e Profissional  
+> **Disciplina:** COM170 - Inteligência Artificial na Prática Acadêmica e Profissional  
 > **Docente Responsável:** Prof. José Avelino Placca  
 > **Foco do Módulo 2:** Modelos de colaboração humano-máquina (**Centauro** vs. **Ciborgue**), a tríade de tomada de decisão (**Auditabilidade, Ganho de Aprendizado, Criticidade**) e preservação da autonomia acadêmica.
 
@@ -10,7 +10,7 @@
 
 Existe uma decisão diária fundamental no uso da tecnologia: **o que você faz sozinho e o que delega para a ferramenta**. 
 
-Na maioria das vezes, essa decisão ocorre de forma inconsciente — ela simplesmente *"vai acontecendo ao longo do caminho"*, e ao final da tarefa o estudante já não sabe com precisão o que foi autoral e o que foi gerado pelo modelo.
+Na maioria das vezes, essa decisão ocorre de forma inconsciente - ela simplesmente *"vai acontecendo ao longo do caminho"*, e ao final da tarefa o estudante já não sabe com precisão o que foi autoral e o que foi gerado pelo modelo.
 
 > [!IMPORTANT]
 > **A Diferença Real de Colaboração:**  
@@ -39,7 +39,7 @@ Registro de reflexão sobre o processo real de estudo realizado em **Um Trabalho
 
 ---
 
-## 🎥 3. Videoaula: Centauro e Ciborgue — Dois Modos de Colaborar
+## 🎥 3. Videoaula: Centauro e Ciborgue - Dois Modos de Colaborar
 
 - 📺 **Vídeo Oficial UNIVESP:** [Assistir no YouTube (Centauro e Ciborgue | Dois Modos de Colaborar)](https://www.youtube.com/watch?v=k6I-fZFOpuI)
 - **Conceito-Chave:** A aula demonstra na prática que **nenhum modo é superior em abstrato**. A escolha ideal depende rigorosamente do que está em jogo na tarefa (risco, aprendizado e necessidade de prestação de contas).

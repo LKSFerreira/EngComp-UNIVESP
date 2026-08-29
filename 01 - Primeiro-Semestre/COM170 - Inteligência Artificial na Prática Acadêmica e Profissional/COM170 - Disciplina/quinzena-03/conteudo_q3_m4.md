@@ -1,6 +1,6 @@
-# Quinzena 03 — Módulo 4: Cada Mensagem Tem um Custo & Síntese da Q3
+# Quinzena 03 - Módulo 4: Cada Mensagem Tem um Custo & Síntese da Q3
 
-> **Disciplina:** COM170 — Inteligência Artificial na Prática Acadêmica e Profissional  
+> **Disciplina:** COM170 - Inteligência Artificial na Prática Acadêmica e Profissional  
 > **Docente Responsável:** Prof. José Avelino Placca  
 > **Foco do Módulo 4:** O **custo energético e hídrico invisível da IA**, a análise crítica de métricas (**As Três Perguntas para Ler um Número**), o laboratório **Um Semestre de Mensagens** e o **Miniquiz de Síntese da Quinzena 03** (com todas as questões e justificativas comentadas).
 

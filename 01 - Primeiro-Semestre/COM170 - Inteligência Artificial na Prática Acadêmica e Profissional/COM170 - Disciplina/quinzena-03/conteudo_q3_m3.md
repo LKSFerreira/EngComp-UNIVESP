@@ -1,6 +1,6 @@
-# Quinzena 03 — Módulo 3: Quando a IA Acerta uma Tarefa e Erra a Vizinha
+# Quinzena 03 - Módulo 3: Quando a IA Acerta uma Tarefa e Erra a Vizinha
 
-> **Disciplina:** COM170 — Inteligência Artificial na Prática Acadêmica e Profissional  
+> **Disciplina:** COM170 - Inteligência Artificial na Prática Acadêmica e Profissional  
 > **Docente Responsável:** Prof. José Avelino Placca  
 > **Foco do Módulo 3:** A **Fronteira Serrilhada** da IA (*Jagged Frontier*), o **Teste dos 10 Segundos**, a distinção entre **Dificuldade Aparente vs. Risco Real**, e a **Triagem Crítica de Validação**.
 
@@ -123,7 +123,7 @@ Análise comparativa demonstrando que a complexidade aparente de uma tarefa **n�
 
 ---
 
-## 🎯 6. Laboratório 2: Triagem de Tempo Escasso — O Que Conferir Primeiro?
+## 🎯 6. Laboratório 2: Triagem de Tempo Escasso - O Que Conferir Primeiro?
 
 Quando você recebe uma resposta longa com várias afirmações e **o tempo só permite conferir 2 itens**, onde concentrar o esforço de validação?
 

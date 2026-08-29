@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Individual M5/M6 - Competências em Transformação (Quinzena 3) - Lucas Ferreira</title>
+  
+  <!-- Fontes (JetBrains Mono para metadados/código; Inter e Arial no corpo e títulos) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= RESET & CONFIGURAÇÃO A4 ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    body {
+      background-color: #525659;
+      font-family: 'Inter', Arial, sans-serif;
+      color: #1e293b;
+      letter-spacing: 0.1px;
+      margin: 0;
+      padding: 30px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    /* PÁGINA A4 EXATA */
+    .page {
+      width: 210mm;
+      height: 297mm;
+      background-color: #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+        gap: 0 !important;
+      }
+      .page {
+        box-shadow: none !important;
+        page-break-after: always !important;
+        page-break-inside: avoid !important;
+        height: 297mm !important;
+      }
+      .no-print-toolbar {
+        display: none !important;
+      }
+    }
+
+    /* BARRA DE IMPRESSÃO SUPERIOR */
+    .no-print-toolbar {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 1000;
+      background: #13324d;
+      color: #ffffff;
+      padding: 9px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 13px;
+      font-weight: bold;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-print {
+      background: #f2a900;
+      color: #0f172a;
+      border: none;
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 12px;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+
+    .btn-print:hover {
+      background: #e59d00;
+      transform: scale(1.04);
+    }
+
+    /* ================= HEADER INSTITUCIONAL UNIVESP ================= */
+    .header-banner {
+      background-color: #13324d;
+      color: #ffffff;
+      padding: 22px 36px;
+    }
+
+    .banner-top-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 500;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: #94a3b8;
+      margin-bottom: 10px;
+    }
+
+    .banner-content {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .badge-template-sq {
+      background-color: #f2a900;
+      color: #0f172a;
+      width: 68px;
+      height: 68px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .badge-template-sq .badge-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 9px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .badge-template-sq .badge-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 34px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .banner-text .quinzena-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #38bdf8;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .banner-text h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 24px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.4px;
+      line-height: 1.15;
+    }
+
+    .banner-text .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 400;
+      color: #cbd5e1;
+      margin-top: 3px;
+    }
+
+    /* HEADER PÁGINAS INTERNAS */
+    .inner-header {
+      background-color: #13324d;
+      color: #ffffff;
+      padding: 12px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .inner-header .doc-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: #f8fafc;
+    }
+
+    .inner-header .doc-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      color: #94a3b8;
+      letter-spacing: 1px;
+    }
+
+    /* CORPO DA PÁGINA */
+    .page-body {
+      padding: 16px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-grow: 1;
+    }
+
+    /* CAMPOS DE IDENTIFICAÇÃO */
+    .fields-row {
+      display: flex;
+      gap: 20px;
+    }
+
+    .field-item {
+      flex: 1;
+    }
+
+    .field-label {
+      display: block;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-bottom: 3px;
+    }
+
+    .field-line {
+      border-bottom: 2px solid #13324d;
+      padding-bottom: 3px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f172a;
+      min-height: 20px;
+    }
+
+    /* CAIXAS DE DESTAQUE */
+    .box-intro {
+      background-color: #f8fafc;
+      border-left: 4px solid #13324d;
+      padding: 10px 14px;
+      font-size: 12px;
+      line-height: 1.45;
+      color: #334155;
+    }
+
+    .box-optional {
+      background-color: #fef8e8;
+      border-left: 4px solid #f2a900;
+      padding: 10px 14px;
+    }
+
+    .box-optional h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #92400e;
+      margin-bottom: 3px;
+    }
+
+    .box-optional p {
+      font-size: 11.5px;
+      color: #78350f;
+      line-height: 1.4;
+    }
+
+    .box-required {
+      background-color: #eff6ff;
+      border-left: 4px solid #2563eb;
+      padding: 10px 14px;
+    }
+
+    .box-required h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #1e40af;
+      margin-bottom: 3px;
+    }
+
+    .box-required p {
+      font-size: 11.5px;
+      color: #1e3a8a;
+      line-height: 1.4;
+    }
+
+    /* CARDS DE PERGUNTA */
+    .question-card {
+      border: 1.5px solid #cbd5e1;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .question-header {
+      background-color: #f1f5f9;
+      padding: 8px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1.5px solid #cbd5e1;
+    }
+
+    .question-badge {
+      background-color: #13324d;
+      color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 3px;
+    }
+
+    .question-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .question-prompt {
+      padding: 10px 14px;
+      font-size: 11.5px;
+      color: #475569;
+      line-height: 1.4;
+      background-color: #ffffff;
+      border-bottom: 1px dashed #e2e8f0;
+    }
+
+    .question-answer {
+      padding: 12px 14px;
+      background-color: #ffffff;
+      font-size: 12px;
+      line-height: 1.55;
+      color: #0f172a;
+    }
+
+    .question-answer p {
+      margin-bottom: 8px;
+    }
+
+    .question-answer p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* TABELAS ESTILIZADAS */
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 11px;
+      margin-top: 4px;
+    }
+
+    .styled-table th {
+      background-color: #13324d;
+      color: #ffffff;
+      text-align: left;
+      padding: 7px 10px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      border: 1px solid #13324d;
+    }
+
+    .styled-table td {
+      padding: 7px 10px;
+      border: 1px solid #cbd5e1;
+      line-height: 1.4;
+      color: #1e293b;
+      vertical-align: top;
+    }
+
+    .styled-table tr:nth-child(even) td {
+      background-color: #f8fafc;
+    }
+
+    .tag-centauro {
+      display: inline-block;
+      background-color: #e0e7ff;
+      color: #3730a3;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 700;
+      font-size: 10px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .tag-enduring {
+      display: inline-block;
+      background-color: #dcfce7;
+      color: #15803d;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 700;
+      font-size: 10px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .tag-diminishing {
+      display: inline-block;
+      background-color: #fee2e2;
+      color: #991b1b;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: 700;
+      font-size: 10px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* LISTA DE COMPETÊNCIAS */
+    .comp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .comp-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+      font-size: 10.5px;
+      line-height: 1.35;
+      padding: 5px 8px;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      background-color: #f8fafc;
+    }
+
+    .comp-item.selected {
+      border: 1.5px solid #2563eb;
+      background-color: #eff6ff;
+      font-weight: 600;
+      color: #1e40af;
+    }
+
+    .comp-num {
+      background-color: #13324d;
+      color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 700;
+      width: 16px;
+      height: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .comp-item.selected .comp-num {
+      background-color: #2563eb;
+    }
+
+    /* FOOTER DAS PÁGINAS */
+    .page-footer {
+      padding: 10px 36px;
+      border-top: 1px solid #e2e8f0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      color: #64748b;
+      background-color: #ffffff;
+    }
+
+    .footer-univesp-bar {
+      height: 4px;
+      width: 100%;
+      background: linear-gradient(90deg, #13324d 0%, #13324d 70%, #f2a900 70%, #f2a900 100%);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA FLUTUANTE DE IMPRESSÃO (NÃO SAI NO PDF) -->
+  <div class="no-print-toolbar">
+    <span>COM170 · Portfólio Individual M5/M6 · Quinzena 3</span>
+    <button class="btn-print" onclick="window.print()">Salvar como PDF / Imprimir</button>
+  </div>
+
+  <!-- =================================================================== -->
+  <!-- PÁGINA 1: CAPA, IDENTIFICAÇÃO E VISÃO GERAL                        -->
+  <!-- =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="header-banner">
+        <div class="banner-top-meta">
+          <span>IA na Prática Acadêmica e Profissional</span>
+          <span>UNIVESP · Quinzena 3</span>
+        </div>
+        <div class="banner-content">
+          <div class="badge-template-sq">
+            <span class="badge-label">Módulo</span>
+            <span class="badge-num">06</span>
+          </div>
+          <div class="banner-text">
+            <span class="quinzena-tag">Trabalho Individual da Quinzena</span>
+            <h1>O seu portfólio individual</h1>
+            <div class="subtitle">Um template, uma entrega. Enviado no Laboratório de Revisão do Módulo 6.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-body">
+        <div class="box-intro">
+          <strong>Este é o trabalho individual da quinzena, e ele é um só.</strong><br>
+          A <strong>Parte 1</strong> fala da sua prática: o que você faz com a IA neste semestre, e como. Ela é opcional.<br>
+          A <strong>Parte 2</strong> fala da história que você recebeu no Módulo 5, e o <strong>Fecho</strong> liga as duas em poucas linhas. Essas duas são o que a entrega pede.<br>
+          Você escreve tudo neste mesmo arquivo e envia uma vez só. Uma boa resposta mostra o caminho que você percorreu, com exemplo.
+        </div>
+
+        <div class="fields-row">
+          <div class="field-item">
+            <span class="field-label">Seu Nome</span>
+            <div class="field-line">Lucas da Silva Ferreira</div>
+          </div>
+          <div class="field-item">
+            <span class="field-label">Seu Eixo</span>
+            <div class="field-line">Computação (Engenharia de Computação)</div>
+          </div>
+        </div>
+
+        <div class="fields-row">
+          <div class="field-item">
+            <span class="field-label">Seu Grupo</span>
+            <div class="field-line">Grupo 05</div>
+          </div>
+          <div class="field-item">
+            <span class="field-label">A História que Você Recebeu</span>
+            <div class="field-line">Caso A · O relatório de sexta (Rui)</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 4px;">
+          <span class="field-label">O que você vai escrever neste documento</span>
+          <table class="styled-table" style="margin-top: 4px;">
+            <thead>
+              <tr>
+                <th style="width: 28%;">Estrutura</th>
+                <th style="width: 44%;">O que ela pede</th>
+                <th style="width: 28%;">Extensão esperada</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Parte 1 · A sua prática com a IA</strong><br><span style="font-size: 9.5px; color: #b45309; font-weight: bold;">(Opcional / Prática)</span></td>
+                <td>Três perguntas sobre o seu semestre: a tarefa e o modo que você escolheu, a vez em que confiou de primeira, e o seu Plano Pessoal de Uso Consciente.</td>
+                <td>Dois a quatro parágrafos por pergunta, e uma tabela de três linhas.</td>
+              </tr>
+              <tr>
+                <td><strong>Parte 2 · A história que você recebeu</strong><br><span style="font-size: 9.5px; color: #1d4ed8; font-weight: bold;">(Entrega Obrigatória)</span></td>
+                <td>Três perguntas sobre a história do Módulo 5 (Caso A): a competência, o que a ferramenta fez e o que ficou com a pessoa, e a categoria em cada situação.</td>
+                <td>Uma tabela e respostas curtas, de duas a cinco linhas cada.</td>
+              </tr>
+              <tr>
+                <td><strong>O Fecho · A ponte</strong><br><span style="font-size: 9.5px; color: #1d4ed8; font-weight: bold;">(Entrega Obrigatória)</span></td>
+                <td>Uma pergunta que liga a história à sua prática. É a frase que você leva ao grupo, no Módulo 7.</td>
+                <td>Três a cinco linhas.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="box-required" style="margin-top: 4px;">
+          <h4>Aviso do Laboratório de Avaliação por Pares</h4>
+          <p>A Parte 2 e o Fecho são o núcleo avaliativo da entrega. A Parte 1 estrutura a reflexão pessoal que fundamenta o fecho. Escrever a Parte 1 coloca as situações no papel e torna a ponte com o Caso A direta e consistente.</p>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="page-footer">
+        <span>IA na Prática Acadêmica e Profissional · UNIVESP · Quinzena 3</span>
+        <span>Página 1 de 4</span>
+      </div>
+      <div class="footer-univesp-bar"></div>
+    </div>
+  </div>
+
+  <!-- =================================================================== -->
+  <!-- PÁGINA 2: PARTE 1 - A SUA PRÁTICA COM A IA                         -->
+  <!-- =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="inner-header">
+        <span class="doc-title">Parte 1 · A sua prática com a IA</span>
+        <span class="doc-meta">MÓDULO 06 · PORTFÓLIO INDIVIDUAL</span>
+      </div>
+
+      <div class="page-body">
+        <div class="box-optional">
+          <h4>Opcional · Ao Seu Critério - Por que vale a pena escrever esta parte</h4>
+          <p>Ela é o único lugar do trabalho em que você olha para o seu próprio semestre em vez de olhar para a história de outra pessoa. Quem escreve a Parte 1 termina a quinzena com um <strong>Plano Pessoal de Uso Consciente</strong> pronto, que diz o que delega, o que faz com apoio e o que mantém integralmente seu.</p>
+        </div>
+
+        <!-- PERGUNTA 1 -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-badge">1</span>
+            <span class="question-title">Pergunta 1 · A tarefa e o modo</span>
+          </div>
+          <div class="question-prompt">
+            Escolha uma tarefa concreta da sua rotina de estudos deste semestre. Diga o modo que você escolheu, <strong>Centauro</strong> ou <strong>Ciborgue</strong>, o motivo da escolha, e qual das três perguntas pesou mais na decisão (<em>Auditabilidade, Ganho de aprendizado ou Criticidade</em>).
+          </div>
+          <div class="question-answer">
+            <p><strong>Tarefa Escolhida:</strong> Elaboração de resumos conceituais e cadernos de estudo ativo para as disciplinas do eixo de Computação (ex.: Programação e Fundamentos de IA).</p>
+            <p><strong>Modo Adotado:</strong> <span class="tag-centauro">Modo Centauro</span></p>
+            <p><strong>Pergunta Determinante:</strong> <strong>Ganho de Aprendizado</strong> (<em>"Fazer isso por conta própria me ensina algo que preciso dominar agora?"</em>).</p>
+            <p><strong>Justificativa Técnica:</strong> Para fixar conceitos de engenharia que serão cobrados em provas presenciais e sem consulta, a formulação da síntese inicial precisa ser estritamente autoral. Redijo meu próprio texto e organizo os diagramas antes de abrir a ferramenta de IA. O modelo é acionado apenas em uma etapa posterior delimitada, funcionando como auditor para confrontar minhas definições, apontar pontos cegos ou testar minha capacidade de argumentação.</p>
+          </div>
+        </div>
+
+        <!-- PERGUNTA 2 -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-badge">2</span>
+            <span class="question-title">Pergunta 2 · A vez em que você confiou de primeira</span>
+          </div>
+          <div class="question-prompt">
+            Conte uma situação deste semestre em que você usou um resultado da IA direto, porque ele parecia seguro. Diga o que aconteceu depois, o que você faria hoje e por quê.
+          </div>
+          <div class="question-answer">
+            <p>No início do semestre, consultei um modelo de linguagem sobre prazos e critérios de envio de atividades da universidade. A resposta chegou com redação impecável, tom altamente assertivo e formatação em tópicos elegante. Ao conferir dias depois no calendário oficial da UNIVESP, descobri que a data cravada pela IA pertencia a uma portaria acadêmica defasada de anos anteriores que já não estava em vigor.</p>
+            <p><strong>O que faço hoje:</strong> Aplico rigorosamente o <em>Teste dos 10 Segundos</em> e a verificação de <em>Raridade</em> (Módulo 3). Compreendi que o erro não muda de tom. Qualquer informação institucional, regulatória, local ou que envolva dados e números específicos é tratada como zona de risco e validada na fonte primária antes de ser considerada.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="page-footer">
+        <span>IA na Prática Acadêmica e Profissional · UNIVESP · Quinzena 3</span>
+        <span>Página 2 de 4</span>
+      </div>
+      <div class="footer-univesp-bar"></div>
+    </div>
+  </div>
+
+  <!-- =================================================================== -->
+  <!-- PÁGINA 3: PLANO CONSCIENTE & PARTE 2 (CASO A - RUI)                -->
+  <!-- =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="inner-header">
+        <span class="doc-title">Plano Pessoal & Parte 2 · A história que você recebeu</span>
+        <span class="doc-meta">MÓDULO 06 · PORTFÓLIO INDIVIDUAL</span>
+      </div>
+
+      <div class="page-body">
+        <!-- PERGUNTA 3 -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-badge">3</span>
+            <span class="question-title">Pergunta 3 · O seu Plano Pessoal de Uso Consciente</span>
+          </div>
+          <div class="question-prompt">
+            Três linhas, cada uma com o critério que a sustenta, escrito na forma da pergunta que ele faz:
+          </div>
+          <div class="question-answer" style="padding: 8px 12px;">
+            <table class="styled-table">
+              <thead>
+                <tr>
+                  <th style="width: 25%;">Plano</th>
+                  <th style="width: 40%;">O que é, na sua rotina</th>
+                  <th style="width: 35%;">O critério que sustenta</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>O que eu delego</strong></td>
+                  <td>Formatação mecânica de tabelas, conversão de formatos (JSON/CSV) e revisão ortográfica/gramatical pontual de textos já finalizados por mim.</td>
+                  <td><em>"Isso ocupa tempo de digitação repetitiva e não representa a competência técnica que preciso dominar no semestre?"</em> (Baixa criticidade / Diminishing).</td>
+                </tr>
+                <tr>
+                  <td><strong>O que eu faço com apoio</strong></td>
+                  <td>Exploração preliminar de documentações de APIs, geração de ideias divergentes para trabalhos e refinamento de clareza textual.</td>
+                  <td><em>"O raciocínio e a curadoria continuam sob meu controle, usando a IA para acelerar a iteração?"</em> (Modo Ciborgue / Evolving).</td>
+                </tr>
+                <tr>
+                  <td><strong>O que eu mantenho integralmente meu</strong></td>
+                  <td>Modelagem lógica de algoritmos, resolução de listas preparatórias para exames, justificativas de projetos de engenharia e decisões éticas.</td>
+                  <td><em>"Se alguém perguntar a procedência ou se o resultado der errado, quem responde sou eu?"</em> (Auditabilidade & Enduring).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PARTE 2: HISTÓRIA RECEBIDA -->
+        <div class="box-required" style="margin-top: 2px;">
+          <h4>Parte 2 · A história que você recebeu (Caso A · Rui: O relatório de sexta)</h4>
+          <p>Nesta história, a mesma competência aparece em duas situações de trabalho, e o que acontece é diferente nas duas. A categoria na Taxonomia Bailey decorre da comparação direta entre o que a ferramenta fez e o que ficou com a pessoa.</p>
+        </div>
+
+        <!-- PERGUNTA 4 -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-badge">4</span>
+            <span class="question-title">Pergunta 4 · A competência identificada</span>
+          </div>
+          <div class="question-prompt">
+            Qual competência aparece nas duas situações da sua história? Escolha uma da lista das Diretrizes Curriculares Nacionais (DCNs) abaixo e diga, em uma frase, o que ela exige da pessoa:
+          </div>
+          <div class="question-answer">
+            <div class="comp-grid">
+              <div class="comp-item"><span class="comp-num">1</span> Analisar situação e resolver problema</div>
+              <div class="comp-item"><span class="comp-num">2</span> Comunicar o que se fez, ajustando a forma</div>
+              <div class="comp-item"><span class="comp-num">3</span> Trabalhar com pessoas e conduzir grupo</div>
+              <div class="comp-item"><span class="comp-num">4</span> Aprender sozinho e ajustar-se à tecnologia</div>
+              <div class="comp-item selected"><span class="comp-num">5</span> Lidar com números e julgar uso em decisão</div>
+              <div class="comp-item"><span class="comp-num">6</span> Avaliar criticamente o que foi produzido</div>
+              <div class="comp-item"><span class="comp-num">7</span> Agir com ética e avaliar impactos</div>
+              <div class="comp-item"><span class="comp-num">8</span> Usar tecnologia como meio, não como fim</div>
+            </div>
+            <div style="margin-top: 8px;">
+              <strong>O que ela exige da pessoa:</strong> Exige a capacidade de compreender a procedência e a consistência dos dados brutos, interpretando o significado real das métricas para assumir a responsabilidade e sustentar a decisão perante a diretoria.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="page-footer">
+        <span>IA na Prática Acadêmica e Profissional · UNIVESP · Quinzena 3</span>
+        <span>Página 3 de 4</span>
+      </div>
+      <div class="footer-univesp-bar"></div>
+    </div>
+  </div>
+
+  <!-- =================================================================== -->
+  <!-- PÁGINA 4: ANÁLISE DO CASO A E O FECHO (A PONTE)                    -->
+  <!-- =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="inner-header">
+        <span class="doc-title">Parte 2 (Continuação) & O Fecho · A ponte</span>
+        <span class="doc-meta">MÓDULO 06 · PORTFÓLIO INDIVIDUAL</span>
+      </div>
+
+      <div class="page-body">
+        <!-- PERGUNTA 5 -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-badge">5</span>
+            <span class="question-title">Pergunta 5 · O que a ferramenta fez, e o que ficou com a pessoa</span>
+          </div>
+          <div class="question-prompt">
+            Uma linha para cada situação. Preencha as duas colunas antes de pensar em categoria:
+          </div>
+          <div class="question-answer" style="padding: 8px 12px;">
+            <table class="styled-table">
+              <thead>
+                <tr>
+                  <th style="width: 25%;">Situação</th>
+                  <th style="width: 38%;">O que a ferramenta fez</th>
+                  <th style="width: 37%;">O que ficou com a pessoa</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Situação 1:</strong><br>Toda sexta-feira (Relatório de rotina)</td>
+                  <td>Recebeu os números brutos exportados pelo sistema e gerou os 6 parágrafos explicativos em 20 minutos.</td>
+                  <td>Colou os dados na IA, salvou o arquivo na pasta de rede e liberou duas horas da tarde de sexta-feira.</td>
+                </tr>
+                <tr>
+                  <td><strong>Situação 2:</strong><br>Relatório de agosto (Decisão de fornecedor)</td>
+                  <td>Recebeu os números comparativos e redigiu parágrafos fluidos e plausíveis, inserindo uma afirmação de estabilidade sem base rastreável.</td>
+                  <td>Assinou o envio do documento e ficou com o dever indelegável de responder à diretoria sobre a procedência da frase (o que não soube fazer).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PERGUNTA 6 -->
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-badge">6</span>
+            <span class="question-title">Pergunta 6 · A categoria em cada situação, e o que mudou</span>
+          </div>
+          <div class="question-prompt">
+            Classifique cada situação na Taxonomia Bailey e escreva o que mudou entre uma e outra:
+          </div>
+          <div class="question-answer">
+            <table class="styled-table" style="margin-bottom: 8px;">
+              <thead>
+                <tr>
+                  <th style="width: 40%;">Situação</th>
+                  <th style="width: 60%;">A Categoria (Taxonomia Bailey)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Situação 1:</strong> Relatório de sexta</td>
+                  <td><span class="tag-diminishing">Diminishing (Perde Espaço)</span> - A digitação operacional foi absorvida pela máquina.</td>
+                </tr>
+                <tr>
+                  <td><strong>Situação 2:</strong> Relatório de agosto</td>
+                  <td><span class="tag-enduring">Enduring (Duradoura)</span> - Exigiu julgamento, auditoria e responsabilidade indelegável.</td>
+                </tr>
+              </tbody>
+            </table>
+            <p><strong>O que mudou entre uma situação e a outra:</strong> O documento, o formato e a ferramenta foram rigorosamente os mesmos. O que mudou foi a <strong>criticidade da decisão</strong> e a <strong>necessidade de auditabilidade</strong>. Na rotina burocrática, ninguém lia o relatório; na decisão contratual, a afirmação gerada pela IA respaldou a escolha de um fornecedor, transferindo todo o ônus da prestação de contas para Rui.</p>
+          </div>
+        </div>
+
+        <!-- O FECHO: A PONTE -->
+        <div class="question-card" style="border: 2px solid #2563eb;">
+          <div class="question-header" style="background-color: #eff6ff; border-bottom: 1.5px solid #93c5fd;">
+            <span class="question-badge" style="background-color: #2563eb;">FECHO</span>
+            <span class="question-title" style="color: #1e3a8a;">O Fecho · A ponte entre a história e você</span>
+          </div>
+          <div class="question-prompt">
+            Olhando a história que você trabalhou na Parte 2: o que ela mostrou que você reconhece na sua própria prática com a IA? Escreva de três a cinco linhas e termine dizendo o que isso pede que você comece a treinar agora (esta é a frase que você leva ao grupo no Módulo 7):
+          </div>
+          <div class="question-answer" style="background-color: #f8fafc;">
+            <p style="font-size: 12.5px; font-weight: 500; color: #0f172a; line-height: 1.6; border-left: 3px solid #2563eb; padding-left: 12px; margin: 0;">
+              "O caso de Rui evidencia o risco de ser seduzido pela fluência sintática da IA e abrir mão da rastreabilidade dos dados. Na minha própria rotina em Engenharia de Computação, reconheço que a facilidade de obter respostas bem estruturadas pode criar uma falsa sensação de segurança e levar à aceitação acrítica de conclusões. Isso me exige treinar imediatamente o hábito de nunca assinar ou incorporar relatórios técnicos sem mapear e auditar pessoalmente a procedência primária de cada afirmação."
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="page-footer">
+        <span>IA na Prática Acadêmica e Profissional · UNIVESP · Quinzena 3</span>
+        <span>Página 4 de 4</span>
+      </div>
+      <div class="footer-univesp-bar"></div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,6 +1,6 @@
-# Quinzena 03 — Competências em Transformação: O Que Fica, O Que Muda, O Que Surge
+# Quinzena 03 - Competências em Transformação: O Que Fica, O Que Muda, O Que Surge
 
-> **Disciplina:** COM170 — Inteligência Artificial na Prática Acadêmica e Profissional  
+> **Disciplina:** COM170 - Inteligência Artificial na Prática Acadêmica e Profissional  
 > **Docente Responsável:** Prof. José Avelino Placca  
 > **Foco do Módulo 1:** Desconstrução de manchetes polarizadas, Taxonomia Bailey de competências e análise crítica da divisão de tarefas com IA.
 
@@ -40,7 +40,7 @@ Ao longo da Q3, serão desenvolvidos e aplicados:
 
 ---
 
-## 📘 2. Módulo 1 — Competências Profissionais na Era da IA
+## 📘 2. Módulo 1 - Competências Profissionais na Era da IA
 
 ### 💡 Duas Perguntas Fundamentais
 
@@ -226,7 +226,7 @@ Abaixo está a consolidação das 12 situações práticas do cotidiano acadêmi
 
 ### 🔍 Destaque Didático: O Contraste entre Item 01 e Item 10
 
-Compare os dois itens que tratam do mesmo ato — *"Escrever um texto"*:
+Compare os dois itens que tratam do mesmo ato - *"Escrever um texto"*:
 - **Item 01 (Redigir o texto com IA):** Classificado como **Evolving**. A ferramenta gera a primeira versão e o estudante atua na curadoria e reescrita.
 - **Item 10 (Responder pelo texto perante o professor):** Classificado como **Enduring**. Diante da pergunta *"de onde você tirou essa afirmação?"*, a IA não responde nem comparece à arguição; quem assina e responde é você.
 
