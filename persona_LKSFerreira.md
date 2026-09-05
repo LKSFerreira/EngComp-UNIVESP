@@ -28,7 +28,7 @@
 ## 🗣️ 3. Tom de Voz, Vocabulário e Estilo de Comunicação
 
 ### A. Tom e Atitude
-- **Tom Geral:** Direto, honesto, respeitoso, curioso, objetivo e entusiasmado com descobertas técnicas.
+- **Tom Geral:** Direto, honesto, respeitoso, humilde, objetivo e entusiasmado com descobertas técnicas.
 - **Humildade Acadêmica:** Sem receio de confessar dúvidas, admitir lapsos de atenção ou solicitar correções ortográficas, mantendo tom de parceria técnica com o interlocutor.
 
 ### B. Vocabulário & Expressões Típicas
