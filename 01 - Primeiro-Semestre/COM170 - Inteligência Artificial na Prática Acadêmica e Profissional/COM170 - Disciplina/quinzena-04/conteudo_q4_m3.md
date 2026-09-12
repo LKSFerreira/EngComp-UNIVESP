@@ -1,6 +1,6 @@
-# Q4-M3 — A Janela Inteira e os Três Limites que Ela Não Resolve
+# Q4-M3 - A Janela Inteira e os Três Limites que Ela Não Resolve
 
-> **Disciplina:** COM170 — Inteligência Artificial na Prática Acadêmica e Profissional  
+> **Disciplina:** COM170 - Inteligência Artificial na Prática Acadêmica e Profissional  
 > **Quinzena 04:** Engenharia de Contexto como Metodologia Estruturada de Pensamento  
 > **Docente Responsável:** Prof. José Avelino Placca  
 > **Foco do Módulo 3:** Diagnóstico e Mitigação dos Três Limites Estruturais de LLMs: Limite de Janela (o material), Limite de Domínio (o assunto) e Limite de Verificação (quem lê).
@@ -25,7 +25,7 @@ graph TD
 Reconhecer qual limite está em jogo define a sua reação:
 1. **Limite de Janela:** Resolve-se reorganizando a conversa (anexando o que falta ou enxugando o excesso).
 2. **Limite de Domínio:** Resolve-se fornecendo o documento oficial e conferindo cada dado na origem antes de usar.
-3. **Limite de Verificação:** Não se resolve escrevendo melhor — resolve-se estabelecendo critérios auditáveis e recorrendo a fontes externas ou especialistas.
+3. **Limite de Verificação:** Não se resolve escrevendo melhor - resolve-se estabelecendo critérios auditáveis e recorrendo a fontes externas ou especialistas.
 
 ---
 

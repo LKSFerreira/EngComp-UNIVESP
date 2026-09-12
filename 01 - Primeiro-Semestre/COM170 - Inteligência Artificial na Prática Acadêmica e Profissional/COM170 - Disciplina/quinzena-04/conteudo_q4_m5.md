@@ -19,7 +19,7 @@ Pedro Alves escreve para a área de comunicação da **Nexo**, uma fintech.
    O aviso voltou incompleto. O título cabia numa notificação de celular sem dizer nada do que importava, e o corpo do texto não soava como um alerta de segurança. Pedro refez o pedido, desta vez registrando com cuidado o que faltava, e o segundo aviso funcionou.
 
 3. **O Desdobramento na Empresa (O Padrão Revelado):**  
-   O episódio chegou à diretoria pelo caminho errado, numa reclamação de cliente, e não pelo caminho certo. Foi o suficiente para alguém perguntar se aquilo acontecia só com o Pedro. A resposta veio rápido, e não foi a que a diretoria queria ouvir: nos dias seguintes, **mais cinco pessoas de áreas diferentes passaram por situações parecidas**, cada uma com a própria versão do mesmo problema — *o pedido que escreveram não continha tudo que precisava conter*.
+   O episódio chegou à diretoria pelo caminho errado, numa reclamação de cliente, e não pelo caminho certo. Foi o suficiente para alguém perguntar se aquilo acontecia só com o Pedro. A resposta veio rápido, e não foi a que a diretoria queria ouvir: nos dias seguintes, **mais cinco pessoas de áreas diferentes passaram por situações parecidas**, cada uma com a própria versão do mesmo problema - *o pedido que escreveram não continha tudo que precisava conter*.
 
 > [!IMPORTANT]
 > **A Revelação do Padrão:**  
@@ -30,8 +30,8 @@ Pedro Alves escreve para a área de comunicação da **Nexo**, uma fintech.
 
 ## 💡 2. Uma Ideia que Organiza o Trabalho
 
-* **Engenharia de Prompt:** É construir bem a instrução — o papel de quem escreve e de quem lê, o objetivo, as restrições e o formato (**PO-RF**).
-* **Engenharia de Contexto:** É decidir o que entra na janela além da instrução, e o que fica de fora — os exemplos, as fontes e o histórico da conversa.
+* **Engenharia de Prompt:** É construir bem a instrução - o papel de quem escreve e de quem lê, o objetivo, as restrições e o formato (**PO-RF**).
+* **Engenharia de Contexto:** É decidir o que entra na janela além da instrução, e o que fica de fora - os exemplos, as fontes e o histórico da conversa.
 
 > [!NOTE]
 > É por isso que, em cada história que você vai receber (ex.: **Caso A - Lorena**), **o que importa não é só o que a pessoa escreveu. É o que ela colocou dentro da conversa, e o que deixou fora dela.**

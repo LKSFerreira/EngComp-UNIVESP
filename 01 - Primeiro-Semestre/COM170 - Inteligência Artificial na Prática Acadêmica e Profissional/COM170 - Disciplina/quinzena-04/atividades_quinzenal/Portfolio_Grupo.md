@@ -16,18 +16,17 @@
 
 ---
 
-### 📋 Identificação do Grupo
+### 📋 Identificação do Trabalho Coletivo
 
-* **Grupo:** Grupo 05
 * **Eixo Temático:** Computação (Engenharia de Computação)
-* **Representante da Quinzena (Responsável pelo Envio no M7):** Integrante 1 (Lucas Ferreira)
+* **Representante da Quinzena (Responsável pelo Envio no M7):** Integrante 1
 * **Integrantes Participantes na Rodada:**
-  1. **Integrante 1 (Lucas Ferreira):** Caso A · Sessenta páginas coladas (Lorena — Atendimento)
-  2. **Integrante 2 (Carol):** Caso do Ivan · O passo a passo da central de ajuda (Ivan — Produto)
-  3. **Integrante 3 (Thales):** Caso A · Sessenta páginas coladas (Lorena — Atendimento)
+  1. **Integrante 1:** Caso A · Sessenta páginas coladas (Lorena - Atendimento)
+  2. **Integrante 2:** Caso do Ivan · O passo a passo da central de ajuda (Ivan - Produto)
+  3. **Integrante 3:** Caso A · Sessenta páginas coladas (Lorena - Atendimento)
 
 > [!NOTE]
-> **Dinâmica do Grupo 05:**  
+> **Dinâmica do Grupo:**  
 > O grupo contou com 3 integrantes ativos. Os Integrantes 1 e 3 analisaram o Caso A (Lorena), convergindo independentemente para o diagnóstico de sobrecarga da janela e falta de restrições, enquanto a Integrante 2 trouxe o Caso de Ivan, evidenciando a contaminação por histórico antigo não resetado. Essa complementaridade sustenta com excelência a generalização sistêmica da Nexo nos Blocos 2 e 3.
 
 ---
@@ -38,9 +37,9 @@
 
 | Integrante e História | O que faltou | Quando poderia ter sido evitado | A providência |
 | :--- | :--- | :--- | :--- |
-| **Integrante 1 (Lucas)**<br>*(Caso A: Lorena - Atendimento)* | Faltou isolar o contexto relevante (recorte do tema) e explicitar a restrição sobre exceções para contas conjuntas (limite de janela). | No momento da preparação do contexto antes do envio do prompt, ao colar 60 páginas brutas do manual sem filtro prévio. | Instituir a regra de nunca colar manuais na íntegra: extrair apenas a seção temática específica e exigir checagem ativa de exceções cadastrais. |
-| **Integrante 2 (Carol)**<br>*(Caso: Ivan - Produto)* | A política atualizada e a orientação explícita para desconsiderar a regra antiga de dez mil reais. | Antes do envio do pedido e durante a conferência da resposta, antes da publicação. | Abrir uma nova conversa ou limpar o contexto anterior, inserir a política vigente e conferir todos os valores e procedimentos com a fonte oficial antes de publicar. |
-| **Integrante 3 (Thales)**<br>*(Caso A: Lorena - Atendimento)* | Faltou definir o componente de restrições no pedido e realizar a verificação do texto final. | Antes de enviar o texto para a IA e no momento antes de colar a resposta para o cliente. | Selecionar e enviar à IA apenas as páginas do manual que falam sobre autenticação e ler a resposta gerada linha a linha antes de enviá-la. |
+| **Integrante 1**<br>*(Caso A: Lorena - Atendimento)* | Faltou isolar o contexto relevante (recorte do tema) e explicitar a restrição sobre exceções para contas conjuntas (limite de janela). | No momento da preparação do contexto antes do envio do prompt, ao colar 60 páginas brutas do manual sem filtro prévio. | Instituir a regra de nunca colar manuais na íntegra: extrair apenas a seção temática específica e exigir checagem ativa de exceções cadastrais. |
+| **Integrante 2**<br>*(Caso: Ivan - Produto)* | A política atualizada e a orientação explícita para desconsiderar a regra antiga de dez mil reais. | Antes do envio do pedido e durante a conferência da resposta, antes da publicação. | Abrir uma nova conversa ou limpar o contexto anterior, inserir a política vigente e conferir todos os valores e procedimentos com a fonte oficial antes de publicar. |
+| **Integrante 3**<br>*(Caso A: Lorena - Atendimento)* | Faltou definir o componente de restrições no pedido e realizar a verificação do texto final. | Antes de enviar o texto para a IA e no momento antes de colar a resposta para o cliente. | Selecionar e enviar à IA apenas as páginas do manual que falam sobre autenticação e ler a resposta gerada linha a linha antes de enviá-la. |
 
 ---
 

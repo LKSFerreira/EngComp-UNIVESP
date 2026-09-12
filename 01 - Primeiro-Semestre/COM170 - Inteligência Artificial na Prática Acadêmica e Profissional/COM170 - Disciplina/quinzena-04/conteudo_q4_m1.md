@@ -1,6 +1,6 @@
-# Q4-M1 — O Que a IA Lê Quando Você Aperta Enviar
+# Q4-M1 - O Que a IA Lê Quando Você Aperta Enviar
 
-> **Disciplina:** COM170 — Inteligência Artificial na Prática Acadêmica e Profissional  
+> **Disciplina:** COM170 - Inteligência Artificial na Prática Acadêmica e Profissional  
 > **Quinzena 04:** Engenharia de Contexto como Metodologia Estruturada de Pensamento  
 > **Docente Responsável:** Prof. José Avelino Placca  
 > **Foco do Módulo 1:** Distinção entre Prompt e Contexto; a Janela de Contexto; e os Quatro Componentes da Instrução (Papel, Objetivo, Restrições e Formato).
@@ -39,7 +39,7 @@ Este módulo separa dois conceitos fundamentais que costumam ser tratados errone
  └─────────────────────────────────────────────────────────────────────────┘
 ```
 
-* **Prompt:** É a ponta final — a instrução que você digita por último.
+* **Prompt:** É a ponta final - a instrução que você digita por último.
 * **Contexto:** É todo o restante reunido na janela, inclusive aquilo que você achou óbvio e deixou de fora.
 
 ---

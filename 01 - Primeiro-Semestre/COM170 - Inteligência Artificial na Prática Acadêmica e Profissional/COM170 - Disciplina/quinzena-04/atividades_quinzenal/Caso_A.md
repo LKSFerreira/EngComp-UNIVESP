@@ -24,7 +24,7 @@
 
 Na segunda-feira à tarde, o chat da Nexo entrou em polvorosa. A notificação sobre a nova autenticação tinha saído pela manhã, e os clientes queriam saber o que mudava para eles. Lorena tinha **quarenta conversas na fila** e **trinta minutos até o fim do turno**.
 
-Ela abriu a ferramenta de IA, colou o manual interno de atendimento inteiro — **sessenta páginas**, o mesmo que a equipe usa há dois anos — e escreveu o seguinte pedido:
+Ela abriu a ferramenta de IA, colou o manual interno de atendimento inteiro - **sessenta páginas**, o mesmo que a equipe usa há dois anos - e escreveu o seguinte pedido:
 
 > *"Preciso responder dúvidas de clientes sobre a nova autenticação em duas etapas. Use o manual e escreva respostas curtas, para eu colar direto no chat."*
 

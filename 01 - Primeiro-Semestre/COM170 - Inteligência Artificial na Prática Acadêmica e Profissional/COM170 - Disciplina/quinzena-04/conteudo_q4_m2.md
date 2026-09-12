@@ -1,6 +1,6 @@
-# Q4-M2 — Uma Frase, Quatro Perguntas: Decomposição e Plausibilidade Estatística
+# Q4-M2 - Uma Frase, Quatro Perguntas: Decomposição e Plausibilidade Estatística
 
-> **Disciplina:** COM170 — Inteligência Artificial na Prática Acadêmica e Profissional  
+> **Disciplina:** COM170 - Inteligência Artificial na Prática Acadêmica e Profissional  
 > **Quinzena 04:** Engenharia de Contexto como Metodologia Estruturada de Pensamento  
 > **Docente Responsável:** Prof. José Avelino Placca  
 > **Foco do Módulo 2:** Metodologia de Decomposição de Informações Brutas nos 4 Componentes (Papel, Objetivo, Restrições, Formato), o Mecanismo Estatístico de Estreitamento do Espaço Amostral e os Limites de Cumprimento Múltiplo de Instruções.

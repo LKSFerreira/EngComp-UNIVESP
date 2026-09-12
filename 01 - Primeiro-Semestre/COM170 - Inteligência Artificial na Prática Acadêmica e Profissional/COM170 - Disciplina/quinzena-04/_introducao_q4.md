@@ -1,4 +1,4 @@
-# Quinzena 04 — Introdução e Orientações de Estudo
+# Quinzena 04 - Introdução e Orientações de Estudo
 ### Engenharia de Contexto como Metodologia Estruturada de Pensamento
 
 > **Docente Responsável:** Prof. José Avelino Placca  
@@ -11,7 +11,7 @@
 ## 📌 1. Boas-vindas e Visão Geral da Quinzena
 
 > *"Na quinzena passada você decidiu o que delega. Registrou, no seu Plano Pessoal de Uso Consciente, o que entrega para a ferramenta, o que faz com apoio dela e o que mantém integralmente seu. Essa decisão continua valendo. A pergunta desta quinzena é a que vem logo depois: já que você decidiu pedir ajuda numa tarefa, como se pede?"*  
-> — **Prof. José Avelino Placca**
+> - **Prof. José Avelino Placca**
 
 A resposta rápida, que quase todo mundo já ouviu, é *"escreva um bom prompt"*. Ela não está errada, mas está incompleta: a diferença entre uma resposta genérica e uma resposta útil quase nunca está na frase que você digitou por último. Está no que você colocou na frente dela:
 - O exemplo que você forneceu;
@@ -25,7 +25,7 @@ Ao longo dos estudos, você desenvolverá quatro instrumentos permanentes para l
 
 1. **Os Quatro Componentes de uma Instrução Completa:** Papel, Objetivo, Restrições e Formato.
 2. **O Mecanismo de Estreitamento do Espaço Amostral:** A explicação técnica de por que fornecer mais contexto e restrições estreita o espaço estatístico de respostas possíveis da IA.
-3. **Os Três Limites Estruturais:** Limitações intrínsecas que nenhuma instrução — por melhor que seja — resolve sozinha (o que ficou fora da janela de contexto, o que está fora do domínio da ferramenta ou o que ninguém conferiu).
+3. **Os Três Limites Estruturais:** Limitações intrínsecas que nenhuma instrução - por melhor que seja - resolve sozinha (o que ficou fora da janela de contexto, o que está fora do domínio da ferramenta ou o que ninguém conferiu).
 4. **O Ciclo de Iteração em Três Passos:** Um método estruturado para diagnosticar e corrigir uma resposta insatisfatória ou incorreta.
 
 No fechamento, você aplicará esses quatro instrumentos em uma situação real do seu semestre, identificando na prática qual componente você costuma omitir com maior frequência.
@@ -92,7 +92,7 @@ graph LR
 > Clique expressamente no botão de **conclusão** da última tela de cada atividade e envie os quizzes. Antes de sair de um módulo, volte à página dele e confira se todos os itens aparecem marcados. É a principal causa de *"fiz tudo e o módulo seguinte não abriu"*.
 
 > [!TIP]
-> **2. Guarde as suas decisões — elas viram o seu portfólio:**  
+> **2. Guarde as suas decisões - elas viram o seu portfólio:**  
 > Ao longo dos quatro módulos você tomará decisões concretas: qual componente falta numa mensagem, qual limite explica um erro ou o que muda ao corrigir um componente. Anote essas decisões logo que elas aparecerem; no Módulo 6, o portfólio solicita exatamente isso aplicado à sua rotina.
 
 > [!NOTE]

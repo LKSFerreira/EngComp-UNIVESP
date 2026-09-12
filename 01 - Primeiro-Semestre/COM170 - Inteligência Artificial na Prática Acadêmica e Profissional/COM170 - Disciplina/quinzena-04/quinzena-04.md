@@ -1,4 +1,4 @@
-# Quinzena 04 — Engenharia de Contexto como Metodologia Estruturada de Pensamento
+# Quinzena 04 - Engenharia de Contexto como Metodologia Estruturada de Pensamento
 
 > 🚨 **PRAZO DA ATIVIDADE INDIVIDUAL (MÓDULO 4):** **DOMINGO, 06 DE SETEMBRO DE 2026 (06/09/2026) ÀS 23H59**  
 > 💡 _Entregar a sua atividade individual no prazo é o que DESBLOQUEIA a sua participação no Trabalho em Grupo (Módulo 7)._  
@@ -10,13 +10,13 @@
 
 ## 📌 Estrutura da Quinzena (7 Módulos)
 
-### 🔹 Semana 1 — Base Individual (Prazo M4: Domingo, 06/09 às 23h59)
+### 🔹 Semana 1 - Base Individual (Prazo M4: Domingo, 06/09 às 23h59)
 - **Módulo 1:** Leitura e Estudo de Fundamentos (IA na Gestão de Estudos e Aprendizagem)
 - **Módulo 2:** Videoaulas e Aplicação Prática
 - **Módulo 3:** Quizzes e Testes de Conhecimento
 - **Módulo 4 (⭐ PRAZO FIXO):** Atividade Individual final (Libera o Laboratório e Grupo)
 
-### 🔹 Semana 2 — Laboratório e Fase Coletiva (De 07/09 a 13/09/2026)
+### 🔹 Semana 2 - Laboratório e Fase Coletiva (De 07/09 a 13/09/2026)
 - **Módulo 5:** O Problema da Quinzena (Investigação e instruções)
 - **Módulo 6:** Portfólio Individual (Registro de reflexão: *O que pensava → O que mudou*)
 - **Módulo 7 (🤝 GRUPO):** Trabalho em Grupo (Disponível se M4 foi entregue a tempo)
@@ -56,18 +56,18 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 
 ### 📖 Módulos 1 a 4 (Estudo Individual / Videoaulas)
 
-* **Q4-M1 — O Que a IA Lê Quando Você Aperta Enviar:** [Notas Detalhadas e Atividades do Módulo 1](./conteudo_q4_m1.md) │ [Videoaula 1: O Que É Contexto e Por Que o Prompt É Só o Fim (YouTube)](https://www.youtube.com/watch?v=wrPK5EUjOlc)
-* **Q4-M2 — Uma Frase, Quatro Perguntas (Decomposição e Plausibilidade):** [Notas Detalhadas e Atividades do Módulo 2](./conteudo_q4_m2.md) │ [Videoaula 2.1: Organizar Informação Bruta (YouTube)](https://www.youtube.com/watch?v=65YhxoBu_c0) │ [Videoaula 2.2: Plausibilidade Estatística (YouTube)](https://www.youtube.com/watch?v=P7GLS5ywU6I)
-* **Q4-M3 — A Janela Inteira e os Três Limites Estruturais:** [Notas Detalhadas e Atividades do Módulo 3](./conteudo_q4_m3.md)
-* **Q4-M4 — O Que Mudar Quando o Resultado Volta Errado (Ciclo de Iteração):** [Notas Detalhadas e Miniquiz do Módulo 4](./conteudo_q4_m4.md) │ [Videoaula 4: O Ciclo de Iteração Estruturada (YouTube)](https://www.youtube.com/watch?v=Dh5vPyvbZMs)
+* **Q4-M1 - O Que a IA Lê Quando Você Aperta Enviar:** [Notas Detalhadas e Atividades do Módulo 1](./conteudo_q4_m1.md) │ [Videoaula 1: O Que É Contexto e Por Que o Prompt É Só o Fim (YouTube)](https://www.youtube.com/watch?v=wrPK5EUjOlc)
+* **Q4-M2 - Uma Frase, Quatro Perguntas (Decomposição e Plausibilidade):** [Notas Detalhadas e Atividades do Módulo 2](./conteudo_q4_m2.md) │ [Videoaula 2.1: Organizar Informação Bruta (YouTube)](https://www.youtube.com/watch?v=65YhxoBu_c0) │ [Videoaula 2.2: Plausibilidade Estatística (YouTube)](https://www.youtube.com/watch?v=P7GLS5ywU6I)
+* **Q4-M3 - A Janela Inteira e os Três Limites Estruturais:** [Notas Detalhadas e Atividades do Módulo 3](./conteudo_q4_m3.md)
+* **Q4-M4 - O Que Mudar Quando o Resultado Volta Errado (Ciclo de Iteração):** [Notas Detalhadas e Miniquiz do Módulo 4](./conteudo_q4_m4.md) │ [Videoaula 4: O Ciclo de Iteração Estruturada (YouTube)](https://www.youtube.com/watch?v=Dh5vPyvbZMs)
 
 ### 📝 Módulo 4 (Atividade Individual - Concluída em 06/09/2026 antes das 23h59)
 * **Status da Entrega:** ✅ **Concluído e Registrado com Sucesso** (Miniquiz com 100% de acerto: 5 de 5 na primeira tentativa). Liberado o acesso à Parte 2 (Laboratório e Grupo).
 
 ### 🧪 Módulos 5, 6 e 7 (Laboratório & Portfólio / Grupo)
-* **Q4-M5 — O Problema da Quinzena (O Caso da Nexo):** [Notas e Visão Geral do Módulo 5](./conteudo_q4_m5.md) │ [Caso A: Sessenta Páginas Coladas (Lorena)](./atividades_quinzenal/Caso_A.md) │ [PDF Caso A](./Q4_M5_CASO_A.pdf)
-* **Q4-M6 — Portfólio Individual (Laboratório de Revisão):** [Roteiro e Template Portfólio Individual](./atividades_quinzenal/Portfolio_Individual.md) │ [📄 Versão Oficial em PDF](./atividades_quinzenal/Portfolio_Individual_M6_Lucas.pdf) │ [🌐 Versão HTML](./atividades_quinzenal/Portfolio_Individual_M6_Lucas.html) │ [PDF Template Individual](./Q4_M5-template-individual.pdf)
-* **Q4-M7 — Trabalho em Grupo (O Protocolo de Contexto da Nexo):** [Template Protocolo do Grupo](./atividades_quinzenal/Portfolio_Grupo.md) │ [📄 Versão Oficial em PDF](./atividades_quinzenal/Protocolo_Grupo_M7.pdf) │ [🌐 Versão HTML](./atividades_quinzenal/Protocolo_Grupo_M7.html) │ [PDF Template Grupo](./Q4_M5-template-grupo.pdf)
+* **Q4-M5 - O Problema da Quinzena (O Caso da Nexo):** [Notas e Visão Geral do Módulo 5](./conteudo_q4_m5.md) │ [Caso A: Sessenta Páginas Coladas (Lorena)](./atividades_quinzenal/Caso_A.md) │ [PDF Caso A](./Q4_M5_CASO_A.pdf)
+* **Q4-M6 - Portfólio Individual (Laboratório de Revisão):** [Roteiro e Template Portfólio Individual](./atividades_quinzenal/Portfolio_Individual.md) │ [📄 Versão Oficial em PDF](./atividades_quinzenal/Portfolio_Individual_M6.pdf) │ [🌐 Versão HTML](./atividades_quinzenal/Portfolio_Individual_M6.html) │ [PDF Template Individual](./Q4_M5-template-individual.pdf)
+* **Q4-M7 - Trabalho em Grupo (O Protocolo de Contexto da Nexo):** [Template Protocolo do Grupo](./atividades_quinzenal/Portfolio_Grupo.md) │ [📄 Versão Oficial em PDF](./atividades_quinzenal/Protocolo_Grupo_M7.pdf) │ [🌐 Versão HTML](./atividades_quinzenal/Protocolo_Grupo_M7.html) │ [PDF Template Grupo](./Q4_M5-template-grupo.pdf)
 
 ---
 
@@ -79,7 +79,7 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
   * [E-book Módulo 3](./Q4_M3-E-book.pdf) │ [Apostila M3](./Q3-M3-apostila.pdf)
   * [E-book Módulo 4](./Q4_M4-E-book.pdf) │ [Apostila M4](./Q3-M4-apostila.pdf)
 * **Materiais das Atividades Práticas (Módulos 5 a 7):**
-  * [PDF Caso A — Sessenta Páginas Coladas](./Q4_M5_CASO_A.pdf)
+  * [PDF Caso A - Sessenta Páginas Coladas](./Q4_M5_CASO_A.pdf)
   * [PDF Template Individual (Módulo 6)](./Q4_M5-template-individual.pdf)
   * [PDF Template Grupo (Módulo 7)](./Q4_M5-template-grupo.pdf)
 

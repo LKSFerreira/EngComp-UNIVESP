@@ -4,7 +4,7 @@
 > **Disciplina:** COM170 - Inteligência Artificial na Prática Acadêmica e Profissional  
 > **Instituição:** UNIVESP | Primeiro Semestre  
 > **Envio:** Laboratório de Revisão do Módulo 6 (com posterior avaliação por pares)  
-> **Arquivos Exportados:** [📄 Versão Oficial em PDF](./Portfolio_Individual_M6_Lucas.pdf) │ [🌐 Versão HTML Interativa](./Portfolio_Individual_M6_Lucas.html)  
+> **Arquivos Exportados:** [📄 Versão Oficial em PDF](./Portfolio_Individual_M6.pdf) │ [🌐 Versão HTML Interativa](./Portfolio_Individual_M6.html)  
 > **PDF Original de Referência:** [`../Q4_M5-template-individual.pdf`](../Q4_M5-template-individual.pdf)  
 > **História de Referência:** [Caso A - Sessenta Páginas Coladas (Lorena)](./Caso_A.md)
 
@@ -94,26 +94,26 @@ O sistema de armaduras do Destiny 2 passou pela reformulação **"Armor 3.0"** (
 
 Cada peça de armadura tem seis atributos principais, todos numa escala de 0 a 200 (antes era até 100, mas com o Armor 3.0 os valores foram dobrados para dar mais granularidade):
 
-- **Mobilidade** (Mobility) — velocidade de corrida e altura de salto.
-- **Resiliência** (Resilience) — vida total, redução de dano e resistência a certos efeitos de controle.
-- **Recuperação** (Recovery) — velocidade de regeneração de vida/escudo.
-- **Disciplina** (Discipline) — tempo de recarga da granada.
-- **Intelecto** (Intellect) — tempo de recarga da habilidade de Super.
-- **Força** (Strength) — tempo de recarga do golpe corpo a corpo (Melee).
+- **Mobilidade** (Mobility) - velocidade de corrida e altura de salto.
+- **Resiliência** (Resilience) - vida total, redução de dano e resistência a certos efeitos de controle.
+- **Recuperação** (Recovery) - velocidade de regeneração de vida/escudo.
+- **Disciplina** (Discipline) - tempo de recarga da granada.
+- **Intelecto** (Intellect) - tempo de recarga da habilidade de Super.
+- **Força** (Strength) - tempo de recarga do golpe corpo a corpo (Melee).
 
-Além disso, cada peça agora vem com um **arquétipo** (Grenadier, Bulwark, Specialist, Gunner, Paragon, Brawler), que concede um bônus fixo em um atributo específico e um perk exclusivo daquele arquétipo — por exemplo, o arquétipo "Bulwark" reforça Resiliência e dá bônus de redução de dano ao usar a habilidade defensiva. Isso substituiu os antigos mods de "Charged with Light" e Elemental Well, unificando tudo num sistema mais direto.
+Além disso, cada peça agora vem com um **arquétipo** (Grenadier, Bulwark, Specialist, Gunner, Paragon, Brawler), que concede um bônus fixo em um atributo específico e um perk exclusivo daquele arquétipo - por exemplo, o arquétipo "Bulwark" reforça Resiliência e dá bônus de redução de dano ao usar a habilidade defensiva. Isso substituiu os antigos mods de "Charged with Light" e Elemental Well, unificando tudo num sistema mais direto.
 
 ## Fragmentos e afinidade elemental
 
-Cada peça de armadura tem uma afinidade de elemento (Solar, Arc, Void, Stasis ou Strand), que determina quantos **fragmentos** você pode encaixar e de qual subclasse. Isso é essencial porque os fragmentos concedem tanto buffs de build (dano, duração de efeitos) quanto, muitas vezes, bônus ou penalidades diretas em atributos — então escolher fragmentos certos também é parte de otimizar seus stats.
+Cada peça de armadura tem uma afinidade de elemento (Solar, Arc, Void, Stasis ou Strand), que determina quantos **fragmentos** você pode encaixar e de qual subclasse. Isso é essencial porque os fragmentos concedem tanto buffs de build (dano, duração de efeitos) quanto, muitas vezes, bônus ou penalidades diretas em atributos - então escolher fragmentos certos também é parte de otimizar seus stats.
 
 ## Quais atributos focar
 
 A prioridade depende do tipo de build, mas há um consenso geral entre a comunidade end-game:
 
-- **Resiliência** é quase sempre prioridade máxima até pelo menos 140-160, pois reduz dano recebido significativamente e dá resistência a flinch (desvio de mira ao ser atingido) — essencial tanto em PvE de alta dificuldade quanto em PvP.
+- **Resiliência** é quase sempre prioridade máxima até pelo menos 140-160, pois reduz dano recebido significativamente e dá resistência a flinch (desvio de mira ao ser atingido) - essencial tanto em PvE de alta dificuldade quanto em PvP.
 - **Recuperação** vem em segundo lugar na maioria das builds, porque regenerar vida rápido evita mortes em conteúdo difícil e permite jogar mais agressivo.
-- **Disciplina** e **Intelecto** são cruciais para builds "ability-focused" (que dependem de granadas e Super com frequência) — muito usadas em builds de dano em massa (add-clear) ou builds de suporte.
+- **Disciplina** e **Intelecto** são cruciais para builds "ability-focused" (que dependem de granadas e Super com frequência) - muito usadas em builds de dano em massa (add-clear) ou builds de suporte.
 - **Força** costuma ser o atributo menos priorizado, a menos que sua build gire em torno de melee (como builds de Titã com combo corpo a corpo ou builds de Strand).
 - **Mobilidade** é mais relevante em PvP para controle de mapa, mas em PvE de alto nível geralmente é sacrificada em favor de Resiliência/Recuperação.
 
@@ -182,25 +182,25 @@ Formato da resposta:
 *(Resposta devolvida pelo modelo Sonnet Thinking via Perplexity com ancoragem web e contexto ativo):*
 
 ```markdown
-A reformulação "Armor 3.0" que você descreve na verdade foi lançada em julho de 2025, com a expansão The Edge of Fate — não há registro em minha base de uma segunda grande reformulação de armaduras em julho de 2026, então vou tratar essa como a atualização vigente e sinalizar essa correção de data como limitação, sem inventar mudanças posteriores não confirmadas.
+A reformulação "Armor 3.0" que você descreve na verdade foi lançada em julho de 2025, com a expansão The Edge of Fate - não há registro em minha base de uma segunda grande reformulação de armaduras em julho de 2026, então vou tratar essa como a atualização vigente e sinalizar essa correção de data como limitação, sem inventar mudanças posteriores não confirmadas.
 
 ### Quadro Comparativo: 3.0 vs Sistema Anterior
 
 | Mudança Chave no 3.0 | Como Funcionava Antes |
 | :--- | :--- |
 | **Atributos renomeados e com função nova:** Armas, Saúde, Classe, Granada, Super, Corpo a Corpo | Seis atributos clássicos: Mobilidade, Resiliência, Recuperação, Disciplina, Intelecto, Força. |
-| **Escala vai de 1 a 200**, com bônus extras adicionais liberados na faixa 101–200 | Escala ia até 100, dividida em "tiers" (degraus fixos) que só valiam a cada 10 pontos. |
+| **Escala vai de 1 a 200**, com bônus extras adicionais liberados na faixa 101-200 | Escala ia até 100, dividida em "tiers" (degraus fixos) que só valiam a cada 10 pontos. |
 | **Cada peça já nasce com um Arquétipo de armadura sorteado**, que define os 2 atributos principais + 1 terciário aleatório | Cada peça podia rolar qualquer combinação dos 6 atributos sem arquétipo fixo. |
 | **Sistema de Gear Tiers (Tier 1 a 5)** define o total de pontos e energia de mod da peça; Tier 5 traz slot de ajuste fino (+5/-5) | Não existia escalonamento por tier de drop; energia de mod era padronizada por raridade. |
 | **Bônus de Conjunto (Set Bonus)** ativa ao vestir múltiplas peças do mesmo set | Peças não tinham sinergia de conjunto embutida no próprio sistema de atributos. |
 | **Resiliência agora é fixa em 100 para todos os Guardiões** (não é mais um atributo rolável) | Resiliência era rolável e definia limites de barreira do PvP e resistência a dano no PvE. |
 
-*Fontes indicam ainda que atributos "aposentados" foram convertidos automaticamente 1:1 nas peças antigas (ex.: Mobilidade virou Armas, Recuperação virou Classe), então não há necessidade de recriar builds do zero — mas, conforme a restrição da sua pergunta, não vou detalhar essas mecânicas antigas além dessa nota de conversão.*
+*Fontes indicam ainda que atributos "aposentados" foram convertidos automaticamente 1:1 nas peças antigas (ex.: Mobilidade virou Armas, Recuperação virou Classe), então não há necessidade de recriar builds do zero - mas, conforme a restrição da sua pergunta, não vou detalhar essas mecânicas antigas além dessa nota de conversão.*
 
 ### Prioridade de Atributos para Sobrevivência/Endgame
 
-1. **Saúde em primeiro lugar, sempre:** no sistema 3.0, Saúde cura em orbes, reduz flinch e, ao passar de 100 rumo a 200, acelera a recarga do escudo e adiciona HP de escudo extra no PvE — é o atributo mais direto para sobrevivência em conteúdo de alta dificuldade.
-2. **Granada e Super como segunda prioridade:** além de reduzirem o cooldown, na faixa 100–200 desbloqueiam até +65% de dano de granada e +45% de dano de Super no PvE, o que sustenta builds de ability-spam que também funcionam como cortina de sobrevivência (cura por granada, invulnerabilidade de Super etc.).
+1. **Saúde em primeiro lugar, sempre:** no sistema 3.0, Saúde cura em orbes, reduz flinch e, ao passar de 100 rumo a 200, acelera a recarga do escudo e adiciona HP de escudo extra no PvE - é o atributo mais direto para sobrevivência em conteúdo de alta dificuldade.
+2. **Granada e Super como segunda prioridade:** além de reduzirem o cooldown, na faixa 100-200 desbloqueiam até +65% de dano de granada e +45% de dano de Super no PvE, o que sustenta builds de ability-spam que também funcionam como cortina de sobrevivência (cura por granada, invulnerabilidade de Super etc.).
 3. **Escolha o Arquétipo certo em vez de "atributo isolado":** para endgame, procure peças com arquétipo Bulwark (Saúde/Classe) ou Grenadier (Granada/Super), já que eles empacotam os dois atributos prioritários acima como primário/secundário automaticamente, otimizando o teto de 200 sem depender de sorte total na rolagem.
 
 > ⚠️ **Ponto de incerteza explícito:** Não tenho confirmação de ajustes de balanceamento específicos posteriores a essas fontes (por exemplo, nerfs/buffs feitos em patches de 2026 após o lançamento inicial do 3.0), então não vou presumir números atualizados além dos citados acima.
