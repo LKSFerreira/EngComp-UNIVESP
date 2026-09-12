@@ -23,7 +23,7 @@ Esta skill orienta a criação de documentos acadêmicos em formato HTML/CSS pro
      - Bloco 2 (Pergunta 2): Verde/Teal (`#0d9488`)
      - Bloco 3 (Pergunta 3): Laranja (`#d97706`)
      - Bloco 4 (Pergunta 4): Roxo (`#7c3aed`)
-   - Caixas de prompt em código (`code-block`) com fundo escuro (`#0f172a`) e texto azul/ciano (`#38bdf8`).
+   - Caixas de prompt em código (`code-block` / `code-prompt`) com fundo claro e legível (`#f8fafc`), borda sutil (`#cbd5e1`), borda lateral de destaque (`#0284c7`) e texto escuro de alta legibilidade (`#0f172a` / `#1e293b`), otimizado para leitura acadêmica e impressão sem fadiga visual.
    - Badge de verificação de fonte em verde (`#dcfce7` / `#15803d`).
 4. **Tabela de Rubrica (Avaliação por Pares):**
    - Tabela estilizada com cabeçalho escuro (`#0f172a`).
