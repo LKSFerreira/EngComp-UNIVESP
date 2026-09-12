@@ -65,9 +65,9 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 * **Status da Entrega:** ✅ **Concluído e Registrado com Sucesso** (Miniquiz com 100% de acerto: 5 de 5 na primeira tentativa). Liberado o acesso à Parte 2 (Laboratório e Grupo).
 
 ### 🧪 Módulos 5, 6 e 7 (Laboratório & Portfólio / Grupo)
-* **Q4-M5 — O Problema da Quinzena:** [Notas e Visão Geral do Módulo 5](./conteudo_q4_m5.md)
-* **Q4-M6 — Portfólio Individual:** 
-* **Q4-M7 — Trabalho em Grupo:** 
+* **Q4-M5 — O Problema da Quinzena (O Caso da Nexo):** [Notas e Visão Geral do Módulo 5](./conteudo_q4_m5.md) │ [Caso A: Sessenta Páginas Coladas (Lorena)](./atividades_quinzenal/Caso_A.md) │ [PDF Caso A](./Q4_M5_CASO_A.pdf)
+* **Q4-M6 — Portfólio Individual (Laboratório de Revisão):** [Roteiro e Template Portfólio Individual](./atividades_quinzenal/Portfolio_Individual.md) │ [📄 Versão Oficial em PDF](./atividades_quinzenal/Portfolio_Individual_M6_Lucas.pdf) │ [🌐 Versão HTML](./atividades_quinzenal/Portfolio_Individual_M6_Lucas.html) │ [PDF Template Individual](./Q4_M5-template-individual.pdf)
+* **Q4-M7 — Trabalho em Grupo (O Protocolo de Contexto da Nexo):** [Template Protocolo do Grupo](./atividades_quinzenal/Portfolio_Grupo.md) │ [📄 Versão Oficial em PDF](./atividades_quinzenal/Protocolo_Grupo_M7.pdf) │ [🌐 Versão HTML](./atividades_quinzenal/Protocolo_Grupo_M7.html) │ [PDF Template Grupo](./Q4_M5-template-grupo.pdf)
 
 ---
 
@@ -78,6 +78,10 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
   * [E-book Módulo 2](./Q4_M2-E-book.pdf) │ [Apostila M2](./Q3-M2-apostila.pdf)
   * [E-book Módulo 3](./Q4_M3-E-book.pdf) │ [Apostila M3](./Q3-M3-apostila.pdf)
   * [E-book Módulo 4](./Q4_M4-E-book.pdf) │ [Apostila M4](./Q3-M4-apostila.pdf)
+* **Materiais das Atividades Práticas (Módulos 5 a 7):**
+  * [PDF Caso A — Sessenta Páginas Coladas](./Q4_M5_CASO_A.pdf)
+  * [PDF Template Individual (Módulo 6)](./Q4_M5-template-individual.pdf)
+  * [PDF Template Grupo (Módulo 7)](./Q4_M5-template-grupo.pdf)
 
 ---
 

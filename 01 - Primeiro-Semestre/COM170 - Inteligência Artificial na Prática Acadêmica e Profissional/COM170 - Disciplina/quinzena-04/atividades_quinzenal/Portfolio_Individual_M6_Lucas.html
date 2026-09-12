@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Individual M6 - Engenharia de Contexto (Quinzena 4) - UNIVESP</title>
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= RESET & CONFIGURAÇÃO A4 ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    body {
+      background-color: #525659;
+      font-family: 'Inter', Arial, sans-serif;
+      color: #1e293b;
+      letter-spacing: 0.1px;
+      margin: 0;
+      padding: 30px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    /* PÁGINA A4 EXATA */
+    .page {
+      width: 210mm;
+      height: 297mm;
+      background-color: #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+        gap: 0 !important;
+      }
+      .page {
+        box-shadow: none !important;
+        page-break-after: always !important;
+        page-break-inside: avoid !important;
+        height: 297mm !important;
+      }
+      .no-print-toolbar {
+        display: none !important;
+      }
+    }
+
+    /* BARRA DE IMPRESSÃO SUPERIOR */
+    .no-print-toolbar {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 1000;
+      background: #13324d;
+      color: #ffffff;
+      padding: 9px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 13px;
+      font-weight: bold;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-print {
+      background: #f2a900;
+      color: #0f172a;
+      border: none;
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 12px;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+
+    .btn-print:hover {
+      background: #e59d00;
+      transform: scale(1.04);
+    }
+
+    /* ================= HEADER INSTITUCIONAL UNIVESP ================= */
+    .header-banner {
+      background-color: #13324d;
+      color: #ffffff;
+      padding: 20px 36px;
+    }
+
+    .banner-top-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: #94a3b8;
+      margin-bottom: 8px;
+    }
+
+    .banner-content {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .badge-template-sq {
+      background-color: #f2a900;
+      color: #0f172a;
+      width: 62px;
+      height: 62px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .badge-template-sq .badge-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .badge-template-sq .badge-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .banner-text .quinzena-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #38bdf8;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .banner-text h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.4px;
+      line-height: 1.15;
+    }
+
+    .banner-text .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #cbd5e1;
+      margin-top: 2px;
+    }
+
+    /* HEADER PÁGINAS INTERNAS */
+    .inner-header {
+      background-color: #13324d;
+      color: #ffffff;
+      padding: 10px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .inner-header .doc-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: #f8fafc;
+    }
+
+    .inner-header .doc-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 500;
+      color: #94a3b8;
+      letter-spacing: 1px;
+    }
+
+    /* CORPO DA PÁGINA */
+    .page-body {
+      padding: 14px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-grow: 1;
+    }
+
+    /* CAIXAS DE DESTAQUE */
+    .box-intro {
+      background-color: #f8fafc;
+      border-left: 4px solid #13324d;
+      padding: 8px 12px;
+      font-size: 11px;
+      line-height: 1.4;
+      color: #334155;
+    }
+
+    .box-attention {
+      background-color: #fef8e8;
+      border-left: 4px solid #f2a900;
+      padding: 8px 12px;
+    }
+
+    .box-attention h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #92400e;
+      margin-bottom: 2px;
+    }
+
+    .box-attention p {
+      font-size: 11px;
+      color: #78350f;
+      line-height: 1.35;
+    }
+
+    /* CARDS DE PERGUNTA E RODADAS */
+    .question-card {
+      border: 1.5px solid #cbd5e1;
+      border-radius: 5px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .question-header {
+      background-color: #f1f5f9;
+      padding: 6px 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #cbd5e1;
+    }
+
+    .question-badge {
+      background-color: #13324d;
+      color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 3px;
+    }
+
+    .question-badge.round1 { background-color: #0284c7; }
+    .question-badge.round2 { background-color: #0d9488; }
+    .question-badge.fecho { background-color: #d97706; }
+
+    .question-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .question-prompt {
+      padding: 7px 12px;
+      font-size: 11px;
+      color: #475569;
+      line-height: 1.35;
+      background-color: #ffffff;
+      border-bottom: 1px dashed #e2e8f0;
+    }
+
+    .question-answer {
+      padding: 9px 12px;
+      background-color: #ffffff;
+      font-size: 11px;
+      line-height: 1.45;
+      color: #0f172a;
+    }
+
+    .code-prompt {
+      background-color: #f8fafc;
+      color: #0f172a;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      padding: 8px 12px;
+      border-radius: 4px;
+      line-height: 1.4;
+      white-space: pre-wrap;
+      margin: 4px 0;
+      border: 1px solid #cbd5e1;
+      border-left: 3px solid #0284c7;
+    }
+
+    .code-output {
+      background-color: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 3px solid #0d9488;
+      padding: 7px 10px;
+      font-size: 10px;
+      line-height: 1.35;
+      color: #0f172a;
+      border-radius: 3px;
+      margin: 4px 0;
+    }
+
+    /* TABELAS */
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.5px;
+      margin-top: 3px;
+    }
+
+    .styled-table th {
+      background-color: #13324d;
+      color: #ffffff;
+      text-align: left;
+      padding: 6px 9px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      border: 1px solid #13324d;
+    }
+
+    .styled-table td {
+      padding: 5px 9px;
+      border: 1px solid #cbd5e1;
+      line-height: 1.35;
+      color: #1e293b;
+      vertical-align: top;
+    }
+
+    .styled-table tr:nth-child(even) td {
+      background-color: #f8fafc;
+    }
+
+    .styled-table td.highlight-col {
+      background-color: #f0fdf4 !important;
+      border-left: 2px solid #22c55e;
+      border-right: 2px solid #22c55e;
+      font-weight: 500;
+    }
+
+    .tag-pill {
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-weight: 700;
+      font-size: 9.5px;
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .tag-blue { background: #e0f2fe; color: #0369a1; }
+    .tag-green { background: #dcfce7; color: #15803d; }
+    .tag-orange { background: #ffedd5; color: #c2410c; }
+    .tag-red { background: #fee2e2; color: #b91c1c; }
+
+    /* RODAPÉ */
+    .footer-bar {
+      border-top: 1px solid #e2e8f0;
+      padding: 8px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      color: #64748b;
+      background-color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BOTÃO DE IMPRESSÃO / SALVAR PDF -->
+  <div class="no-print-toolbar">
+    <span>UNIVESP · COM170 · Quinzena 4</span>
+    <button class="btn-print" onclick="window.print()">Salvar / Imprimir em PDF</button>
+  </div>
+
+  <!-- =================================================================== -->
+  <!-- PÁGINA 1: IDENTIFICAÇÃO, VISÃO GERAL E TABELAS DE REFERÊNCIA         -->
+  <!-- =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="header-banner">
+        <div class="banner-top-meta">
+          <span>COM170 — Inteligência Artificial na Prática Acadêmica e Profissional</span>
+          <span>UNIVESP · 2026</span>
+        </div>
+        <div class="banner-content">
+          <div class="badge-template-sq">
+            <span class="badge-label">Módulo</span>
+            <span class="badge-num">06</span>
+          </div>
+          <div class="banner-text">
+            <span class="quinzena-tag">Quinzena 04 · Atividade Prática Individual</span>
+            <h1>O Seu Portfólio Individual</h1>
+            <div class="subtitle">Engenharia de Contexto como Metodologia Estruturada de Pensamento</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-body">
+        <div class="box-attention">
+          <h4>Atenção à Revisão Anônima por Pares</h4>
+          <p>Este documento é preparado para o Laboratório de Revisão do Moodle. Para preservar a avaliação cega, a identificação do estudante é feita exclusivamente pelo sistema do AVA, sem menção de nome pessoal no corpo do texto.</p>
+        </div>
+
+        <div class="box-intro">
+          <strong>A história que você recebeu:</strong> Caso A · Sessenta páginas coladas (Lorena — Atendimento ao Cliente / Nexo)<br>
+          <strong>Eixo Temático:</strong> Computação / Engenharia de Computação (UNIVESP)
+        </div>
+
+        <div style="margin-top: 4px;">
+          <h3 style="font-size: 12px; font-weight: 800; color: #13324d; margin-bottom: 4px; text-transform: uppercase; font-family: 'JetBrains Mono', monospace;">
+            1. Estrutura e Escopo do Portfólio
+          </h3>
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Parte</th>
+                <th style="width: 50%;">O que ela pede</th>
+                <th style="width: 25%;">Quanto escrever</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Parte 1 · O ciclo na sua tarefa</strong></td>
+                <td>Aplicar o ciclo de diagnosticar, mudar e verificar numa tarefa sua em duas rodadas, registrando contexto inicial, resultado, diagnóstico e contexto revisado em cada uma.</td>
+                <td>Os oito campos da ficha, mais a resposta à pergunta final.</td>
+              </tr>
+              <tr>
+                <td><strong>Parte 2 · A história que você recebeu</strong></td>
+                <td>Três perguntas sobre o Caso A (Lorena): o que estava na conversa e o que ficou de fora, o que explica o resultado (componente vs limite) e o que a pessoa deveria ter feito.</td>
+                <td>Respostas de três a seis linhas para cada pergunta.</td>
+              </tr>
+              <tr>
+                <td><strong>O Fecho · A ponte para o protocolo</strong></td>
+                <td>Três campos que resumem a história em forma de regra: o que faltou, quando poderia ter sido evitado e a providência concreta.</td>
+                <td>Uma linha em cada campo (leva ao Bloco 1 do grupo).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top: 6px;">
+          <h3 style="font-size: 12px; font-weight: 800; color: #13324d; margin-bottom: 4px; text-transform: uppercase; font-family: 'JetBrains Mono', monospace;">
+            2. Quadros de Referência Rápida (Instrumentos da Quinzena)
+          </h3>
+          <div style="display: flex; gap: 12px;">
+            <div style="flex: 1;">
+              <table class="styled-table">
+                <thead>
+                  <tr>
+                    <th colspan="2">Os Quatro Componentes da Instrução (PO-RF)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="width: 30%;"><strong>Papel</strong></td>
+                    <td>Quem escreve e quem lê; governa tom, registro, público e gênero.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Objetivo</strong></td>
+                    <td>O que o texto precisa produzir; a função prática que cumpre.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Restrições</strong></td>
+                    <td>Limites verificáveis: extensão, o que incluir e o que evitar.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Formato</strong></td>
+                    <td>Estrutura em que o resultado aparece: tabela, lista, e-mail.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div style="flex: 1;">
+              <table class="styled-table">
+                <thead>
+                  <tr>
+                    <th colspan="2">Os Três Limites Estruturais da IA</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style="width: 35%;"><strong>Limite de Janela</strong></td>
+                    <td>A informação estava disponível, mas ficou perdida no excesso de material, ou não foi enviada.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Limite de Domínio</strong></td>
+                    <td>O assunto é recente ou raro; a IA preenche a lacuna com algo plausível, mesmo com fontes à vista.</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Limite de Verificação</strong></td>
+                    <td>O pedido estava completo e a fonte estava lá, mas ninguém conferiu linha a linha antes de usar.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>UNIVESP · COM170 — Inteligência Artificial na Prática Acadêmica e Profissional</span>
+      <span>Portfólio Individual · Página 1 de 4</span>
+    </div>
+  </div>
+
+  <!-- =================================================================== -->
+  <!-- PÁGINA 2: PARTE 1 — RODADA 1 (DESTINY 2 / SONNET OFFLINE)           -->
+  <!-- =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="inner-header">
+        <span class="doc-title">Parte 1 · O Ciclo na Sua Tarefa Prática (Rodada 1)</span>
+        <span class="doc-meta">MÓDULO 06 · QUINZENA 04</span>
+      </div>
+
+      <div class="page-body">
+        <div class="box-intro">
+          <strong>Tarefa Prática Escolhida:</strong> Consulta técnica de teoria de builds para o jogo eletrônico <strong>Destiny 2</strong> (análise do <em>Sistema de Armaduras 3.0</em> pós-reestruturação).<br>
+          <strong>Ambiente de Teste:</strong> Plataforma <strong>Perplexity</strong> · Modelo <strong>Sonnet Thinking</strong>.<br>
+          <strong>Condição de Contorno da Rodada 1:</strong> <strong>Modo Offline (Sem Acesso à Web / Sem Conectores)</strong>, isolando a memória paramétrica pré-treinada para expor o Limite de Domínio diante de 10 anos de dados históricos.
+        </div>
+
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-badge round1">RODADA 1</span>
+            <span class="question-title">1. Contexto Inicial (Comando Natural / Ingênuo)</span>
+          </div>
+          <div class="question-prompt">
+            Comando formulado de forma direta e sem policiar restrições ou contexto temporal:
+            <div class="code-prompt">Me explica como funciona o sistema de armaduras no Destiny 2 e quais os melhores atributos para focar numa build.</div>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-badge round1">RODADA 1</span>
+            <span class="question-title">2. Evidência Visual e Resultado Obtido</span>
+          </div>
+          <div class="question-answer" style="display: flex; gap: 12px; align-items: flex-start;">
+            <div style="flex: 0 0 170px; text-align: center;">
+              <img src="./rodada_01.png" alt="Captura da Rodada 1" style="width: 100%; border-radius: 4px; border: 1px solid #cbd5e1; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+              <span style="font-size: 9px; color: #64748b; font-family: 'JetBrains Mono', monospace; display: block; margin-top: 3px;">rodada_01.png (Offline)</span>
+            </div>
+            <div style="flex: 1;">
+              <div class="code-output">
+                <strong>Síntese da Resposta da IA (Sonnet Thinking Offline):</strong><br>
+                O modelo afirmou com segurança que o "Armor 3.0" saiu com a expansão <em>The Final Shape</em> em 2024. Criou uma alucinação completa: declarou que os atributos agora vão de <strong>0 a 200</strong> (em vez de até 100), inventou "arquétipos" de peças (Bulwark, Grenadier, Specialist) e afirmou que as peças exigem <strong>afinidade elemental de armadura</strong> (Solar, Arc, Void) para encaixar fragmentos — um sistema aposentado pela Bungie anos atrás.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-badge round1">RODADA 1</span>
+            <span class="question-title">3. Diagnóstico Técnico (PO-RF e Limites Estruturais)</span>
+          </div>
+          <div class="question-answer">
+            <ul style="padding-left: 16px; margin: 0; line-height: 1.45;">
+              <li><strong>Componentes Ausentes do Pedido:</strong> Faltaram <strong>Restrições</strong> (não delimitou a versão/corte, não proibiu mecânicas obsoletas e não exigiu declaração de incerteza), <strong>Papel</strong> (não atribuiu perfil de auditor/especialista rigoroso) e <strong>Formato</strong> (texto corrido não estruturado).</li>
+              <li><strong>Incidência de Limite de Domínio:</strong> Isolado da web, o modelo preencheu a lacuna com predições estatisticamente plausíveis derivadas de 10 anos de histórico de Destiny 2, misturando mecânicas aposentadas com dados inventados.</li>
+              <li><strong>Incidência de Limite de Verificação:</strong> A redação extremamente fluente induz um leitor novato ao erro grave caso não execute auditoria com fontes oficiais.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-badge round1">RODADA 1</span>
+            <span class="question-title">4. Contexto Revisado (Preparação para a Rodada 2)</span>
+          </div>
+          <div class="question-prompt">
+            Comando reconstruído incorporando Papel, Objetivo, Formato e blindagem por Restrições:
+            <div class="code-prompt">Atue como um Gamer especialista em Destiny 2.
+
+Seu objetivo é explicar a mecânica do novo Sistema de Armaduras 3.0, implementado após a grande reformulação de julho de 2026, orientando a distribuição ideal de atributos.
+
+Restrições obrigatórias:
+- Ignore completamente sistemas obsoletos de Armaduras 1.0 e 2.0 (não cite afinidades elementais antigas de peças nem mecânicas aposentadas de masterwork).
+- Foque estritamente nas regras e tiers atuais do sistema 3.0 de 2026.
+- Se algum detalhe recente de balanceamento for incerto na sua base, declare explicitamente a limitação em vez de deduzir.
+
+Formato da resposta:
+1. Quadro comparativo sucinto em tabela: "Mudança Chave no 3.0" vs "Como Funcionava Antes".
+2. Lista em 3 tópicos diretos com os atributos prioritários para o meta atual de Sobrevivência/Endgame.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>UNIVESP · COM170 — Inteligência Artificial na Prática Acadêmica e Profissional</span>
+      <span>Portfólio Individual · Página 2 de 4</span>
+    </div>
+  </div>
+
+  <!-- =================================================================== -->
+  <!-- PÁGINA 3: PARTE 1 — RODADA 2 (DESTINY 2 / SONNET ONLINE)            -->
+  <!-- =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="inner-header">
+        <span class="doc-title">Parte 1 · O Ciclo na Sua Tarefa Prática (Rodada 2)</span>
+        <span class="doc-meta">MÓDULO 06 · QUINZENA 04</span>
+      </div>
+
+      <div class="page-body">
+        <div class="box-intro">
+          <strong>Condição da Rodada 2:</strong> <strong>Conectores de Busca / Acesso à Web Ativados</strong>, associando Engenharia de Prompt (PO-RF) à verdadeira <strong>Engenharia de Contexto (Grounding / RAG)</strong> para recuperar fontes primárias da Bungie.
+        </div>
+
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-badge round2">RODADA 2</span>
+            <span class="question-title">1 e 2. Evidência Visual e Novo Resultado (Ancorado na Web)</span>
+          </div>
+          <div class="question-answer" style="display: flex; gap: 12px; align-items: flex-start;">
+            <div style="flex: 0 0 160px; text-align: center;">
+              <img src="./rodada_02.png" alt="Captura da Rodada 2" style="width: 100%; border-radius: 4px; border: 1px solid #cbd5e1; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+              <span style="font-size: 9px; color: #64748b; font-family: 'JetBrains Mono', monospace; display: block; margin-top: 3px;">rodada_02.png (Com Busca)</span>
+            </div>
+            <div style="flex: 1;">
+              <div class="code-output" style="font-size: 10px; line-height: 1.35;">
+                <strong>Auditoria Factual e Resposta Estruturada:</strong><br>
+                1. <em>Correção de Data:</em> Esclareceu que a reformulação saiu em julho/2025 (<em>The Edge of Fate</em>) e declarou como limitação que não há registro de novo patch estrutural em 2026.<br>
+                2. <em>Tabela Comparativa Oficial:</em> Citou fontes (Bungie TWID, GamesRadar, PC Gamer) confirmando a nova nomenclatura de atributos (Armas, Saúde, Classe, Granada, Super, Corpo a Corpo), escala estendida e Gear Tiers.<br>
+                3. <em>Prioridades de Endgame:</em> Listou Saúde (1º), Granada/Super (2º) e sinergia de Arquétipos (3º).<br>
+                4. <em>Declaração de Incerteza Explícita:</em> Registrou aviso no rodapé sobre não presumir números além dos confirmados.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-badge round2">RODADA 2</span>
+            <span class="question-title">3. Diagnóstico da Evolução e 4. Contexto Revisado Final</span>
+          </div>
+          <div class="question-answer">
+            <p><strong>Avaliação da Melhora:</strong> A evolução foi radical. O Limite de Domínio foi superado pela ancoragem externa (recuperação de contexto da web). As restrições negativas impediram a repetição de alucinações legadas e forçaram a IA a auditar a premissa da pergunta (corrigindo a data e declarando incerteza). O formato de tabela e lista de 3 tópicos foi cumprido com rigor.</p>
+            <p><strong>Contexto Revisado Definitivo (Versão Otimizada):</strong></p>
+            <div class="code-prompt">Atue como um Gamer especialista em Destiny 2.
+Objetivo: Gerar um resumo executivo sobre as regras vigentes do Sistema de Armaduras 3.0 com foco em endgame.
+Restrições: Baseie-se exclusivamente nos patch notes oficiais confirmados da Bungie. Não mencione histórico de conversão nem mecânicas aposentadas de versões anteriores. Se houver lacuna de dados, declare "Dado não confirmado" em vez de extrapolar. Extensão máxima: tabela comparativa de até 6 linhas e exatamente 3 tópicos de prioridade.
+Formato: 1. Tabela com as colunas: [Regra 3.0 | Mecânica Anterior | Impacto Prático]. 2. Tópicos 1, 2 e 3 de recomendação prioritária de stats.</div>
+          </div>
+        </div>
+
+        <div class="question-card" style="border-left: 4px solid #d97706;">
+          <div class="question-header" style="background-color: #fef8e8;">
+            <span class="question-badge fecho">PERGUNTA FINAL</span>
+            <span class="question-title" style="color: #92400e;">Olhando as suas duas rodadas: qual componente ficou de fora nas duas?</span>
+          </div>
+          <div class="question-answer">
+            <p style="margin: 0; font-size: 11px; line-height: 1.45;">
+              O componente que tendeu a ficar de fora nas duas rodadas foi <strong>Restrições</strong> (especialmente as restrições negativas de exclusão e os limites de extensão textual). Ao formular um pedido, a atenção humana foca naturalmente no <strong>Objetivo</strong> e no <strong>Papel</strong>, presumindo que a IA deduzirá os limites do que não deve fazer. Na Rodada 1, a ausência de restrições permitiu a alucinação de mecânicas aposentadas. Na Rodada 2, mesmo após adicionar restrições de veracidade, ainda omiti a restrição de tamanho, fazendo a IA incluir notas marginais extras. O controle do modelo depende de demarcar rigorosamente as fronteiras do que está proibido.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>UNIVESP · COM170 — Inteligência Artificial na Prática Acadêmica e Profissional</span>
+      <span>Portfólio Individual · Página 3 de 4</span>
+    </div>
+  </div>
+
+  <!-- =================================================================== -->
+  <!-- PÁGINA 4: PARTE 2 (CASO A), O FECHO E RUBRICA DE AVALIAÇÃO          -->
+  <!-- =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="inner-header">
+        <span class="doc-title">Parte 2 · O Caso A (Lorena), O Fecho e Rubrica de Revisão</span>
+        <span class="doc-meta">MÓDULO 06 · QUINZENA 04</span>
+      </div>
+
+      <div class="page-body">
+        <div>
+          <h3 style="font-size: 11.5px; font-weight: 800; color: #13324d; margin-bottom: 4px; text-transform: uppercase; font-family: 'JetBrains Mono', monospace;">
+            1. Análise do Caso A — Sessenta Páginas Coladas (Lorena / Nexo)
+          </h3>
+          <div class="question-card" style="margin-bottom: 6px;">
+            <div class="question-header">
+              <span class="question-badge">P1</span>
+              <span class="question-title">O que estava dentro da conversa, e o que ficou de fora?</span>
+            </div>
+            <div class="question-answer">
+              Estavam dentro da conversa o manual interno de atendimento na íntegra (sessenta páginas) e um pedido genérico solicitando respostas curtas para colar direto no chat. Ficou de fora o recorte específico sobre a nova autenticação, a identificação dos perfis de clientes (conta individual vs conta conjunta), a exigência mandatória de verificar regras de exceção e o requisito operacional de cadastrar o aparelho por CPF.
+            </div>
+          </div>
+
+          <div class="question-card" style="margin-bottom: 6px;">
+            <div class="question-header">
+              <span class="question-badge">P2</span>
+              <span class="question-title">O que explica o resultado: componente ou limite? Qual pesou mais?</span>
+            </div>
+            <div class="question-answer">
+              O resultado decorre da soma de falha na instrução com o <strong>Limite de Janela</strong>. Na instrução, faltaram Restrições e Papel claro. No entanto, o fator determinante e que <strong>pesou mais foi o Limite de Janela</strong>: ao colar 60 páginas de uma só vez, a exceção sobre contas conjuntas ficou soterrada no meio de dezenas de páginas irrelevantes (efeito <em>loss in the middle</em>), fazendo o modelo priorizar a regra geral e induzir sete clientes ao erro.
+            </div>
+          </div>
+
+          <div class="question-card">
+            <div class="question-header">
+              <span class="question-badge">P3</span>
+              <span class="question-title">O que Lorena deveria ter feito antes e depois?</span>
+            </div>
+            <div class="question-answer">
+              <strong>Antes:</strong> Isolar apenas o trecho do manual referente à nova política de segurança (filtragem de contexto prévio) e incluir restrições explícitas sobre casos especiais (contas conjuntas). <strong>Depois:</strong> Realizar uma conferência amostral ativa confrontando as respostas da IA diretamente contra as regras de exceção do manual antes de colar no chat, em vez de ler superficialmente para bater a meta de tempo da fila.
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 4px;">
+          <h3 style="font-size: 11.5px; font-weight: 800; color: #13324d; margin-bottom: 3px; text-transform: uppercase; font-family: 'JetBrains Mono', monospace;">
+            2. O Fecho · A Ponte para o Protocolo de Contexto
+          </h3>
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Campo</th>
+                <th style="width: 75%;">Conteúdo da Linha do Fecho (Leva ao Bloco 1 do Grupo)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>O que faltou</strong></td>
+                <td>Faltou isolar o contexto relevante (recorte do tema) e explicitar a restrição sobre exceções para contas conjuntas (limite de janela).</td>
+              </tr>
+              <tr>
+                <td><strong>Quando poderia ter sido evitado</strong></td>
+                <td>No momento da preparação do contexto antes do envio do prompt, ao colar 60 páginas brutas do manual sem filtro prévio.</td>
+              </tr>
+              <tr>
+                <td><strong>A providência</strong></td>
+                <td>Instituir a regra de nunca colar manuais na íntegra: extrair apenas a seção temática específica e exigir checagem ativa de exceções cadastrais.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div style="margin-top: 4px;">
+          <h3 style="font-size: 11.5px; font-weight: 800; color: #13324d; margin-bottom: 3px; text-transform: uppercase; font-family: 'JetBrains Mono', monospace;">
+            3. Rubrica de Avaliação no Laboratório de Revisão
+          </h3>
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th style="width: 26%;">Critério</th>
+                <th style="width: 24%;">Para Retomar</th>
+                <th style="width: 24%;">Em Construção</th>
+                <th style="width: 26%;" class="highlight-col">Consolidado (Alcançado)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. As duas rodadas estão completas</strong></td>
+                <td>Menos de duas das quatro colunas aparecem preenchidas.</td>
+                <td>Uma rodada está completa e a outra segue parcial.</td>
+                <td class="highlight-col"><strong>As duas rodadas estão completas, com contextos visivelmente contrastantes (offline vs online).</strong></td>
+              </tr>
+              <tr>
+                <td><strong>2. Nomeia o que explica o resultado</strong></td>
+                <td>Aponta só que faltou algo, sem nomear componente nem limite.</td>
+                <td>Nomeia um componente ou limite, mas não diz qual pesou mais.</td>
+                <td class="highlight-col"><strong>Nomeia componentes (Restrições/Papel) e o Limite de Janela, justificando o peso determinante.</strong></td>
+              </tr>
+              <tr>
+                <td><strong>3. O Fecho traz providência executável</strong></td>
+                <td>Repete o diagnóstico sem dizer o que fazer.</td>
+                <td>Providência genérica, sem ação concreta.</td>
+                <td class="highlight-col"><strong>Descreve ação concreta (filtragem prévia e checagem ativa) com momento exato identificado.</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>UNIVESP · COM170 — Inteligência Artificial na Prática Acadêmica e Profissional</span>
+      <span>Portfólio Individual · Página 4 de 4</span>
+    </div>
+  </div>
+
+</body>
+</html>

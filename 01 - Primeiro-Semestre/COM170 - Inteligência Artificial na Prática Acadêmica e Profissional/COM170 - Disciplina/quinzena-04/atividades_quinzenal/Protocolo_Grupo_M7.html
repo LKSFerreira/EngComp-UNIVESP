@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protocolo de Contexto da Nexo - Trabalho em Grupo (Módulo 7) - UNIVESP</title>
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= RESET & CONFIGURAÇÃO A4 ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    body {
+      background-color: #525659;
+      font-family: 'Inter', Arial, sans-serif;
+      color: #1e293b;
+      letter-spacing: 0.1px;
+      margin: 0;
+      padding: 30px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      background-color: #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+        gap: 0 !important;
+      }
+      .page {
+        box-shadow: none !important;
+        page-break-after: always !important;
+        page-break-inside: avoid !important;
+        height: 297mm !important;
+      }
+      .no-print-toolbar {
+        display: none !important;
+      }
+    }
+
+    .no-print-toolbar {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 1000;
+      background: #13324d;
+      color: #ffffff;
+      padding: 9px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 13px;
+      font-weight: bold;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-print {
+      background: #f2a900;
+      color: #0f172a;
+      border: none;
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 12px;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+
+    .btn-print:hover {
+      background: #e59d00;
+      transform: scale(1.04);
+    }
+
+    /* HEADER */
+    .header-banner {
+      background-color: #13324d;
+      color: #ffffff;
+      padding: 20px 36px;
+    }
+
+    .banner-top-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: #94a3b8;
+      margin-bottom: 8px;
+    }
+
+    .banner-content {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .badge-template-sq {
+      background-color: #0d9488;
+      color: #ffffff;
+      width: 62px;
+      height: 62px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .badge-template-sq .badge-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .badge-template-sq .badge-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 30px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .banner-text .quinzena-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #5eead4;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .banner-text h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 22px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.4px;
+      line-height: 1.15;
+    }
+
+    .banner-text .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      color: #cbd5e1;
+      margin-top: 2px;
+    }
+
+    .inner-header {
+      background-color: #13324d;
+      color: #ffffff;
+      padding: 10px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .inner-header .doc-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: #f8fafc;
+    }
+
+    .inner-header .doc-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 500;
+      color: #94a3b8;
+      letter-spacing: 1px;
+    }
+
+    .page-body {
+      padding: 14px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      flex-grow: 1;
+    }
+
+    .box-intro {
+      background-color: #f8fafc;
+      border-left: 4px solid #13324d;
+      padding: 8px 12px;
+      font-size: 11px;
+      line-height: 1.4;
+      color: #334155;
+    }
+
+    .box-attention {
+      background-color: #fef8e8;
+      border-left: 4px solid #f2a900;
+      padding: 8px 12px;
+    }
+
+    .box-attention h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #92400e;
+      margin-bottom: 2px;
+    }
+
+    .box-attention p {
+      font-size: 11px;
+      color: #78350f;
+      line-height: 1.35;
+    }
+
+    .question-card {
+      border: 1.5px solid #cbd5e1;
+      border-radius: 5px;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .question-header {
+      background-color: #f1f5f9;
+      padding: 7px 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px solid #cbd5e1;
+    }
+
+    .question-badge {
+      background-color: #0d9488;
+      color: #ffffff;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 3px;
+    }
+
+    .question-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .question-answer {
+      padding: 10px 12px;
+      background-color: #ffffff;
+      font-size: 11px;
+      line-height: 1.45;
+      color: #0f172a;
+    }
+
+    .styled-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.5px;
+      margin-top: 3px;
+    }
+
+    .styled-table th {
+      background-color: #13324d;
+      color: #ffffff;
+      text-align: left;
+      padding: 6px 9px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      border: 1px solid #13324d;
+    }
+
+    .styled-table td {
+      padding: 6px 9px;
+      border: 1px solid #cbd5e1;
+      line-height: 1.35;
+      color: #1e293b;
+      vertical-align: top;
+    }
+
+    .styled-table tr:nth-child(even) td {
+      background-color: #f8fafc;
+    }
+
+    .styled-table td.highlight-col {
+      background-color: #f0fdf4 !important;
+      border-left: 2px solid #22c55e;
+      border-right: 2px solid #22c55e;
+      font-weight: 500;
+    }
+
+    .rule-box {
+      background-color: #f8fafc;
+      border-left: 4px solid #0d9488;
+      padding: 8px 12px;
+      margin-bottom: 6px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .rule-title {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #0f766e;
+      margin-bottom: 2px;
+    }
+
+    .rule-desc {
+      font-size: 11px;
+      line-height: 1.4;
+      color: #0f172a;
+    }
+
+    .footer-bar {
+      border-top: 1px solid #e2e8f0;
+      padding: 8px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      color: #64748b;
+      background-color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BOTÃO DE IMPRESSÃO / SALVAR PDF -->
+  <div class="no-print-toolbar">
+    <span>UNIVESP · COM170 · Módulo 7</span>
+    <button class="btn-print" onclick="window.print()">Salvar / Imprimir em PDF</button>
+  </div>
+
+  <!-- =================================================================== -->
+  <!-- PÁGINA 1: IDENTIFICAÇÃO E BLOCO 1 (O QUE CADA HISTÓRIA MOSTROU)     -->
+  <!-- =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="header-banner">
+        <div class="banner-top-meta">
+          <span>COM170 — Inteligência Artificial na Prática Acadêmica e Profissional</span>
+          <span>UNIVESP · 2026</span>
+        </div>
+        <div class="banner-content">
+          <div class="badge-template-sq">
+            <span class="badge-label">Módulo</span>
+            <span class="badge-num">07</span>
+          </div>
+          <div class="banner-text">
+            <span class="quinzena-tag">Quinzena 04 · Trabalho Prático em Grupo</span>
+            <h1>O Protocolo de Contexto da Nexo</h1>
+            <div class="subtitle">Laboratório de Revisão do Módulo 7 · Construção Coletiva do Grupo 05</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="page-body">
+        <div class="box-attention">
+          <h4>Atenção ao Anonimato na Entrega Coletiva</h4>
+          <p>A revisão no Moodle é anônima. Para preservar a avaliação cega entre pares, os estudantes são identificados como <strong>Integrante 1</strong>, <strong>Integrante 2</strong>, etc. Quem realiza o envio já fica registrado pelo sistema do AVA.</p>
+        </div>
+
+        <div class="box-intro">
+          <strong>Grupo de Trabalho:</strong> Grupo 05<br>
+          <strong>Eixo Temático:</strong> Computação / Engenharia de Computação (UNIVESP)<br>
+          <strong>Representante da Quinzena (Responsável pelo Envio):</strong> Integrante 1 (Lucas Ferreira)<br>
+          <strong>Composição na Rodada:</strong> Integrante 1 (Lucas Ferreira — Caso A: Lorena), Integrante 2 (Carol — Caso: Ivan / Produto), Integrante 3 (Thales — Caso A: Lorena).
+        </div>
+
+        <div style="margin-top: 4px;">
+          <h3 style="font-size: 12px; font-weight: 800; color: #13324d; margin-bottom: 4px; text-transform: uppercase; font-family: 'JetBrains Mono', monospace;">
+            Bloco 1 · O Que Cada História Mostrou
+          </h3>
+          <p style="font-size: 11px; color: #475569; margin-bottom: 4px;">
+            Uma linha por integrante, copiada diretamente do Fecho do portfólio individual de cada um. O grupo não reescreve: compara as providências trazidas.
+          </p>
+
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th style="width: 22%;">Integrante e História</th>
+                <th style="width: 26%;">O que faltou</th>
+                <th style="width: 24%;">Quando poderia ter sido evitado</th>
+                <th style="width: 28%;">A providência</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Integrante 1 (Lucas)</strong><br><span style="font-size: 9.5px; color: #0284c7;">Caso A: Lorena (Atendimento)</span></td>
+                <td>Faltou isolar o contexto relevante (recorte do tema) e explicitar a restrição sobre exceções para contas conjuntas (limite de janela).</td>
+                <td>No momento da preparação do contexto antes do envio do prompt, ao colar 60 páginas brutas do manual sem filtro prévio.</td>
+                <td>Instituir a regra de nunca colar manuais na íntegra: extrair apenas a seção temática específica e exigir checagem ativa de exceções cadastrais.</td>
+              </tr>
+              <tr>
+                <td><strong>Integrante 2 (Carol)</strong><br><span style="font-size: 9.5px; color: #0d9488;">Caso: Ivan (Produto)</span></td>
+                <td>A política atualizada e a orientação explícita para desconsiderar a regra antiga de dez mil reais.</td>
+                <td>Antes do envio do pedido e durante a conferência da resposta, antes da publicação.</td>
+                <td>Abrir uma nova conversa ou limpar o contexto anterior, inserir a política vigente e conferir todos os valores e procedimentos com a fonte oficial antes de publicar.</td>
+              </tr>
+              <tr>
+                <td><strong>Integrante 3 (Thales)</strong><br><span style="font-size: 9.5px; color: #7c3aed;">Caso A: Lorena (Atendimento)</span></td>
+                <td>Faltou definir o componente de restrições no pedido e realizar a verificação do texto final.</td>
+                <td>Antes de enviar o texto para a IA e no momento antes de colar a resposta para o cliente.</td>
+                <td>Selecionar e enviar à IA apenas as páginas do manual que falam sobre autenticação e ler a resposta gerada linha a linha antes de enviá-la.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="box-intro" style="margin-top: 6px; border-left-color: #0d9488;">
+          <strong>Dinâmica de Convergência do Grupo:</strong> O grupo reuniu 3 integrantes ativos. Os Integrantes 1 e 3 analisaram o Caso A (Lorena), convergindo para o diagnóstico de sobrecarga da janela e ausência de restrições, enquanto a Integrante 2 trouxe o Caso de Ivan, evidenciando a contaminação por histórico antigo não resetado. Essa complementaridade sustenta com perfeição a análise sistêmica dos Blocos 2 e 3.
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>UNIVESP · COM170 — Inteligência Artificial na Prática Acadêmica e Profissional</span>
+      <span>Protocolo de Contexto da Nexo · Grupo 05 · Página 1 de 2</span>
+    </div>
+  </div>
+
+  <!-- =================================================================== -->
+  <!-- PÁGINA 2: BLOCO 2 (PADRÃO), BLOCO 3 (PROTOCOLO) E RUBRICA           -->
+  <!-- =================================================================== -->
+  <div class="page">
+    <div>
+      <div class="inner-header">
+        <span class="doc-title">Bloco 2 (O Padrão da Nexo), Bloco 3 (O Protocolo) e Rubrica</span>
+        <span class="doc-meta">MÓDULO 07 · QUINZENA 04</span>
+      </div>
+
+      <div class="page-body">
+        <div class="question-card">
+          <div class="question-header">
+            <span class="question-badge">BLOCO 2</span>
+            <span class="question-title">O Padrão da Nexo: O que se repete e o que isso diz sobre o processo?</span>
+          </div>
+          <div class="question-answer">
+            <p style="margin-bottom: 6px;">
+              A comparação entre a história de <strong>Lorena (Atendimento)</strong> e a de <strong>Ivan (Produto)</strong> evidencia que as falhas não derivam de descuido individual, mas de um <strong>vazio metodológico corporativo na gestão da janela de contexto</strong>:
+            </p>
+            <ul style="padding-left: 16px; margin-bottom: 6px; line-height: 1.4;">
+              <li><strong>Os Dois Lados do Erro de Janela:</strong> Lorena errou pelo <em>excesso desordenado</em> (colou 60 páginas do manual e perdeu a exceção de contas conjuntas por <em>loss in the middle</em>); Ivan errou pela <em>poluição de histórico</em> (manteve a conversa da manhã aberta com a regra antiga de R$ 10 mil e não limpou o contexto para a nova política de R$ 5 mil).</li>
+              <li><strong>Falta de Diretrizes de Higiene de Contexto:</strong> A Nexo incentivou a velocidade no uso da IA sem treinar suas equipes sobre como recortar documentos ou quando resetar uma sessão.</li>
+              <li><strong>Inversão de Responsabilidade:</strong> Tanto no chat quanto na central de ajuda, o texto da IA foi tratado como produto final, atropelando a conferência primária por pressão de prazo.</li>
+            </ul>
+            <p style="margin: 0;">
+              <strong>Conclusão do Grupo:</strong> O problema na Nexo é estrutural. A empresa adotou ferramentas de IA sem estabelecer a governança operacional de entrada (higiene de contexto) e de saída (auditoria obrigatória).
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="font-size: 11.5px; font-weight: 800; color: #13324d; margin-bottom: 4px; text-transform: uppercase; font-family: 'JetBrains Mono', monospace;">
+            Bloco 3 · O Protocolo em Três Linhas
+          </h3>
+
+          <div class="rule-box">
+            <div class="rule-title">1️⃣ O que se escreve antes de enviar um pedido (Higiene de Contexto e Recorte Focado)</div>
+            <div class="rule-desc">
+              Antes de disparar o prompt, inicie sempre uma sessão limpa para novas tarefas (evitando contaminação por históricos antigos) e anexe apenas o trecho estritamente pertinente do documento (recorte de poucas páginas), definindo explicitamente no texto as restrições mandatórias e as regras de exceção vigentes.
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <div class="rule-title">2️⃣ O que se confere depois de receber a resposta (Auditoria Obrigatória de Saída)</div>
+            <div class="rule-desc">
+              Antes de qualquer publicação externa ou envio ao cliente, execute a conferência factual linha a linha confrontando a resposta da IA diretamente contra a fonte primária oficial, checando expressamente valores numéricos, datas, limites de corte e condições de exceção.
+            </div>
+          </div>
+
+          <div class="rule-box">
+            <div class="rule-title">3️⃣ O que nenhuma instrução bem escrita resolve sozinha (O Limite Inviolável do Julgamento Humano)</div>
+            <div class="rule-desc">
+              Nenhuma engenharia de prompt ou de contexto é capaz de impedir erros se o usuário não alimentar a IA com dados atualizados, e nenhuma fluência de texto substitui a responsabilidade profissional e legal indelegável de assinar e auditar as consequências do que é entregue.
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h3 style="font-size: 11px; font-weight: 800; color: #13324d; margin-bottom: 3px; text-transform: uppercase; font-family: 'JetBrains Mono', monospace;">
+            Rubrica de Avaliação no Laboratório de Revisão (Módulo 7)
+          </h3>
+          <table class="styled-table">
+            <thead>
+              <tr>
+                <th style="width: 25%;">Critério</th>
+                <th style="width: 23%;">Para Retomar</th>
+                <th style="width: 24%;">Em Construção</th>
+                <th style="width: 28%;" class="highlight-col">Consolidado (Alcançado)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>1. O Bloco 1 traz a providência de cada história</strong></td>
+                <td>Linhas incompletas, faltando a providência de pelo menos uma história.</td>
+                <td>Linhas completas, mas repetem diagnóstico sem dizer o que fazer.</td>
+                <td class="highlight-col"><strong>Todas as linhas estão completas e cada providência aponta uma ação clara.</strong></td>
+              </tr>
+              <tr>
+                <td><strong>2. O Bloco 2 olha as histórias juntas</strong></td>
+                <td>Descreve história isolada, sem comparar com as outras.</td>
+                <td>Aponta semelhança entre histórias sem ligar ao processo.</td>
+                <td class="highlight-col"><strong>Nomeia o que se repete (Lorena e Ivan), apontando falha no processo da Nexo e não em pessoas.</strong></td>
+              </tr>
+              <tr>
+                <td><strong>3. O Bloco 3 generaliza em regra aplicável</strong></td>
+                <td>Repete providência do Bloco 1 sem generalizar.</td>
+                <td>Regras genéricas demais para orientar alguém.</td>
+                <td class="highlight-col"><strong>As três linhas descrevem ações claras aplicáveis a qualquer colaborador e reconhecem os limites humanos.</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span>UNIVESP · COM170 — Inteligência Artificial na Prática Acadêmica e Profissional</span>
+      <span>Protocolo de Contexto da Nexo · Grupo 05 · Página 2 de 2</span>
+    </div>
+  </div>
+
+</body>
+</html>
