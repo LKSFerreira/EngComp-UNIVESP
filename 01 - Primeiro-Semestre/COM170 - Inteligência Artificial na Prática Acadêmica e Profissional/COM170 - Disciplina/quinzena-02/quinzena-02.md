@@ -77,7 +77,11 @@ Após o processo de tokenização, aplica-se o Embedding, que é a vetorização
 
 ## 5. Leituras e Material de Apoio
 
-* (indicar capítulos, PDFs, links oficiais)
+* **E-books e Apostilas Oficiais UNIVESP:**
+  * [E-book Módulo 1](./Q2_M1_e-book-1.pdf) │ [Apostila M1](./COM170_apostila_quinzena2_M1.pdf)
+  * [E-book Módulo 2](./Q2_M2_visual.pdf) │ [Apostila M2](./COM170_apostila_quinzena2_M2.pdf)
+  * [E-book Módulo 3](./Q2_M3_e-book_visual.pdf) │ [Apostila M3](./COM170_apostila_quinzena2_M3.pdf)
+  * [E-book Módulo 4](./Q2_M4_e-book_visual.pdf) │ [Apostila M4](./COM170_apostila_quinzena2_M4.pdf)
 
 ---
 

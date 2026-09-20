@@ -73,10 +73,10 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 ## 5. Leituras e Material de Apoio
 
 * **E-books Oficiais UNIVESP:**
-  * [E-book Módulo 1](./Q3_M1-E-book.pdf) │ [Apostila M1](./Q3-M1-apostila.pdf)
-  * [E-book Módulo 2](./Q3_M2-E-book.pdf) │ [Apostila M2](./Q3-M2-apostila.pdf)
-  * [E-book Módulo 3](./Q3_M3-E-book.pdf) │ [Apostila M3](./Q3-M3-apostila.pdf)
-  * [E-book Módulo 4](./Q3_M4-E-book.pdf) │ [Apostila M4](./Q3-M4-apostila.pdf)
+  * [E-book Módulo 1](./Q3_M1-E-book.pdf) │ [Apostila M1](./COM170_apostila_quinzena3_M1.pdf)
+  * [E-book Módulo 2](./Q3_M2-E-book.pdf) │ [Apostila M2](./COM170_apostila_quinzena3_M2.pdf)
+  * [E-book Módulo 3](./Q3_M3-E-book.pdf) │ [Apostila M3](./COM170_apostila_quinzena3_M3.pdf)
+  * [E-book Módulo 4](./Q3_M4-E-book.pdf) │ [Apostila M4](./COM170_apostila_quinzena3_M4.pdf)
 
 ---
 

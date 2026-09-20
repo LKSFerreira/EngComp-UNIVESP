@@ -240,7 +240,13 @@ A naturalização acontece quando 4 conceitos começam a ficar permanentemente c
 
 ## 5. Leituras e Material de Apoio
 
-- (indicar capítulos, PDFs, links oficiais)
+* **E-books e Apostilas Oficiais UNIVESP:**
+  * [E-book Módulo 1](./m1-e-book.pdf) │ [Apostila M1](./COM170_apostila_quinzena1_M1.pdf)
+  * [E-book Módulo 2](./m2-e-book.pdf) │ [Apostila M2](./COM170_apostila_quinzena1_M2.pdf)
+  * [E-book Módulo 3](./m3-e-book.pdf) │ [Apostila M3](./COM170_apostila_quinzena1_M3.pdf)
+  * [E-book Módulo 4](./m4-e-book.pdf) │ [Apostila M4](./COM170_apostila_quinzena1_M4.pdf)
+* **Artigo Científico Base:**
+  * [Attention Is All You Need (Vaswani et al., 2017)](./Attention%20Is%20All%20You%20Need.pdf)
 
 ---
 
