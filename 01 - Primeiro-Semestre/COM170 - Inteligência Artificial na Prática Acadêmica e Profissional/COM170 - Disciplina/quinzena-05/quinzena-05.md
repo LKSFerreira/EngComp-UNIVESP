@@ -86,7 +86,10 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
   - Ficha de auditoria (Módulo 2)
   - Roteiro dos quatro passos da conferência (Módulo 3)
 * **Artigo da Turma (Módulo 5):**
-  - Artigo único compartilhado para toda a turma
+  - [Percepções da IA Generativa na Educação (Silva, La Marca e Lopes, 2024 - ERI-MT/SBC)](https://doi.org/10.5753/eri-mt.2024.245844)
+* **Guias Oficiais dos Trabalhos Práticos (Semana 2):**
+  - Guia do Portfólio Individual: [Q5_M5-template-individual.pdf](./Q5_M5-template-individual.pdf) (Módulo 6)
+  - Guia da Atividade em Grupo: [Q5_M5-template-grupo.pdf](./Q5_M5-template-grupo.pdf) (Módulo 7)
 
 ---
 
