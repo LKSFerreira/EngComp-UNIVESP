@@ -36,3 +36,5 @@ trigger: always_on
 6. **Organização e Documentação:**
    - Não manter código comentado ou morto no arquivo. Apague o que não for mais usado.
    - Documentação específica por linguagem (tipagem, docstrings, comandos) deve seguir as regras definidas em `/.agents/rules/<linguagem>.md`.
+   - **Expansão de siglas:** Em documentações, relatórios, resumos e atividades acadêmicas, toda sigla ou acrônimo (ex.: IES, IAG, AVA) deve obrigatoriamente ser apresentada por extenso na primeira menção (ex.: *"Instituições de Ensino Superior (IES)"*), ou conter nota/legenda explicativa, garantindo clareza imediata na revisão por pares.
+

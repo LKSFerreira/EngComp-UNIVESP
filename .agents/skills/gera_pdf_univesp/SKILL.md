@@ -59,3 +59,5 @@ Esta skill orienta a criação de documentos acadêmicos em formato HTML/CSS pro
 
 - Não utilizar pacotes Python inexistentes ou não garantidos (como `fitz`/PyMuPDF). Utilizar sempre o Chrome nativo do sistema via `subprocess`.
 - Manter o documento anônimo para submissão em revisões por pares cegas.
+- **Expansão de siglas:** Toda sigla ou acrônimo utilizado no documento (ex.: IES, IAG, AVA) deve obrigatoriamente ser acompanhado do seu significado por extenso na primeira menção (ex.: *"Instituições de Ensino Superior (IES)"*) ou em legenda explicativa direta, eliminando qualquer ambiguidade para o leitor.
+
