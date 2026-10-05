@@ -41,7 +41,7 @@ DOI: 10.5753/eri-mt.2024.245844.
 * **Objeto do Estudo:** Em agosto de 2024, 123 estudantes de graduação de três instituições de ensino superior em Barra do Garças (MT) responderam a um questionário sobre o uso prático de ferramentas generativas (ChatGPT, Gemini, Copilot) na vida acadêmica.
 * **Tópicos Investigados:** Proporção de adoção, finalidades de uso, frequência, conferência crítica das respostas geradas e percepção sobre o impacto da IA nos estudos.
 * **Extensão e Estrutura:** Seis páginas contendo Resumo, Introdução, Metodologia, Resultados e Discussões, Considerações Finais e Referências.
-* **Acesso Oficial:** [Acessar no SBC OpenLib (DOI: 10.5753/eri-mt.2024.245844)](https://doi.org/10.5753/eri-mt.2024.245844)
+* **Acesso Oficial:** [Acessar no SBC OpenLib (DOI: 10.5753/eri-mt.2024.245844)](https://doi.org/10.5753/eri-mt.2024.245844) │ [Arquivo PDF Local](./q5-m5-percepcoes-da-inteligencia-artificial-generativa-na-edu.pdf)
 
 ---
 

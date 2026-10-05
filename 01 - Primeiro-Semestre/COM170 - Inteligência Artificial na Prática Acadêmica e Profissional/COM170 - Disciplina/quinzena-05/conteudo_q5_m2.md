@@ -27,8 +27,8 @@ Você vai ver o protocolo executado por inteiro, com um artigo de verdade, e vai
 * **Tema central:** O professor executa o protocolo inteiro, na mesa de trabalho, com um artigo de acesso aberto que leu na véspera.
 
 ### 📚 Material de Apoio Oficial
-* **E-book (Versão Visual):** `Q5_M2-E-book.pdf` *(Produzido com IA - ChatGPT 5.5)*
-* **Apostila (Versão Acessível):** `COM170_apostila_quinzena5_M2.pdf`
+* **E-book (Versão Visual):** [Q5_M2-E-book.pdf](./Q5_M2-E-book.pdf) *(Produzido com IA - ChatGPT 5.5)*
+* **Apostila (Versão Acessível):** [COM170_apostila_quinzena5_M2.pdf](./COM170_apostila_quinzena5_M2.pdf)
 
 ---
 

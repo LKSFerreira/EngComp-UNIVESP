@@ -77,10 +77,10 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 ## 5. Leituras e Material de Apoio
 
 * **E-books e Apostilas Oficiais UNIVESP:**
-  - Módulo 1: E-book `Q5_M1-E-book.pdf` (Visual) │ Apostila `COM170_apostila_quinzena5_M1.pdf` (Acessível)
-  - Módulo 2: E-book `Q5_M2-E-book.pdf` (Visual) │ Apostila `COM170_apostila_quinzena5_M2.pdf` (Acessível)
-  - Módulo 3: E-book `Q5_M3-E-book.pdf` (Visual) │ Apostila `COM170_apostila_quinzena5_M3.pdf` (Acessível)
-  - Módulo 4: E-book `Q5_M4-E-book.pdf` (Visual) │ Apostila `COM170_apostila_quinzena5_M4.pdf` (Acessível)
+  - **Módulo 1:** E-book [Q5_M1-E-book.pdf](./Q5_M1-E-book.pdf) (Visual) │ Apostila [COM170_apostila_quinzena5_M1.pdf](./COM170_apostila_quinzena5_M1.pdf) (Acessível)
+  - **Módulo 2:** E-book [Q5_M2-E-book.pdf](./Q5_M2-E-book.pdf) (Visual) │ Apostila [COM170_apostila_quinzena5_M2.pdf](./COM170_apostila_quinzena5_M2.pdf) (Acessível)
+  - **Módulo 3:** E-book [Q5_M3-E-book.pdf](./Q5_M3-E-book.pdf) (Visual) │ Apostila [COM170_apostila_quinzena5_M3.pdf](./COM170_apostila_quinzena5_M3.pdf) (Acessível)
+  - **Módulo 4:** E-book [Q5_M4-E-book.pdf](./Q5_M4-E-book.pdf) (Visual) │ Apostila [COM170_apostila_quinzena5_M4.pdf](./COM170_apostila_quinzena5_M4.pdf) (Acessível)
 * **Modelos Oficiais em Branco (a copiar para uso):**
   - Ficha de rastreamento (Módulo 1)
   - Ficha de auditoria (Módulo 2)

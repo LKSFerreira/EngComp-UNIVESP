@@ -25,8 +25,8 @@ Abre-se também uma reflexão ética essencial a partir de casos reais: quando u
 * **Aspectos abordados:** A anatomia de uma referência fabricada, os riscos da validação superficial e a responsabilidade autoral coletiva.
 
 ### 📚 Material de Apoio Oficial
-* **E-book (Versão Visual):** `Q5_M3-E-book.pdf` *(Produzido com IA - ChatGPT 5.5)*
-* **Apostila (Versão Acessível):** `COM170_apostila_quinzena5_M3.pdf`
+* **E-book (Versão Visual):** [Q5_M3-E-book.pdf](./Q5_M3-E-book.pdf) *(Produzido com IA - ChatGPT 5.5)*
+* **Apostila (Versão Acessível):** [COM170_apostila_quinzena5_M3.pdf](./COM170_apostila_quinzena5_M3.pdf)
 
 ---
 

@@ -31,8 +31,8 @@ Em seguida, aborda-se a restrição prática mais comum do estudante: **o tempo 
 * **Tema central:** Três afirmações geradas por síntese de IA, quarenta minutos restantes até a entrega e tempo hábil para abrir e conferir apenas uma. O professor demonstra como ordenar a prioridade pela consequência do erro.
 
 ### 📚 Material de Apoio Oficial
-* **E-book (Versão Visual):** `Q5_M4-E-book.pdf` *(Produzido com IA - ChatGPT 5.5)*
-* **Apostila (Versão Acessível):** `COM170_apostila_quinzena5_M4.pdf`
+* **E-book (Versão Visual):** [Q5_M4-E-book.pdf](./Q5_M4-E-book.pdf) *(Produzido com IA - ChatGPT 5.5)*
+* **Apostila (Versão Acessível):** [COM170_apostila_quinzena5_M4.pdf](./COM170_apostila_quinzena5_M4.pdf)
 
 ---
 

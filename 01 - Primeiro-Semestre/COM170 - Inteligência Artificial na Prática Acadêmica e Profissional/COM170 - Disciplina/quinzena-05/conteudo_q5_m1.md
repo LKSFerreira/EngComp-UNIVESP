@@ -26,8 +26,8 @@ Este módulo mostra o que separa a ferramenta que procura da ferramenta que gera
 * **Tema central:** Uma semana comum de estudo, com dois momentos em que a máquina pode fazer o serviço no lugar do estudante: a busca e a leitura.
 
 ### 📚 Material de Apoio Oficial
-* **E-book (Versão Visual):** `Q5_M1-E-book.pdf` *(Produzido com IA - ChatGPT 5.5)*
-* **Apostila (Versão Acessível):** `COM170_apostila_quinzena5_M1.pdf`
+* **E-book (Versão Visual):** [Q5_M1-E-book.pdf](./Q5_M1-E-book.pdf) *(Produzido com IA - ChatGPT 5.5)*
+* **Apostila (Versão Acessível):** [COM170_apostila_quinzena5_M1.pdf](./COM170_apostila_quinzena5_M1.pdf)
 
 ---
 
