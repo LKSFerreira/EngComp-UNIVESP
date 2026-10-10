@@ -38,22 +38,35 @@ Esta skill orienta a criação de documentos acadêmicos em formato HTML/CSS pro
 2. **Criação do Arquivo HTML (`.html`):**
    - Criar um HTML responsivo com CSS de impressão `@media print` e botão superior de impressão (invisível no PDF final).
 
-3. **Compilação do PDF via Python + Headless Chrome:**
-   - Executar o comando Python em `subprocess` invocando o Chrome instalado no sistema:
-     ```python
-     import subprocess
-     subprocess.run([
-         r"C:\Program Files\Google\Chrome\Application\chrome.exe",
-         "--headless=new",
-         "--no-sandbox",
-         r"--print-to-pdf=C:\caminho\para\arquivo.pdf",
-         r"file:///C:/caminho/para/arquivo.html"
-     ])
+3. **Compilação do PDF via Utilitário Oficial (`tools/gera_pdf_univesp.py`):**
+   - Executar o utilitário genérico institucional localizado na raiz do projeto:
+     ```bash
+     python tools/gera_pdf_univesp.py "caminho/para/arquivo.html"
      ```
-   - Confirmar a criação e o tamanho do arquivo via `os.path.getsize`.
+   - O utilitário localiza automaticamente o executável do Google Chrome no sistema operacional, aplica os parâmetros A4 milimétricos (`--headless=new`, `--no-sandbox`, `--disable-gpu`) e compila o PDF garantindo a integridade gráfica do documento.
 
 4. **Regra de Versionamento:**
    - **NÃO commitar no Git** até que o usuário solicite explicitamente (`só commit quando eu solicitar`).
+
+## Autodeclaração Dinâmica de Uso de IA (Duas Metades) - REGRA OBRIGATÓRIA
+
+Todo documento acadêmico gerado via HTML/PDF para a UNIVESP deve incluir obrigatoriamente a **Declaração de Uso de Ferramentas de Inteligência Artificial em Duas Metades**, parametrizada de forma **100% dinâmica** de acordo com as ferramentas, os modelos, a configuração exata de esforço e as tarefas executadas (incluindo a formatação e geração do arquivo .PDF):
+
+1. **Primeira Metade (Autodeclaração Dinâmica das Ferramentas de IA):**
+   - Nome das Ferramentas em uso (ex.: *Gemini WebChat (Google)*, *Antigravity (Google)*);
+   - Modelo Exato em Execução (ex.: *Gemini 3.8 Flash*);
+   - Nível de Esforço com nomenclatura exata da interface utilizada:
+      - Ex. Gemini WebChat: `nível de esforço: Máx. Muito detalhado` (ou `Mín. Rápido e eficiente` / `Médio Equilibrado`);
+      - Ex. Antigravity IDE: `Low / Medium / High`;
+   - Tarefas Executadas delimitadas com precisão:
+      - *Debate/Raciocínio:* contra-ataque dialético oposto à recomendação técnica ou geração de hipóteses;
+      - *Engenharia de Documento / PDF:* diagramação, estilização visual em HTML/CSS e compilação técnica em formato .PDF institucional UNIVESP;
+2. **Segunda Metade (Auditoria Humana Inalienável):**
+   - O que o estudante conferiu (ex.: *validade lógica, ausência de alucinações, pertinência contextual, fidelidade de formatação visual do .PDF e integridade textual*);
+   - Onde conferiu (ex.: *Etapas 1 a 5, Ficha de Resultados e documento PDF gerado*);
+   - Como conferiu (ex.: *analisando cada apontamento com o texto literal dos documentos de referência, confrontando as diretrizes do template e aplicando os conceitos teóricos da disciplina*).
+
+Essa autodeclaração não pode ser estática nem genérica: deve espelhar com rigor cirúrgico a configuração real e todas as ferramentas de IA empregadas pelo estudante.
 
 # Restrições
 
