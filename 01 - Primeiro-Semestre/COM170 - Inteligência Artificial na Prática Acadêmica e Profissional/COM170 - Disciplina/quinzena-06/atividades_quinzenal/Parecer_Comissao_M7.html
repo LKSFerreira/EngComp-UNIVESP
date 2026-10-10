@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UNIVESP - Parecer da Comissão Multidisciplinar (Módulo 7)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #e2e8f0;
+      color: #0f172a;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      padding: 24px 0;
+    }
+
+    .no-print-toolbar {
+      position: fixed;
+      top: 12px;
+      right: 12px;
+      background: #0f172a;
+      color: #ffffff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+      z-index: 9999;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 11px;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .no-print-toolbar .btn-print {
+      background: #2563eb;
+      color: #ffffff;
+      border: none;
+      padding: 5px 12px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 11px;
+    }
+
+    .no-print-toolbar .btn-print:hover {
+      background: #1d4ed8;
+    }
+
+    @media print {
+      body {
+        background-color: transparent;
+        padding: 0;
+        gap: 0;
+      }
+      .no-print-toolbar {
+        display: none !important;
+      }
+      .page {
+        box-shadow: none !important;
+        margin: 0 !important;
+        page-break-after: always;
+        break-after: page;
+      }
+    }
+
+    .page {
+      width: 210mm;
+      height: 297mm;
+      background-color: #ffffff;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* BANNER PRINCIPAL */
+    .header-banner {
+      background: linear-gradient(135deg, #13324d 0%, #1a4266 100%);
+      color: #ffffff;
+      padding: 16px 36px 14px 36px;
+      border-bottom: 3.5px solid #0284c7;
+    }
+
+    .banner-top-meta {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.5px;
+      color: #94a3b8;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .banner-content {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .badge-template-sq {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1.5px solid rgba(255, 255, 255, 0.25);
+      border-radius: 6px;
+      width: 52px;
+      height: 52px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .badge-template-sq .badge-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 7.5px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .badge-template-sq .badge-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .banner-text .quinzena-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #38bdf8;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .banner-text h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 18.5px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.4px;
+      line-height: 1.18;
+    }
+
+    .banner-text .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      color: #cbd5e1;
+      margin-top: 2px;
+    }
+
+    /* HEADER PÁGINAS INTERNAS */
+    .inner-header {
+      background-color: #13324d;
+      color: #ffffff;
+      padding: 9px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .inner-header .doc-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: #f8fafc;
+    }
+
+    .inner-header .doc-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.5px;
+      font-weight: 500;
+      color: #94a3b8;
+      letter-spacing: 1px;
+    }
+
+    /* CORPO DA PÁGINA */
+    .page-body {
+      padding: 14px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      flex-grow: 1;
+      justify-content: flex-start;
+    }
+
+    /* BOXES E CARDS */
+    .box-attention {
+      background-color: #fef8e8;
+      border-left: 3.5px solid #f2a900;
+      padding: 8px 12px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .box-attention h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #b45309;
+      margin-bottom: 2px;
+    }
+
+    .box-attention p {
+      font-size: 10.4px;
+      line-height: 1.45;
+      color: #78350f;
+      font-weight: 450;
+    }
+
+    .card-block {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 5px;
+      padding: 10px 14px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .card-block.border-navy { border-top: 3.5px solid #13324d; }
+    .card-block.border-blue { border-top: 3.5px solid #0284c7; }
+    .card-block.border-teal { border-top: 3.5px solid #0d9488; }
+    .card-block.border-amber { border-top: 3.5px solid #d97706; }
+
+    .card-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 12.8px;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8px;
+      font-weight: 700;
+      padding: 2.5px 6px;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+
+    .badge-navy { background: #e2e8f0; color: #13324d; }
+    .badge-blue { background: #eff6ff; color: #1d4ed8; }
+    .badge-teal { background: #f0fdfa; color: #0f766e; }
+    .badge-amber { background: #fffbeb; color: #b45309; }
+
+    .text-body {
+      font-size: 10.8px;
+      line-height: 1.5;
+      color: #0f172a;
+      font-weight: 500;
+    }
+
+    /* TABELA DE CONFRONTO */
+    .confronto-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10px;
+      margin-top: 4px;
+    }
+
+    .confronto-table th {
+      background-color: #13324d;
+      color: #ffffff;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      text-align: left;
+      padding: 6px 9px;
+      font-size: 9.8px;
+      letter-spacing: 0.3px;
+    }
+
+    .confronto-table td {
+      border: 1px solid #cbd5e1;
+      padding: 6px 9px;
+      line-height: 1.44;
+      color: #0f172a;
+      vertical-align: top;
+    }
+
+    .confronto-table tr:nth-child(even) td {
+      background-color: #f8fafc;
+    }
+
+    /* CAIXA DE CONSENSO */
+    .box-consenso {
+      background-color: #f0fdf4;
+      border-left: 3.5px solid #16a34a;
+      padding: 9px 12px;
+      border-radius: 0 4px 4px 0;
+      margin-top: 6px;
+    }
+
+    .box-consenso h5 {
+      font-family: 'Inter', sans-serif;
+      font-size: 10.5px;
+      font-weight: 700;
+      color: #15803d;
+      margin-bottom: 3px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .box-consenso p {
+      font-size: 10.4px;
+      line-height: 1.48;
+      color: #14532d;
+      font-weight: 500;
+    }
+
+    /* BLOCOS DO PARECER OFICIAL */
+    .parecer-bloco {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 5px;
+      padding: 11px 15px;
+    }
+
+    .parecer-bloco-header {
+      font-family: 'Inter', sans-serif;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .parecer-bloco-text {
+      font-size: 10.8px;
+      line-height: 1.5;
+      color: #0f172a;
+      font-weight: 500;
+    }
+
+    .garantia-item {
+      background-color: #f8fafc;
+      border-left: 3.5px solid #0284c7;
+      padding: 8px 12px;
+      border-radius: 0 4px 4px 0;
+      margin-top: 6px;
+      font-size: 10.6px;
+      line-height: 1.48;
+      color: #0f172a;
+    }
+
+    .garantia-item:nth-child(2) {
+      border-left-color: #0d9488;
+    }
+
+    .garantia-tag {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      color: #0f172a;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .garantia-origem {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.8px;
+      color: #475569;
+      display: block;
+      margin-top: 3px;
+    }
+
+    /* DECLARAÇÃO DE IA */
+    .declaracao-box {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-top: 3.5px solid #13324d;
+      border-radius: 5px;
+      padding: 10px 14px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .declaracao-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .declaracao-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 10.5px;
+      line-height: 1.48;
+      color: #0f172a;
+      font-weight: 500;
+    }
+
+    /* RODAPÉ INSTITUCIONAL */
+    .footer-bar {
+      background-color: #f8fafc;
+      border-top: 1px solid #cbd5e1;
+      padding: 8px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.5px;
+      color: #475569;
+      font-weight: 500;
+    }
+
+    .footer-bar .footer-univesp {
+      font-weight: 700;
+      color: #13324d;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BOTÃO FLUTUANTE DE IMPRESSÃO -->
+  <div class="no-print-toolbar">
+    <span>UNIVESP · COM170 · MÓDULO 7</span>
+    <button class="btn-print" onclick="window.print()">Salvar como PDF</button>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 1: MANDATO E CONFRONTO DAS FICHAS   -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="header-banner">
+      <div class="banner-top-meta">
+        <span>UNIVESP · ENSINO SUPERIOR PÚBLICO VIRTUAL</span>
+        <span>LABORATÓRIO DE REVISÃO · MÓDULO 7 (GRUPO)</span>
+      </div>
+      <div class="banner-content">
+        <div class="badge-template-sq">
+          <span class="badge-label">Módulo</span>
+          <span class="badge-num">07</span>
+        </div>
+        <div class="banner-text">
+          <span class="quinzena-tag">Quinzena 06 · Semana 2 · Parecer da Comissão</span>
+          <h1>Parecer Institucional: O Caso ProvaSegura</h1>
+          <div class="subtitle">Deliberação Colegiada sobre o Monitoramento por Inteligência Artificial na Faculdade Horizonte</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-body">
+      <!-- AVISO DE ANONIMATO OBRIGATÓRIO -->
+      <div class="box-attention">
+        <h4>Atenção Obrigatória ao Anonimato na Revisão Entre Grupos (Moodle/AVA)</h4>
+        <p>A avaliação deste parecer é anônima às cegas entre grupos discentes. Em estrito cumprimento às normas acadêmicas da UNIVESP, <strong>não declare nomes civis, Registro do Aluno (RA), polo ou número de equipe</strong>. O documento é assinado coletivamente como <em>"A Comissão Multidisciplinar da Faculdade Horizonte"</em>.</p>
+      </div>
+
+      <!-- SÍNTESE DO MANDATO INSTITUCIONAL -->
+      <div class="card-block border-navy">
+        <div class="card-title-row">
+          <span class="card-title">Mandato Institucional da Comissão</span>
+          <span class="card-badge badge-navy">Convocação Oficial</span>
+        </div>
+        <p class="text-body">
+          A Direção da Faculdade Horizonte instituiu esta Comissão Multidisciplinar com o encargo formal de analisar o teste-piloto do software <em>ProvaSegura</em> e emitir um parecer oficial conclusivo escolhendo entre três caminhos: <strong>Adotar</strong>, <strong>Adotar com Condições</strong> ou <strong>Não Adotar</strong>. O parecer sintetiza o confronto direto das fichas individuais elaboradas no Módulo 6, formulando a posição institucional e as garantias mínimas inegociáveis.
+        </p>
+      </div>
+
+      <!-- QUADRO DE CONFRONTO DAS FICHAS INDIVIDUAIS -->
+      <div class="card-block border-blue">
+        <div class="card-title-row">
+          <span class="card-title">Quadro de Confronto das Fichas Individuais da Comissão</span>
+          <span class="card-badge badge-blue">Deliberação Colegiada</span>
+        </div>
+        
+        <table class="confronto-table">
+          <thead>
+            <tr>
+              <th style="width: 17%;">Membro</th>
+              <th style="width: 20%;">Recomendação</th>
+              <th style="width: 25%;">Valor Central</th>
+              <th style="width: 38%;">O que Cedeu e Ponto Crítico Levantado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Membro A</strong></td>
+              <td><span style="color: #dc2626; font-weight: 700;">Não Adotar</span></td>
+              <td>Equidade social, não discriminação e acolhimento discente</td>
+              <td>Cedeu a vigilância automatizada contínua contra fraudes. Reconheceu o risco de desvalorização do diploma perante o MEC e aceitou convergir mediante compliance algorítmico rigoroso.</td>
+            </tr>
+            <tr>
+              <td><strong>Membro B</strong></td>
+              <td><span style="color: #d97706; font-weight: 700;">Adotar com Condições</span></td>
+              <td>Segurança institucional e ampla defesa do estudante</td>
+              <td>Cedeu a comodidade da automação cega (exigiu canal humano). Propôs tolerância de até 20% de falsos positivos em alto risco, mas rebaixou a métrica de falsos positivos para menos de 0,5% para qualquer nível de marcação diante do impacto em escala.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- RESOLUÇÃO DO CONSENSO E CORREÇÃO DE ESCALA -->
+        <div class="box-consenso">
+          <h5>Resolução do Consenso: Compliance Prévio e Correção de Escala</h5>
+          <p>
+            A comissão superou a divergência inicial ao constatar que o mero fornecimento de explicações pela fornecedora <strong>não constitui um cheque em branco para contratação automática</strong>. A deliberação colegiada corrigiu a tolerância de falsos positivos: 20% em um corpo de milhares de alunos representaria milhares de inocentes penalizados, o que colapsaria a coordenação e violaria a equidade. Estabeleceu-se o consenso de <strong>Adotar com Condições Rigorosas</strong>, subordinando a contratação à auditoria de conformidade (compliance) com comprovação de ausência de vieses de treinamento e taxa residual de falsos positivos inferior a 0,5% para qualquer nível de marcação.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span class="footer-univesp">UNIVESP · Inteligência Artificial na Prática Acadêmica e Profissional</span>
+      <span>Página 1 de 2</span>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 2: O PARECER OFICIAL EM 3 BLOCOS    -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="inner-header">
+      <span class="doc-title">COM170 · Parecer da Comissão Multidisciplinar · Quinzena 06</span>
+      <span class="doc-meta">MÓDULO 7: PARECER INSTITUCIONAL</span>
+    </div>
+
+    <div class="page-body">
+      <!-- BLOCO 1: A RECOMENDAÇÃO DA COMISSÃO -->
+      <div class="parecer-bloco" style="border-top: 3.5px solid #13324d;">
+        <div class="parecer-bloco-header">
+          <span>Bloco 1. A Recomendação da Comissão (em até 8 linhas)</span>
+          <span class="card-badge badge-navy">Decisão Oficial</span>
+        </div>
+        <p class="parecer-bloco-text">
+          A Comissão Multidisciplinar recomenda <strong>Adotar com Condições Rigorosas</strong>, condicionando qualquer implementação futura à aprovação prévia em auditoria de <em>compliance</em> ético e técnico. A razão de considerar a ferramenta é resguardar a validade pública do diploma perante o Ministério da Educação (MEC) e o mercado de trabalho; a razão das condições rigorosas é impedir a punição algorítmica de estudantes vulneráveis por condições materiais de moradia e conectividade. Cedeu-se a agilidade da contratação e a vigilância automatizada imediata no próximo semestre, pois a faculdade assume o encargo institucional de auditar os algoritmos antes de qualquer uso. A comissão superou a divergência inicial entre "Não Adotar" e "Adotar com Condições" ao fixar que a entrega de relatórios pelo fornecedor não garante adoção automática, subordinando o contrato ao cumprimento estrito dos parâmetros da instituição.
+        </p>
+      </div>
+
+      <!-- BLOCO 2: AS GARANTIAS MÍNIMAS -->
+      <div class="parecer-bloco" style="border-top: 3.5px solid #0284c7;">
+        <div class="parecer-bloco-header">
+          <span>Bloco 2. As Garantias Mínimas (Uma para Cada Lado)</span>
+          <span class="card-badge badge-blue">Salvaguardas Inegociáveis</span>
+        </div>
+        
+        <div class="garantia-item">
+          <span class="garantia-tag">• Garantia ao Estudante (Proteção e Ampla Defesa):</span>
+          A faculdade garante ao estudante notificado o acesso integral ao trecho audiovisual que motivou a suspeita e o direito a recurso analisado por comissão humana com resposta vinculante em até 48 horas úteis, aplicando regras formais de tolerância para oscilações involuntárias de internet e ruídos domésticos.
+          <span class="garantia-origem">Raiz documental: Resposta "Quem Responde Quando o Sistema Erra" da Bússola Ética e Carta 2 (e-mail da aluna Priscila).</span>
+        </div>
+
+        <div class="garantia-item">
+          <span class="garantia-tag">• Garantia à Validade da Prova (Integridade Pública e Suporte):</span>
+          A faculdade garante a realização de auditoria técnica independente sobre o algoritmo do ProvaSegura para mensurar a taxa real de falsos positivos, identificar e mitigar vieses de modelos e verificar o processo de treinamento, além de disponibilizar polos presenciais equipados com conexão estável para atendimento de estudantes que não disponham de ambiente silencioso em casa.
+          <span class="garantia-origem">Raiz documental: Respostas "O que as Pessoas Sabem" e "Quanto Custa" da Bússola Ética e Carta 3 (ofício da Direção).</span>
+        </div>
+      </div>
+
+      <!-- BLOCO 3: O QUE FARIA A COMISSÃO MUDAR DE PARECER -->
+      <div class="parecer-bloco" style="border-top: 3.5px solid #d97706;">
+        <div class="parecer-bloco-header">
+          <span>Bloco 3. O que Faria a Comissão Mudar de Parecer (em até 5 linhas)</span>
+          <span class="card-badge badge-amber">Condição de Falseabilidade</span>
+        </div>
+        <p class="parecer-bloco-text">
+          A comissão mudaria de parecer e decretaria a <strong>Não Adoção definitiva</strong> se a auditoria pericial dos registros do teste-piloto detectar a presença de vieses de treinamento no modelo, se comprovar que a taxa de falsos positivos para qualquer marcação decorrente de fatores estruturais fora do controle do estudante (como quedas transitórias de conexão ou ruídos no cômodo) for igual ou superior a <strong>0,5%</strong> dos exames, ou caso a fornecedora recuse a transferência de governança e a absorção integral dos custos de custódia sob a Lei Geral de Proteção de Dados Pessoais (LGPD), dados que a comissão técnica da própria faculdade apurará na fase de homologação contratual.
+        </p>
+      </div>
+
+      <!-- DECLARAÇÃO COLETIVA DE USO DE IA -->
+      <div class="declaracao-box">
+        <div class="declaracao-title">Declaração Coletiva de Uso de Ferramentas de IA (Duas Metades)</div>
+        <p class="declaracao-text">
+          Na elaboração deste parecer colegiado, a comissão utilizou as ferramentas <strong>Google Gemini (modelos Gemini 3.8 Flash e Gemini 3.1 PRO Estendido)</strong> para apoiar a simulação de oponentes dialéticos e a síntese técnica dos argumentos divergentes entre os membros, e a ferramenta <strong>Antigravity (Google)</strong> para a diagramação estrutural do relatório técnico nos padrões da UNIVESP; e os integrantes da comissão conferiram criticamente todos os argumentos formulados, confrontaram cada apontamento com o texto literal dos documentos do caso (o folheto do fornecedor, o e-mail da estudante e o ofício da Direção), auditaram a redação dos três blocos deliberativos para eliminar eventuais alucinações conceituais e asseguraram que a fundamentação ética e a tomada de decisão decorrem exclusivamente do julgamento humano dos membros da comissão.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span class="footer-univesp">UNIVESP · Inteligência Artificial na Prática Acadêmica e Profissional</span>
+      <span>Página 2 de 2</span>
+    </div>
+  </div>
+
+</body>
+</html>
