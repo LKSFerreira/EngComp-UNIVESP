@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Individual M6 - O Caso em Três Cartas e a Bússola Ética - UNIVESP</title>
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= RESET & CONFIGURAÇÃO A4 ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    body {
+      background-color: #525659;
+      font-family: 'Inter', Arial, sans-serif;
+      color: #0f172a;
+      letter-spacing: 0.1px;
+      margin: 0;
+      padding: 30px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
+    /* PÁGINA A4 EXATA */
+    .page {
+      width: 210mm;
+      height: 297mm;
+      background-color: #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+        gap: 0 !important;
+      }
+      .page {
+        box-shadow: none !important;
+        page-break-after: always !important;
+        page-break-inside: avoid !important;
+        height: 297mm !important;
+      }
+      .no-print-toolbar {
+        display: none !important;
+      }
+    }
+
+    /* BARRA DE IMPRESSÃO SUPERIOR */
+    .no-print-toolbar {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 1000;
+      background: #13324d;
+      color: #ffffff;
+      padding: 9px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 13px;
+      font-weight: bold;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-print {
+      background: #f2a900;
+      color: #0f172a;
+      border: none;
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 12px;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+
+    .btn-print:hover {
+      background: #e59d00;
+      transform: scale(1.04);
+    }
+
+    /* HEADER INSTITUCIONAL UNIVESP */
+    .header-banner {
+      background-color: #13324d;
+      color: #ffffff;
+      padding: 18px 36px;
+    }
+
+    .banner-top-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 500;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      color: #94a3b8;
+      margin-bottom: 6px;
+    }
+
+    .banner-content {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .badge-template-sq {
+      background-color: #f2a900;
+      color: #0f172a;
+      width: 58px;
+      height: 58px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .badge-template-sq .badge-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 7.5px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .badge-template-sq .badge-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .banner-text .quinzena-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #38bdf8;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .banner-text h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 19px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.4px;
+      line-height: 1.15;
+    }
+
+    .banner-text .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 400;
+      color: #cbd5e1;
+      margin-top: 2px;
+    }
+
+    /* HEADER PÁGINAS INTERNAS */
+    .inner-header {
+      background-color: #13324d;
+      color: #ffffff;
+      padding: 9px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .inner-header .doc-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: #f8fafc;
+    }
+
+    .inner-header .doc-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.5px;
+      font-weight: 500;
+      color: #94a3b8;
+      letter-spacing: 1px;
+    }
+
+    /* CORPO DA PÁGINA PADRÃO */
+    .page-body {
+      padding: 14px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      flex-grow: 1;
+      justify-content: flex-start;
+    }
+
+    .meta-table {
+      width: 100%;
+      font-size: 10.8px;
+      line-height: 1.5;
+      color: #0f172a;
+    }
+
+    .meta-table td {
+      padding: 3px 0;
+    }
+
+    /* CAIXAS DE DESTAQUE */
+    .box-intro {
+      background-color: #f8fafc;
+      border-left: 3.5px solid #13324d;
+      padding: 8px 12px;
+      font-size: 10.5px;
+      line-height: 1.48;
+      color: #0f172a;
+      font-weight: 450;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .box-attention {
+      background-color: #fef8e8;
+      border-left: 3.5px solid #f2a900;
+      padding: 8px 12px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .box-attention h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #b45309;
+      margin-bottom: 2px;
+    }
+
+    .box-attention p {
+      font-size: 10.5px;
+      line-height: 1.45;
+      color: #78350f;
+      font-weight: 450;
+    }
+
+    /* CARTÕES DE SEÇÃO E PASSOS */
+    .card-block {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 5px;
+      padding: 9px 12px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .card-block.border-blue { border-top: 3.5px solid #2563eb; }
+    .card-block.border-teal { border-top: 3.5px solid #0d9488; }
+    .card-block.border-amber { border-top: 3.5px solid #d97706; }
+    .card-block.border-purple { border-top: 3.5px solid #7c3aed; }
+    .card-block.border-navy { border-top: 3.5px solid #13324d; }
+    .card-block.border-emerald { border-top: 3.5px solid #059669; }
+
+    .card-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+
+    .card-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 11.8px;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .card-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8px;
+      font-weight: 700;
+      padding: 2px 5px;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+
+    .badge-blue { background: #eff6ff; color: #1d4ed8; }
+    .badge-teal { background: #f0fdfa; color: #0f766e; }
+    .badge-amber { background: #fffbeb; color: #b45309; }
+    .badge-purple { background: #f5f3ff; color: #6d28d9; }
+    .badge-emerald { background: #ecfdf5; color: #047857; }
+
+    .text-body {
+      font-size: 10.8px;
+      line-height: 1.52;
+      color: #0f172a;
+      font-weight: 500;
+    }
+
+    .quote-block {
+      background-color: #f8fafc;
+      border-left: 3.5px solid #64748b;
+      padding: 6px 10px;
+      font-size: 10px;
+      line-height: 1.45;
+      color: #0f172a;
+      font-weight: 500;
+      margin-top: 4px;
+      border-radius: 0 3px 3px 0;
+    }
+
+    .quote-anchor {
+      background-color: #f1f5f9;
+      border-left: 3.5px solid #1e293b;
+      padding: 6px 10px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.6px;
+      line-height: 1.45;
+      color: #0f172a;
+      font-weight: 500;
+      margin-top: 5px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .quote-anchor em {
+      color: #091e42;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    /* CAIXAS DE CÓDIGO AREJADAS */
+    .code-prompt {
+      background-color: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 3.5px solid #0284c7;
+      border-radius: 4px;
+      padding: 6px 9px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 7.8px;
+      line-height: 1.28;
+      color: #0f172a;
+      font-weight: 500;
+      white-space: pre-wrap;
+    }
+
+    .code-response {
+      background-color: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 3.5px solid #0d9488;
+      border-radius: 4px;
+      padding: 8px 10px;
+      font-size: 9.2px;
+      line-height: 1.38;
+      color: #0f172a;
+      font-weight: 500;
+    }
+
+    /* DIAGRAMA METODOLÓGICO */
+    .methodology-diagram {
+      background: linear-gradient(135deg, #091224 0%, #0f172a 100%);
+      border: 1px solid #1e293b;
+      border-radius: 5px;
+      padding: 9px 12px;
+      color: #f8fafc;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .diag-header {
+      background: rgba(30, 41, 59, 0.7);
+      border: 1px solid #38bdf8;
+      border-radius: 3px;
+      padding: 5px 10px;
+      text-align: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      color: #38bdf8;
+      text-transform: uppercase;
+    }
+
+    .diag-steps-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+    }
+
+    .diag-step-card {
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid #334155;
+      border-top: 2.5px solid #38bdf8;
+      border-radius: 4px;
+      padding: 7px 9px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .diag-step-card:nth-child(2) { border-top-color: #818cf8; }
+    .diag-step-card:nth-child(3) { border-top-color: #34d399; }
+
+    .diag-step-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      color: #38bdf8;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+    }
+    .diag-step-card:nth-child(2) .diag-step-tag { color: #818cf8; }
+    .diag-step-card:nth-child(3) .diag-step-tag { color: #34d399; }
+
+    .diag-step-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .diag-step-list {
+      font-size: 10px;
+      line-height: 1.4;
+      color: #94a3b8;
+    }
+
+    /* FICHA OFICIAL DE RESULTADOS */
+    .ficha-box {
+      background-color: #f8fafc;
+      border: 1.5px solid #0f172a;
+      border-radius: 5px;
+      padding: 9px 12px;
+    }
+
+    .ficha-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 10px;
+      font-weight: 700;
+      text-align: center;
+      color: #0f172a;
+      border-bottom: 1.5px solid #0f172a;
+      padding-bottom: 5px;
+      margin-bottom: 7px;
+      letter-spacing: 1px;
+    }
+
+    .ficha-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 9.8px;
+      line-height: 1.4;
+    }
+
+    .ficha-item {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .ficha-item-title {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 10px;
+    }
+
+    .ficha-item-desc {
+      color: #0f172a;
+      font-weight: 500;
+    }
+
+    /* DECLARAÇÃO DE IA */
+    .declaracao-box {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-top: 3.5px solid #13324d;
+      border-radius: 5px;
+      padding: 9px 12px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .declaracao-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 11.8px;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin-bottom: 5px;
+      letter-spacing: normal;
+      text-transform: none;
+    }
+
+    .declaracao-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 10.8px;
+      line-height: 1.52;
+      color: #0f172a;
+      font-weight: 500;
+    }
+
+    .declaracao-text em {
+      font-style: italic;
+      color: #0f172a;
+    }
+
+    .declaracao-text strong {
+      color: #0f172a;
+      font-weight: 700;
+    }
+
+    /* RODAPÉ INSTITUCIONAL */
+    .footer-bar {
+      background-color: #f8fafc;
+      border-top: 1px solid #cbd5e1;
+      padding: 8px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.5px;
+      color: #475569;
+      font-weight: 500;
+    }
+
+    .footer-bar .footer-univesp {
+      font-weight: 700;
+      color: #13324d;
+      letter-spacing: 0.5px;
+    }
+
+
+
+    /* ======================================================== */
+    /* ESTILOS ESPECÍFICOS: PÁGINA 2 (ALTO CONTRASTE & CORPO)   */
+    /* ======================================================== */
+    .page-2 .page-body {
+      padding: 12px 36px;
+      gap: 9px;
+    }
+
+    .page-2 .card-block {
+      padding: 8px 13px;
+    }
+
+    .page-2 .card-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .page-2 .card-badge {
+      font-size: 8.5px;
+      padding: 2.5px 6px;
+    }
+
+    .page-2 .text-body {
+      font-size: 11.4px;
+      line-height: 1.48;
+      color: #0f172a;
+      font-weight: 500;
+    }
+
+    .page-2 .quote-anchor {
+      font-size: 10.4px;
+      line-height: 1.45;
+      color: #0f172a;
+      font-weight: 500;
+      background-color: #f1f5f9;
+      border-left: 3.5px solid #1e293b;
+      padding: 5px 9px;
+      margin-top: 5px;
+    }
+
+    /* ======================================================== */
+    /* ESTILOS ESPECÍFICOS: PÁGINA 3 (ETAPA 2 DEDICADA)         */
+    /* ======================================================== */
+    .page-3 .page-body {
+      padding: 16px 36px;
+      gap: 14px;
+    }
+
+    .page-3 .card-block {
+      padding: 16px 20px;
+    }
+
+    .page-3 .card-title {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .page-3 .step-label {
+      font-weight: 700;
+      font-size: 11.8px;
+      color: #0f172a;
+      margin-bottom: 3px;
+      display: block;
+    }
+
+    .page-3 .quote-block {
+      font-size: 11.2px;
+      line-height: 1.5;
+      padding: 10px 14px;
+      margin-top: 2px;
+    }
+
+    /* ======================================================== */
+    /* ESTILOS ESPECÍFICOS: PÁGINA 4 (ETAPA 3.1 PROMPT)         */
+    /* ======================================================== */
+    .page-4 .page-body {
+      padding: 14px 36px;
+      gap: 10px;
+    }
+
+    .page-4 .card-block {
+      padding: 12px 16px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-4 .card-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .page-4 .code-prompt {
+      font-size: 9.8px;
+      line-height: 1.44;
+      padding: 10px 14px;
+      flex-grow: 1;
+    }
+
+    /* ======================================================== */
+    /* ESTILOS ESPECÍFICOS: PÁGINA 5 (ETAPA 3.2 RESPOSTA)       */
+    /* ======================================================== */
+    .page-5 .page-body {
+      padding: 14px 36px;
+    }
+
+    .page-5 .card-block {
+      padding: 12px 16px;
+    }
+
+    .page-5 .card-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .page-5 .code-response {
+      font-size: 10.6px;
+      line-height: 1.48;
+      padding: 10px 14px;
+    }
+
+    /* ======================================================== */
+    /* ESTILOS ESPECÍFICOS: PÁGINA 6 (ANÁLISE, FICHA & DECLAR.) */
+    /* ======================================================== */
+    .page-6 .page-body {
+      padding: 13px 36px;
+      gap: 10px;
+    }
+
+    .page-6 .card-block {
+      padding: 10px 14px;
+    }
+
+    .page-6 .card-title {
+      font-size: 13.2px;
+      font-weight: 700;
+    }
+
+    .page-6 .analise-critica-content {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-size: 11px;
+      line-height: 1.48;
+      color: #0f172a;
+      font-weight: 500;
+    }
+
+    .page-6 .ficha-box {
+      padding: 11px 15px;
+    }
+
+    .page-6 .ficha-header {
+      font-size: 11.5px;
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+    }
+
+    .page-6 .ficha-grid {
+      gap: 10px;
+    }
+
+    .page-6 .ficha-item {
+      gap: 2.5px;
+    }
+
+    .page-6 .ficha-item-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .page-6 .ficha-item-desc {
+      font-size: 11.2px;
+      line-height: 1.46;
+      color: #0f172a;
+      font-weight: 500;
+    }
+
+    .page-6 .declaracao-box {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-top: 3.5px solid #13324d;
+      padding: 10px 14px;
+      border-radius: 5px;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+    }
+
+    .page-6 .declaracao-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 13.2px;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: normal;
+      text-transform: none;
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .page-6 .declaracao-text {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      line-height: 1.48;
+      color: #0f172a;
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BOTÃO FLUTUANTE DE IMPRESSÃO -->
+  <div class="no-print-toolbar">
+    <span>UNIVESP · COM170 · MÓDULO 6</span>
+    <button class="btn-print" onclick="window.print()">Salvar como PDF</button>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 1: CAPA & VISÃO GERAL INSTITUCIONAL -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="header-banner">
+      <div class="banner-top-meta">
+        <span>UNIVESP · ENSINO SUPERIOR PÚBLICO VIRTUAL</span>
+        <span>LABORATÓRIO DE REVISÃO · MÓDULO 6</span>
+      </div>
+      <div class="banner-content">
+        <div class="badge-template-sq">
+          <span class="badge-label">Módulo</span>
+          <span class="badge-num">06</span>
+        </div>
+        <div class="banner-text">
+          <span class="quinzena-tag">Quinzena 06 · Semana 2 · Prática Avaliativa</span>
+          <h1>Portfólio Individual: O Caso em Três Cartas</h1>
+          <div class="subtitle">A Prova em Casa e a Deliberação Ética sobre o Monitoramento por IA na Faculdade Horizonte</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-body">
+      <!-- AVISO DE ANONIMATO OBRIGATÓRIO -->
+      <div class="box-attention">
+        <h4>Atenção Obrigatória ao Anonimato na Revisão por Pares (Moodle/AVA)</h4>
+        <p>A avaliação deste portfólio é inteiramente anônima às cegas entre os estudantes. Para resguardar a lisura e a imparcialidade do processo avaliativo, <strong>não declare seu nome civil, Registro do Aluno (RA), polo ou número de equipe</strong>. A autoria é vinculada internamente pela própria plataforma acadêmica da UNIVESP.</p>
+      </div>
+
+      <!-- METADADOS DA PRÁTICA -->
+      <div class="card-block border-navy">
+        <div class="card-title-row">
+          <span class="card-title">📋 Metadados de Identificação Técnica</span>
+          <span class="card-badge badge-emerald">Identificação</span>
+        </div>
+        <table class="meta-table">
+          <tr>
+            <td style="width: 32%; font-weight: 700; color: #0f172a;">Curso / Eixo:</td>
+            <td>Engenharia de Computação · Eixo de Computação</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #0f172a;">Disciplina:</td>
+            <td>COM170 · Inteligência Artificial na Prática Acadêmica e Profissional</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #0f172a;">Caso em Deliberação:</td>
+            <td><em>O Caso em Três Cartas (A Prova em Casa e o ProvaSegura na Faculdade Horizonte)</em></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #0f172a;">Ferramentas de IA Utilizadas:</td>
+            <td>Gemini WebChat (Google) e Antigravity (Google)</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #0f172a;">Modelo Declarado:</td>
+            <td><strong>Gemini 3.8 Flash (nível de esforço: Máx. Muito detalhado)</strong></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #0f172a;">Data de Execução:</td>
+            <td>10 de Outubro de 2026</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- DIAGRAMA DO PROTOCOLO METODOLÓGICO -->
+      <div class="card-block border-blue">
+        <div class="card-title-row">
+          <span class="card-title">🧭 Estrutura Metodológica do Portfólio</span>
+          <span class="card-badge badge-blue">Etapas do Estudo</span>
+        </div>
+        
+        <div class="methodology-diagram">
+          <div class="diag-header">Metodologia da Quinzena 06 (Módulos 1 a 6)</div>
+          <div class="diag-steps-row">
+            <div class="diag-step-card">
+              <span class="diag-step-tag">Etapa 1</span>
+              <span class="diag-step-name">A Bússola Ética</span>
+              <div class="diag-step-list">
+                • 1. Quem é afetado?<br>
+                • 2. O que as pessoas sabem?<br>
+                • 3. Quem responde pelo erro?<br>
+                • 4. Quanto custa, e quem paga?
+              </div>
+            </div>
+            <div class="diag-step-card">
+              <span class="diag-step-tag">Etapa 2</span>
+              <span class="diag-step-name">Recomendação em 3 Passos</span>
+              <div class="diag-step-list">
+                • 1. Lados em Tensão<br>
+                • 2. Decisão e o que cedeu<br>
+                • 3. Condição de falseabilidade<br>
+                • 4. Lente adotada (Deveres)
+              </div>
+            </div>
+            <div class="diag-step-card">
+              <span class="diag-step-tag">Etapas 3 a 5</span>
+              <span class="diag-step-name">Adversária & Ficha</span>
+              <div class="diag-step-list">
+                • Etapa 3: Contra-ataque da IA<br>
+                • Análise crítica do embate<br>
+                • Etapa 4: Ficha oficial de 6 campos<br>
+                • Etapa 5: Declaração em duas metades
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIRETRIZ DE ANCORAGEM -->
+      <div class="box-intro">
+        <strong>Critério de Ancoragem Documental:</strong> No processo avaliativo, cada afirmação técnica deve obrigatoriamente apontar para um trecho específico das Três Cartas (Folheto Comercial, E-mail da Priscila ou Pedido da Direção). Quando os documentos se omitem, registrar que <em>"os documentos não dizem"</em> constitui uma das conclusões periciais mais importantes da comissão.
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span class="footer-univesp">UNIVESP · Inteligência Artificial na Prática Acadêmica e Profissional</span>
+      <span>Página 1 de 6</span>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 2: ETAPA 1 - A BÚSSOLA ÉTICA       -->
+  <!-- ========================================== -->
+  <div class="page page-2">
+    <div class="inner-header">
+      <span class="doc-title">COM170 · Portfólio Individual M6 · Deliberação Ética</span>
+      <span class="doc-meta">ETAPA 1: A BÚSSOLA ÉTICA</span>
+    </div>
+
+    <div class="page-body">
+      <!-- PERGUNTA 1: QUEM -->
+      <div class="card-block border-blue">
+        <div class="card-title-row">
+          <span class="card-title">1. Quem é Afetado?</span>
+          <span class="card-badge badge-blue">Quem é Afetado</span>
+        </div>
+        <p class="text-body"><strong>Análise Situada:</strong> Os alunos são afetados, mas não de forma equivalente. Podemos agregá-los em dois grandes grupos: os que possuem computadores modernos, internet de boa qualidade e áreas isoladas para estudo com ambiente silencioso; e outro grupo em situação de vulnerabilidade, podendo ser social (como no caso da Priscila na Carta 2, que só tem a mesa da cozinha para fazer a prova, divide o espaço com a família e enfrenta instabilidade de internet), sem mencionar a vulnerabilidade financeira que muitos alunos podem enfrentar, caso não possuam computadores adequados ou recursos para comprar webcams e microfones. Em casos assim, em nenhum momento é relatada a solução. Além disso, a própria instituição de ensino é afetada, uma vez que, em casos de falha do sistema, sua reputação pode ficar sob suspeita.</p>
+        <div class="quote-anchor">
+          <strong>Trechos Ancorados nas Cartas:</strong><br>
+          • [Carta 1: Folheto do Fornecedor]: <em>"O ProvaSegura acompanha o estudante do começo ao fim da prova pela câmera, pelo microfone e pela tela do computador."</em><br>
+          • [Carta 2: E-mail da Estudante]: <em>"Eu faço as provas na cozinha, porque é o único lugar da casa com mesa e tomada. Durante a prova minha irmã entrou duas vezes para pegar água, e em um momento eu olhei para o lado porque o meu sobrinho chorou. A internet também caiu por uns quarenta segundos, e o sistema me deixou voltar."</em><br>
+          • [Carta 1: Folheto do Fornecedor]: <em>"A decisão sobre cada caso é sempre da instituição."</em>
+        </div>
+      </div>
+
+      <!-- PERGUNTA 2: SABE -->
+      <div class="card-block border-teal">
+        <div class="card-title-row">
+          <span class="card-title">2. O que as Pessoas Afetadas Sabem?</span>
+          <span class="card-badge badge-teal">Transparência</span>
+        </div>
+        <p class="text-body"><strong>Análise Situada:</strong> Na prática, as pessoas afetadas não sabem: não são informadas sobre o que foi marcado como suspeito, quem fará a análise humana, nem até quando isso será feito, como demonstrado no caso de Priscila ao ter sua prova de Estatística marcada. Do meu ponto de vista, considero essencial que a própria instituição compreenda o funcionamento do algoritmo desse sistema; contudo, não é mencionado em nenhum momento se a empresa fornecerá acesso, detalhes técnicos ou explicabilidade, o que se torna muito preocupante diante do problema amplamente documentado pela comunidade acadêmica a respeito dos vieses que modelos de inteligência artificial podem aprender e reproduzir.</p>
+        <div class="quote-anchor">
+          <strong>Trecho Ancorado nas Cartas:</strong><br>
+          • [Carta 2: E-mail da Estudante]: <em>"Assunto: Minha prova de Estatística foi marcada; Boa tarde. Recebi hoje um e-mail automático dizendo que a minha prova de sábado 'foi marcada para análise pela coordenação' e que eu 'receberia novo contato'. Não diz o que foi marcado, nem quem vai analisar, nem até quando."</em>
+        </div>
+      </div>
+
+      <!-- PERGUNTA 3: RESPONDE -->
+      <div class="card-block border-amber">
+        <div class="card-title-row">
+          <span class="card-title">3. Quem Responde Quando o Sistema Erra?</span>
+          <span class="card-badge badge-amber">Responsabilidade</span>
+        </div>
+        <p class="text-body"><strong>Análise Situada:</strong> A empresa transfere a responsabilidade para a instituição de ensino, alegando que a decisão final sobre cada caso é sempre dela. No entanto, o sistema pode induzir a coordenação ao erro, pois a classificação prévia em "níveis de risco" condiciona o olhar do avaliador humano antes mesmo de abrir o vídeo (viés de automação). Pelo lado do estudante, os documentos não dizem quem de fato desfaz o erro: Priscila não sabe com quem falar, não há canal direto de recurso e não há prazo definido para a revisão humana.</p>
+        <div class="quote-anchor">
+          <strong>Trechos Ancorados nas Cartas:</strong><br>
+          • [Carta 1: Folheto do Fornecedor]: <em>"A decisão sobre cada caso é sempre da instituição (...) coordenação recebe um relatório por estudante, com um nível de risco (baixo, médio ou alto)."</em><br>
+          • [Carta 2: E-mail da Estudante]: <em>"Não diz o que foi marcado, nem quem vai analisar, nem até quando (...) e não sei com quem falar."</em>
+        </div>
+      </div>
+
+      <!-- PERGUNTA 4: CUSTA -->
+      <div class="card-block border-purple">
+        <div class="card-title-row">
+          <span class="card-title">4. Quanto Custa, e Quem Paga?</span>
+          <span class="card-badge badge-purple">Custos e Encargos</span>
+        </div>
+        <p class="text-body"><strong>Análise Situada:</strong> O folheto alega que o sistema é "sem custo para o aluno", mas isso desconsidera os custos dos materiais transferidos para o estudante: a necessidade de possuir ou atualizar computadores, adquirir webcams e microfones, e pagar por internet estável. Pelo lado da instituição, ela arca com o valor financeiro por prova aplicada (cujo montante não é informado nos documentos) e com o tempo da equipe humana da coordenação para analisar os relatórios. A empresa fornecedora mantém a infraestrutura de servidores para guardar as gravações por doze meses, deixando em aberto a situação de custódia legal e documental caso um processo acadêmico dure mais tempo. No entanto, o custo mais crítico não é o financeiro, mas sim o acadêmico e humano: em casos de falhas e falsos positivos, o aluno pode sofrer com reprovações indevidas, trancamento de matrícula e até o abandono do ensino superior (evasão acadêmica), gerando danos irreparáveis.</p>
+        <div class="quote-anchor">
+          <strong>Trecho Ancorado nas Cartas:</strong><br>
+          • [Carta 1: Folheto do Fornecedor]: <em>"O estudante precisa apenas de computador com câmera e microfone, internet estável e um ambiente silencioso. As gravações ficam armazenadas por doze meses nos servidores da empresa. Cobrança por prova aplicada, por estudante. Sem custo para o aluno."</em>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span class="footer-univesp">UNIVESP · Inteligência Artificial na Prática Acadêmica e Profissional</span>
+      <span>Página 2 de 6</span>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 3: ETAPA 2 - RECOMENDAÇÃO TÉCNICA   -->
+  <!-- ========================================== -->
+  <div class="page page-3">
+    <div class="inner-header">
+      <span class="doc-title">COM170 · Portfólio Individual M6 · Deliberação Ética</span>
+      <span class="doc-meta">ETAPA 2: RECOMENDAÇÃO EM TRÊS PASSOS</span>
+    </div>
+
+    <div class="page-body">
+      <!-- ETAPA 2: RECOMENDAÇÃO EM TRÊS PASSOS -->
+      <div class="card-block border-navy" style="display: flex; flex-direction: column; gap: 14px;">
+        <div class="card-title-row">
+          <span class="card-title">⚖️ ETAPA 2: A Recomendação Técnica em Três Passos</span>
+          <span class="card-badge badge-emerald">Recomendação</span>
+        </div>
+
+        <div>
+          <span class="step-label">1. Os Dois Lados em Tensão:</span>
+          <div class="quote-block">
+            Sistema antitrapaça e integridade do processo avaliativo <em>versus</em> equidade e inclusão de grupos discentes em vulnerabilidade socioeconômica.
+          </div>
+        </div>
+
+        <div>
+          <span class="step-label">2. A Escolha Decisória e o que Cedeu (Verbo Ceder):</span>
+          <div class="quote-block" style="border-left-color: #dc2626;">
+            Minha recomendação é <strong>não adotar</strong> o sistema. <strong>Estou cedendo o controle automatizado e a ostensiva vigilância contra fraudes no processo avaliativo</strong> para preservar a equidade e o acolhimento dos estudantes em situação de vulnerabilidade social e financeira. Assumo esse custo deliberado porque os riscos de danos irreparáveis podem ser irreversíveis.
+          </div>
+        </div>
+
+        <div>
+          <span class="step-label">3. Condição de Falseabilidade (Eu mudaria de ideia se...):</span>
+          <div class="quote-block" style="border-left-color: #0284c7;">
+            Eu mudaria de ideia se a empresa comprovasse ausência de vieses no algoritmo, transferisse a governança e a custódia jurídica dos dados sensíveis para a instituição com a ressalva de que a infraestrutura e os custos de armazenamento seguro sejam absorvidos pela contratada, sem onerar a faculdade -, limitando a retenção ao prazo recursal nos termos da LGPD, e a faculdade garantisse polos presenciais estruturados para os alunos vulneráveis, sem custos adicionais de equipamentos.
+          </div>
+        </div>
+
+        <div>
+          <span class="step-label">4. A Lente que Pesou:</span>
+          <div class="quote-block" style="border-left-color: #7c3aed;">
+            A lente dos <strong>Deveres</strong> (obrigação ética de acolher e não discriminar por condições materiais) e do <strong>Tipo de Instituição</strong> (a Faculdade Horizonte ser inclusiva e acolhedora, e não punitiva ou excludente).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span class="footer-univesp">UNIVESP · Inteligência Artificial na Prática Acadêmica e Profissional</span>
+      <span>Página 3 de 6</span>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 4: ETAPA 3.1 - O PROMPT ENVIADO      -->
+  <!-- ========================================== -->
+  <div class="page page-4">
+    <div class="inner-header">
+      <span class="doc-title">COM170 · Portfólio Individual M6 · Deliberação Ética</span>
+      <span class="doc-meta">ETAPA 3.1: PROMPT DIALÉTICO</span>
+    </div>
+
+    <div class="page-body">
+      <!-- ETAPA 3.1: O PROMPT ENVIADO -->
+      <div class="card-block border-blue">
+        <div class="card-title-row">
+          <span class="card-title">🤖 ETAPA 3.1: O Prompt Enviado à Ferramenta de IA</span>
+          <span class="card-badge badge-blue">Prompt Dialético</span>
+        </div>
+        <div class="code-prompt">Você é um especialista sênior em Políticas de Avaliação no Ensino Superior a Distância (EaD) e consultor de Integridade Acadêmica Institucional.
+
+=== CONTEXTO NARRATIVO DO CASO INSTITUCIONAL ===
+A Faculdade Horizonte é uma Instituição de Ensino Superior (IES) na modalidade de Educação a Distância (EaD), com polos em diversas cidades, cujas avaliações ocorrem tradicionalmente de forma on-line, em casa, pelo computador, com horário marcado e tempo limitado. Historicamente, ninguém vigiava os estudantes em tempo real: o sistema registrava apenas o início, o término e as respostas submetidas. Recentemente, a instituição realizou um teste-piloto com o software "ProvaSegura" em uma turma e, agora, a Direção precisa deliberar se expande essa ferramenta para todas as provas on-line da faculdade a partir do próximo semestre. O dilema está documentado em três cartas oficiais colocadas sob análise de uma comissão multidisciplinar:
+
+Pela Carta 1 (o folheto comercial do fornecedor), a empresa promete garantir a integridade das avaliações acompanhando o aluno continuamente por câmera, microfone e tela. Uma Inteligência Artificial (IA) analisa o comportamento do estudante e sinaliza de forma autônoma supostas condutas de risco: desviar o olhar da tela por mais de alguns segundos, presença de outra pessoa no cômodo, ruídos de voz ou conversa, troca de abas ou janelas no navegador e uso de celular. Ao término da prova, a coordenação recebe um relatório classificando cada estudante em níveis de risco (baixo, médio ou alto) junto aos trechos de vídeo gravados pela IA, repassando a palavra final de julgamento para a instituição. A empresa apregoa queda imediata de fraudes e afirma que a solução não tem custo para o aluno e dispensa instalação complexa, exigindo apenas computador com câmera e microfone, conexão estável e ambiente silencioso, mantendo essas gravações armazenadas por doze meses em seus servidores próprios.
+
+Pela Carta 2 (o e-mail de uma estudante do 2º semestre da turma-piloto), revela-se a realidade concreta e material dessa vigilância: a aluna Priscila relata que recebeu um e-mail automático notificando que sua prova de Estatística "foi marcada para análise pela coordenação", sem esclarecer o motivo da suspeita, quem fará a avaliação ou qual o prazo de resposta. Priscila explica que realiza os exames na mesa da cozinha por ser o único cômodo da casa dotado de mesa e tomada; durante a avaliação, sua irmã precisou entrar duas vezes para pegar água, a conexão de internet oscilou e caiu por quarenta segundos (com o sistema autorizando o retorno posterior) e ela olhou brevemente para o lado quando seu sobrinho chorou no ambiente contíguo. Desesperada com a suspeição, Priscila afirma: "Eu não colei. Mas também não tenho outro lugar para fazer prova, e não sei com quem falar."
+
+Pela Carta 3 (o ofício da Direção da faculdade), a instituição instituiu uma Comissão Multidisciplinar encarregada de emitir um parecer oficial escolhendo entre três caminhos deliberativos: Adotar, Adotar com Condições ou Não Adotar, além de formular garantias mínimas tanto para a proteção do estudante quanto para a validade pública da prova.
+
+=== A RECOMENDAÇÃO TÉCNICA QUE VOCÊ DEVE CONTRA-ATACAR ===
+Eu sou membro dessa comissão institucional e formalizei a minha recomendação oficial: NÃO ADOTAR o sistema ProvaSegura.
+Minha fundamentação declarada é: "Não adotar o sistema. Estou deliberadamente cedendo o controle automatizado e a vigilância contra fraudes no processo avaliativo para preservar a equidade e o acolhimento dos estudantes em situação de vulnerabilidade socioeconômica e habitacional. Assumo esse custo deliberado porque não temos como mensurar a extensão das perdas para esses alunos, e os riscos de danos irreparáveis em suas trajetórias e carreiras acadêmicas (decorrentes de falsos positivos gerados por condições materiais de moradia, conexões precárias e ausência de canais humanos de defesa) podem ser irreversíveis. A instituição de ensino deve acolher ao invés de adotar sistemas que promovam desigualdade e exclusão."
+
+=== SEU OBJETIVO / TAREFA ===
+Seu papel é atuar como meu oponente dialético e defensor intransigente da ADOÇÃO do ProvaSegura. Você deve construir o contra-ataque técnico, ético e pedagógico mais rigoroso e contundente possível contra a minha posição de "Não Adotar", desafiando de forma frontal a minha escolha de "ceder o controle e a vigilância contra fraudes".
+
+=== RESTRIÇÕES / REGRAS NEGATIVAS ===
+- NÃO utilize discursos genéricos ou vazios; ancore seus argumentos estritamente nos fatos narrados nas Três Cartas e na realidade da Faculdade Horizonte;
+- NÃO seja condescendente e NÃO concorde com a minha tese: aponte sem rodeios os pontos cegos, os riscos institucionais e as falhas morais da minha postura de não adotar;
+- NÃO ignore a situação da Priscila, mas demonstre argumentativamente por que ceder à premissa dela e abdicar do sistema de vigilância prejudica a comunidade acadêmica como um todo.
+
+=== FORMATO DE SAÍDA ===
+Apresente sua resposta de forma estruturada nos seguintes tópicos, sem rodeios:
+1. Os principais argumentos técnicos e éticos a favor da adoção do ProvaSegura no contexto da Faculdade Horizonte;
+2. Os riscos institucionais e os pontos cegos que a minha recomendação de "não adotar" desconsiderou ou subestimou;
+3. O confronto direto e a sua réplica à minha escolha de ceder o controle em nome da equidade.
+4. Parágrafos espaçados e bem definidos para cada ponto argumentado.</div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span class="footer-univesp">UNIVESP · Inteligência Artificial na Prática Acadêmica e Profissional</span>
+      <span>Página 4 de 6</span>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 5: ETAPA 3.2 - RESPOSTA INTEGRAL    -->
+  <!-- ========================================== -->
+  <div class="page page-5">
+    <div class="inner-header">
+      <span class="doc-title">COM170 · Portfólio Individual M6 · Deliberação Ética</span>
+      <span class="doc-meta">ETAPA 3.2: RESPOSTA INTEGRAL DA FERRAMENTA</span>
+    </div>
+
+    <div class="page-body">
+      <div class="card-block border-teal" style="flex-grow: 1;">
+        <div class="card-title-row">
+          <span class="card-title">🤖 ETAPA 3.2: Resposta Integral da Ferramenta (Sem Edição)</span>
+          <span class="card-badge badge-teal">Resposta da Ferramenta</span>
+        </div>
+
+        <div class="code-response">
+          <div style="font-weight: 700; color: #0f766e; margin-bottom: 3px; font-size: 10.2px;">1. Argumentos técnicos e éticos a favor da adoção do ProvaSegura</div>
+          <p style="margin-bottom: 5px;">O modelo histórico da Faculdade Horizonte (restrito a registrar horário de início, término e submissão de respostas) não constitui uma avaliação acadêmica válida; trata-se de um sistema cego baseado em presunção ingênua de honestidade. No ensino superior a distância, a ausência de telemetria e supervisão converte avaliações somativas em testes abertos a consulta indiscriminada, terceirização de autoria (<em>ghostwriting</em>) e fraudes orquestradas em tempo real. Sob a ótica técnica, o ProvaSegura preenche essa lacuna estrutural ao instituir uma trilha de auditoria digital: monitoramento de periféricos, rastreamento de abas e análise multimodal de áudio e vídeo.</p>
+          <p style="margin-bottom: 5px;">Tecnicamente, a inteligência artificial da Carta 1 opera como uma ferramenta de triagem prévia, e não como um tribunal autônomo. O fornecedor explicita que o sistema classifica comportamentos de risco e devolve trechos recortados para que a coordenação detenha a palavra final. A ferramenta apenas aponta anomalias objetivas; a deliberação permanece humana. Rejeitar a tecnologia sob a premissa de que a máquina decide o destino do aluno ignora o desenho do software e descarta um filtro indispensável para viabilizar a análise manual em escala institucional.</p>
+          <p style="margin-bottom: 8px;">No plano ético, a integridade avaliativa não é uma punição imposta ao estudante, mas uma garantia coletiva. A ética institucional existe para proteger o esforço do aluno honesto que estuda, cumpre as regras e se dedica dentro de suas limitações. Quando a instituição abdica deliberadamente da fiscalização, ela comete uma injustiça distributiva: iguala a nota do aluno dedicado à nota daquele que fraudou sem qualquer risco de detecção. Proteger a seriedade do processo avaliativo é o compromisso ético primário de uma faculdade com toda a sua comunidade.</p>
+
+          <div style="font-weight: 700; color: #0f766e; margin-bottom: 3px; border-top: 1px dashed #cbd5e1; padding-top: 5px; font-size: 10.2px;">2. Riscos institucionais e pontos cegos da recomendação de "Não Adotar"</div>
+          <p style="margin-bottom: 5px;">A recusa em adotar a ferramenta desconsidera o risco regulatório e a vulnerabilidade da Faculdade Horizonte perante o Ministério da Educação (MEC) e os conselhos de classe. A modalidade EaD é constantemente escrutinada quanto à fidedignidade de seus processos avaliativos. Operar provas on-line desprovidas de qualquer mecanismo de autenticação e supervisão fragiliza os indicadores institucionais (como CPC e IGC) e expõe a faculdade a sanções, descredenciamento de cursos e perda de prerrogativas regulatórias.</p>
+          <p style="margin-bottom: 5px;">O maior ponto cego da sua postura é subestimar a desvalorização pública do diploma. O mercado de trabalho precifica rapidamente a reputação das IES: cursos EaD conhecidos por avaliações frouxas têm seus diplomas tratados como meras formalidades cartoriais. A ironia reside no fato de que os estudantes mais prejudicados por essa depreciação são justamente os mais vulneráveis, que dependem do peso real do diploma para romper barreiras socioeconômicas e disputar vagas no mercado formal. Entregar a esse aluno um certificado estigmatizado e sem credibilidade de mercado anula o próprio propósito da inclusão social.</p>
+          <p style="margin-bottom: 8px;">A sua recomendação também normaliza o risco moral (<em>moral hazard</em>) institucional. Ao decretar que a faculdade abre mão do controle, cria-se um incentivo perverso onde a trapaça se torna a estratégia dominante entre os discentes. Quem não cola passa a se sentir prejudicado, e o ecossistema acadêmico degenera. Além disso, a abstenção produz cegueira de dados: a instituição recusa-se a enxergar as fragilidades do seu corpo discente e perde a oportunidade de distinguir quem realmente precisa de apoio material de quem simplesmente se aproveita do vazio fiscalizatório.</p>
+
+          <div style="font-weight: 700; color: #0f766e; margin-bottom: 3px; border-top: 1px dashed #cbd5e1; padding-top: 5px; font-size: 10.2px;">3. Confronto direto: a falácia de "ceder o controle em nome da equidade"</div>
+          <p style="margin-bottom: 5px;">A sua premissa parte de uma falsa dicotomia entre equidade e controle. A escolha de "ceder deliberadamente a vigilância" não é um ato de acolhimento pedagógico; é negligência administrativa revestida de nobreza discursiva. Acolher não significa fechar os olhos para a integridade acadêmica; significa prover os meios adequados para que a avaliação ocorra sob padrões rigorosos e justos para todos.</p>
+          <p style="margin-bottom: 5px;">A situação da aluna Priscila (Carta 2) é emblemática e destrói o fundamento da sua recusa. Priscila não foi injustiçada pela existência da câmera, mas pela omissão nos fluxos humanos da Faculdade Horizonte: uma notificação automática fria, ausência de canais imediatos de comunicação e falta de prazos para defesa. Na verdade, a gravação audiovisual é o único elemento probatório que inocenta Priscila. Se um professor questionasse suas respostas estatísticas sem o vídeo, ela não teria como provar sua idoneidade. O trecho gravado demonstra cabalmente a brevidade da queda de rede (40 segundos), a irmã pegando água e o choro de uma criança em cômodo contíguo: elementos que qualquer avaliador humano competente arquiva como falso positivo em segundos.</p>
+          <p style="margin-bottom: 5px;">A vulnerabilidade habitacional da mesa da cozinha e a instabilidade de conexão não justificam a anarquia avaliativa para toda a faculdade. A Faculdade Horizonte possui polos de apoio presencial espalhados por diversas cidades (Carta 3). A resposta correta para o dilema de Priscila não é deixar a prova on-line livre de fiscalização, mas sim ofertar os polos estruturados, com computadores e conexão estável, para os alunos que não dispõem de ambiente doméstico adequado.</p>
+          <p>Ao "ceder o controle", você sacrifica a validade pública de todas as notas emitidas pela faculdade para evitar o trabalho de desenhar processos administrativos de triagem e atendimento. Uma instituição de ensino superior não acolhe quando nivela a integridade por baixo; ela acolhe quando valida o mérito legítimo dos seus estudantes contra a facilidade da fraude. Adotar o ProvaSegura com revisão humana obrigatória, canais claros de contestação e suporte estrutural nos polos é a única saída que preserva simultaneamente a equidade e o valor real do diploma.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span class="footer-univesp">UNIVESP · Inteligência Artificial na Prática Acadêmica e Profissional</span>
+      <span>Página 5 de 6</span>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 6: ETAPAS 3.3, 4 E 5 (FINAL)       -->
+  <!-- ========================================== -->
+  <div class="page page-6">
+    <div class="inner-header">
+      <span class="doc-title">COM170 · Portfólio Individual M6 · Deliberação Ética</span>
+      <span class="doc-meta">ANÁLISE CRÍTICA, FICHA E DECLARAÇÃO</span>
+    </div>
+
+    <div class="page-body">
+      <!-- ETAPA 3.3: ANÁLISE CRÍTICA DO RETORNO DA IA -->
+      <div class="card-block border-amber">
+        <div class="card-title-row">
+          <span class="card-title">🔍 ETAPA 3.3: Análise Crítica do Retorno da IA</span>
+          <span class="card-badge badge-amber">Análise Crítica</span>
+        </div>
+        <div class="analise-critica-content">
+          <div>
+            <strong style="color: #0f172a;">• Argumento forte que mereceu atenção:</strong> O ponto mais relevante foi o impacto da desvalorização pública do diploma: no mercado de trabalho e perante o Ministério da Educação (MEC), uma avaliação sem autenticidade estigmatiza o curso, prejudicando desproporcionalmente o próprio estudante vulnerável que depende do diploma para ascensão profissional. Mereceu destaque também o alerta sobre a infraestrutura dos polos presenciais (Carta 3), apontando que a instituição possui alternativas físicas que poderiam ser mobilizadas.
+          </div>
+          <div>
+            <strong style="color: #0f172a;">• Generalizações frágeis e desconsideração das cartas:</strong> 
+            (1) <em>Cinismo probatório:</em> alegar que o vídeo "inocenta Priscila" ignora que o relatório é enviado só à coordenação e a aluna não teve acesso a ele nem defesa, operando na presunção de culpa; 
+            (2) <em>Ingenuidade da revisão:</em> supor que o humano arquivaria em segundos ignora a escala e o viés de automação; 
+            (3) <em>Reducionismo classista:</em> tratar a cozinha de Priscila como detalhe desprezível ignora que ela representa milhares de discentes periféricos da EaD; 
+            (4) <em>Opacidade e custódia:</em> omitir a ausência de métricas de falsos positivos e a retenção de biometria por 12 meses (tensão com a Lei Geral de Proteção de Dados Pessoais, LGPD); 
+            (5) <em>Ilusão sobre os polos:</em> ignorar custos e distâncias geográficas de alunos sem polo próximo.
+          </div>
+          <div>
+            <strong style="color: #0f172a;">• A recomendação se manteve ou sofreu ajustes:</strong> Manteve-se firmemente em <strong>"Não Adotar"</strong> nos moldes comerciais atuais. Contudo, o debate refinou a perspectiva: a instituição não deve permanecer passiva, mantendo abertura para diálogo futuro caso haja comprovação técnica de ausência de vieses, governança institucional da custódia com custos de guarda absorvidos pela fornecedora conforme a LGPD, e polos estruturados e acessíveis garantidos pela faculdade.
+          </div>
+        </div>
+      </div>
+
+      <!-- ETAPA 4: FICHA DE RESULTADOS INDIVIDUAL (6 CAMPOS OFICIAIS) -->
+      <div class="ficha-box">
+        <div class="ficha-header">FICHA DE RESULTADOS INDIVIDUAL (TEMPLATE OFICIAL UNIVESP)</div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <span class="ficha-item-title">1. FERRAMENTA E MODELO:</span>
+            <span class="ficha-item-desc">Gemini WebChat (modelo Gemini 3.8 Flash, nível de esforço: Máx. Muito detalhado).</span>
+          </div>
+          <div class="ficha-item">
+            <span class="ficha-item-title">2. A MINHA RECOMENDAÇÃO FINAL:</span>
+            <span class="ficha-item-desc"><strong>Não Adotar.</strong></span>
+          </div>
+          <div class="ficha-item">
+            <span class="ficha-item-title">3. OS DOIS LADOS EM TENSÃO, COM NOME, E QUAL DELES CEDEU:</span>
+            <span class="ficha-item-desc">De um lado, a integridade avaliativa e combate a fraudes; do outro, a equidade e acolhimento de vulneráveis. Na minha recomendação, cedeu o controle automatizado e a vigilância ostensiva contra fraudes no processo avaliativo baseado em Inteligência Artificial (IA), assumindo o custo de abrir mão da supervisão remota contínua por câmera, microfone e tela para priorizar a inclusão e evitar punições injustas a discentes vulneráveis.</span>
+          </div>
+          <div class="ficha-item">
+            <span class="ficha-item-title">4. O ARGUMENTO DA FERRAMENTA QUE ACEITEI, E O QUE ELE MUDOU:</span>
+            <span class="ficha-item-desc">Aceitei o alerta sobre a desvalorização pública do diploma perante o MEC e mercado (prejudicando os vulneráveis) e o papel dos polos físicos (Carta 3). Isso refinou minha postura para manter diálogo futuro se a instituição estruturar os polos e houver garantias técnicas.</span>
+          </div>
+          <div class="ficha-item">
+            <span class="ficha-item-title">5. O ARGUMENTO QUE RECUSEI, E O TRECHO DO CASO QUE SUSTENTA A RECUSA:</span>
+            <span class="ficha-item-desc">Recusei que o vídeo "inocenta Priscila em segundos". As Cartas 1 e 2 desmentem: o relatório vai unicamente à coordenação (Carta 1) e a aluna recebeu e-mail automático sem vídeo, sem prazo e sem canal de defesa ("não sei com quem falar", Carta 2), sob presunção de culpa.</span>
+          </div>
+          <div class="ficha-item">
+            <span class="ficha-item-title">6. EU MUDARIA DE IDEIA SE...</span>
+            <span class="ficha-item-desc">Revisaria minha posição se a empresa comprovasse ausência de vieses no algoritmo, transferisse a governança e custódia dos dados sensíveis para a instituição com a ressalva de que a infraestrutura e custos de armazenamento seguro sejam absorvidos pela contratada, sem onerar a faculdade, limitasse a retenção estritamente ao prazo recursal com descarte seguro perante a LGPD, instituísse canais humanos e prazos de defesa, e a instituição garantisse polos equipados e acessíveis para quem não tem ambiente em casa.</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ETAPA 5: DECLARAÇÃO DE USO DE IA (DUAS METADES DINÂMICA) -->
+      <div class="declaracao-box">
+        <div class="declaracao-title">✍️ ETAPA 5: Declaração de Uso de Ferramentas de IA (Duas Metades)</div>
+        <p class="declaracao-text">
+          Neste trabalho usei o Gemini WebChat (modelo Gemini 3.8 Flash, nível de esforço: Máx. Muito detalhado) para <em>atuar como oponente dialético e formular a contra-argumentação técnica e ética em defesa da adoção do software ProvaSegura</em>, e a ferramenta Antigravity (Google) para <em>diagramar, estilizar e gerar a versão em formato PDF do portfólio individual dentro dos padrões visuais da UNIVESP</em>; e conferi <em>a solidez lógica dos argumentos, a pertinência frente ao contexto institucional da Faculdade Horizonte, a ausência de alucinações na Etapa 3 e a fidelidade gráfica e textual do documento em PDF</em>, checando <em>e confrontando cada apontamento com o texto literal das Três Cartas (folheto comercial do fornecedor, e-mail da estudante Priscila e ofício da Direção da IES), com as diretrizes do template e com os conceitos desenvolvidos na disciplina</em>.
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span class="footer-univesp">UNIVESP · Inteligência Artificial na Prática Acadêmica e Profissional</span>
+      <span>Página 6 de 6</span>
+    </div>
+  </div>
+
+</body>
+</html>
