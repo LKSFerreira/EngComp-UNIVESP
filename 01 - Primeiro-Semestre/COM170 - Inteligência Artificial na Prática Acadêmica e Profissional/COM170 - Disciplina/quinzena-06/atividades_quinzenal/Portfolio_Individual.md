@@ -32,7 +32,7 @@ Responda às quatro perguntas estruturais da Bússola Ética fundamentando cada 
 
 ### 1. Quem é Afetado?
 
-- **Análise Situada:** Os alunos são afetados, mas não de forma equivalente. Podemos agregá-los em dois grandes grupos: os que possuem computadores modernos, internet de boa qualidade e áreas isoladas para estudo com ambiente silencioso; e outro grupo em situação de vulnerabilidade, podendo ser social (como no caso da Priscila na Carta 2, que só tem a mesa da cozinha para fazer a prova, divide o espaço com a família e enfrenta instabilidade de internet), sem mencionar que ainda existe a vulnerabilidade financeira que muitos alunos podem enfrentar, no caso de não possuírem computadores adequados ou não terem dinheiro para comprar webcams e microfones. Em casos assim, em nenhum momento é relatada a solução. Além disso, a própria instituição de ensino é afetada, uma vez que, em casos de falha do sistema, sua reputação pode ficar sob suspeita.
+- **Análise Situada:** Os alunos são afetados, mas não de forma equivalente. Podemos agregá-los em dois grandes grupos: os que possuem computadores modernos, internet de boa qualidade e áreas isoladas para estudo com ambiente silencioso; e outro grupo em situação de vulnerabilidade, podendo ser social (como no caso da Priscila na Carta 2, que só tem a mesa da cozinha para fazer a prova, divide o espaço com a família e enfrenta instabilidade de internet), sem mencionar a vulnerabilidade financeira que muitos alunos podem enfrentar, caso não possuam computadores adequados ou recursos para comprar webcams e microfones. Em casos assim, em nenhum momento é relatada a solução. Além disso, a própria instituição de ensino é afetada, uma vez que, em casos de falha do sistema, sua reputação pode ficar sob suspeita.
 
 - **Trecho Ancorado nas Cartas:** [Carta 1: Folheto do Fornecedor: O ProvaSegura acompanha o estudante do começo ao fim da prova pela câmera, pelo microfone e pela tela do computador.] │ [Carta 2: E-mail da Estudante: Eu faço as provas na cozinha, porque é o único lugar da casa com mesa e tomada. Durante a prova minha irmã entrou duas vezes para pegar água, e em um momento eu olhei para o lado porque o meu sobrinho chorou. A internet também caiu por uns quarenta segundos, e o sistema me deixou voltar.] │ [Carta 1: Folheto do Fornecedor: A decisão sobre cada caso é sempre da instituição.]
 
@@ -43,14 +43,14 @@ Responda às quatro perguntas estruturais da Bússola Ética fundamentando cada 
 
 ### 3. Quem Responde Quando o Sistema Erra?
 
-- **Análise Situada:** A empresa transfere a responsabilidade para a instituição de ensino, alegando que a decisão final sobre cada caso é sempre dela. No entanto, o sistema pode induzir a coordenação ao erro, pois a classificação prévia em "níveis de risco" condiciona o olhar do avaliador humano antes mesmo de abrir o vídeo. Pelo lado do estudante, os documentos não dizem quem de fato desfaz o erro: Priscila não sabe com quem falar, não há canal direto de recurso e não há prazo definido para a revisão humana.
+- **Análise Situada:** A empresa transfere a responsabilidade para a instituição de ensino, alegando que a decisão final sobre cada caso é sempre dela. No entanto, o sistema pode induzir a coordenação ao erro, pois a classificação prévia em "níveis de risco" condiciona o olhar do avaliador humano antes mesmo de abrir o vídeo (viés de automação). Pelo lado do estudante, os documentos não dizem quem de fato desfaz o erro: Priscila não sabe com quem falar, não há canal direto de recurso e não há prazo definido para a revisão humana.
 
 - **Trecho Ancorado nas Cartas:** [Carta 1: Folheto do Fornecedor: A decisão sobre cada caso é sempre da instituição (...) coordenação recebe um relatório por estudante, com um nível de risco (baixo, médio ou alto)] │ [Carta 2: E-mail da Estudante: Não diz o que foi marcado, nem quem vai analisar, nem até quando (...) e não sei com quem falar.]
 
 
 ### 4. Quanto Custa, e Quem Paga?
 
-- **Análise Situada:** O folheto alega que o sistema é "sem custo para o aluno", mas isso desconsidera os custos dos materiais transferidos para o estudante: a necessidade de possuir ou atualizar computadores, adquirir webcams e microfones, e pagar por internet estável. Pelo lado da instituição, ela arca com o valor financeiro por prova aplicada (cujo montante não é informado nos documentos) e com o tempo da equipe humana da coordenação para analisar os relatórios. Quanto a empresa fornecedora mantém a infraestrutura de servidores para guardar as gravações por doze meses, deixando em aberto a situação de custódia legal e documental caso um processo acadêmico dure mais tempo. No entanto, o custo mais crítico não é o financeiro, mas sim o acadêmico e humano: em casos de falhas e falsos positivos, o aluno pode sofrer com reprovações indevidas, trancamento de matrícula e até o abandono do ensino superior (evasão academica), gerando danos irreparáveis.
+- **Análise Situada:** O folheto alega que o sistema é "sem custo para o aluno", mas isso desconsidera os custos dos materiais transferidos para o estudante: a necessidade de possuir ou atualizar computadores, adquirir webcams e microfones, e pagar por internet estável. Pelo lado da instituição, ela arca com o valor financeiro por prova aplicada (cujo montante não é informado nos documentos) e com o tempo da equipe humana da coordenação para analisar os relatórios. A empresa fornecedora mantém a infraestrutura de servidores para guardar as gravações por doze meses, deixando em aberto a situação de custódia legal e documental caso um processo acadêmico dure mais tempo. No entanto, o custo mais crítico não é o financeiro, mas sim o acadêmico e humano: em casos de falhas e falsos positivos, o aluno pode sofrer com reprovações indevidas, trancamento de matrícula e até o abandono do ensino superior (evasão acadêmica), gerando danos irreparáveis.
 
 - **Trecho Ancorado nas Cartas:** [Carta 1: Folheto do Fornecedor: O estudante precisa apenas de computador com câmera e microfone, internet estável e um ambiente silencioso. As gravações ficam armazenadas por doze meses nos servidores da empresa. Cobrança por prova aplicada, por estudante. Sem custo para o aluno.]
 
@@ -64,15 +64,15 @@ Formulação da recomendação oficial fundamentada na metodologia rigorosa do [
 
 ### 1. Os Dois Lados em Tensão
 
-> Sistema antitrapaça e integridade do processo avaliativo versus equidade e inclusão de grupos em vulnerabilidade socioeconômica.
+> Sistema antitrapaça e integridade do processo avaliativo versus equidade e inclusão de grupos discentes em vulnerabilidade socioeconômica.
 
 ### 2. A Escolha Decisória e o que Cedeu
 
-> Minha recomendação é **não adotar** o sistema. **Estou cedendo o controle automatizado e a vigilância contra fraudes no processo avaliativo** para preservar a equidade e o acolhimento dos estudantes em situação de vulnerabilidade social e financeira. Assumo esse custo deliberado porque não temos como mensurar a extensão das perdas para esses alunos, e os riscos de danos irreparáveis em suas trajetórias e carreiras acadêmicas podem ser irreversíveis. A instituição deve acolher ao invés de adotar sistemas que promovam desigualdade e exclusão.
+> Minha recomendação é **não adotar** o sistema. **Estou cedendo o controle automatizado e a ostensiva vigilância contra fraudes no processo avaliativo** para preservar a equidade e o acolhimento dos estudantes em situação de vulnerabilidade social e financeira. Assumo esse custo deliberado porque os riscos de danos irreparáveis podem ser irreversíveis.
 
 ### 3. A Condição de Falseabilidade
 
-> Eu mudaria de ideia se a empresa fornecesse transparência sobre a documentação técnica e o treinamento do algoritmo (comprovando ausência de vieses), transferisse a governança e a custódia jurídica dos dados sensíveis para a instituição (com a ressalva de que a infraestrutura e os custos de armazenamento seguro sejam integralmente absorvidos pela fornecedora no valor contratado por prova, sem onerar a faculdade nem os alunos), limitando a retenção estritamente ao prazo recursal nos termos da LGPD, e a instituição garantisse polos presenciais estruturados e acessíveis para os estudantes vulneráveis.
+> Eu mudaria de ideia se a empresa comprovasse ausência de vieses no algoritmo, transferisse a governança e a custódia jurídica dos dados sensíveis para a instituição com a ressalva de que a infraestrutura e os custos de armazenamento seguro sejam absorvidos pela contratada, sem onerar a faculdade -, limitando a retenção ao prazo recursal nos termos da LGPD, e a faculdade garantisse polos presenciais estruturados para os alunos vulneráveis, sem custos adicionais de equipamentos.
 
 ### 4. A Lente que Pesou
 
@@ -176,7 +176,7 @@ A minha recomendação oficial se **manteve firmemente em 'Não Adotar'** o Prov
 
 ## 📑 ETAPA 4: Ficha de Resultados do Portfólio
 
-Ficha síntese padronizada para compartilhamento no ponto de encontro do grupo ([Módulo 7](./atividade_quinzenal.md)):
+Ficha síntese padronizada para compartilhamento no ponto de encontro do grupo ([Módulo 7](./Parecer_Comissao_Q6_M7.md)):
 
 ```text
 ================================================================================
