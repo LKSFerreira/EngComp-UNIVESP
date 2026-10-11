@@ -5,7 +5,7 @@
 > **Instituição:** Universidade Virtual do Estado de São Paulo (UNIVESP) │ Primeiro Semestre  
 > **Envio Oficial:** Laboratório de Revisão do Módulo 7 (postado pelo representante do grupo)  
 > **Caso Deliberado:** [O Caso em Três Cartas (A Prova em Casa)](../conteudo_q6_m5.md)  
-> **Material de Apoio e Roteiro:** [Portfólio Individual M6](./Portfolio_Individual.md) │ [Índice Geral da Quinzena](../quinzena-06.md)  
+> **Material de Apoio e Roteiro:** [Portfólio Individual M6](./Portfolio_Individual_Q6_M6.md) │ [Índice Geral da Quinzena](../quinzena-06.md)  
 > **Guia Oficial de Referência:** [Q6_M5-template-grupo.pdf](../Q6_M5-template-grupo.pdf)
 
 ---
@@ -18,7 +18,7 @@
 
 ## 🏛️ 1. Síntese do Mandato Institucional e do Trabalho Colegiado
 
-A Direção da Faculdade Horizonte solicitou a esta Comissão Multidisciplinar a avaliação do sistema automatizado de monitoramento e supervisão remota (*proctoring*) **ProvaSegura**, após a realização de teste-piloto no semestre anterior. Com base no cotejamento dos documentos apresentados (o folheto comercial do fornecedor na Carta 1, o e-mail da estudante Priscila na Carta 2 e o ofício da Direção na Carta 3), bem como na conciliação das fichas individuais dos membros desta comissão ([Módulo 6](./Portfolio_Individual.md)), apresenta-se este parecer conclusivo.
+A Direção da Faculdade Horizonte solicitou a esta Comissão Multidisciplinar a avaliação do sistema automatizado de monitoramento e supervisão remota (*proctoring*) **ProvaSegura**, após a realização de teste-piloto no semestre anterior. Com base no cotejamento dos documentos apresentados (o folheto comercial do fornecedor na Carta 1, o e-mail da estudante Priscila na Carta 2 e o ofício da Direção na Carta 3), bem como na conciliação das fichas individuais dos membros desta comissão ([Módulo 6](./Portfolio_Individual_Q6_M6.md)), apresenta-se este parecer conclusivo.
 
 ```mermaid
 graph TD

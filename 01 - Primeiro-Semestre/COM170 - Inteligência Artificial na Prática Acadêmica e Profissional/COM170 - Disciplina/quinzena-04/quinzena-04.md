@@ -65,9 +65,9 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 * **Status da Entrega:** ✅ **Concluído e Registrado com Sucesso** (Miniquiz com 100% de acerto: 5 de 5 na primeira tentativa). Liberado o acesso à Parte 2 (Laboratório e Grupo).
 
 ### 🧪 Módulos 5, 6 e 7 (Laboratório & Portfólio / Grupo)
-* **Q4-M5 - O Problema da Quinzena (O Caso da Nexo):** [Notas e Visão Geral do Módulo 5](./conteudo_q4_m5.md) │ [Caso A: Sessenta Páginas Coladas (Lorena)](./atividades_quinzenal/Caso_A.md) │ [PDF Caso A](./Q4_M5_CASO_A.pdf)
-* **Q4-M6 - Portfólio Individual (Laboratório de Revisão):** [Roteiro e Template Portfólio Individual](./atividades_quinzenal/Portfolio_Individual.md) │ [📄 Versão Oficial em PDF](./atividades_quinzenal/Portfolio_Individual_M6.pdf) │ [🌐 Versão HTML](./atividades_quinzenal/Portfolio_Individual_M6.html) │ [PDF Template Individual](./Q4_M5-template-individual.pdf)
-* **Q4-M7 - Trabalho em Grupo (O Protocolo de Contexto da Nexo):** [Template Protocolo do Grupo](./atividades_quinzenal/Portfolio_Grupo.md) │ [📄 Versão Oficial em PDF](./atividades_quinzenal/Protocolo_Grupo_M7.pdf) │ [🌐 Versão HTML](./atividades_quinzenal/Protocolo_Grupo_M7.html) │ [PDF Template Grupo](./Q4_M5-template-grupo.pdf)
+* **Q4-M5 - O Problema da Quinzena (O Caso da Nexo):** [Notas e Visão Geral do Módulo 5](./conteudo_q4_m5.md) │ [Caso A: Sessenta Páginas Coladas (Lorena)](./atividades_quinzenal/Caso_A_Q4_M5.md) │ [PDF Caso A](./Q4_M5_CASO_A.pdf)
+* **Q4-M6 - Portfólio Individual (Laboratório de Revisão):** [Roteiro e Template Portfólio Individual](./atividades_quinzenal/Portfolio_Individual_Q4_M6.md) │ [📄 Versão Oficial em PDF](./atividades_quinzenal/Portfolio_Individual_Q4_M6.pdf) │ [🌐 Versão HTML](./atividades_quinzenal/Portfolio_Individual_Q4_M6.html) │ [PDF Template Individual](./Q4_M5-template-individual.pdf)
+* **Q4-M7 - Trabalho em Grupo (O Protocolo de Contexto da Nexo):** [Template Protocolo do Grupo](./atividades_quinzenal/Protocolo_Grupo_Q4_M7.md) │ [📄 Versão Oficial em PDF](./atividades_quinzenal/Protocolo_Grupo_Q4_M7.pdf) │ [🌐 Versão HTML](./atividades_quinzenal/Protocolo_Grupo_Q4_M7.html) │ [PDF Template Grupo](./Q4_M5-template-grupo.pdf)
 
 ---
 

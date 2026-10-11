@@ -64,9 +64,9 @@ Após realizar as leituras e assistir as videoaulas, feche tudo e responda:
 * **Resumo / Entrega:**
 
 ### 🧪 Módulos 5, 6 e 7 (Laboratório & Portfólio / Grupo)
-* **Q3-M5 - O Caso: A Análise do Documento:** [Notas e Visão Geral do Módulo 5](./conteudo_q3_m5.md) │ [Caso A: O Relatório de Sexta (Rui)](./atividades_quinzenal/Caso_A.md) │ [PDF Caso A](./Q3_M5_CASO_A.pdf)
-* **Q3-M6 - Portfólio Individual (Laboratório de Revisão):** [Template Portfólio Individual](./atividades_quinzenal/Portfolio_Individual.md) │ [PDF Template Individual](./Q3_M5-template-individual.pdf)
-* **Q3-M7 - O Mapa de Competências do Curso (Trabalho em Grupo):** [Template Mapa de Competências em Grupo](./atividades_quinzenal/Portfolio_Grupo.md) │ [PDF Template Grupo](./Q3_M5-template-grupo.pdf)
+* **Q3-M5 - O Caso: A Análise do Documento:** [Notas e Visão Geral do Módulo 5](./conteudo_q3_m5.md) │ [Caso A: O Relatório de Sexta (Rui)](./atividades_quinzenal/Caso_A_Q3_M5.md) │ [PDF Caso A](./Q3_M5_CASO_A.pdf)
+* **Q3-M6 - Portfólio Individual (Laboratório de Revisão):** [Template Portfólio Individual](./atividades_quinzenal/Portfolio_Individual_Q3_M6.md) │ [PDF Template Individual](./Q3_M5-template-individual.pdf)
+* **Q3-M7 - O Mapa de Competências do Curso (Trabalho em Grupo):** [Template Mapa de Competências em Grupo](./atividades_quinzenal/Portfolio_Grupo_Q3_M7.md) │ [PDF Template Grupo](./Q3_M5-template-grupo.pdf)
 
 ---
 

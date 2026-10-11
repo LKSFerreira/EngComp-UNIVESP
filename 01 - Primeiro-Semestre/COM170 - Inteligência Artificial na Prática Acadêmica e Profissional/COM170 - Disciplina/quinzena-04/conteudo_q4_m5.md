@@ -99,6 +99,6 @@ O trabalho prático da Quinzena 04 é composto por **duas entregas obrigatórias
 
 Para facilitar a elaboração das atividades práticas, os documentos foram estruturados e transcritos em Markdown na pasta `atividades_quinzenal/`:
 
-* 📄 **História Recebida:** [Caso A - Sessenta Páginas Coladas (Lorena)](./atividades_quinzenal/Caso_A.md) │ [PDF Original (Q4_M5_CASO_A.pdf)](./Q4_M5_CASO_A.pdf)
-* 📝 **Template Individual:** [Portfólio Individual (Módulo 6)](./atividades_quinzenal/Portfolio_Individual.md) │ [PDF Original (Q4_M5-template-individual.pdf)](./Q4_M5-template-individual.pdf)
-* 👥 **Template Coletivo:** [Protocolo de Contexto da Nexo (Módulo 7)](./atividades_quinzenal/Portfolio_Grupo.md) │ [PDF Original (Q4_M5-template-grupo.pdf)](./Q4_M5-template-grupo.pdf)
+* 📄 **História Recebida:** [Caso A - Sessenta Páginas Coladas (Lorena)](./atividades_quinzenal/Caso_A_Q4_M5.md) │ [PDF Original (Q4_M5_CASO_A.pdf)](./Q4_M5_CASO_A.pdf)
+* 📝 **Template Individual:** [Portfólio Individual (Módulo 6)](./atividades_quinzenal/Portfolio_Individual_Q4_M6.md) │ [PDF Original (Q4_M5-template-individual.pdf)](./Q4_M5-template-individual.pdf)
+* 👥 **Template Coletivo:** [Protocolo de Contexto da Nexo (Módulo 7)](./atividades_quinzenal/Protocolo_Grupo_Q4_M7.md) │ [PDF Original (Q4_M5-template-grupo.pdf)](./Q4_M5-template-grupo.pdf)

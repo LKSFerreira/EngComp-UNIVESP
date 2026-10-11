@@ -3,7 +3,7 @@
 > **Disciplina:** COM170 - Inteligência Artificial na Prática Acadêmica e Profissional  
 > **Quinzena 06:** Ética como Estrutura: Critérios, a Bússola e Sistemas que Decidem sobre Pessoas  
 > **Docente Responsável:** Prof. José Avelino Placca  
-> **Foco do Módulo 5:** Apresentação do caso institucional da Faculdade Horizonte; estudo analítico das Três Cartas da comissão; preparação técnica para a deliberação do Portfólio Individual no [Módulo 6](./atividades_quinzenal/Portfolio_Individual.md) e do Parecer da Comissão no [Módulo 7](./atividades_quinzenal/atividade_quinzenal.md).
+> **Foco do Módulo 5:** Apresentação do caso institucional da Faculdade Horizonte; estudo analítico das Três Cartas da comissão; preparação técnica para a deliberação do Portfólio Individual no [Módulo 6](./atividades_quinzenal/Portfolio_Individual_Q6_M6.md) e do Parecer da Comissão no [Módulo 7](./atividades_quinzenal/Parecer_Comissao_Q6_M7.md).
 
 ---
 
@@ -43,7 +43,7 @@ graph TD
 
 > [!IMPORTANT]
 > **Leitura Obrigatória e Ancoragem Textual:**  
-> Leia com atenção analítica cada uma das três cartas abaixo. No seu Portfólio Individual ([Módulo 6](./atividades_quinzenal/Portfolio_Individual.md)) e na elaboração coletiva do Parecer da Comissão ([Módulo 7](./atividades_quinzenal/atividade_quinzenal.md)), cada resposta, crítica ou salvaguarda proposta deverá obrigatoriamente apontar para um trecho específico destas cartas.
+> Leia com atenção analítica cada uma das três cartas abaixo. No seu Portfólio Individual ([Módulo 6](./atividades_quinzenal/Portfolio_Individual_Q6_M6.md)) e na elaboração coletiva do Parecer da Comissão ([Módulo 7](./atividades_quinzenal/Parecer_Comissao_Q6_M7.md)), cada resposta, crítica ou salvaguarda proposta deverá obrigatoriamente apontar para um trecho específico destas cartas.
 
 ---
 
@@ -176,7 +176,7 @@ A comissão deve avaliar com rigor crítico as três rotas deliberativas postas 
 Com a assimilação deste caso, você está habilitado a avançar para a execução da Semana 2:
 
 ### 👤 Módulo 6: Portfólio Individual
-* **Onde realizar:** [Acesse o Portfólio Individual](./atividades_quinzenal/Portfolio_Individual.md);
+* **Onde realizar:** [Acesse o Portfólio Individual](./atividades_quinzenal/Portfolio_Individual_Q6_M6.md);
 * **Guia Oficial:** [Q6_M5-template-individual.pdf](./Q6_M5-template-individual.pdf) (Template Oficial da UNIVESP);
 * **O que fazer:**
   1. Responder às quatro perguntas da Bússola Ética apontando trechos das três cartas;
@@ -186,7 +186,7 @@ Com a assimilação deste caso, você está habilitado a avançar para a execuç
 * **Atenção ao Anonimato:** Não coloque seu nome no arquivo final do portfólio; o Ambiente Virtual de Aprendizagem (AVA) identifica o autor automaticamente para garantir revisão por pares imparcial.
 
 ### 👥 Módulo 7: Parecer da Comissão (Trabalho Coletivo)
-* **Onde realizar:** [Acesse a Atividade do Grupo](./atividades_quinzenal/atividade_quinzenal.md);
+* **Onde realizar:** [Acesse a Atividade do Grupo](./atividades_quinzenal/Parecer_Comissao_Q6_M7.md);
 * **Guia Oficial:** [Q6_M5-template-grupo.pdf](./Q6_M5-template-grupo.pdf) (Template Oficial da UNIVESP);
 * **O que fazer:**
   1. Compartilhar as fichas individuais no ponto de encontro da equipe;

@@ -6,7 +6,7 @@
 > **Envio Oficial:** Laboratório de Revisão do Módulo 6 (com posterior avaliação por pares)  
 > **Artigo Analisado:** *Percepções da Inteligência Artificial Generativa na educação: um estudo sobre o uso entre universitários* (SILVA; LA MARCA; LOPES, SBC / ERI-MT 2024, DOI: [10.5753/eri-mt.2024.245844](https://doi.org/10.5753/eri-mt.2024.245844))  
 > **Guia Oficial de Referência:** [`../Q5_M5-template-individual.pdf`](../Q5_M5-template-individual.pdf)  
-> **Arquivos Exportados:** [📄 Versão Oficial em PDF](./Portfolio_Individual_M6.pdf) │ [🌐 Versão HTML Interativa](./Portfolio_Individual_M6.html)
+> **Arquivos Exportados:** [📄 Versão Oficial em PDF](./Portfolio_Individual_Q5_M6.pdf) │ [🌐 Versão HTML Interativa](./Portfolio_Individual_Q5_M6.html)
 
 ---
 

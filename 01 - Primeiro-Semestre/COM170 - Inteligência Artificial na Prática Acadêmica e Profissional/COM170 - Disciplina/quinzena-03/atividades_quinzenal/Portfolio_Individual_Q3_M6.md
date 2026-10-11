@@ -4,7 +4,7 @@
 > **Disciplina:** COM170 - Inteligência Artificial na Prática Acadêmica e Profissional  
 > **Instituição:** UNIVESP | Primeiro Semestre  
 > **Envio:** Laboratório de Revisão do Módulo 6 (com posterior avaliação por pares)  
-> **Arquivos Exportados:** [Versão HTML Interativa](./Portfolio_Individual_M5_Lucas.html) │ [Versão Oficial em PDF](./Portfolio_Individual_M5_Lucas.pdf)  
+> **Arquivos Exportados:** [Versão HTML Interativa](./Portfolio_Individual_Q3_M5_Lucas.html) │ [Versão Oficial em PDF](./Portfolio_Individual_Q3_M5_Lucas.pdf)  
 > **PDF Original de Referência:** [`../Q3_M5-template-individual.pdf`](../Q3_M5-template-individual.pdf)
 
 ---
@@ -14,7 +14,7 @@
 * **Nome Completo:** Lucas da Silva Ferreira
 * **Eixo Temático:** Computação (Engenharia de Computação)
 * **Grupo:** Grupo 05 *(Responsável pela entrega do grupo na Q3: Thales)*
-* **História Recebida no Módulo 5:** [Caso A - O Relatório de Sexta (Rui)](./Caso_A.md)
+* **História Recebida no Módulo 5:** [Caso A - O Relatório de Sexta (Rui)](./Caso_A_Q3_M5.md)
 
 ---
 

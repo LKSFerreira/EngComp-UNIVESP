@@ -84,6 +84,6 @@ O trabalho prático da Quinzena 03 é composto por **duas entregas obrigatórias
 
 Para facilitar a elaboração das atividades práticas, os documentos foram transcritos e estruturados em Markdown:
 
-* 📄 **História Recebida:** [Caso A - O Relatório de Sexta (Rui)](./atividades_quinzenal/Caso_A.md) │ [PDF Original (Q3_M5_CASO_A.pdf)](./Q3_M5_CASO_A.pdf)
-* 📝 **Template Individual:** [Portfólio Individual (Módulo 6)](./atividades_quinzenal/Portfolio_Individual.md) │ [PDF Original (Q3_M5-template-individual.pdf)](./Q3_M5-template-individual.pdf)
-* 👥 **Template Coletivo:** [Mapa de Competências em Grupo (Módulo 7)](./atividades_quinzenal/Portfolio_Grupo.md) │ [PDF Original (Q3_M5-template-grupo.pdf)](./Q3_M5-template-grupo.pdf)
+* 📄 **História Recebida:** [Caso A - O Relatório de Sexta (Rui)](./atividades_quinzenal/Caso_A_Q3_M5.md) │ [PDF Original (Q3_M5_CASO_A.pdf)](./Q3_M5_CASO_A.pdf)
+* 📝 **Template Individual:** [Portfólio Individual (Módulo 6)](./atividades_quinzenal/Portfolio_Individual_Q3_M6.md) │ [PDF Original (Q3_M5-template-individual.pdf)](./Q3_M5-template-individual.pdf)
+* 👥 **Template Coletivo:** [Mapa de Competências em Grupo (Módulo 7)](./atividades_quinzenal/Portfolio_Grupo_Q3_M7.md) │ [PDF Original (Q3_M5-template-grupo.pdf)](./Q3_M5-template-grupo.pdf)

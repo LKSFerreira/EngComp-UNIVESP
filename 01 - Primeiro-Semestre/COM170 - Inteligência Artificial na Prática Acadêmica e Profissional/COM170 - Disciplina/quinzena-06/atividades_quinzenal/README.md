@@ -7,12 +7,12 @@ Esta pasta é o repositório oficial das atividades práticas da **Semana 2** da
 
 ### 📦 Estrutura das Atividades (Janela de Entrega: 05/10 a 10/10/2026)
 
-1. **[Módulo 6: Portfólio Individual](./Portfolio_Individual.md)**
+1. **[Módulo 6: Portfólio Individual](./Portfolio_Individual_Q6_M6.md)**
    * **Objetivo:** Aplicação individual das quatro perguntas da Bússola Ética ao caso da Faculdade Horizonte ([Módulo 5](../conteudo_q6_m5.md)), redação da recomendação em três passos, contra-ataque analítico solicitado à Inteligência Artificial (IA) e consolidação da Ficha de Resultados.
    * **Local de Envio no AVA:** Laboratório de Revisão do Módulo 6.
    * **Regra Inegociável:** Anonimato rigoroso (sem nomes ou identificadores pessoais no arquivo para avaliação cega por pares).
 
-2. **[Módulo 7: O Parecer da Comissão (Atividade em Grupo)](./atividade_quinzenal.md)**
+2. **[Módulo 7: O Parecer da Comissão (Atividade em Grupo)](./Parecer_Comissao_Q6_M7.md)**
    * **Objetivo:** Deliberação coletiva da comissão fundamentada no cotejamento das fichas individuais de cada integrante, definição de salvaguardas operacionais mínimas e redação do parecer institucional da Faculdade Horizonte.
    * **Local de Envio no AVA:** Laboratório de Revisão do Módulo 7 (postado pelo representante da equipe).
    * **Regra Inegociável:** Sem número de grupo ou nomes de estudantes.

@@ -4,9 +4,9 @@
 > **Disciplina:** COM170 - Inteligência Artificial na Prática Acadêmica e Profissional  
 > **Instituição:** UNIVESP | Primeiro Semestre  
 > **Envio:** Laboratório de Revisão do Módulo 7 (Enviado pelo representante do grupo)  
-> **Arquivos Exportados:** [📄 Versão Oficial em PDF](./Protocolo_Grupo_M7.pdf) │ [🌐 Versão HTML Interativa](./Protocolo_Grupo_M7.html)  
+> **Arquivos Exportados:** [📄 Versão Oficial em PDF](./Protocolo_Grupo_Q4_M7.pdf) │ [🌐 Versão HTML Interativa](./Protocolo_Grupo_Q4_M7.html)  
 > **PDF Original de Referência:** [`../Q4_M5-template-grupo.pdf`](../Q4_M5-template-grupo.pdf)  
-> **História Base (Integrante 1):** [Caso A - Sessenta Páginas Coladas (Lorena)](./Caso_A.md)
+> **História Base (Integrante 1):** [Caso A - Sessenta Páginas Coladas (Lorena)](./Caso_A_Q4_M5.md)
 
 ---
 

@@ -71,8 +71,8 @@ Após realizar as leituras e assistir às videoaulas, feche tudo e responda:
 
 ### 🧪 Módulos 5, 6 e 7 (Laboratório & Portfólio / Grupo)
 * **Q6-M5 - O Caso em Três Cartas:** [Notas Estruturadas do Caso e Análise Forense](./conteudo_q6_m5.md) │ Leitura obrigatória do caso institucional da Faculdade Horizonte *(Sem entrega formal)*.
-* **Q6-M6 - Portfólio Individual (Janela de 05 a 10/10/2026):** [Elaboração do Portfólio Individual](./atividades_quinzenal/Portfolio_Individual.md) │ Aplicação da Bússola Ética, recomendação em três passos, contraposição crítica da IA e Ficha de Resultados.
-* **Q6-M7 - O Parecer da Comissão do Grupo (Janela de 05 a 10/10/2026):** [Elaboração do Parecer da Comissão](./atividades_quinzenal/atividade_quinzenal.md) │ Deliberação colegiada da equipe fundamentada nas fichas individuais e definição das garantias mínimas.
+* **Q6-M6 - Portfólio Individual (Janela de 05 a 10/10/2026):** [Elaboração do Portfólio Individual](./atividades_quinzenal/Portfolio_Individual_Q6_M6.md) │ Aplicação da Bússola Ética, recomendação em três passos, contraposição crítica da IA e Ficha de Resultados.
+* **Q6-M7 - O Parecer da Comissão do Grupo (Janela de 05 a 10/10/2026):** [Elaboração do Parecer da Comissão](./atividades_quinzenal/Parecer_Comissao_Q6_M7.md) │ Deliberação colegiada da equipe fundamentada nas fichas individuais e definição das garantias mínimas.
 
 
 ---

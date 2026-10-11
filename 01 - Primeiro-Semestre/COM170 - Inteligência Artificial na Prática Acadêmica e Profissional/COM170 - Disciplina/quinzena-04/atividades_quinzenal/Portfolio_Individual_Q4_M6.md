@@ -4,9 +4,9 @@
 > **Disciplina:** COM170 - Inteligência Artificial na Prática Acadêmica e Profissional  
 > **Instituição:** UNIVESP | Primeiro Semestre  
 > **Envio:** Laboratório de Revisão do Módulo 6 (com posterior avaliação por pares)  
-> **Arquivos Exportados:** [📄 Versão Oficial em PDF](./Portfolio_Individual_M6.pdf) │ [🌐 Versão HTML Interativa](./Portfolio_Individual_M6.html)  
+> **Arquivos Exportados:** [📄 Versão Oficial em PDF](./Portfolio_Individual_Q4_M6.pdf) │ [🌐 Versão HTML Interativa](./Portfolio_Individual_Q4_M6.html)  
 > **PDF Original de Referência:** [`../Q4_M5-template-individual.pdf`](../Q4_M5-template-individual.pdf)  
-> **História de Referência:** [Caso A - Sessenta Páginas Coladas (Lorena)](./Caso_A.md)
+> **História de Referência:** [Caso A - Sessenta Páginas Coladas (Lorena)](./Caso_A_Q4_M5.md)
 
 ---
 
