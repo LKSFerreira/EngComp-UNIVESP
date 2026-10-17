@@ -121,10 +121,15 @@ Você envia a exata mesma instrução: **"Confirma comigo até amanhã."**
 
 ---
 
-## 🎥 3. Videoaula 1: O Que É Contexto e Por Que o Prompt É Só o Fim
+## 📺 3. Videoaula e Material-Base
 
-* **Link da Aula:** [Assistir no YouTube (Prof. José Avelino Placca)](https://www.youtube.com/watch?v=wrPK5EUjOlc)
+### 🎥 Videoaula 1: O Que É Contexto e Por Que o Prompt É Só o Fim
+* **Acesso:** [Assistir no YouTube (Prof. José Avelino Placca)](https://www.youtube.com/watch?v=wrPK5EUjOlc)
 * **Conceito Central:** O prompt é estritamente a última mensagem de uma interação sequencial. O modelo processa a integralidade da janela; quando o contexto não é explicitamente estruturado, **o modelo preenche as lacunas por plausibilidade estatística** (o que for estatisticamente mais provável), que quase nunca coincide com a necessidade específica do estudante.
+
+### 📚 Material de Apoio Oficial
+* **E-book (Versão Visual):** [Q4_M1-E-book.pdf](./Q4_M1-E-book.pdf)
+* **Apostila (Versão Acessível):** [COM170_apostila_quinzena4_M1.pdf](./COM170_apostila_quinzena4_M1.pdf)
 
 ---
 

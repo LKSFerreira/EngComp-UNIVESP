@@ -143,10 +143,15 @@ Ao invés de responder a manchetes genéricas, decompõe-se a função em suas a
 
 ---
 
-## 🎥 5. Videoaula 1: Da Manchete à Taxonomia Bailey
+## 📺 5. Videoaula e Material-Base
 
-- 📺 **Vídeo Oficial UNIVESP:** [Assistir no YouTube (Da Manchete à Taxonomia Bailey)](https://www.youtube.com/watch?v=y94_bMWTiWA)
-- **Ideia Central:** Desconstruir a polarização e adotar a taxonomia desenvolvida por Diane Bailey para classificar o impacto da automação nas competências humanas em quatro categorias analíticas.
+### 🎥 Videoaula 1: Da Manchete à Taxonomia Bailey
+* **Acesso:** [Assistir no YouTube (Da Manchete à Taxonomia Bailey)](https://www.youtube.com/watch?v=y94_bMWTiWA)
+* **Ideia Central:** Desconstruir a polarização e adotar a taxonomia desenvolvida por Diane Bailey para classificar o impacto da automação nas competências humanas em quatro categorias analíticas.
+
+### 📚 Material de Apoio Oficial
+* **E-book (Versão Visual):** [Q3_M1-E-book.pdf](./Q3_M1-E-book.pdf)
+* **Apostila (Versão Acessível):** [COM170_apostila_quinzena3_M1.pdf](./COM170_apostila_quinzena3_M1.pdf)
 
 ---
 

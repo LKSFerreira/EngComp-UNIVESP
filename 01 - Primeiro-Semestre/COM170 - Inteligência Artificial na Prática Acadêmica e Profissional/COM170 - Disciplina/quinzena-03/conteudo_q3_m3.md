@@ -20,10 +20,15 @@ A IA responde a uma alucinação com a mesma elegância sintática, a mesma conv
 
 ---
 
-## 🎥 2. Videoaula: Quando a IA Acerta uma Tarefa e Erra a Vizinha
+## 📺 2. Videoaula e Material-Base
 
-- 📺 **Vídeo Oficial UNIVESP:** [Assistir no YouTube (Quando a IA Acerta uma Tarefa e Erra a Vizinha)](https://www.youtube.com/watch?v=Ilg1uYHwOnE)
-- **Conceito-Chave:** A fronteira de capacidade da IA é **serrilhada e não-linear**: ela resolve problemas que parecem difíceis ao cérebro humano e tropeça em detalhes que parecem triviais.
+### 🎥 Videoaula 3: Quando a IA Acerta uma Tarefa e Erra a Vizinha
+* **Acesso:** [Assistir no YouTube (Quando a IA Acerta uma Tarefa e Erra a Vizinha)](https://www.youtube.com/watch?v=Ilg1uYHwOnE)
+* **Conceito-Chave:** A fronteira de capacidade da IA é **serrilhada e não-linear**: ela resolve problemas que parecem difíceis ao cérebro humano e tropeça em detalhes que parecem triviais.
+
+### 📚 Material de Apoio Oficial
+* **E-book (Versão Visual):** [Q3_M3-E-book.pdf](./Q3_M3-E-book.pdf)
+* **Apostila (Versão Acessível):** [COM170_apostila_quinzena3_M3.pdf](./COM170_apostila_quinzena3_M3.pdf)
 
 ---
 

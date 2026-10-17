@@ -29,13 +29,18 @@ Reconhecer qual limite está em jogo define a sua reação:
 
 ---
 
-## 🎥 2. Videoaula: Os Três Limites Estruturais do Contexto
+## 📺 2. Videoaula e Material-Base
 
-* **Link da Aula:** [Assistir no YouTube (Prof. José Avelino Placca)](https://www.youtube.com/watch?v=wrPK5EUjOlc) *(Tema abordado na videoaula de fundamentos estruturais)*
+### 🎥 Videoaula 3: Os Três Limites Estruturais do Contexto
+* **Acesso:** [Assistir no YouTube (Prof. José Avelino Placca)](https://www.youtube.com/watch?v=wrPK5EUjOlc) *(Tema abordado na videoaula de fundamentos estruturais)*
 * **Síntese:** Um modelo de linguagem opera exclusivamente sobre duas fontes:
   1. O que foi apreendido durante o treinamento estatístico prévio;
   2. O que está presente na janela de contexto da sessão ativa.  
   A engenharia de contexto organiza a conversa, mas não transforma o modelo em uma entidade onisciente nem elimina esses limites.
+
+### 📚 Material de Apoio Oficial
+* **E-book (Versão Visual):** [Q4_M3-E-book.pdf](./Q4_M3-E-book.pdf)
+* **Apostila (Versão Acessível):** [COM170_apostila_quinzena4_M3.pdf](./COM170_apostila_quinzena4_M3.pdf)
 
 ---
 

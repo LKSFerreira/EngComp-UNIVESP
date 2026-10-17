@@ -39,10 +39,15 @@ Registro de reflexão sobre o processo real de estudo realizado em **Um Trabalho
 
 ---
 
-## 🎥 3. Videoaula: Centauro e Ciborgue - Dois Modos de Colaborar
+## 📺 3. Videoaula e Material-Base
 
-- 📺 **Vídeo Oficial UNIVESP:** [Assistir no YouTube (Centauro e Ciborgue | Dois Modos de Colaborar)](https://www.youtube.com/watch?v=k6I-fZFOpuI)
-- **Conceito-Chave:** A aula demonstra na prática que **nenhum modo é superior em abstrato**. A escolha ideal depende rigorosamente do que está em jogo na tarefa (risco, aprendizado e necessidade de prestação de contas).
+### 🎥 Videoaula 2: Centauro e Ciborgue - Dois Modos de Colaborar
+* **Acesso:** [Assistir no YouTube (Centauro e Ciborgue | Dois Modos de Colaborar)](https://www.youtube.com/watch?v=k6I-fZFOpuI)
+* **Conceito-Chave:** A aula demonstra na prática que **nenhum modo é superior em abstrato**. A escolha ideal depende rigorosamente do que está em jogo na tarefa (risco, aprendizado e necessidade de prestação de contas).
+
+### 📚 Material de Apoio Oficial
+* **E-book (Versão Visual):** [Q3_M2-E-book.pdf](./Q3_M2-E-book.pdf)
+* **Apostila (Versão Acessível):** [COM170_apostila_quinzena3_M2.pdf](./COM170_apostila_quinzena3_M2.pdf)
 
 ---
 

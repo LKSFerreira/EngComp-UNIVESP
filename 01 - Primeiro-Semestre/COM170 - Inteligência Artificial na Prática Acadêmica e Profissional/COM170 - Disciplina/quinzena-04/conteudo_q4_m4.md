@@ -33,10 +33,15 @@ O **Ciclo Estruturado** substitui a tentativa e erro aleatória pelo diagnóstic
 
 ---
 
-## 🎥 2. Videoaula: O Ciclo de Iteração Estruturada
+## 📺 2. Videoaula e Material-Base
 
-* **Link da Aula:** [Assistir no YouTube (Prof. José Avelino Placca)](https://www.youtube.com/watch?v=Dh5vPyvbZMs)
+### 🎥 Videoaula 4: O Ciclo de Iteração Estruturada
+* **Acesso:** [Assistir no YouTube (Prof. José Avelino Placca)](https://www.youtube.com/watch?v=Dh5vPyvbZMs)
 * **Síntese:** Apresenta o fluxo metódico de refinamento em três etapas. Em vez de regenerar o texto cegamente, o estudante atua como auditor, identificando a causa raiz da inconsistência e aplicando correções incrementais e localizadas.
+
+### 📚 Material de Apoio Oficial
+* **E-book (Versão Visual):** [Q4_M4-E-book.pdf](./Q4_M4-E-book.pdf)
+* **Apostila (Versão Acessível):** [COM170_apostila_quinzena4_M4.pdf](./COM170_apostila_quinzena4_M4.pdf)
 
 ---
 

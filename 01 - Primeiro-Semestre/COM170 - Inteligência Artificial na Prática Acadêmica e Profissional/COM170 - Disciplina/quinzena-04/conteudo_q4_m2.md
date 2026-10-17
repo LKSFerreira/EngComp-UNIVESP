@@ -26,10 +26,19 @@ Existe uma razão puramente probabilística: **quanto mais preciso e restrito fo
 
 ---
 
-## 🎥 2. Videoaula 1: Como Organizar Informação Bruta em Componentes de Contexto
+## 📺 2. Videoaula e Material-Base
 
-* **Link da Aula:** [Assistir no YouTube (Prof. José Avelino Placca)](https://www.youtube.com/watch?v=65YhxoBu_c0)
+### 🎥 Videoaula 2.1: Como Organizar Informação Bruta em Componentes de Contexto
+* **Acesso:** [Assistir no YouTube (Prof. José Avelino Placca)](https://www.youtube.com/watch?v=65YhxoBu_c0)
 * **Síntese:** Dois estudantes recebem a mesma incumbência. A discrepância na utilidade prática do resultado não se deve à escolha da ferramenta nem a "palavras mágicas" no prompt final, mas sim à **capacidade prévia de decomposição** das premissas recebidas.
+
+### 🎥 Videoaula 2.2: Plausibilidade Estatística
+* **Acesso:** [Assistir no YouTube (Plausibilidade Estatística)](https://www.youtube.com/watch?v=P7GLS5ywU6I)
+* **Tema central:** Como o modelo opera probabilisticamente estreitando o espaço amostral conforme mais contexto estruturado é fornecido.
+
+### 📚 Material de Apoio Oficial
+* **E-book (Versão Visual):** [Q4_M2-E-book.pdf](./Q4_M2-E-book.pdf)
+* **Apostila (Versão Acessível):** [COM170_apostila_quinzena4_M2.pdf](./COM170_apostila_quinzena4_M2.pdf)
 
 ---
 

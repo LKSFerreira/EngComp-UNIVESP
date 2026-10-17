@@ -17,10 +17,15 @@ Do ponto de vista do usuário, interagir com uma IA é apenas digitar numa caixa
 
 ---
 
-## 🎥 2. Videoaula: O Custo Invisível de Cada Conversa com a IA
+## 📺 2. Videoaula e Material-Base
 
-- 📺 **Vídeo Oficial UNIVESP:** [Assistir no YouTube (O Custo Invisível de Cada Conversa com a IA)](https://www.youtube.com/watch?v=ZHlHULBahpQ)
-- **Conceito-Chave:** A aula desmistifica o funcionamento físico dos data centers, ensina a separar consumo pontual de consumo acumulado em escala, e prepara a base para a discussão ambiental no trabalho em grupo.
+### 🎥 Videoaula 4: O Custo Invisível de Cada Conversa com a IA
+* **Acesso:** [Assistir no YouTube (O Custo Invisível de Cada Conversa com a IA)](https://www.youtube.com/watch?v=ZHlHULBahpQ)
+* **Conceito-Chave:** A aula desmistifica o funcionamento físico dos data centers, ensina a separar consumo pontual de consumo acumulado em escala, e prepara a base para a discussão ambiental no trabalho em grupo.
+
+### 📚 Material de Apoio Oficial
+* **E-book (Versão Visual):** [Q3_M4-E-book.pdf](./Q3_M4-E-book.pdf)
+* **Apostila (Versão Acessível):** [COM170_apostila_quinzena3_M4.pdf](./COM170_apostila_quinzena3_M4.pdf)
 
 ---
 
