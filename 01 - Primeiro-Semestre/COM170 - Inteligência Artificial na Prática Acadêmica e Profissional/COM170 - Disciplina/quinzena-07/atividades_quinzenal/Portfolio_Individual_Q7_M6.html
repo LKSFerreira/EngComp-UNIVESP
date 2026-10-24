@@ -1,0 +1,1036 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Individual M6 - A Carta Para Quem Começa - UNIVESP</title>
+  
+  <!-- Fontes do Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ================= RESET & CONFIGURAÇÃO A4 ================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    @page {
+      size: A4 portrait;
+      margin: 0;
+    }
+
+    body {
+      background-color: #525659;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      color: #0f172a;
+      letter-spacing: 0.1px;
+      margin: 0;
+      padding: 25px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+
+    /* PÁGINA A4 RIGOROSAMENTE DELIMITADA */
+    .page {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      background-color: #ffffff;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      page-break-after: always;
+      page-break-inside: avoid;
+    }
+
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+        gap: 0 !important;
+      }
+      .page {
+        box-shadow: none !important;
+        page-break-after: always !important;
+        page-break-inside: avoid !important;
+        height: 297mm !important;
+        max-height: 297mm !important;
+      }
+      .no-print-toolbar {
+        display: none !important;
+      }
+    }
+
+    /* BARRA DE IMPRESSÃO SUPERIOR */
+    .no-print-toolbar {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      z-index: 1000;
+      background: #13324d;
+      color: #ffffff;
+      padding: 9px 20px;
+      border-radius: 30px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 13px;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn-print {
+      background: #f2a900;
+      color: #0f172a;
+      border: none;
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 12px;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+    }
+
+    .btn-print:hover {
+      background: #e59d00;
+      transform: scale(1.04);
+    }
+
+    /* HEADER INSTITUCIONAL UNIVESP (CAPA) */
+    .header-banner {
+      background-color: #13324d;
+      color: #ffffff;
+      padding: 16px 36px;
+    }
+
+    .banner-top-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #94a3b8;
+      margin-bottom: 5px;
+    }
+
+    .banner-content {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .badge-template-sq {
+      background-color: #f2a900;
+      color: #0f172a;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .badge-template-sq .badge-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 8px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .badge-template-sq .badge-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 26px;
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .banner-text .quinzena-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      color: #38bdf8;
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .banner-text h1 {
+      font-family: 'Inter', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.3px;
+      line-height: 1.2;
+    }
+
+    .banner-text .subtitle {
+      font-family: 'Inter', sans-serif;
+      font-size: 11.5px;
+      font-weight: 400;
+      color: #cbd5e1;
+      margin-top: 2px;
+    }
+
+    /* HEADER PÁGINAS INTERNAS */
+    .inner-header {
+      background-color: #13324d;
+      color: #ffffff;
+      padding: 10px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .inner-header .doc-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: #f8fafc;
+    }
+
+    .inner-header .doc-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 600;
+      color: #94a3b8;
+      letter-spacing: 1px;
+    }
+
+    /* CORPO DA PÁGINA PADRÃO */
+    .page-body {
+      padding: 14px 36px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-grow: 1;
+      justify-content: flex-start;
+    }
+
+    /* TABELA DE METADADOS */
+    .meta-table {
+      width: 100%;
+      font-size: 11.2px;
+      line-height: 1.5;
+      color: #0f172a;
+      border-collapse: collapse;
+    }
+
+    .meta-table td {
+      padding: 3.5px 0;
+      vertical-align: top;
+    }
+
+    /* CAIXAS DE DESTAQUE */
+    .box-intro {
+      background-color: #f8fafc;
+      border-left: 4px solid #13324d;
+      padding: 8px 12px;
+      font-size: 11px;
+      line-height: 1.48;
+      color: #0f172a;
+      font-weight: 450;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .box-attention {
+      background-color: #fef8e8;
+      border-left: 4px solid #f2a900;
+      padding: 8px 12px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .box-attention h4 {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.8px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: #b45309;
+      margin-bottom: 2px;
+    }
+
+    .box-attention p {
+      font-size: 11px;
+      line-height: 1.45;
+      color: #78350f;
+      font-weight: 450;
+    }
+
+    /* CARTÕES DE BLOCO / SEÇÃO */
+    .card-block {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 5px;
+      padding: 10px 14px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+    }
+
+    .card-block.border-blue { border-top: 3.5px solid #2563eb; }
+    .card-block.border-teal { border-top: 3.5px solid #0d9488; }
+    .card-block.border-amber { border-top: 3.5px solid #d97706; }
+    .card-block.border-purple { border-top: 3.5px solid #7c3aed; }
+    .card-block.border-navy { border-top: 3.5px solid #13324d; }
+    .card-block.border-emerald { border-top: 3.5px solid #059669; }
+
+    .card-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .card-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 12.8px;
+      font-weight: 700;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 8.5px;
+      font-weight: 700;
+      padding: 2.5px 6px;
+      border-radius: 3px;
+      text-transform: uppercase;
+    }
+
+    .badge-blue { background: #eff6ff; color: #1d4ed8; }
+    .badge-teal { background: #f0fdfa; color: #0f766e; }
+    .badge-amber { background: #fffbeb; color: #b45309; }
+    .badge-purple { background: #f5f3ff; color: #6d28d9; }
+    .badge-emerald { background: #ecfdf5; color: #047857; }
+    .badge-navy { background: #e2e8f0; color: #13324d; }
+
+    .text-body {
+      font-size: 11.5px;
+      line-height: 1.52;
+      color: #0f172a;
+      font-weight: 450;
+    }
+
+    .text-body p {
+      margin-bottom: 6px;
+    }
+
+    .text-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* CAIXAS DE CÓDIGO E PROMPT */
+    .code-prompt {
+      background-color: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 3.5px solid #0284c7;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      line-height: 1.42;
+      color: #0f172a;
+      font-weight: 500;
+      white-space: pre-wrap;
+    }
+
+    .code-response {
+      background-color: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-left: 3.5px solid #0d9488;
+      border-radius: 4px;
+      padding: 8px 12px;
+      font-size: 10.8px;
+      line-height: 1.45;
+      color: #0f172a;
+      font-weight: 450;
+    }
+
+    /* MARCAÇÃO DOS 3 SINAIS EM CORES REAIS */
+    .mark-sinal-1 {
+      background-color: #fef08a;
+      color: #713f12;
+      padding: 1px 4px;
+      border-radius: 2px;
+      font-weight: 600;
+      border-bottom: 1.5px solid #ca8a04;
+    }
+
+    .mark-sinal-2 {
+      background-color: #bbf7d0;
+      color: #14532d;
+      padding: 1px 4px;
+      border-radius: 2px;
+      font-weight: 600;
+      border-bottom: 1.5px solid #16a34a;
+    }
+
+    .mark-sinal-3 {
+      background-color: #bfdbfe;
+      color: #1e3a8a;
+      padding: 1px 4px;
+      border-radius: 2px;
+      font-weight: 600;
+      border-bottom: 1.5px solid #2563eb;
+    }
+
+    /* LEGENDA DOS SINAIS */
+    .legend-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 8px;
+      margin-top: 5px;
+    }
+
+    .legend-card {
+      border: 1px solid #cbd5e1;
+      border-radius: 4px;
+      padding: 6px 8px;
+      background: #ffffff;
+      font-size: 10px;
+      line-height: 1.35;
+    }
+
+    .legend-card-header {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      margin-bottom: 3px;
+    }
+
+    .color-swatch {
+      width: 12px;
+      height: 12px;
+      border-radius: 2px;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    /* TABELAS ESTILIZADAS */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.6px;
+      line-height: 1.45;
+      color: #0f172a;
+    }
+
+    .data-table th {
+      background-color: #13324d;
+      color: #ffffff;
+      text-align: left;
+      padding: 6px 10px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 10.2px;
+      letter-spacing: 0.3px;
+    }
+
+    .data-table td {
+      padding: 6px 10px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+    }
+
+    .data-table tr:nth-child(even) td {
+      background-color: #f8fafc;
+    }
+
+    .tag-origin {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 5px;
+      border-radius: 3px;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .tag-origin.modificado { background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; }
+    .tag-origin.aceito { background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+    .tag-origin.meu { background: #dbeafe; color: #1e40af; border: 1px solid #93c5fd; }
+
+    /* CARTA FINAL PARÁGRAFOS */
+    .final-letter-p {
+      margin-bottom: 6px;
+      font-size: 11.5px;
+      line-height: 1.5;
+      color: #0f172a;
+    }
+
+    .final-letter-p:last-child {
+      margin-bottom: 0;
+    }
+
+    .final-p-header {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9.5px;
+      font-weight: 700;
+      margin-right: 4px;
+    }
+
+    /* FICHA DE RESULTADOS VERTICAL */
+    .ficha-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .ficha-item {
+      background-color: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 4px;
+      padding: 5px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .ficha-item-label {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      font-weight: 700;
+      color: #13324d;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .ficha-item-val {
+      font-size: 10.6px;
+      line-height: 1.4;
+      color: #0f172a;
+      font-weight: 500;
+    }
+
+    /* CAIXA DE DEFESA */
+    .defesa-card {
+      background-color: #f8fafc;
+      border: 1.5px solid #13324d;
+      border-top: 4px solid #13324d;
+      border-radius: 5px;
+      padding: 10px 14px;
+    }
+
+    .defesa-text {
+      font-size: 11.4px;
+      line-height: 1.5;
+      color: #0f172a;
+      font-weight: 500;
+      text-align: justify;
+    }
+
+    /* DECLARAÇÃO DE IA */
+    .declaracao-box {
+      background-color: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-top: 3.5px solid #13324d;
+      padding: 9px 12px;
+      border-radius: 5px;
+    }
+
+    .declaracao-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .declaracao-text {
+      font-size: 10.8px;
+      line-height: 1.48;
+      color: #0f172a;
+      font-weight: 450;
+    }
+
+    /* RODAPÉ INSTITUCIONAL */
+    .footer-bar {
+      background-color: #f8fafc;
+      border-top: 1px solid #cbd5e1;
+      padding: 8px 36px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 9px;
+      color: #475569;
+      font-weight: 500;
+    }
+
+    .footer-bar .footer-univesp {
+      font-weight: 700;
+      color: #13324d;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BARRA FLUTUANTE DE IMPRESSÃO (INVISÍVEL NO PDF) -->
+  <div class="no-print-toolbar">
+    <span>UNIVESP · COM170 · MÓDULO 6</span>
+    <button class="btn-print" onclick="window.print()">Salvar como PDF</button>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 1: CAPA & METADADOS TÉCNICOS        -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="header-banner">
+      <div class="banner-top-meta">
+        <span>UNIVESP · UNIVERSIDADE VIRTUAL DO ESTADO DE SÃO PAULO</span>
+        <span>LABORATÓRIO DE REVISÃO · MÓDULO 6</span>
+      </div>
+      <div class="banner-content">
+        <div class="badge-template-sq">
+          <span class="badge-label">Módulo</span>
+          <span class="badge-num">06</span>
+        </div>
+        <div class="banner-text">
+          <span class="quinzena-tag">Quinzena 07 · Semana 2 · Prática Avaliativa Individual</span>
+          <h1>Portfólio Individual: A Carta Para Quem Começa</h1>
+          <div class="subtitle">Autoria Assistida: Do Texto Genérico à Rastreabilidade Parágrafo por Parágrafo</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page-body">
+      <!-- AVISO DE ANONIMATO OBRIGATÓRIO -->
+      <div class="box-attention">
+        <h4>Atenção Obrigatória ao Anonimato na Revisão por Pares no AVA</h4>
+        <p>A avaliação deste portfólio no Ambiente Virtual de Aprendizagem (AVA) é realizada de forma estritamente anônima às cegas entre os estudantes. No texto final submetido, <strong>não inclua o seu nome civil, Registro do Aluno (RA), polo ou número de equipe</strong>. A autoria é vinculada internamente pela própria plataforma acadêmica.</p>
+      </div>
+
+      <!-- METADADOS DA PRÁTICA -->
+      <div class="card-block border-navy">
+        <div class="card-title-row">
+          <span class="card-title">📋 Metadados de Identificação Técnica</span>
+          <span class="card-badge badge-emerald">Identificação Oficial</span>
+        </div>
+        <table class="meta-table">
+          <tr>
+            <td style="width: 30%; font-weight: 700; color: #13324d;">Curso / Eixo:</td>
+            <td>Engenharia de Computação · Eixo de Computação</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #13324d;">Disciplina:</td>
+            <td>COM170 · Inteligência Artificial na Prática Acadêmica e Profissional</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #13324d;">Instituição:</td>
+            <td>Universidade Virtual do Estado de São Paulo (UNIVESP) · Primeiro Semestre</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #13324d;">Atividade Avaliativa:</td>
+            <td>Portfólio Individual (Módulo 6) com posterior avaliação cega por pares no AVA</td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #13324d;">Ferramenta de IA Utilizada:</td>
+            <td><code>Gemini WebChat (Google)</code></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #13324d;">Modelo Declarado:</td>
+            <td><code>3.5 Flash Lite │ Nível de raciocínio: Baixo</code></td>
+          </tr>
+          <tr>
+            <td style="font-weight: 700; color: #13324d;">Data da Execução:</td>
+            <td>24 de Outubro de 2026</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- VISÃO GERAL METODOLÓGICA -->
+      <div class="card-block border-blue">
+        <div class="card-title-row">
+          <span class="card-title">🎯 Propósito Pedagógico e Estrutura da Atividade</span>
+          <span class="card-badge badge-blue">Metodologia</span>
+        </div>
+        <div class="text-body">
+          <p>Esta prática individual consolida a transição do estudante de um mero consumidor passivo de Inteligência Artificial para um <strong>autor consciente, crítico e tecnicamente respaldado</strong>. O exercício descontrói o mito de que o texto gerado por modelos de linguagem deve ser aceito integralmente ou rejeitado por completo, introduzindo o método de rastreabilidade parágrafo por parágrafo:</p>
+          <p><strong>1. Passo 1 (A minha lista):</strong> Produção 100% autoral e empírica, sem nenhuma ferramenta de IA, relatando os bastidores da disciplina, 3 conselhos práticos e a frase de acolhida.<br>
+          <strong>2. Passo 2 (A carta da ferramenta):</strong> Geração da carta via prompt detalhado e identificação visual dos 3 Sinais Típicos de IA (profundidade ilusória, saber antecipado e enumerações mecânicas).<br>
+          <strong>3. Passo 3 (A minha carta):</strong> Composição da carta final de 5 parágrafos com marcadores explícitos (MODIFICADO, ACEITO, MEU) e tabela sistemática de justificativas.<br>
+          <strong>4. Passo 4 (A revisão):</strong> Interação dialética focada de revisão gramatical com a ferramenta, analisando perdas, ganhos e preservação da voz autoral humana.<br>
+          <strong>5. Ficha & Defesa:</strong> Síntese quantitativa, declaração de uso em duas metades e defesa argumentativa do processo de curadoria.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span class="footer-univesp">UNIVESP · COM170 · QUINZENA 07</span>
+      <span>A CARTA PARA QUEM COMEÇA · MÓDULO 6</span>
+      <span>PÁGINA 1 DE 6</span>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 2: PASSO 1 - A MINHA LISTA          -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="inner-header">
+      <span class="doc-title">PORTFÓLIO INDIVIDUAL M6 · A CARTA PARA QUEM COMEÇA</span>
+      <span class="doc-meta">PASSO 1: A MINHA LISTA</span>
+    </div>
+
+    <div class="page-body">
+      <div class="box-intro">
+        <strong>Orientações desta Etapa (Produção 100% Autoral - Sem IA):</strong> Produção redigida exclusivamente com as palavras do estudante, sem o auxílio de nenhuma ferramenta de Inteligência Artificial (IA), relatando a experiência concreta vivida na disciplina.
+      </div>
+
+      <!-- 1. A DISCIPLINA DESCRITA POR MIM -->
+      <div class="card-block border-teal">
+        <div class="card-title-row">
+          <span class="card-title">1. A Disciplina Descrita por Mim</span>
+          <span class="card-badge badge-teal">Relato Autoral</span>
+        </div>
+        <div class="text-body" style="font-size: 11.2px; line-height: 1.48;">
+          <p>Inteligência Artificial na Prática Acadêmica e Profissional foi acertadamente a primeira matéria que todo calouro deve obrigatoriamente realizar. Eu diria que, na verdade, ela deveria ser executada de forma única e exclusiva antes de qualquer outra, mas entendo que isso seja impossível devido ao cronograma da UNIVESP. Dito isso, o que você precisa entender é que essa matéria servirá para que você passe para trás das cortinas no palco, jargão conhecido como <em>backstage</em>, não mais como um usuário comum e leigo. E não digo isso de forma pejorativa; digo como forma de reconhecermos nossas limitações, pois nessa situação possuo lugar de fala. Utilizar Inteligência Artificial (IA) e as ferramentas que as <em>Big Techs</em> oferecem não é uma relação de igualdade, pois quem não se adapta e quem não aprende acaba se tornando obsoleto. Contudo, usar de forma superficial e leviana, sem conhecimento técnico, não é algo que um estudante da UNIVESP deveria estar fazendo, e é exatamente por isso que nasceu essa disciplina. Aqui você terá contato com os tópicos mais relevantes que farão de você um usuário consciente: não apenas aprender como surgiu a tecnologia, mas por que ela é capaz de existir hoje em dia, quais problemas ela resolve, quais ela não resolve e, o mais importante, quais problemas essa tecnologia criou, como, por exemplo, as Câmaras de Eco e as Respostas Enviesadas.</p>
+          <p>O curso é dividido em 8 Quinzenas, então a cada duas semanas o ciclo se repete: primeiro estudamos o conteúdo, que é dividido em 4 módulos seguindo a estrutura de Introdução, videoaula, material aprofundado (apostila) e de revisão (e-book) e, por fim, uma atividade totalmente interativa que não tem peso de nota de certo ou errado. E justamente por esse motivo desconstrói completamente os métodos antigos e arcaicos de que o valor de uma nota tirada em um teste representa o conhecimento absorvido por um aluno. Por esse motivo, acredito fortemente que a forma como foi construída essa matéria COM170 deveria ser o padrão-ouro para todas as outras, que deveriam usar o mesmo método, modelo e estilo.</p>
+          <p>Essa repetição padronizada permite que nosso cérebro se adapte de forma muito mais confortável do que qualquer outra forma de estudo apresentada. Partindo da primeira quinzena, você terá o primeiro contato com os modelos e ferramentas, entenderá por que acontecem as alucinações, aprenderá sobre Engenharia de Prompts, descobrirá o que é Cadeia de Pensamento (<em>Chain-of-Thought</em>), compreenderá por que devemos declarar o uso de IA, ajustará a sua Bússola Ética quanto ao uso de Modelos de Linguagem de Grande Escala (LLM - <em>Large Language Models</em>) e defenderá suas ideias mesmo que uma IA tenha escrito 100% do conteúdo para você, porque no final o importante é a autoria humana que assina pelo valor produzido.</p>
+          <p>Digo-lhe que, de todos os assuntos abordados, talvez o que teve mais impacto sobre mim foi a parte na qual diz que, dependendo do uso, pessoas de verdade, um ser humano de carne e osso, igual a você e a mim, podem ter sua vida completamente afetada de forma negativa por um algoritmo controlado por uma empresa que muitas vezes está sob a custódia de um Estado estrangeiro e que possui pensamentos elitistas com vieses estruturais totalmente distorcidos dos valores da humanidade.</p>
+        </div>
+      </div>
+
+      <!-- 2. TRÊS CONSELHOS & FRASE -->
+      <div class="card-block border-amber">
+        <div class="card-title-row">
+          <span class="card-title">2. Três Conselhos Empíricos & Frase de Acolhida</span>
+          <span class="card-badge badge-amber">Prática Real</span>
+        </div>
+        <div class="text-body" style="font-size: 11px; line-height: 1.46;">
+          <p><strong>Conselho 1:</strong> Assim que os grupos forem definidos, tente ou faça contato com os outros membros, mesmo que você não seja representante ou não tenha cargo que fora escolhido. Crie um grupo no Telegram, no WhatsApp ou em qualquer outra plataforma de mensageria; o importante é que vocês possam se comunicar da forma mais rápida e direta possível, evitando fóruns, e-mails ou formas assíncronas de alto tempo de resposta.</p>
+          <p><strong>Conselho 2:</strong> Não perca e respeite os prazos: eles são fundamentais para que você possa usufruir 100% do que o conteúdo e as interações da matéria possam te proporcionar. Interaja sempre que possível com outros colegas, mesmo que não sejam do seu grupo, e acesse todos os dias a plataforma do Ambiente Virtual de Aprendizagem (AVA) em busca de alterações ou novidades.</p>
+          <p><strong>Conselho 3:</strong> Não deixe para buscar ajuda no último instante. Em caso de dúvidas, procure imediatamente os facilitadores, o atendimento da faculdade ou qualquer outra autoridade; mesmo que essa pessoa não possa resolver o seu problema diretamente, ela indicará como prosseguir, o que fazer e quem procurar. Se você não deixar claros os seus problemas, ninguém terá como descobrir isso.</p>
+          <p style="margin-top: 4px; padding-top: 4px; border-top: 1px dashed #cbd5e1;"><strong>Frase que eu queria ter ouvido na primeira semana:</strong> <em>"Seja colega de todos os que puder, reúnam-se em grupo, fórum ou videoaula, não importa onde. O importante na UNIVESP é o networking."</em></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span class="footer-univesp">UNIVESP · COM170 · QUINZENA 07</span>
+      <span>PASSO 1: A MINHA LISTA</span>
+      <span>PÁGINA 2 DE 6</span>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 3: PASSO 2 - A CARTA DA FERRAMENTA  -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="inner-header">
+      <span class="doc-title">PORTFÓLIO INDIVIDUAL M6 · A CARTA PARA QUEM COMEÇA</span>
+      <span class="doc-meta">PASSO 2: A CARTA DA FERRAMENTA</span>
+    </div>
+
+    <div class="page-body">
+      <!-- PROMPT UTILIZADO -->
+      <div class="card-block border-blue">
+        <div class="card-title-row">
+          <span class="card-title">Prompt Fornecido ao Modelo de IA</span>
+          <span class="card-badge badge-blue">Comando</span>
+        </div>
+        <div class="code-prompt">Escreva uma carta de boas-vindas para quem vai começar a cursar a disciplina Inteligência Artificial na Prática Acadêmica e Profissional no ano que vem. Use as seguintes informações como base:
+- O que é a disciplina: [Inserir o relato autoral completo do Passo 1: A disciplina descrita por mim].
+A carta deve ter exatamente quatro parágrafos, tom acolhedor e estilo claro. Não invente conteúdos que não estejam nas informações fornecidas.</div>
+      </div>
+
+      <!-- CARTA GERADA COM SINAIS -->
+      <div class="card-block border-purple">
+        <div class="card-title-row">
+          <span class="card-title">Carta da Ferramenta com os Três Sinais Típicos de IA</span>
+          <span class="card-badge badge-purple">Diagnóstico Textual</span>
+        </div>
+        <div class="code-response">
+          <p style="margin-bottom: 6px;"><strong>Parágrafo 1:</strong> Parabéns por garantir sua vaga no curso e seja muito bem-vindo <span class="mark-sinal-2">ao ano letivo que se inicia</span>! Você está prestes a iniciar a disciplina Inteligência Artificial na Prática Acadêmica e Profissional, a primeira e mais acertada matéria para todo calouro. Esta disciplina é a porta de entrada ideal para você passar <span class="mark-sinal-1">para trás das cortinas do backstage</span>, deixando a postura de usuário comum e leigo para compreender, de forma técnica e consciente, as transformações impostas pelo avanço das Big Techs no mundo atual.</p>
+          <p style="margin-bottom: 6px;"><strong>Parágrafo 2:</strong> A rotina acadêmica é organizada em 8 quinzenas que se repetem ciclicamente. Em cada ciclo de duas semanas, você navegará por 4 módulos de aprendizagem: introdução ao tema, videoaula, aprofundamento em apostila e revisão em e-book. Para concluir o período, você realizará uma atividade totalmente interativa e sem nota punitiva, uma metodologia inovadora que desconstrói a rigidez dos testes antigos e coloca o foco genuinamente no conhecimento que você é capaz de absorver e aplicar.</p>
+          <p style="margin-bottom: 6px;"><strong>Parágrafo 3:</strong> Essa estrutura previsível permite que sua mente se adapte com tranquilidade às exigências do ensino superior. <span class="mark-sinal-3">Logo na primeira quinzena, você entra em contato com modelos e ferramentas, aprende sobre as causas das alucinações, domina a Engenharia de Prompts e a Cadeia de Pensamento, descobre a importância de declarar o uso de IA, ajusta sua Bússola Ética em relação aos Modelos de Linguagem de Grande Escala e aprende a defender suas ideias mesmo quando a IA redige o conteúdo</span>, assegurando que o valor final seja sempre respaldado pela sua assinatura humana.</p>
+          <p><strong>Parágrafo 4:</strong> Acima de tudo, prepare-se para uma formação com profundo impacto social e responsabilidade humana. A disciplina ensinará você a olhar criticamente para além das telas, lembrando que decisões orientadas por algoritmos proprietários de empresas globais afetam diretamente <span class="mark-sinal-1">a vida de pessoas de carne e osso no cotidiano</span>. Desejamos uma excelente jornada de descobertas e que você aproveite ao máximo cada etapa dessa formação essencial!</p>
+        </div>
+
+        <!-- LEGENDA TÉCNICA -->
+        <div class="legend-grid">
+          <div class="legend-card" style="border-left: 3px solid #ca8a04;">
+            <div class="legend-card-header" style="color: #854d0e;">
+              <span class="color-swatch" style="background: #fef08a; border: 1px solid #ca8a04;"></span>
+              <span>Sinal 1: Profundidade Ilusória</span>
+            </div>
+            <span>Frases genéricas ou pleonásticas (<em>"trás das cortinas do backstage"</em>) que soam sofisticadas, mas trazem redundância lexical.</span>
+          </div>
+
+          <div class="legend-card" style="border-left: 3px solid #16a34a;">
+            <div class="legend-card-header" style="color: #166534;">
+              <span class="color-swatch" style="background: #bbf7d0; border: 1px solid #16a34a;"></span>
+              <span>Sinal 2: Saber Antecipado</span>
+            </div>
+            <span>Tom presciente que saúda quem começará no <em>"ano que vem"</em>, assumindo fatos futuros além do contexto real imediato.</span>
+          </div>
+
+          <div class="legend-card" style="border-left: 3px solid #2563eb;">
+            <div class="legend-card-header" style="color: #1e40af;">
+              <span class="color-swatch" style="background: #bfdbfe; border: 1px solid #2563eb;"></span>
+              <span>Sinal 3: Lista no Lugar da Frase</span>
+            </div>
+            <span>Enumeração mecânica e enciclopédica de tópicos do curso inteiro (Q1 a Q6) em um único fôlego, como se ocorresse <em>"logo na primeira quinzena"</em>.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span class="footer-univesp">UNIVESP · COM170 · QUINZENA 07</span>
+      <span>PASSO 2: A CARTA DA FERRAMENTA</span>
+      <span>PÁGINA 3 DE 6</span>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 4: PASSO 3 - A MINHA CARTA          -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="inner-header">
+      <span class="doc-title">PORTFÓLIO INDIVIDUAL M6 · A CARTA PARA QUEM COMEÇA</span>
+      <span class="doc-meta">PASSO 3: A MINHA CARTA & REGISTRO DE ORIGEM</span>
+    </div>
+
+    <div class="page-body">
+      <!-- CARTA FINAL DE 5 PARÁGRAFOS -->
+      <div class="card-block border-navy">
+        <div class="card-title-row">
+          <span class="card-title">A Minha Carta (Carta Final de 5 Parágrafos Numerados)</span>
+          <span class="card-badge badge-navy">Composição Final</span>
+        </div>
+        <div class="text-body" style="font-size: 11.2px; line-height: 1.48;">
+          <div class="final-letter-p">
+            <span class="final-p-header tag-origin modificado">1 (MODIFICADO)</span>
+            Parabéns por garantir sua vaga no curso de Engenharia de Computação. Acabei de terminar a primeira disciplina do curso, chamada Inteligência Artificial na Prática Acadêmica e Profissional, e quero ajudar você a se orientar nessa jornada. Essa matéria é a porta de entrada ideal, projetada para levar você para os bastidores, transformando sua postura de um usuário comum e leigo em alguém consciente e tecnicamente preparado diante do avanço das Big Techs.
+          </div>
+          <div class="final-letter-p">
+            <span class="final-p-header tag-origin aceito">2 (ACEITO)</span>
+            A estrutura do curso é dividida em 8 quinzenas que se repetem ciclicamente. Em cada ciclo de duas semanas, você estuda o conteúdo estruturado em 4 módulos: introdução, videoaula, material aprofundado em apostila e material de revisão em e-book. O ciclo se encerra com uma atividade interativa sem peso de nota de certo ou errado, o que desconstrói métodos arcaicos de avaliação e foca genuinamente no conhecimento absorvido.
+          </div>
+          <div class="final-letter-p">
+            <span class="final-p-header tag-origin modificado">3 (MODIFICADO)</span>
+            Essa repetição padronizada ajuda o cérebro a se adaptar confortavelmente aos estudos. Partindo da primeira quinzena com o contato inicial, você avança ao longo das semanas aprendendo sobre as causas das alucinações, dominando a Engenharia de Prompts e a Cadeia de Pensamento, compreendendo a declaração de uso de IA, ajustando sua Bússola Ética e aprendendo a defender suas ideias para garantir a autoria humana.
+          </div>
+          <div class="final-letter-p">
+            <span class="final-p-header tag-origin aceito">4 (ACEITO)</span>
+            Além da técnica, um dos impactos mais fortes da disciplina envolve a reflexão crítica sobre o uso dessas tecnologias. O conteúdo nos alerta que o uso inconsequente de algoritmos controlados por empresas estrangeiras e influenciados por pensamentos elitistas e vieses estruturais pode afetar negativamente a vida de pessoas reais, de carne e osso, exigindo de nós uma postura muito mais madura e responsável.
+          </div>
+          <div class="final-letter-p">
+            <span class="final-p-header tag-origin meu">5 (MEU)</span>
+            Por fim, deixo três conselhos que a minha experiência me ensinou: assim que os grupos forem formados, não dependa de fóruns lentos e crie logo um grupo de comunicação rápida no WhatsApp ou Telegram; respeite rigorosamente os prazos e acesse o AVA todos os dias; e, diante de qualquer dúvida, procure imediatamente os facilitadores antes que seja tarde. Lembre-se sempre: seja colega de todos os que puder, reúnam-se em grupo, fórum ou videoaula, não importa onde. O importante na UNIVESP é o networking.
+          </div>
+        </div>
+      </div>
+
+      <!-- TABELA DE REGISTRO DE ORIGEM -->
+      <div class="card-block border-teal">
+        <div class="card-title-row">
+          <span class="card-title">Tabela de Registro Sistemático de Origem</span>
+          <span class="card-badge badge-teal">Rastreabilidade</span>
+        </div>
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th style="width: 14%;">Parágrafo</th>
+              <th style="width: 18%;">Origem</th>
+              <th style="width: 32%;">O que foi alterado?</th>
+              <th style="width: 36%;">Justificativa Crítica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Parágrafo 1</strong></td>
+              <td><span class="tag-origin modificado">MODIFICADO</span></td>
+              <td>Eliminou a imprecisão temporal de <em>"ano que vem"</em> e o pleonasmo <em>"trás das cortinas do backstage"</em>.</td>
+              <td>Acolhe o calouro já matriculado no curso real de Engenharia de Computação com linguagem direta e precisa.</td>
+            </tr>
+            <tr>
+              <td><strong>Parágrafo 2</strong></td>
+              <td><span class="tag-origin aceito">ACEITO</span></td>
+              <td>Mantido integralmente conforme a versão da ferramenta.</td>
+              <td>Sintetiza perfeitamente a rotina de 4 módulos e o método avaliativo formativo sem nota punitiva.</td>
+            </tr>
+            <tr>
+              <td><strong>Parágrafo 3</strong></td>
+              <td><span class="tag-origin modificado">MODIFICADO</span></td>
+              <td>Substituiu <em>"Logo na primeira quinzena..."</em> por <em>"Partindo da primeira quinzena com o contato inicial, você avança..."</em>.</td>
+              <td>Corrige o Sinal 3 da IA, restabelecendo que os temas complexos foram aprendidos gradualmente ao longo das quinzenas.</td>
+            </tr>
+            <tr>
+              <td><strong>Parágrafo 4</strong></td>
+              <td><span class="tag-origin aceito">ACEITO</span></td>
+              <td>Mantido integralmente conforme a versão da ferramenta.</td>
+              <td>Preserva o impacto ético essencial sobre seres humanos de carne e osso e a responsabilidade algorítmica.</td>
+            </tr>
+            <tr>
+              <td><strong>Parágrafo 5</strong></td>
+              <td><span class="tag-origin meu">MEU</span></td>
+              <td>Parágrafo 100% autoral, composto pelos 3 conselhos práticos e a frase de acolhida do Passo 1.</td>
+              <td>Injeta a vivência empírica real de estudante (mensageria rápida, disciplina com prazos e o valor do networking).</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span class="footer-univesp">UNIVESP · COM170 · QUINZENA 07</span>
+      <span>PASSO 3: A MINHA CARTA</span>
+      <span>PÁGINA 4 DE 6</span>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 5: PASSO 4 - A REVISÃO              -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="inner-header">
+      <span class="doc-title">PORTFÓLIO INDIVIDUAL M6 · A CARTA PARA QUEM COMEÇA</span>
+      <span class="doc-meta">PASSO 4: A REVISÃO & DIALÉTICA</span>
+    </div>
+
+    <div class="page-body">
+      <!-- COMANDO E RESPOSTA DA FERRAMENTA -->
+      <div class="card-block border-amber">
+        <div class="card-title-row">
+          <span class="card-title">Interação Dialética de Revisão com a Ferramenta</span>
+          <span class="card-badge badge-amber">Revisão Focada</span>
+        </div>
+        <div class="code-prompt">Revise a redação do parágrafo a seguir, corrigindo problemas gramaticais e de pontuação e melhorando a clareza, mas sem alterar o sentido nem o tom. Se fizer alterações, liste o que você alterou e por quê:
+"[Inserir o texto do Parágrafo 5 (MEU)]."</div>
+        <div class="code-response" style="margin-top: 6px;">
+          <p><strong>Resposta do Gemini WebChat:</strong> Sugiro dividir o período final para melhorar o ritmo e a cadência da leitura:</p>
+          <p style="margin-top: 4px; font-style: italic; color: #1e293b;">"Por fim, deixo três conselhos que a minha experiência me ensinou: assim que os grupos forem formados, não dependa de fóruns lentos e crie logo um grupo de comunicação rápida no WhatsApp ou Telegram; respeite rigorosamente os prazos e acesse o AVA todos os dias; e, diante de qualquer dúvida, procure imediatamente os facilitadores antes que seja tarde. Lembre-se sempre: seja colega de todos os que puder, reunindo-se em grupo, fórum ou videoaula, não importa onde. O importante na UNIVESP é o networking."</p>
+          <p style="margin-top: 4px; font-size: 10px; color: #475569;"><strong>Alterações listadas pela IA:</strong> Divisão da última oração longa em duas frases independentes; ajuste de paralelismo sintático mantendo 100% dos termos originais.</p>
+        </div>
+      </div>
+
+      <!-- AS TRÊS PERGUNTAS ANALÍTICAS DA VIDEOAULA 7.3 -->
+      <div class="card-block border-purple">
+        <div class="card-title-row">
+          <span class="card-title">Análise Crítica da Revisão (Perguntas da Videoaula 7.3)</span>
+          <span class="card-badge badge-purple">Auditoria Crítica</span>
+        </div>
+        <div class="text-body" style="font-size: 11px; line-height: 1.48;">
+          <p><strong>1. O que você aceitou?</strong><br>
+          No <strong>Parágrafo 5</strong>, aceitei a sugestão de pontuação da ferramenta que dividiu o período final longo em duas sentenças pontuadas (<em>"Lembre-se sempre: seja colega de todos os que puder, reunindo-se em grupo, fórum ou videoaula, não importa onde. O importante na UNIVESP é o networking."</em>). Essa mudança conferiu maior clareza rítmica e impacto enfático à frase final sem descaracterizar a informalidade e a autenticidade do conselho. No <strong>Parágrafo 1</strong>, aceitei a troca do pleonasmo informal <em>"trás das cortinas do backstage"</em> por <em>"os bastidores"</em>, que tornou a abertura mais límpida.</p>
+          
+          <p><strong>2. O que você recusou ou manteve do seu jeito?</strong><br>
+          Recusei qualquer tentativa da ferramenta de atenuar a informalidade autoral dos conselhos práticos no <strong>Parágrafo 5</strong>: mantive as menções explícitas aos aplicativos <em>"WhatsApp ou Telegram"</em> e a crítica expressa aos <em>"fóruns lentos"</em>, pois essa recomendação decorre de um sufoco real vivido na Quinzena 02. No <strong>Parágrafo 2</strong>, mantive a redação mesmo com a repetição de <em>"repetem ciclicamente. Em cada ciclo..."</em> por refletir a cadência do estudante. No <strong>Parágrafo 4</strong>, mantive a expressão enfática <em>"de carne e osso"</em>, que a ferramenta tentou suprimir alegando concisão, pois essa expressão carrega a intencionalidade humana de contrapor a frieza dos algoritmos corporativos.</p>
+          
+          <p><strong>3. Qual frase mudou de sentido?</strong><br>
+          <strong>Nenhuma frase mudou de sentido substantivo.</strong> As intervenções acatadas restringiram-se a melhorias estritas de pontuação, eliminação de pleonasmos evidentes e cadência de leitura. Todas as posições conceituais, críticas às Big Techs, descrições do modelo formativo da UNIVESP e diretrizes empíricas de networking foram rigorosamente preservadas em sua essência.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span class="footer-univesp">UNIVESP · COM170 · QUINZENA 07</span>
+      <span>PASSO 4: A REVISÃO & DIALÉTICA</span>
+      <span>PÁGINA 5 DE 6</span>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- PÁGINA 6: FICHA, DECLARAÇÃO & DEFESA       -->
+  <!-- ========================================== -->
+  <div class="page">
+    <div class="inner-header">
+      <span class="doc-title">PORTFÓLIO INDIVIDUAL M6 · A CARTA PARA QUEM COMEÇA</span>
+      <span class="doc-meta">FICHA DE RESULTADOS & A MINHA DEFESA</span>
+    </div>
+
+    <div class="page-body">
+      <!-- FICHA DE RESULTADOS SINTÉTICA -->
+      <div class="card-block border-teal">
+        <div class="card-title-row">
+          <span class="card-title">Ficha de Resultados Sintética</span>
+          <span class="card-badge badge-teal">Auditoria Quantitativa</span>
+        </div>
+        <div class="ficha-grid">
+          <div class="ficha-item">
+            <span class="ficha-item-label">1. Ferramenta & Modelo de IA</span>
+            <span class="ficha-item-val"><code>Gemini WebChat │ 3.5 Flash Lite │ Nível de raciocínio: Baixo</code></span>
+          </div>
+          <div class="ficha-item">
+            <span class="ficha-item-label">2. Contagem de Parágrafos</span>
+            <span class="ficha-item-val"><strong>MEU:</strong> 1 │ <strong>ACEITO:</strong> 2 │ <strong>MODIFICADO:</strong> 2 │ <strong>RECUSADO:</strong> 0 (Total: 5)</span>
+          </div>
+          <div class="ficha-item">
+            <span class="ficha-item-label">3. Conselho Autoral (MEU) & Quinzena</span>
+            <span class="ficha-item-val">Mensageria rápida (Telegram/WhatsApp) originado na <strong>Quinzena 02</strong> (comunicação de equipe).</span>
+          </div>
+          <div class="ficha-item">
+            <span class="ficha-item-label">4. Sinal de IA Mais Evidente</span>
+            <span class="ficha-item-val"><strong>Sinal 3 (A lista no lugar da frase)</strong> no Parágrafo 3 (enumeração mecânica de Q1 a Q6).</span>
+          </div>
+          <div class="ficha-item">
+            <span class="ficha-item-label">5. Balanço da Revisão Gramatical</span>
+            <span class="ficha-item-val"><strong>Corrigiu:</strong> pleonasmo <em>"trás das cortinas do backstage"</em> (P1) e dividiu sentença longa (P5). <strong>Deixou passar:</strong> clichê <em>"jornada"</em> (P1) e eco lexical <em>"repetem ciclicamente. Em cada ciclo..."</em> (P2).</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- DECLARAÇÃO ÉTICA EM DUAS METADES -->
+      <div class="declaracao-box">
+        <div class="declaracao-title">
+          <span>✍️ Declaração de Uso de Ferramentas de IA (Duas Metades)</span>
+          <span class="card-badge badge-navy">Transparência Ética</span>
+        </div>
+        <p class="declaracao-text">
+          Neste trabalho usei o Gemini WebChat (modelo 3.5 Flash Lite │ Nível de raciocínio: Baixo) para <em>escrever a primeira versão da carta (Passo 2) e para revisar a redação do parágrafo 5 (Passo 4)</em>, e a ferramenta Antigravity (Google) para <em>diagramar, estilizar e gerar a versão em formato PDF do portfólio individual dentro dos padrões visuais da UNIVESP</em>; e conferi <em>a solidez lógica dos argumentos, a pertinência frente às diretrizes da disciplina, a ausência de alucinações, a integridade da minha voz autoral em cada parágrafo e a fidelidade gráfica e textual do documento em PDF</em>, checando <em>e confrontando cada apontamento com o texto das orientações oficiais, com as diretrizes do template e com os conceitos desenvolvidos na disciplina</em>.
+        </p>
+      </div>
+
+      <!-- A MINHA DEFESA -->
+      <div class="defesa-card">
+        <div class="card-title-row">
+          <span class="card-title">A Minha Defesa (10 linhas │ Limite Oficial: até 15 linhas)</span>
+          <span class="card-badge badge-emerald">Voz do Autor</span>
+        </div>
+        <div class="defesa-text">
+          O conselho de criar imediatamente grupos de mensageria (Telegram ou WhatsApp) nasceu da minha vivência na Quinzena 02: depender apenas dos fóruns assíncronos do Ambiente Virtual de Aprendizagem (AVA) causava atrasos de dias na comunicação, quase comprometendo o envio conjunto da equipe. O parágrafo 2 (ACEITO), que detalha a rotina quinzenal e a avaliação formativa sem nota punitiva, funciona porque a previsibilidade dos quatro módulos semanais permite conciliar trabalho e estudo; além disso, a ausência de nota punitiva estimula a experimentação prática com ferramentas de Inteligência Artificial (IA) sem medo do erro. Se alguém discordar alegando que a falta de nota reduz a dedicação, respondo que a revisão cega por pares no Laboratório do AVA exige muito mais autoria, senso crítico e responsabilidade do que simplesmente assinalar alternativas em provas tradicionais. Por fim, realizei duas intervenções de MODIFICADO: ajustei o parágrafo 1 para corrigir a imprecisão temporal da IA de falar com alguém do "ano que vem", acolhendo o estudante já matriculado em Engenharia de Computação; e modifiquei o parágrafo 3 porque a ferramenta dava a entender que se aprenderia tudo de uma só vez "logo na primeira quinzena", restaurando a realidade pedagógica da trajetória gradual ao longo das semanas.
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bar">
+      <span class="footer-univesp">UNIVESP · COM170 · QUINZENA 07</span>
+      <span>FICHA DE RESULTADOS & A MINHA DEFESA</span>
+      <span>PÁGINA 6 DE 6</span>
+    </div>
+  </div>
+
+</body>
+</html>
