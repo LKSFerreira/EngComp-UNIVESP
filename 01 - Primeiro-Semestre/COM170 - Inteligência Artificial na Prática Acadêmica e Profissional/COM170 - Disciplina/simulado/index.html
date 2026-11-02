@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulado Acadêmico | COM170 - Inteligência Artificial na Prática Acadêmica e Profissional</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Cabeçalho Principal -->
+  <header class="app-header">
+    <div class="header-container">
+      <div class="brand-group">
+        <span class="badge-tag">UNIVESP • COM170</span>
+        <h1 class="app-title">Simulado Acadêmico Oficial</h1>
+        <p class="app-subtitle">Inteligência Artificial na Prática Acadêmica e Profissional — Preparação para Avaliação Presencial</p>
+      </div>
+      <div class="header-actions">
+        <button id="themeToggleBtn" class="btn btn-outline" aria-label="Alternar Tema">
+          <span class="theme-icon">🌙</span> <span class="theme-label">Tema Escuro</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="main-container">
+    <!-- Tela 1: Configuração e Início -->
+    <section id="configScreen" class="view-panel active">
+      <div class="card intro-card">
+        <div class="intro-header">
+          <h2>Configuração do Simulado</h2>
+          <p>Selecione a modalidade de estudo para iniciar. O banco de dados selecionará aleatoriamente <strong>21 questões</strong> (1 fácil, 1 média e 1 difícil de cada uma das 7 quinzenas) com alternativas embaralhadas via algoritmo Fisher-Yates.</p>
+        </div>
+
+        <div class="grid-two-cols mode-selection">
+          <label class="mode-card selected" for="modeImmediate">
+            <input type="radio" id="modeImmediate" name="studyMode" value="immediate" checked>
+            <div class="mode-content">
+              <span class="mode-badge">Aprendizagem Ativa</span>
+              <h3>Feedback Imediato</h3>
+              <p>Justificativa pedagógica e referências detalhadas exibidas logo após a seleção de cada alternativa. Ideal para estudo formativo e consolidação de conceitos.</p>
+            </div>
+          </label>
+
+          <label class="mode-card" for="modeExam">
+            <input type="radio" id="modeExam" name="studyMode" value="exam">
+            <div class="mode-content">
+              <span class="mode-badge">Simulação Real</span>
+              <h3>Modo Prova (Vunesp)</h3>
+              <p>Responda as 21 questões de forma contínua sem interrupções. O gabarito justificado e a nota diagnóstica por quinzena são gerados ao finalizar a prova.</p>
+            </div>
+          </label>
+        </div>
+
+        <div class="filter-box">
+          <label for="filterQuinzena">Filtro de Foco por Quinzena (Opcional):</label>
+          <select id="filterQuinzena" class="form-select">
+            <option value="all">Todas as Quinzenas (Simulado Geral Completo — 21 Questões)</option>
+            <option value="1">Quinzena 1: O que é (e o que não é) Inteligência Artificial</option>
+            <option value="2">Quinzena 2: Como os Modelos de Linguagem Funcionam e Erram</option>
+            <option value="3">Quinzena 3: Decidir quando e quanto usar IA</option>
+            <option value="4">Quinzena 4: Engenharia de Prompts e Ciclo de Iteração</option>
+            <option value="5">Quinzena 5: IA no Trabalho Acadêmico e Fontes</option>
+            <option value="6">Quinzena 6: Ética, Bússola Decisória e Diretrizes</option>
+            <option value="7">Quinzena 7: Autoria Intelectual e Transparência</option>
+          </select>
+        </div>
+
+        <div class="stats-overview">
+          <div class="stat-item">
+            <span class="stat-number">105</span>
+            <span class="stat-text">Questões Totais no Banco</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">21</span>
+            <span class="stat-text">Questões por Rodada</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-text">Grounding no E-book de Revisão</span>
+          </div>
+        </div>
+
+        <div class="action-footer">
+          <button id="startSimuladoBtn" class="btn btn-primary btn-lg">Iniciar Simulado Agora</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tela 2: Simulado em Andamento -->
+    <section id="quizScreen" class="view-panel">
+      <!-- Barra Superior de Navegação e Status -->
+      <div class="quiz-status-bar card">
+        <div class="progress-details">
+          <div class="progress-info">
+            <span id="currentQuestionIndicator">Questão 1 de 21</span>
+            <span id="currentQuinzenaIndicator" class="quinzena-pill">Quinzena 1</span>
+            <span id="currentDifficultyIndicator" class="diff-pill facil">Fácil</span>
+          </div>
+          <div class="score-tracker">
+            <span class="score-label">Acertos:</span>
+            <span id="liveScore" class="score-value">0 / 0 (0%)</span>
+          </div>
+        </div>
+        <div class="progress-track">
+          <div id="progressBar" class="progress-fill" style="width: 0%;"></div>
+        </div>
+      </div>
+
+      <!-- Card da Questão -->
+      <div class="card question-card">
+        <div class="question-meta">
+          <span class="topic-tag" id="questionTopic">Tópico da Questão</span>
+          <span class="id-tag" id="questionId">Q01-F-01</span>
+        </div>
+
+        <div class="question-body">
+          <p id="questionPrompt" class="question-text"></p>
+        </div>
+
+        <div id="optionsList" class="options-container" role="radiogroup">
+          <!-- As alternativas são injetadas dinamicamente aqui -->
+        </div>
+
+        <!-- Feedback Pedagógico (Ativo no Modo Imediato ou pós-envio) -->
+        <div id="feedbackContainer" class="feedback-box card hidden">
+          <div class="feedback-header">
+            <span id="feedbackIcon" class="feedback-icon">✓</span>
+            <h4 id="feedbackTitle">Resposta Correta!</h4>
+          </div>
+          <div id="feedbackText" class="feedback-content"></div>
+          
+          <div class="reference-box">
+            <strong>Fonte Bibliográfica do Conteúdo:</strong>
+            <p id="feedbackReference" class="reference-text"></p>
+          </div>
+        </div>
+
+        <!-- Controles de Navegação -->
+        <div class="quiz-controls">
+          <button id="prevBtn" class="btn btn-secondary" disabled>Anterior</button>
+          <button id="confirmAnswerBtn" class="btn btn-primary hidden">Confirmar Resposta</button>
+          <button id="nextBtn" class="btn btn-primary" disabled>Próxima Questão</button>
+          <button id="finishBtn" class="btn btn-success hidden">Finalizar e Ver Diagnóstico</button>
+        </div>
+      </div>
+
+      <!-- Mapa Rápido de Questões -->
+      <div class="card question-map-card">
+        <h3>Navegação Rápida</h3>
+        <div id="questionGridNav" class="question-grid-nav">
+          <!-- Botões de acesso rápido injetados via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Tela 3: Diagnóstico Final e Desempenho -->
+    <section id="resultScreen" class="view-panel">
+      <div class="card result-card">
+        <div class="result-header">
+          <h2>Diagnóstico de Rendimento Acadêmico</h2>
+          <p>Confira seu aproveitamento geral e a análise de domínio conceitual por quinzena.</p>
+        </div>
+
+        <div class="final-score-banner">
+          <div class="score-circle">
+            <span id="finalScorePercent" class="circle-value">0%</span>
+            <span class="circle-label">Aproveitamento</span>
+          </div>
+          <div class="score-summary-text">
+            <h3 id="performanceGreeting">Desempenho Registrado</h3>
+            <p id="performanceMessage">Você acertou <strong id="finalCorrectCount">0</strong> de <strong id="finalTotalCount">21</strong> questões.</p>
+            <div id="performanceBadge" class="grade-badge">Excelente</div>
+          </div>
+        </div>
+
+        <!-- Desempenho Detalhado por Quinzena -->
+        <div class="breakdown-section">
+          <h3>Rendimento por Quinzena da Disciplina</h3>
+          <div id="quinzenasBreakdown" class="quinzenas-grid">
+            <!-- Gráficos/Barras por quinzena gerados dinamicamente -->
+          </div>
+        </div>
+
+        <!-- Desempenho por Nível de Dificuldade -->
+        <div class="difficulty-breakdown">
+          <h3>Aproveitamento por Nível Cognitivo</h3>
+          <div class="difficulty-meters">
+            <div class="diff-meter-item">
+              <span class="diff-title">Fácil (Compreensão Direta)</span>
+              <div class="meter-bar"><div id="meterFacil" class="meter-fill facil"></div></div>
+              <span id="labelFacil" class="meter-label">0%</span>
+            </div>
+            <div class="diff-meter-item">
+              <span class="diff-title">Médio (Relação e Interpretação)</span>
+              <div class="meter-bar"><div id="meterMedio" class="meter-fill medio"></div></div>
+              <span id="labelMedio" class="meter-label">0%</span>
+            </div>
+            <div class="diff-meter-item">
+              <span class="diff-title">Difícil (Análise Crítica e Casos)</span>
+              <div class="meter-bar"><div id="meterDificil" class="meter-fill dificil"></div></div>
+              <span id="labelDificil" class="meter-label">0%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="result-actions">
+          <button id="reviewQuestionsBtn" class="btn btn-outline">Revisar Todas as Questões com Gabarito</button>
+          <button id="restartBtn" class="btn btn-primary">Gerar Novo Simulado Aleatório</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <div class="footer-container">
+      <p>Material desenvolvido com base no <strong>E-book de Revisão das Quinzenas (COM170)</strong> — Universidade Virtual do Estado de São Paulo (UNIVESP).</p>
+      <p class="copyright">Ambiente de Aprendizagem Ativa e Autoavaliação Formativa.</p>
+    </div>
+  </footer>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
